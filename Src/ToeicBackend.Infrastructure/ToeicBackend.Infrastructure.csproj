@@ -4,6 +4,12 @@
     <ProjectReference Include="..\ToeicBackend.Domain\ToeicBackend.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Firebase\" />
+    <Folder Include="ExternalServices\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
