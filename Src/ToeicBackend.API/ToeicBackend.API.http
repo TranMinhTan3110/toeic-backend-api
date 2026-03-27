@@ -1,0 +1,6 @@
+@ToeicBackend.API_HostAddress = http://localhost:5133
+
+GET {{ToeicBackend.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
