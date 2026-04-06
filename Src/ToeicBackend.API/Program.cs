@@ -1,6 +1,33 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+
+// --- PHẦN SETUP FIREBASE (DI) ---
+
+// 1. Lấy đường dẫn file JSON từ appsettings.json
+var keyPath = Path.Combine(Directory.GetCurrentDirectory(), builder.Configuration["Firebase:ApiKeyPath"]!);
+
+// 2. Thiết lập biến môi trường để SDK của Google tự nhận diện chứng chỉ
+Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", keyPath);
+
+// 3. Khởi tạo Firebase Admin SDK (Dùng cho Auth, Cloud Messaging)
+if (FirebaseApp.DefaultInstance == null)
+{
+    FirebaseApp.Create(new AppOptions()
+    {
+        Credential = GoogleCredential.FromFile(keyPath),
+    });
+}
+
+// 4. Đăng ký FirestoreDb vào DI Container (AddSingleton)
+// Singleton nghĩa là cả ứng dụng chỉ dùng chung 1 kết nối duy nhất, cực kỳ tiết kiệm tài nguyên.
+builder.Services.AddSingleton(sp => 
+{
+    // Lấy Project ID từ file JSON 
+    string projectId = "toeic-80ff0"; 
+    return FirestoreDb.Create(projectId);
+});
+// --- KẾT THÚC SETUP FIREBASE ---
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
