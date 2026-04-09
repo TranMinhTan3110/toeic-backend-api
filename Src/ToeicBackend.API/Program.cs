@@ -1,3 +1,7 @@
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
+using Google.Cloud.Firestore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -28,6 +32,21 @@ builder.Services.AddSingleton(sp =>
     return FirestoreDb.Create(projectId);
 });
 // --- KẾT THÚC SETUP FIREBASE ---
+
+builder.Services.AddControllers();
+
+// Đăng ký Repository và Service cho DI Container
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyRepository, ToeicBackend.Infrastructure.Repositories.VocabularyRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyService, ToeicBackend.Application.Services.VocabularyService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
@@ -39,7 +58,11 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+app.UseCors("AllowAll");
+
+// app.UseHttpsRedirection(); // Tạm tắt nếu test local cho máy ảo đỡ lỗi chứng chỉ
+
+app.MapControllers();
 
 var summaries = new[]
 {
