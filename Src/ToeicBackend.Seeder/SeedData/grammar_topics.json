@@ -1,0 +1,58 @@
+[
+  {
+    "id": "gtopic_001",
+    "title": "Thì quá khứ đơn",
+    "title_en": "Simple Past Tense",
+    "category": "tense",
+    "description": "Diễn tả hành động đã xảy ra và kết thúc trong quá khứ.",
+    "icon": "⏪",
+    "lesson_count": 2,
+    "exercise_count": 10,
+    "related_parts": [5, 6],
+    "difficulty": "basic",
+    "order": 1,
+    "is_published": true
+  },
+  {
+    "id": "gtopic_002",
+    "title": "Thì hiện tại đơn",
+    "title_en": "Simple Present Tense",
+    "category": "tense",
+    "description": "Diễn tả thói quen, sự thật hiển nhiên và lịch trình cố định.",
+    "icon": "🔄",
+    "lesson_count": 2,
+    "exercise_count": 10,
+    "related_parts": [5, 6],
+    "difficulty": "basic",
+    "order": 2,
+    "is_published": true
+  },
+  {
+    "id": "gtopic_003",
+    "title": "Từ loại (Word Forms)",
+    "title_en": "Word Forms",
+    "category": "word_form",
+    "description": "Phân biệt danh từ, động từ, tính từ, trạng từ trong câu.",
+    "icon": "📝",
+    "lesson_count": 3,
+    "exercise_count": 20,
+    "related_parts": [5],
+    "difficulty": "intermediate",
+    "order": 3,
+    "is_published": true
+  },
+  {
+    "id": "gtopic_004",
+    "title": "Giới từ (Prepositions)",
+    "title_en": "Prepositions",
+    "category": "preposition",
+    "description": "Cách dùng in, on, at, by, for, with, of và các giới từ phổ biến.",
+    "icon": "📍",
+    "lesson_count": 2,
+    "exercise_count": 15,
+    "related_parts": [5, 6],
+    "difficulty": "intermediate",
+    "order": 4,
+    "is_published": true
+  }
+]

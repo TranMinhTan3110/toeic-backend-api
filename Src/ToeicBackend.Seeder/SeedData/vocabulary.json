@@ -1,0 +1,105 @@
+[
+  {
+    "id": "vocab_001",
+    "word": "negotiate",
+    "phonetic": "/nɪˈɡoʊʃieɪt/",
+    "word_type": "verb",
+    "definition_en": "To discuss something in order to reach an agreement.",
+    "definition_vi": "Đàm phán, thương lượng.",
+    "examples": [
+      { "sentence": "They negotiated a new contract with the supplier.", "sentence_vi": "Họ đã đàm phán một hợp đồng mới với nhà cung cấp." },
+      { "sentence": "The union is negotiating better wages.", "sentence_vi": "Công đoàn đang đàm phán mức lương tốt hơn." }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "intermediate",
+    "synonyms": ["bargain", "mediate", "discuss"],
+    "antonyms": ["agree", "accept"],
+    "collocations": ["negotiate a deal", "negotiate terms", "negotiate a contract"],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_002",
+    "word": "submit",
+    "phonetic": "/səbˈmɪt/",
+    "word_type": "verb",
+    "definition_en": "To present something for consideration or judgment.",
+    "definition_vi": "Nộp, trình, đệ trình.",
+    "examples": [
+      { "sentence": "Please submit your report by Friday.", "sentence_vi": "Vui lòng nộp báo cáo của bạn trước thứ Sáu." },
+      { "sentence": "She submitted her application online.", "sentence_vi": "Cô ấy đã nộp đơn trực tuyến." }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "basic",
+    "synonyms": ["hand in", "present", "file"],
+    "antonyms": ["withdraw", "recall"],
+    "collocations": ["submit a report", "submit an application", "submit a request"],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_003",
+    "word": "reimbursement",
+    "phonetic": "/ˌriːɪmˈbɜːrsmənt/",
+    "word_type": "noun",
+    "definition_en": "The action of repaying a person who has spent money.",
+    "definition_vi": "Việc hoàn tiền, bồi hoàn.",
+    "examples": [
+      { "sentence": "Employees will receive reimbursement for travel expenses.", "sentence_vi": "Nhân viên sẽ được hoàn tiền chi phí đi lại." }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "intermediate",
+    "synonyms": ["repayment", "refund", "compensation"],
+    "antonyms": [],
+    "collocations": ["expense reimbursement", "seek reimbursement", "claim reimbursement"],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_004",
+    "word": "deadline",
+    "phonetic": "/ˈdɛdlaɪn/",
+    "word_type": "noun",
+    "definition_en": "The latest time or date by which something should be completed.",
+    "definition_vi": "Hạn chót, thời hạn cuối.",
+    "examples": [
+      { "sentence": "We must meet the deadline for the project.", "sentence_vi": "Chúng ta phải đáp ứng hạn chót cho dự án." },
+      { "sentence": "The deadline for applications is next Monday.", "sentence_vi": "Hạn chót nộp đơn là thứ Hai tới." }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "basic",
+    "synonyms": ["due date", "time limit", "cutoff"],
+    "antonyms": [],
+    "collocations": ["meet a deadline", "miss a deadline", "set a deadline"],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_005",
+    "word": "implement",
+    "phonetic": "/ˈɪmplɪmɛnt/",
+    "word_type": "verb",
+    "definition_en": "To put a plan or decision into effect.",
+    "definition_vi": "Triển khai, thực hiện.",
+    "examples": [
+      { "sentence": "The company will implement the new policy next month.", "sentence_vi": "Công ty sẽ triển khai chính sách mới vào tháng tới." }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "intermediate",
+    "synonyms": ["execute", "carry out", "apply"],
+    "antonyms": ["cancel", "abandon"],
+    "collocations": ["implement a plan", "implement a strategy", "implement changes"],
+    "related_question_ids": [],
+    "frequency": "high"
+  }
+]
