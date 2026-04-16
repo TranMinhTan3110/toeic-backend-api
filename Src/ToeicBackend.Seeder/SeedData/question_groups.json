@@ -1,0 +1,869 @@
+[
+  {
+    "id": "group_part3_01",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_01.mp3",
+    "question_ids": [
+      "q_part3_32",
+      "q_part3_33",
+      "q_part3_34"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_02",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_02.mp3",
+    "question_ids": [
+      "q_part3_35",
+      "q_part3_36",
+      "q_part3_37"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_03",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_03.mp3",
+    "question_ids": [
+      "q_part3_38",
+      "q_part3_39",
+      "q_part3_40"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_04",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_04.mp3",
+    "question_ids": [
+      "q_part3_41",
+      "q_part3_42",
+      "q_part3_43"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_05",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_05.mp3",
+    "question_ids": [
+      "q_part3_44",
+      "q_part3_45",
+      "q_part3_46"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_06",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_06.mp3",
+    "question_ids": [
+      "q_part3_47",
+      "q_part3_48",
+      "q_part3_49"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_07",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_07.mp3",
+    "question_ids": [
+      "q_part3_50",
+      "q_part3_51",
+      "q_part3_52"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_08",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_08.mp3",
+    "question_ids": [
+      "q_part3_53",
+      "q_part3_54",
+      "q_part3_55"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_09",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_09.mp3",
+    "question_ids": [
+      "q_part3_56",
+      "q_part3_57",
+      "q_part3_58"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_10",
+    "part": 3,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_10.mp3",
+    "question_ids": [
+      "q_part3_59",
+      "q_part3_60",
+      "q_part3_61"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_11",
+    "part": 3,
+    "passage_text": null,
+    "image_url": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto/f_auto/v1776131309/ETS-2024/Test-01/images/part3/group_part3_11.png",
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_11.mp3",
+    "question_ids": [
+      "q_part3_62",
+      "q_part3_63",
+      "q_part3_64"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_12",
+    "part": 3,
+    "passage_text": null,
+    "image_url": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto/f_auto/v1776131309/ETS-2024/Test-01/images/part3/group_part3_12.png",
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_12.mp3",
+    "question_ids": [
+      "q_part3_65",
+      "q_part3_66",
+      "q_part3_67"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part3_13",
+    "part": 3,
+    "passage_text": null,
+    "image_url": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto/f_auto/v1776131309/ETS-2024/Test-01/images/part3/group_part3_13.png",
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part3/group_part3_13.mp3",
+    "question_ids": [
+      "q_part3_68",
+      "q_part3_69",
+      "q_part3_70"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_01",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_01.mp3",
+    "question_ids": [
+      "q_part4_71",
+      "q_part4_72",
+      "q_part4_73"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_02",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_02.mp3",
+    "question_ids": [
+      "q_part4_74",
+      "q_part4_75",
+      "q_part4_76"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_03",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_03.mp3",
+    "question_ids": [
+      "q_part4_77",
+      "q_part4_78",
+      "q_part4_79"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_04",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_04.mp3",
+    "question_ids": [
+      "q_part4_80",
+      "q_part4_81",
+      "q_part4_82"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_05",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_05.mp3",
+    "question_ids": [
+      "q_part4_83",
+      "q_part4_84",
+      "q_part4_85"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_06",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_06.mp3",
+    "question_ids": [
+      "q_part4_86",
+      "q_part4_87",
+      "q_part4_88"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_07",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_07.mp3",
+    "question_ids": [
+      "q_part4_89",
+      "q_part4_90",
+      "q_part4_91"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_08",
+    "part": 4,
+    "passage_text": null,
+    "image_url": null,
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_08.mp3",
+    "question_ids": [
+      "q_part4_92",
+      "q_part4_93",
+      "q_part4_94"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_09",
+    "part": 4,
+    "passage_text": null,
+    "image_url": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto/f_auto/v1776131398/ETS-2024/Test-01/images/part4/group_part4_09.png",
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_09.mp3",
+    "question_ids": [
+      "q_part4_95",
+      "q_part4_96",
+      "q_part4_97"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part4_10",
+    "part": 4,
+    "passage_text": null,
+    "image_url": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto/f_auto/v1776131398/ETS-2024/Test-01/images/part4/group_part4_10.png",
+    "audio_url": "https://res.cloudinary.com/dlfc5qwhj/video/upload/q_auto,f_auto/ETS-2024/Test-01/audio/part4/group_part4_10.mp3",
+    "question_ids": [
+      "q_part4_98",
+      "q_part4_99",
+      "q_part4_100"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part6_01",
+    "part": 6,
+    "passage_text": "Come to the Maxley Heights Center for Horticulture and learn how to create a beautiful, eco-friendly garden for your home or business.  _______ [131]. \n\nWe will teach you how to plant a rain garden, which is simply a shallow sunken garden _______ [132] a special soil mix to filter pollutants from rainwater flowing from nearby roads and rooftops. These gardens can be landscaped with native plants and flowers. _______ [133], rain gardens are always beneficial to the local environment. Among other things, _______ [134] improve drainage and protect rivers and streams. \n\nTo register, visit www.maxley-horticulture.org.",
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part6_131",
+      "q_part6_132",
+      "q_part6_133",
+      "q_part6_134"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part6_02",
+    "part": 6,
+    "passage_text": "31 July\n\nAkwasi Dombo\nFourth Avenue\nGA 105\nAccra, Ghana\n\nDear Mr. Dombo,\n\nThank you for your _______ [135] support in helping me to plan the opening gala for Tokyo’s fashion week. The event was a huge success, and I was honored to work with you. I know that our attendees follow your work closely, and they loved the designs you contributed for this event.\n\nYour designs received a lot of _______ [136] on social media. Shows like this will keep Tokyo on the map as a premier fashion centre. _______ [137]. I realize that the multiple delays made the planning no easy task. The auction _______ [138] our Young Designers Award program is coming up soon and I look forward to working with you on that as well.\n\nSincerely,\n\nAsahi Ishioka\nDirector, Japanese Guild of Fashion Designers",
+    "passages": [
+      {
+        "type": "text",
+        "content": "31 July\n\nAkwasi Dombo\nFourth Avenue\nGA 105\nAccra, Ghana\n\nDear Mr. Dombo,\n\nThank you for your _______ [135] support in helping me to plan the opening gala for Tokyo’s fashion week. The event was a huge success, and I was honored to work with you. I know that our attendees follow your work closely, and they loved the designs you contributed for this event.\n\nYour designs received a lot of _______ [136] on social media. Shows like this will keep Tokyo on the map as a premier fashion centre. _______ [137]. I realize that the multiple delays made the planning no easy task. The auction _______ [138] our Young Designers Award program is coming up soon and I look forward to working with you on that as well.\n\nSincerely,\n\nAsahi Ishioka\nDirector, Japanese Guild of Fashion Designers"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part6_135",
+      "q_part6_136",
+      "q_part6_137",
+      "q_part6_138"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part6_03",
+    "part": 6,
+    "passage_text": "From: Patron Services <patronservices@menachinlibrary.org>\nTo: Edgar Hughes <hughese98@villachesta.com>\nSubject: Card expiration date approaching\nDate: December 3\n\nDear Mr. Hughes,\n\nPlease be advised that your Mena Chin Library card will expire one month from today.\n\n_______ [139] must be renewed if you intend to keep your membership for the coming year. _______ [140]. This can be done at the information desk at any branch location.\n\n_______ [141] you decide to close your account, no action is necessary. Failure to complete your renewal by the _______ [142] date will result in the expiration of your library privileges.\n\nIf you have any questions about this notice, or about general library services, you may reply directly to this e-mail.\n\nSincerely,\n\nPatron Services",
+    "passages": [
+      {
+        "type": "text",
+        "content": "From: Patron Services <patronservices@menachinlibrary.org>\nTo: Edgar Hughes <hughese98@villachesta.com>\nSubject: Card expiration date approaching\nDate: December 3\n\nDear Mr. Hughes,\n\nPlease be advised that your Mena Chin Library card will expire one month from today.\n\n_______ [139] must be renewed if you intend to keep your membership for the coming year. _______ [140]. This can be done at the information desk at any branch location.\n\n_______ [141] you decide to close your account, no action is necessary. Failure to complete your renewal by the _______ [142] date will result in the expiration of your library privileges.\n\nIf you have any questions about this notice, or about general library services, you may reply directly to this e-mail.\n\nSincerely,\n\nPatron Services"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part6_139",
+      "q_part6_140",
+      "q_part6_141",
+      "q_part6_142"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part6_04",
+    "part": 6,
+    "passage_text": "April 7\n\nNaomi Burwell\n43 Waymire Road\nSouth Portland, ME 04109\n\nDear Ms. Burwell,\n\nI am Omar Ridha, the manager of Droplight Studio. _______ [143]. We offer a full range of photography services for real estate professionals like you. We take pride in composing interior and exterior shots that make a property look its best. Droplight Studio spares no effort in _______ [144] superior digital images. _______ [145], our professional-grade equipment, lighting, and staging techniques allow us to highlight the best features of a property. And once the photo shoot is over, every image _______ [146] expert editing. All these services come standard in every package.\n\nPlease visit our Web site to view our work as well as our pricing and scheduling information. We are happy to work with you to customize orders.\n\nSincerely,\n\nOmar Ridha, Droplight Studio",
+    "passages": [
+      {
+        "type": "text",
+        "content": "April 7\n\nNaomi Burwell\n43 Waymire Road\nSouth Portland, ME 04109\n\nDear Ms. Burwell,\n\nI am Omar Ridha, the manager of Droplight Studio. _______ [143]. We offer a full range of photography services for real estate professionals like you. We take pride in composing interior and exterior shots that make a property look its best. Droplight Studio spares no effort in _______ [144] superior digital images. _______ [145], our professional-grade equipment, lighting, and staging techniques allow us to highlight the best features of a property. And once the photo shoot is over, every image _______ [146] expert editing. All these services come standard in every package.\n\nPlease visit our Web site to view our work as well as our pricing and scheduling information. We are happy to work with you to customize orders.\n\nSincerely,\n\nOmar Ridha, Droplight Studio"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part6_143",
+      "q_part6_144",
+      "q_part6_145",
+      "q_part6_146"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_01",
+    "part": 7,
+    "passage_text": "STOP! PLEASE READ FIRST.\n\nThank you for purchasing this item.\n\nAs you do the unpacking, please verify that all components are included and place them in a safe area to avoid loss or damage. Assemble the item on a soft surface or on the flattened empty box.\n\nFollow the pictures and begin the assembly by placing the main part on its side. Never overtighten any screws or bolts, or you may damage the wood or cushioning. Please visit our Web site to obtain maintenance tips and register your product for warranty coverage: www.indoordelight.com.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_01.png"
+      },
+      {
+        "type": "text",
+        "content": "STOP! PLEASE READ FIRST.\n\nThank you for purchasing this item.\n\nAs you do the unpacking, please verify that all components are included and place them in a safe area to avoid loss or damage. Assemble the item on a soft surface or on the flattened empty box.\n\nFollow the pictures and begin the assembly by placing the main part on its side. Never overtighten any screws or bolts, or you may damage the wood or cushioning. Please visit our Web site to obtain maintenance tips and register your product for warranty coverage: www.indoordelight.com."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_147",
+      "q_part7_148"
+    ],
+    "question_count": 2,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_02",
+    "part": 7,
+    "passage_text": "We are asking all Winnipeg staff to keep a copy of this schedule at their desks as a quick reference tool for scheduling interoffice meetings. Whenever possible, please schedule these meetings during one of the underlined hours, that is, after 7:00 A.M. but before 11:00 A.M.\n\nWinnipeg       Toulouse\n7:00 A.M.  —  2:00 P.M.\n8:00 A.M.  —  3:00 P.M.\n9:00 A.M.  —  4:00 P.M.\n10:00 A.M. —  5:00 P.M.\n11:00 A.M. —  6:00 P.M.\n12:00 noon —  7:00 P.M.\n\n(Note: Winnipeg hours 7:00 A.M. to 10:00 A.M. are underlined.)",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_02.png"
+      },
+      {
+        "type": "text",
+        "content": "We are asking all Winnipeg staff to keep a copy of this schedule at their desks as a quick reference tool for scheduling interoffice meetings. Whenever possible, please schedule these meetings during one of the underlined hours, that is, after 7:00 A.M. but before 11:00 A.M.\n\nWinnipeg       Toulouse\n7:00 A.M.  —  2:00 P.M.\n8:00 A.M.  —  3:00 P.M.\n9:00 A.M.  —  4:00 P.M.\n10:00 A.M. —  5:00 P.M.\n11:00 A.M. —  6:00 P.M.\n12:00 noon —  7:00 P.M.\n\n(Note: Winnipeg hours 7:00 A.M. to 10:00 A.M. are underlined.)"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_149",
+      "q_part7_150"
+    ],
+    "question_count": 2,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_03",
+    "part": 7,
+    "passage_text": "The Bryant Foyer is one of the premier event spaces in our area. Set on a hill, it has expansive windows that provide sweeping views of the adjacent botanical gardens and the river. Built in 1897, it was the home of the Francona Charitable Trust until its renovation just over a year ago. Today, the space can accommodate up to 200 guests and is ideal for wedding receptions, office parties, and panel presentations. With its marble floors, cathedral ceiling, and stunning artwork, the Bryant Foyer is the ideal location for your next gathering.\n\nThe on-site restaurant, Andito's, caters our events and also operates as its own business. This farm-to-table restaurant, headed by chef Michaela Rymond, meets all dietary needs and has revolutionized the local food scene. Area residents know to plan far in advance to get a seat.\n\nTo reserve the event space or to make a dinner reservation, give us a call at 216-555-0157.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_03.png"
+      },
+      {
+        "type": "text",
+        "content": "The Bryant Foyer is one of the premier event spaces in our area. Set on a hill, it has expansive windows that provide sweeping views of the adjacent botanical gardens and the river. Built in 1897, it was the home of the Francona Charitable Trust until its renovation just over a year ago. Today, the space can accommodate up to 200 guests and is ideal for wedding receptions, office parties, and panel presentations. With its marble floors, cathedral ceiling, and stunning artwork, the Bryant Foyer is the ideal location for your next gathering.\n\nThe on-site restaurant, Andito's, caters our events and also operates as its own business. This farm-to-table restaurant, headed by chef Michaela Rymond, meets all dietary needs and has revolutionized the local food scene. Area residents know to plan far in advance to get a seat.\n\nTo reserve the event space or to make a dinner reservation, give us a call at 216-555-0157."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_151",
+      "q_part7_152"
+    ],
+    "question_count": 2,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_04",
+    "part": 7,
+    "passage_text": "Joan Chi (12:39 P.M.): Hello Mina. Are you almost finished with the field measurements? I'm getting hungry.\nMina Evers (12:40 P.M.): Sorry, Joan. I'm afraid you and Ms. Lim will have to go to lunch without me today. There's a problem with the site coordinates. This is going to take some time.\nJoan Chi (12:51 P.M.): Oh no. Should we bring something back for you?\nMina Evers (12:59 P.M.): Get me a chicken sandwich.\nJoan Chi (1:00 P.M.): Sure thing, Mina. See you in a while.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_04.png"
+      },
+      {
+        "type": "text",
+        "content": "Joan Chi (12:39 P.M.): Hello Mina. Are you almost finished with the field measurements? I'm getting hungry.\nMina Evers (12:40 P.M.): Sorry, Joan. I'm afraid you and Ms. Lim will have to go to lunch without me today. There's a problem with the site coordinates. This is going to take some time.\nJoan Chi (12:51 P.M.): Oh no. Should we bring something back for you?\nMina Evers (12:59 P.M.): Get me a chicken sandwich.\nJoan Chi (1:00 P.M.): Sure thing, Mina. See you in a while."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_153",
+      "q_part7_154"
+    ],
+    "question_count": 2,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_05",
+    "part": 7,
+    "passage_text": "This season’s excellent weather has yielded a substantial harvest of fruits and vegetables, in many cases more than growers may find buyers for. Those of you wishing to donate surplus produce to community organizations can do so by visiting Vosey Farm and Garden’s Web site (www.vfgrdn.org), where you will find our list of drop-off locations.\n\nIf you need us to come to you instead, please contact us. We will reach out to one of the many independent truck drivers who have kindly volunteered to transport and quickly distribute your food donations to vetted groups that need it. Check our Web site for more information about this service as well as for insights into topics related to farming and gardening in the Northern Great Plains region.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_05.png"
+      },
+      {
+        "type": "text",
+        "content": "This season’s excellent weather has yielded a substantial harvest of fruits and vegetables, in many cases more than growers may find buyers for. Those of you wishing to donate surplus produce to community organizations can do so by visiting Vosey Farm and Garden’s Web site (www.vfgrdn.org), where you will find our list of drop-off locations.\n\nIf you need us to come to you instead, please contact us. We will reach out to one of the many independent truck drivers who have kindly volunteered to transport and quickly distribute your food donations to vetted groups that need it. Check our Web site for more information about this service as well as for insights into topics related to farming and gardening in the Northern Great Plains region."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_155",
+      "q_part7_156",
+      "q_part7_157"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_06",
+    "part": 7,
+    "passage_text": "We are delighted that you are joining us for today’s event. — [1] —. We ask that you adhere to the following guidelines to ensure that all attendees have an enjoyable experience.\n\nUpon entering the venue, please put any and all electronic devices in silent mode. Ringtones and lit screens are very distracting to both the performers and your fellow audience members. — [2] —. Moreover, audience members are not allowed to make an audio or visual recording of the performance.\n\nBags and other items in the aisles pose a safety concern. — [3] —. If your bag is too big to fit properly under a seat, consider storing it in a locker for just $2. — [4] —. One of our attendants will gladly assist you with that.\n\nThank you for your cooperation.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_06.png"
+      },
+      {
+        "type": "text",
+        "content": "We are delighted that you are joining us for today’s event. — [1] —. We ask that you adhere to the following guidelines to ensure that all attendees have an enjoyable experience.\n\nUpon entering the venue, please put any and all electronic devices in silent mode. Ringtones and lit screens are very distracting to both the performers and your fellow audience members. — [2] —. Moreover, audience members are not allowed to make an audio or visual recording of the performance.\n\nBags and other items in the aisles pose a safety concern. — [3] —. If your bag is too big to fit properly under a seat, consider storing it in a locker for just $2. — [4] —. One of our attendants will gladly assist you with that.\n\nThank you for your cooperation."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_158",
+      "q_part7_159",
+      "q_part7_160"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_07",
+    "part": 7,
+    "passage_text": "*E-mail*\n\nTo: Camille Ayala <ayala@esplinelectronics.com>\nFrom: Masae Adachi <madachi@sweeterspecialties.com>\nDate: February 12\nSubject: Event order\nAttachment: Sweeter Specialties Request Form\n\nDear Ms. Ayala,\n\nThank you for selecting our business to provide baked goods for the Esplin Electronics conference event in March. We are honored that you chose us for a fourth year in a row! On March 29, we will provide a large vanilla cake for each of the ten venues you indicated, and we will deliver a custom-baked multilayer cake on the following day. You will be billed on March 28. Please review the attached order form and return it to me within seven days.\n\nRegarding the cake you ordered for March 30, our head pastry chef will produce it according to your specifications. In fact, he created a sample of the complete recipe earlier today—almond crème cake with fresh raspberry filling. We have judged it to be a delectable treat, and we are sure that you will be pleased.\n\nIf you have any concerns, just send me an e-mail. As always, we value your business.\n\nMasae Adachi, Owner\nSweeter Specialties",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_07.png"
+      },
+      {
+        "type": "text",
+        "content": "*E-mail*\n\nTo: Camille Ayala <ayala@esplinelectronics.com>\nFrom: Masae Adachi <madachi@sweeterspecialties.com>\nDate: February 12\nSubject: Event order\nAttachment: Sweeter Specialties Request Form\n\nDear Ms. Ayala,\n\nThank you for selecting our business to provide baked goods for the Esplin Electronics conference event in March. We are honored that you chose us for a fourth year in a row! On March 29, we will provide a large vanilla cake for each of the ten venues you indicated, and we will deliver a custom-baked multilayer cake on the following day. You will be billed on March 28. Please review the attached order form and return it to me within seven days.\n\nRegarding the cake you ordered for March 30, our head pastry chef will produce it according to your specifications. In fact, he created a sample of the complete recipe earlier today—almond crème cake with fresh raspberry filling. We have judged it to be a delectable treat, and we are sure that you will be pleased.\n\nIf you have any concerns, just send me an e-mail. As always, we value your business.\n\nMasae Adachi, Owner\nSweeter Specialties"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_161",
+      "q_part7_162",
+      "q_part7_163",
+      "q_part7_164"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_08",
+    "part": 7,
+    "passage_text": "Great Dishwasher!\n\nI never had a dishwasher before. After remodeling my kitchen, I finally had room for a compact dishwasher. I did a lot of research, and the Dish Magic 300 seemed to be the best choice. It was pricier than other models, but all of the reviews were excellent. So, I decided to spend the extra money. I have had the dishwasher for one month now, and I could not be happier with my decision. Most importantly, the dishes come out sparkling clean, no matter how dirty they were going in. Also, the machine is so quiet, you do not even know it is running. Lastly, it is designed to use water efficiently, which is very important to me. Overall, I am very pleased with this dishwasher.\n\n— Anna Yakovleva",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_08.png"
+      },
+      {
+        "type": "text",
+        "content": "Great Dishwasher!\n\nI never had a dishwasher before. After remodeling my kitchen, I finally had room for a compact dishwasher. I did a lot of research, and the Dish Magic 300 seemed to be the best choice. It was pricier than other models, but all of the reviews were excellent. So, I decided to spend the extra money. I have had the dishwasher for one month now, and I could not be happier with my decision. Most importantly, the dishes come out sparkling clean, no matter how dirty they were going in. Also, the machine is so quiet, you do not even know it is running. Lastly, it is designed to use water efficiently, which is very important to me. Overall, I am very pleased with this dishwasher.\n\n— Anna Yakovleva"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_165",
+      "q_part7_166",
+      "q_part7_167"
+    ],
+    "question_count": 3,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_09",
+    "part": 7,
+    "passage_text": "Skyler Airlines employs more than 20,000 people from all over the world. We’re growing fast and have many positions available. — [1] —. So regardless of your background, there’s probably a place for you on our team. Skyler employees enjoy many perks. — [2] —. For example, our discount program enables them to fly to any of our destinations for a fraction of the average ticket price. — [3] —. We offer upward and global mobility, tuition reimbursement, a mentorship program, and a generous compensation package. — [4] —. Annual paid vacations enable a comfortable work-life balance. It’s no wonder that Skyler Airlines was named “Best Airline to Work For” by Travel Vista Journal three years in a row.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_09.png"
+      },
+      {
+        "type": "text",
+        "content": "Skyler Airlines employs more than 20,000 people from all over the world. We’re growing fast and have many positions available. — [1] —. So regardless of your background, there’s probably a place for you on our team. Skyler employees enjoy many perks. — [2] —. For example, our discount program enables them to fly to any of our destinations for a fraction of the average ticket price. — [3] —. We offer upward and global mobility, tuition reimbursement, a mentorship program, and a generous compensation package. — [4] —. Annual paid vacations enable a comfortable work-life balance. It’s no wonder that Skyler Airlines was named “Best Airline to Work For” by Travel Vista Journal three years in a row."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_168",
+      "q_part7_169",
+      "q_part7_170",
+      "q_part7_171"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_10",
+    "part": 7,
+    "passage_text": "Susan Gowan 9:16 A.M.: Good morning. The presentation slides about the new line of headphones are almost ready for distribution to our many partner stores. We are on track to send them out next Monday.\n\nMaggie Lorenz 9:17 A.M.: How do they look?\n\nSusan Gowan 9:20 A.M.: There are still some missing elements.\n\nAlan Woodson 9:21 A.M.: We mainly need the information from the user studies that reviewed the headphones for sport use. We should have that report from the research and development office by Wednesday.\n\nMaggie Lorenz 9:22 A.M.: Yes, let's not overlook that. And if you're concerned about the report not arriving by Wednesday, please contact Matt Harven and remind him to expedite a summary to us.\n\nSusan Gowan 9:23 A.M.: Assuming we receive that summary soon enough to incorporate its findings into the slides, should the three of us schedule a trial run through the presentation on Thursday or Friday?\n\nMaggie Lorenz 9:24 A.M.: Let's try for Thursday afternoon. Then we will still have Friday to make any necessary changes.\n\nAlan Woodson 9:25 A.M.: Fine by me. I'm free after 2 P.M.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_10.png"
+      },
+      {
+        "type": "text",
+        "content": "Susan Gowan 9:16 A.M.: Good morning. The presentation slides about the new line of headphones are almost ready for distribution to our many partner stores. We are on track to send them out next Monday.\n\nMaggie Lorenz 9:17 A.M.: How do they look?\n\nSusan Gowan 9:20 A.M.: There are still some missing elements.\n\nAlan Woodson 9:21 A.M.: We mainly need the information from the user studies that reviewed the headphones for sport use. We should have that report from the research and development office by Wednesday.\n\nMaggie Lorenz 9:22 A.M.: Yes, let's not overlook that. And if you're concerned about the report not arriving by Wednesday, please contact Matt Harven and remind him to expedite a summary to us.\n\nSusan Gowan 9:23 A.M.: Assuming we receive that summary soon enough to incorporate its findings into the slides, should the three of us schedule a trial run through the presentation on Thursday or Friday?\n\nMaggie Lorenz 9:24 A.M.: Let's try for Thursday afternoon. Then we will still have Friday to make any necessary changes.\n\nAlan Woodson 9:25 A.M.: Fine by me. I'm free after 2 P.M."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_172",
+      "q_part7_173",
+      "q_part7_174",
+      "q_part7_175"
+    ],
+    "question_count": 4,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_11",
+    "part": 7,
+    "passage_text": "Aparna Kothari, Media Contact\nKitchen Swifts\nakothari@kitchenswifts.com.au\n\nFOR IMMEDIATE RELEASE\n\nSYDNEY (4 June)—Kitchen Swifts and Chef Darius Cordero are joining together to give home cooks a new culinary experience. The award-winning chef is the owner of restaurants in both the Philippines and Australia, including the recently opened Enriqua's. He says his cooking reflects his Filipino heritage, which is a blend of many cultures.\n\n\"I've designed these simplified recipes for Kitchen Swifts so that cooks at home can enjoy new and exciting flavours with ease,\" he said. \"While preparing and eating these meals, you can feel like you are travelling the world with me.\"\n\nZahra Chambers, vice president of Kitchen Swifts, says she is pleased to work with Chef Cordero and to offer delicious new recipes to their customers. Kitchen Swifts supplies menus, recipes, and ingredients for two people, four people, or six people, including a range of vegetarian selections. Customers choose the most appropriate meal options, and then a box is delivered weekly. Current customers will see no price increase with the partnership. To find out more, visit the Kitchen Swifts Web site at www.kitchenswifts.com.au.\n\n***\n\nhttps://www.sydneyrestaurants.com.au\n\nA colleague arranged for us to eat at Enriqua's while I was at a conference in Sydney. It is usually fully booked for dinner; you may need to call months in advance for a table. We had a wonderful lunch there instead. Everything was delicious, and the bread and desserts are baked on-site! It was a worthwhile treat before I flew back to Hong Kong.\n\n——Meili Guan",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_11.png"
+      },
+      {
+        "type": "text",
+        "content": "Aparna Kothari, Media Contact\nKitchen Swifts\nakothari@kitchenswifts.com.au\n\nFOR IMMEDIATE RELEASE\n\nSYDNEY (4 June)—Kitchen Swifts and Chef Darius Cordero are joining together to give home cooks a new culinary experience. The award-winning chef is the owner of restaurants in both the Philippines and Australia, including the recently opened Enriqua's. He says his cooking reflects his Filipino heritage, which is a blend of many cultures.\n\n\"I've designed these simplified recipes for Kitchen Swifts so that cooks at home can enjoy new and exciting flavours with ease,\" he said. \"While preparing and eating these meals, you can feel like you are travelling the world with me.\"\n\nZahra Chambers, vice president of Kitchen Swifts, says she is pleased to work with Chef Cordero and to offer delicious new recipes to their customers. Kitchen Swifts supplies menus, recipes, and ingredients for two people, four people, or six people, including a range of vegetarian selections. Customers choose the most appropriate meal options, and then a box is delivered weekly. Current customers will see no price increase with the partnership. To find out more, visit the Kitchen Swifts Web site at www.kitchenswifts.com.au.\n\n***\n\nhttps://www.sydneyrestaurants.com.au\n\nA colleague arranged for us to eat at Enriqua's while I was at a conference in Sydney. It is usually fully booked for dinner; you may need to call months in advance for a table. We had a wonderful lunch there instead. Everything was delicious, and the bread and desserts are baked on-site! It was a worthwhile treat before I flew back to Hong Kong.\n\n——Meili Guan"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_176",
+      "q_part7_177",
+      "q_part7_178",
+      "q_part7_179",
+      "q_part7_180"
+    ],
+    "question_count": 5,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_12",
+    "part": 7,
+    "passage_text": "To: laura.savard@orbitmail.scot\nFrom: cboyle@ceoleire.co.uk\nDate: 25 May\nSubject: RE: Some suggestions\n\nDear Ms. Savard,\n\nThank you for your kind offer to either pick up your online order from my shop or to pay extra for air or train transport. Neither arrangement is necessary, as I am happy to deliver your items to you in Stranraer myself. It so happens that my sister and her children live nearby in Kirkcolm. Before seeing them, I will drive my rental car to your house and hand deliver the items to you.\n\nAs you know, my merchandise is 100 percent handcrafted. If any damage occurs in transit, the repair turns into an expensive, time-consuming ordeal. Over the years, I've seen too much damage done by inattentive baggage handlers. My policy is to deliver items personally whenever feasible or hire a ground- or sea-based courier service I trust.\n\nI look forward to meeting you on 5 June. I expect to arrive at your house no later than 5 p.m.\n\nSincerely,\n\nConor Boyle\nCeoleire Classics\n\n***\n\nNorthern Ireland Ferry Service\nDate of Issuance: 26 May\nPassenger Name: Conor Boyle\n\nDeparting Belfast: Friday, 5 June, 1:05 PM\nDocking at Cairnryan: Friday, 5 June, 3:20 PM\n\nBaggage: 1 suitcase (small), 2 instrument cases (1 mandolin, 1 guitar)\nVehicle transport: No\n\nAdult Standard Class: £55.00\n\nPlease arrive 30 minutes prior to departure.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_12_1.png"
+      },
+      {
+        "type": "text",
+        "content": "To: laura.savard@orbitmail.scot\nFrom: cboyle@ceoleire.co.uk\nDate: 25 May\nSubject: RE: Some suggestions\n\nDear Ms. Savard,\n\nThank you for your kind offer to either pick up your online order from my shop or to pay extra for air or train transport. Neither arrangement is necessary, as I am happy to deliver your items to you in Stranraer myself. It so happens that my sister and her children live nearby in Kirkcolm. Before seeing them, I will drive my rental car to your house and hand deliver the items to you.\n\nAs you know, my merchandise is 100 percent handcrafted. If any damage occurs in transit, the repair turns into an expensive, time-consuming ordeal. Over the years, I've seen too much damage done by inattentive baggage handlers. My policy is to deliver items personally whenever feasible or hire a ground- or sea-based courier service I trust.\n\nI look forward to meeting you on 5 June. I expect to arrive at your house no later than 5 p.m.\n\nSincerely,\n\nConor Boyle\nCeoleire Classics"
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_12_2.png"
+      },
+      {
+        "type": "text",
+        "content": "Northern Ireland Ferry Service\nDate of Issuance: 26 May\nPassenger Name: Conor Boyle\n\nDeparting Belfast: Friday, 5 June, 1:05 PM\nDocking at Cairnryan: Friday, 5 June, 3:20 PM\n\nBaggage: 1 suitcase (small), 2 instrument cases (1 mandolin, 1 guitar)\nVehicle transport: No\n\nAdult Standard Class: £55.00\n\nPlease arrive 30 minutes prior to departure."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_181",
+      "q_part7_182",
+      "q_part7_183",
+      "q_part7_184",
+      "q_part7_185"
+    ],
+    "question_count": 5,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_13",
+    "part": 7,
+    "passage_text": "Egbe's Bakery—Unique baked-in flavours in every bite!\n* Section 1: Explore our menu and price list\n* Section 2: Browse photos of our delicious treats\n* Section 3: Learn about our catering services\n* Section 4: View lists of ingredients\n\n***\n\nDiscussion forum for students enrolled in Train to Achieve Class TTA1504\nPosted on: 21 May, 9:41 A.M.    Posted by: Joseph Egbe    Subject: Presentations\nViewing the list of students enrolled in this class, I remembered chatting with some of you on the forum for January's poster design class. I look forward to sharing our learning experiences again for this class. Yesterday I was the second student to meet with Mr. Akpan for an individual videoconference about my business. I own a food truck from which I sell baked goods, and when I shared with Mr. Akpan the outline for my Web site, he suggested that I add a section with vivid images of all my baked goods. It was helpful advice.\n\n***\n\nTrain to Achieve (TTA)—Our classes prepare you to succeed!\nProfiled in the latest Business Directions Nigeria newsletter, Train to Achieve (TTA) is one of the most innovative training providers in West Africa. By offering our classes entirely in online format, we bring the classroom to your home. All classes include individualized instruction and are taught by recognized professionals in their respective fields. Upon successful completion of a class, you will receive an official Certificate of Training, a valuable addition to any résumé. For a complete list of class fees and schedules, visit our Web site at www.traintoachieve.org.ng. The following are some of our most popular classes.\n\nIntroduction to Social Media Marketing (TTA1504): Taught by marketing consultant Marcus Akpan, the class equips you with the know-how to promote your business online.\n\nBecome a Successful Freelance Writer (TTA3283): Business writer Brenda Akande gives you expert guidance on how to hone your writing skills and sell your writing services.\n\nStarting an Internet Radio Station (TTA7629): Online radio host Natalie Kabiru shows you how to appeal to your target market and gives practical tips for setting up your broadcast service.\n\nBasics of Graphic Design (TTA7633): Veteran graphic designer Doug Umaru helps you acquire the basic skills needed to start a graphic design business.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_13_1.png"
+      },
+      {
+        "type": "text",
+        "content": "Egbe's Bakery—Unique baked-in flavours in every bite!\n* Section 1: Explore our menu and price list\n* Section 2: Browse photos of our delicious treats\n* Section 3: Learn about our catering services\n* Section 4: View lists of ingredients"
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_13_2.png"
+      },
+      {
+        "type": "text",
+        "content": "Discussion forum for students enrolled in Train to Achieve Class TTA1504\nPosted on: 21 May, 9:41 A.M.    Posted by: Joseph Egbe    Subject: Presentations\nViewing the list of students enrolled in this class, I remembered chatting with some of you on the forum for January's poster design class. I look forward to sharing our learning experiences again for this class. Yesterday I was the second student to meet with Mr. Akpan for an individual videoconference about my business. I own a food truck from which I sell baked goods, and when I shared with Mr. Akpan the outline for my Web site, he suggested that I add a section with vivid images of all my baked goods. It was helpful advice."
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_13_3.png"
+      },
+      {
+        "type": "text",
+        "content": "Train to Achieve (TTA)—Our classes prepare you to succeed!\nProfiled in the latest Business Directions Nigeria newsletter, Train to Achieve (TTA) is one of the most innovative training providers in West Africa. By offering our classes entirely in online format, we bring the classroom to your home. All classes include individualized instruction and are taught by recognized professionals in their respective fields. Upon successful completion of a class, you will receive an official Certificate of Training, a valuable addition to any résumé. For a complete list of class fees and schedules, visit our Web site at www.traintoachieve.org.ng. The following are some of our most popular classes.\n\nIntroduction to Social Media Marketing (TTA1504): Taught by marketing consultant Marcus Akpan, the class equips you with the know-how to promote your business online.\n\nBecome a Successful Freelance Writer (TTA3283): Business writer Brenda Akande gives you expert guidance on how to hone your writing skills and sell your writing services.\n\nStarting an Internet Radio Station (TTA7629): Online radio host Natalie Kabiru shows you how to appeal to your target market and gives practical tips for setting up your broadcast service.\n\nBasics of Graphic Design (TTA7633): Veteran graphic designer Doug Umaru helps you acquire the basic skills needed to start a graphic design business."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_186",
+      "q_part7_187",
+      "q_part7_188",
+      "q_part7_189",
+      "q_part7_190"
+    ],
+    "question_count": 5,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_14",
+    "part": 7,
+    "passage_text": "To: tpeterkin@sunmail.co.uk\nFrom: vsmith@orangebaykitchen.co.uk\nDate: 24 August\nSubject: Your review\nAttachment: @ 0258\n\nDear Ms. Peterkin,\n\nThank you for visiting Orange Bay Kitchen and leaving a review. Our manager, Keron Deslandes, told me more about your visit and our failure to live up to your expectations that evening. Please accept the attached £20 gift certificate; I do hope that you will give us another try.\n\nDuring your visit, our band had an equipment malfunction, which is what led to the last-minute cancellation. However, the band will be back performing weekly beginning in September. Also, I want you to know that Head Chef Adio Brown has changed the spices he uses in the stewed cabbage. I am sure you will find them delightful.\n\nSincerely,\n\nVea Smith, Owner\nOrange Bay Kitchen\n\n***\n\nhttps://www.dinerreviews.co.uk/orangebaykitchen\nPosted on 22 August by Tamika Peterkin, tpeterkin@sunmail.co.uk\nOrange Bay Kitchen: 2/5 Stars\n\nAfter reading a glowing article about Orange Bay Kitchen by Rebecca Roats, I was eager to give this place a try. My husband and I arrived there at 7 P.M. yesterday, keen to enjoy live music with our dinner. Unfortunately, the band's performance that night had been cancelled. Undeterred, we stayed and both ordered the jerk chicken. While the chicken's smoky flavour was outstanding, the stewed cabbage was lacking in flavour. Also, the portion size was smaller than we had anticipated, so we ordered another appetiser to avoid going home hungry. The head chef came out to apologise and was extremely nice, but we will probably not go back anytime soon.\n\n***\n\nCaribbean Flavours Abound\nBy Rebecca Roats\n\nNOTTINGHAM (1 August)—Orange Bay Kitchen has been serving up an infusion of Jamaican flavours in a laid-back Caribbean atmosphere for six months now. Managed by Keron Deslandes, the 150-seat restaurant is an aromatic jewel amid the bustling shops and eateries in Wester Square. The servers are always happy to help diners select from the variety of delights on the extensive menu, which includes curried goat, oxtail soup, and red snapper. The restaurant is most famous for its jerk chicken. Marinated for 24 hours prior to grilling and served with sides of stewed cabbage and coconut rice, the dish is a good deal at £12.\n\nIf you stop in on any Friday night between 7 and 11 P.M., you will enjoy live reggae music.",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_14_1.png"
+      },
+      {
+        "type": "text",
+        "content": "To: tpeterkin@sunmail.co.uk\nFrom: vsmith@orangebaykitchen.co.uk\nDate: 24 August\nSubject: Your review\nAttachment: @ 0258\n\nDear Ms. Peterkin,\n\nThank you for visiting Orange Bay Kitchen and leaving a review. Our manager, Keron Deslandes, told me more about your visit and our failure to live up to your expectations that evening. Please accept the attached £20 gift certificate; I do hope that you will give us another try.\n\nDuring your visit, our band had an equipment malfunction, which is what led to the last-minute cancellation. However, the band will be back performing weekly beginning in September. Also, I want you to know that Head Chef Adio Brown has changed the spices he uses in the stewed cabbage. I am sure you will find them delightful.\n\nSincerely,\n\nVea Smith, Owner\nOrange Bay Kitchen"
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_14_2.png"
+      },
+      {
+        "type": "text",
+        "content": "https://www.dinerreviews.co.uk/orangebaykitchen\nPosted on 22 August by Tamika Peterkin, tpeterkin@sunmail.co.uk\nOrange Bay Kitchen: 2/5 Stars\n\nAfter reading a glowing article about Orange Bay Kitchen by Rebecca Roats, I was eager to give this place a try. My husband and I arrived there at 7 P.M. yesterday, keen to enjoy live music with our dinner. Unfortunately, the band's performance that night had been cancelled. Undeterred, we stayed and both ordered the jerk chicken. While the chicken's smoky flavour was outstanding, the stewed cabbage was lacking in flavour. Also, the portion size was smaller than we had anticipated, so we ordered another appetiser to avoid going home hungry. The head chef came out to apologise and was extremely nice, but we will probably not go back anytime soon."
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_14_3.png"
+      },
+      {
+        "type": "text",
+        "content": "Caribbean Flavours Abound\nBy Rebecca Roats\n\nNOTTINGHAM (1 August)—Orange Bay Kitchen has been serving up an infusion of Jamaican flavours in a laid-back Caribbean atmosphere for six months now. Managed by Keron Deslandes, the 150-seat restaurant is an aromatic jewel amid the bustling shops and eateries in Wester Square. The servers are always happy to help diners select from the variety of delights on the extensive menu, which includes curried goat, oxtail soup, and red snapper. The restaurant is most famous for its jerk chicken. Marinated for 24 hours prior to grilling and served with sides of stewed cabbage and coconut rice, the dish is a good deal at £12.\n\nIf you stop in on any Friday night between 7 and 11 P.M., you will enjoy live reggae music."
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_191",
+      "q_part7_192",
+      "q_part7_193",
+      "q_part7_194",
+      "q_part7_195"
+    ],
+    "question_count": 5,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  },
+  {
+    "id": "group_part7_15",
+    "part": 7,
+    "passage_text": "Orbys Distributors\n\nTo our valued customers:\nOur current invoicing system has been in use since Orbys Distributors was founded over twenty years ago. As a much-needed upgrade, we are switching to electronic invoicing. Starting August 1, invoices will be generated automatically each month and will be sent to the e-mail address associated with your company's account.\n\nRest assured that our long-standing incentives remain in place:\n\n* A 10% discount for orders of more than $4,000\n* A 20% discount for charitable organizations\n* Free deliveries to locations within 5 miles of one of our supply centers\n* Free samples for members of our Frequent Buyer Club\n\nMore information about our transition to electronic invoicing is available on our Web site. Thank you for your support. Orbys Distributors appreciates your business.\n\n***\n\nOrbys Distributors\n\nClient: Green Canyon    Date: June 10\nAccount: 4352-0\n\nItem                             Price\nGarden soil, 33 cubic meters    $1,170.00\nCrushed gravel, 30 metric tons    1,710.00\nDecorative stone, 20 metric tons  1,140.00\n70 paving stones, .6 x .6 meters    630.00\nSubtotal                         4,650.00\n\nDiscount (10%)                    465.00\nDelivery charge                   350.00\nGrand Total                      4,535.00\n\nPlease see the enclosed notice outlining important changes to your billing.\n\n***\n\nTo: Mary Peterson, Billing Department\nFrom: Tanvir Singh, Account Manager\nDate: September 12\nSubject: Account 1012-4\n\nHello Mary,\n\nI received a query today from William Tesoriero at Tesoriero Remodeling. His monthly invoice for August never arrived.\n\nAs you know, Mr. Tesoriero was one of our very first customers. Since we first opened for business, he has made purchases from us on a regular basis. He is also a member of the Frequent Buyer Club. This is a customer we absolutely do not want to lose. I explained to him that the rollout of our electronic invoicing system did not go as smoothly as we had hoped and promised that this would not happen again.\n\nI would appreciate it if you could please investigate the problem without delay and send the invoice for August to Mr. Tesoriero.\n\nTanvir",
+    "passages": [
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_15_1.png"
+      },
+      {
+        "type": "text",
+        "content": "Orbys Distributors\n\nTo our valued customers:\nOur current invoicing system has been in use since Orbys Distributors was founded over twenty years ago. As a much-needed upgrade, we are switching to electronic invoicing. Starting August 1, invoices will be generated automatically each month and will be sent to the e-mail address associated with your company's account.\n\nRest assured that our long-standing incentives remain in place:\n\n* A 10% discount for orders of more than $4,000\n* A 20% discount for charitable organizations\n* Free deliveries to locations within 5 miles of one of our supply centers\n* Free samples for members of our Frequent Buyer Club\n\nMore information about our transition to electronic invoicing is available on our Web site. Thank you for your support. Orbys Distributors appreciates your business."
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_15_2.png"
+      },
+      {
+        "type": "text",
+        "content": "Orbys Distributors\n\nClient: Green Canyon    Date: June 10\nAccount: 4352-0\n\nItem                             Price\nGarden soil, 33 cubic meters    $1,170.00\nCrushed gravel, 30 metric tons    1,710.00\nDecorative stone, 20 metric tons  1,140.00\n70 paving stones, .6 x .6 meters    630.00\nSubtotal                         4,650.00\n\nDiscount (10%)                    465.00\nDelivery charge                   350.00\nGrand Total                      4,535.00\n\nPlease see the enclosed notice outlining important changes to your billing."
+      },
+      {
+        "type": "image",
+        "content": "https://res.cloudinary.com/dlfc5qwhj/image/upload/q_auto,f_auto/ETS-2024/Test-01/images/part7/group_part7_15_3.png"
+      },
+      {
+        "type": "text",
+        "content": "To: Mary Peterson, Billing Department\nFrom: Tanvir Singh, Account Manager\nDate: September 12\nSubject: Account 1012-4\n\nHello Mary,\n\nI received a query today from William Tesoriero at Tesoriero Remodeling. His monthly invoice for August never arrived.\n\nAs you know, Mr. Tesoriero was one of our very first customers. Since we first opened for business, he has made purchases from us on a regular basis. He is also a member of the Frequent Buyer Club. This is a customer we absolutely do not want to lose. I explained to him that the rollout of our electronic invoicing system did not go as smoothly as we had hoped and promised that this would not happen again.\n\nI would appreciate it if you could please investigate the problem without delay and send the invoice for August to Mr. Tesoriero.\n\nTanvir"
+      }
+    ],
+    "image_url": null,
+    "audio_url": null,
+    "question_ids": [
+      "q_part7_196",
+      "q_part7_197",
+      "q_part7_198",
+      "q_part7_199",
+      "q_part7_200"
+    ],
+    "question_count": 5,
+    "source": "ILC 기출 TEST 01",
+    "created_at": "2026-04-12T00:00:00Z"
+  }
+]

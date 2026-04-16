@@ -124,6 +124,8 @@ storage/
 | group_id | string? | ID nhóm (Part 3,4,6,7) |
 | tags | array | `["grammar","office","past-tense"]` |
 | grammar_topic_id | string? | Liên kết với grammar_topics |
+| is_for_exam | boolean | true = xuất hiện trong bài thi thử |
+| is_for_practice | boolean | true = xuất hiện trong phòng luyện tập |
 | difficulty | string | `easy` \| `medium` \| `hard` |
 | skill | string | `listening` \| `reading` |
 | created_at | timestamp | Thời điểm tạo |
@@ -133,6 +135,8 @@ storage/
 {
   "id": "q_part5_101",
   "part": 5,
+  "is_for_exam": true,
+  "is_for_practice": false,
   "question_text": "The manager _______ the report before the deadline.",
   "options": ["A. submit", "B. submitted", "C. submitting", "D. to submit"],
   "correct_answer": "B",
@@ -159,7 +163,7 @@ storage/
 | passage_text | string? | Đoạn văn/hội thoại |
 | image_url | string? | Hình minh họa |
 | audio_url | string? | Audio (Part 3, 4) |
-| question_ids | array | ['q_id1', 'q_id2', ...] |
+| question_ids | array | ['q_id1', 'q_id2'x`, ...] |
 | question_count | number | Số câu trong nhóm |
 | source | string? | Nguồn đề: `ETS 2024 Test 01` |
 | created_at | timestamp | Thời điểm tạo |
@@ -191,7 +195,7 @@ storage/
 
 **Mô tả:** Phiên luyện tập linh hoạt — user tự chọn Part, số câu, thời gian. KHÁC với thi thử (không cố định 200 câu, không cố định thời gian).
 
-> 💡 Đây là điểm khác biệt chính với `user_results`: luyện tập thì số câu linh hoạt, thời gian tùy chọn.
+>  Đây là điểm khác biệt chính với `user_results`: luyện tập thì số câu linh hoạt, thời gian tùy chọn.
 
 | Field | Kiểu | Mô tả |
 |---|---|---|
@@ -778,7 +782,7 @@ writing_results (1)
 | 10 | `writing_questions` | Độc lập |
 | 11–21 | Còn lại | Tự tạo khi có data từ user |
 
-> 💡 Collections từ `user_results` trở đi **không cần tạo thủ công** — BE/client tự tạo khi user thao tác.
+>  Collections từ `user_results` trở đi **không cần tạo thủ công** — BE/client tự tạo khi user thao tác.
 
 ---
 

@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ToeicBackend.Domain\ToeicBackend.Domain.csproj" />
+    <ProjectReference Include="..\ToeicBackend.Application\ToeicBackend.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
