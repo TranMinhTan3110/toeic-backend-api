@@ -31,7 +31,11 @@ Console.ResetColor();
 // --- Seed từng collection ---
 await SeedCollection("vocabulary", "vocabulary.json");
 await SeedCollection("grammar_topics", "grammar_topics.json");
+await SeedCollection("question_groups", "question_groups.json");
 await SeedCollection("questions", "questions.json");
+await SeedCollection("exams", "exams.json");
+await SeedCollection("speaking_questions", "speaking_questions.json");
+await SeedCollection("writing_questions", "writing_questions.json");
 
 Console.ForegroundColor = ConsoleColor.Cyan;
 Console.WriteLine("\n Seed data hoàn tất!");

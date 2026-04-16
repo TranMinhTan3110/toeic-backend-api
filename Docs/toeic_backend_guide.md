@@ -4,7 +4,7 @@
 
 ---
 
-## 🗂️ Toàn Bộ Cấu Trúc Thư Mục (Có File Bổ Sung)
+##  Toàn Bộ Cấu Trúc Thư Mục (Có File Bổ Sung)
 
 ```
 / (Root)
@@ -67,7 +67,7 @@
 
 ---
 
-## 🧠 Kiến Trúc: Clean Architecture — Tại Sao Lại Chia Như Vậy?
+##  Kiến Trúc: Clean Architecture — Tại Sao Lại Chia Như Vậy?
 
 Dự án này dùng **Clean Architecture** — một cách tổ chức code chuyên nghiệp theo từng "tầng" (layer). Mỗi tầng chỉ làm **một việc duy nhất**, giúp code dễ sửa và dễ test.
 
@@ -88,9 +88,9 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-## 📂 Giải Thích Chi Tiết Từng Phần
+##  Giải Thích Chi Tiết Từng Phần
 
-### 1️⃣ `ToeicBackend.API` — Cửa Ngõ Của Hệ Thống
+### 1️ `ToeicBackend.API` — Cửa Ngõ Của Hệ Thống
 
 **Vai trò:** Nhận HTTP Request từ ReactJS Web và Flutter App, trả về Response.
 
@@ -105,7 +105,7 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-### 2️⃣ `ToeicBackend.Application` — Bộ Não Của Hệ Thống
+### 2️ `ToeicBackend.Application` — Bộ Não Của Hệ Thống
 
 **Vai trò:** Chứa toàn bộ **logic nghiệp vụ** (business logic). Controller chỉ gọi vào đây, không tự xử lý.
 
@@ -121,7 +121,7 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-### 3️⃣ `ToeicBackend.Domain` — Linh Hồn Của Hệ Thống
+### 3️ `ToeicBackend.Domain` — Linh Hồn Của Hệ Thống
 
 **Vai trò:** Định nghĩa **dữ liệu** và **quy tắc cốt lõi**. Không phụ thuộc vào bất kỳ thư viện nào.
 
@@ -134,7 +134,7 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-### 4️⃣ `ToeicBackend.Infrastructure` — Tay Chân Của Hệ Thống
+### 4️`ToeicBackend.Infrastructure` — Tay Chân Của Hệ Thống
 
 **Vai trò:** Thực thi code thực tế để kết nối Firebase, gửi email, v.v.
 
@@ -147,7 +147,7 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-### 5️⃣ `Docs/` — Tài Liệu Cho Cả Nhóm
+### 5️`Docs/` — Tài Liệu Cho Cả Nhóm
 
 | File | Nội dung |
 |---|---|
@@ -156,7 +156,7 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-## 🗃️ Mẫu Schema Firestore (`firestore_schema.json`)
+## Mẫu Schema Firestore (`firestore_schema.json`)
 
 ```json
 {
@@ -199,7 +199,7 @@ Dự án này dùng **Clean Architecture** — một cách tổ chức code chuy
 
 ---
 
-## 🚀 Quy Trình Làm Việc Cho Nhóm
+##  Quy Trình Làm Việc Cho Nhóm
 
 ### Bước 1 — Tân (Owner) setup ban đầu
 ```bash
@@ -249,7 +249,7 @@ dotnet run --project Src/ToeicBackend.API
 
 ---
 
-## 👥 Phân Công Công Việc Gợi Ý
+##  Phân Công Công Việc Gợi Ý
 
 | Thành viên | Phụ trách |
 |---|---|
@@ -266,7 +266,7 @@ dotnet run --project Src/ToeicBackend.API
 
 ---
 
-## 📋 Checklist Trước Khi Code
+##  Checklist Trước Khi Code
 
 - [ ] Pull code mới nhất từ `main` về
 - [ ] Tạo branch mới: `git checkout -b feature/ten-tinh-nang`
