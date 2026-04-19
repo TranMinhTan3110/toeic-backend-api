@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using ToeicBackend.Application.Interfaces;
+using ToeicBackend.Application.DTOs;
 
 namespace ToeicBackend.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/vocabularies")]
 public class VocabularyController : ControllerBase
 {
     private readonly IVocabularyService _service;
@@ -17,20 +18,9 @@ public class VocabularyController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAll([FromQuery] string? topic = null, [FromQuery] string? level = null)
     {
-        if (!string.IsNullOrEmpty(topic) && !string.IsNullOrEmpty(level))
-        {
-            var results = await _service.GetVocabularyByTopicAndLevelAsync(topic, level);
-            return Ok(results);
-        }
-        
-        if (!string.IsNullOrEmpty(topic))
-        {
-            var results = await _service.GetVocabularyByTopicAsync(topic);
-            return Ok(results);
-        }
-
-        var all = await _service.GetAllVocabularyAsync();
-        return Ok(all);
+        Console.WriteLine($"[DEBUG] GetAll called with topic: '{topic}', level: '{level}'");
+        var results = await _service.GetVocabularyListAsync(topic, level);
+        return Ok(results);
     }
 
     [HttpGet("{id}")]
@@ -41,10 +31,17 @@ public class VocabularyController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("topic/{topic}")]
-    public async Task<IActionResult> GetByTopic(string topic)
+    [HttpGet("topics")]
+    public async Task<IActionResult> GetTopics()
     {
-        var results = await _service.GetVocabularyByTopicAsync(topic);
-        return Ok(results);
+        var topics = await _service.GetTopicsAsync();
+        return Ok(topics);
+    }
+
+    [HttpGet("levels")]
+    public async Task<IActionResult> GetLevels()
+    {
+        var levels = await _service.GetLevelsAsync();
+        return Ok(levels);
     }
 }
