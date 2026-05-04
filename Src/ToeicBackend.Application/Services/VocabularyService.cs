@@ -13,21 +13,9 @@ public class VocabularyService : IVocabularyService
         _repository = repository;
     }
 
-    public async Task<IEnumerable<VocabularyDto>> GetAllVocabularyAsync()
+    public async Task<IEnumerable<VocabularyDto>> GetVocabularyListAsync(string? topic, string? level)
     {
-        var entities = await _repository.GetAllAsync();
-        return entities.Select(MapToDto);
-    }
-
-    public async Task<IEnumerable<VocabularyDto>> GetVocabularyByTopicAsync(string topic)
-    {
-        var entities = await _repository.GetByTopicAsync(topic);
-        return entities.Select(MapToDto);
-    }
-
-    public async Task<IEnumerable<VocabularyDto>> GetVocabularyByTopicAndLevelAsync(string topic, string level)
-    {
-        var entities = await _repository.GetByTopicAndLevelAsync(topic, level);
+        var entities = await _repository.GetFilteredAsync(topic, level);
         return entities.Select(MapToDto);
     }
 
@@ -35,6 +23,16 @@ public class VocabularyService : IVocabularyService
     {
         var entity = await _repository.GetByIdAsync(id);
         return entity == null ? null : MapToDto(entity);
+    }
+
+    public async Task<IEnumerable<string>> GetTopicsAsync()
+    {
+        return await _repository.GetTopicsAsync();
+    }
+
+    public async Task<IEnumerable<string>> GetLevelsAsync()
+    {
+        return await _repository.GetLevelsAsync();
     }
 
     private VocabularyDto MapToDto(Vocabulary entity)

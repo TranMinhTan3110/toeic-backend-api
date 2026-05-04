@@ -14,28 +14,29 @@ public class VocabularyRepository : IVocabularyRepository
         _firestoreDb = firestoreDb;
     }
 
-    public async Task<IEnumerable<Vocabulary>> GetAllAsync()
+    public async Task<IEnumerable<Vocabulary>> GetFilteredAsync(string? topic, string? level)
     {
-        var snapshot = await _firestoreDb.Collection(CollectionName).GetSnapshotAsync();
-        return snapshot.Documents.Select(MapToDomain);
-    }
+     
+        topic = topic?.Trim().ToLowerInvariant();
+        level = level?.Trim();
 
-    public async Task<IEnumerable<Vocabulary>> GetByTopicAsync(string topic)
-    {
-        var snapshot = await _firestoreDb.Collection(CollectionName)
-            .WhereEqualTo("topic", topic)
-            .GetSnapshotAsync();
-            
-        return snapshot.Documents.Select(MapToDomain);
-    }
+        Console.WriteLine($"[DEBUG] Querying Firestore - Collection: '{CollectionName}', Topic: '{topic}', Level: '{level}'");
 
-    public async Task<IEnumerable<Vocabulary>> GetByTopicAndLevelAsync(string topic, string level)
-    {
-        var snapshot = await _firestoreDb.Collection(CollectionName)
-            .WhereEqualTo("topic", topic)
-            .WhereEqualTo("level", level)
-            .GetSnapshotAsync();
-            
+        Query query = _firestoreDb.Collection(CollectionName);
+
+        if (!string.IsNullOrEmpty(topic))
+        {
+            query = query.WhereEqualTo("topic", topic);
+        }
+
+        if (!string.IsNullOrEmpty(level))
+        {
+            query = query.WhereEqualTo("level", level);
+        }
+
+        var snapshot = await query.GetSnapshotAsync();
+        Console.WriteLine($"[DEBUG] Firestore returned {snapshot.Documents.Count} documents.");
+
         return snapshot.Documents.Select(MapToDomain);
     }
 
@@ -47,6 +48,26 @@ public class VocabularyRepository : IVocabularyRepository
         if (!snapshot.Exists) return null;
         
         return MapToDomain(snapshot);
+    }
+
+    public async Task<IEnumerable<string>> GetTopicsAsync()
+    {
+        var snapshot = await _firestoreDb.Collection(CollectionName).Select("topic").GetSnapshotAsync();
+        return snapshot.Documents
+            .Where(doc => doc.ContainsField("topic"))
+            .Select(doc => doc.GetValue<string>("topic"))
+            .Distinct()
+            .OrderBy(t => t);
+    }
+
+    public async Task<IEnumerable<string>> GetLevelsAsync()
+    {
+        var snapshot = await _firestoreDb.Collection(CollectionName).Select("level").GetSnapshotAsync();
+        return snapshot.Documents
+            .Where(doc => doc.ContainsField("level"))
+            .Select(doc => doc.GetValue<string>("level"))
+            .Distinct()
+            .OrderBy(l => l);
     }
 
     private Vocabulary MapToDomain(DocumentSnapshot doc)
