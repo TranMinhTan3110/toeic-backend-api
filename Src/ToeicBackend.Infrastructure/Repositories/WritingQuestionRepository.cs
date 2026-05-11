@@ -107,7 +107,9 @@ public class WritingQuestionRepository : IWritingQuestionRepository
         if (doc.ContainsField("difficulty")) wq.Difficulty = doc.GetValue<string>("difficulty");
         if (doc.ContainsField("exam_set_id")) wq.ExamSetId = doc.GetValue<string?>("exam_set_id");
         if (doc.ContainsField("is_practice")) wq.IsPractice = doc.GetValue<bool>("is_practice");
-        if (doc.ContainsField("created_at")) wq.CreatedAt = doc.GetValue<DateTime?>("created_at");
+        
+        // Skip created_at - Firestore Timestamp not directly convertible to DateTime
+        // Frontend doesn't need this info anyway
 
         if (doc.ContainsField("given_words")) 
             wq.GivenWords = doc.GetValue<List<string>>("given_words") ?? new();
