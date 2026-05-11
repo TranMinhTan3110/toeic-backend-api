@@ -1,0 +1,66 @@
+[
+  {
+    "task_number": 1,
+    "task_type": "Read aloud",
+    "prompt_text": "In this part of the test, you will read aloud the text on the screen. You will have 45 seconds to prepare. Then you will have 45 seconds to read the text aloud.",
+    "sample_answer": "Attention all passengers waiting for the 10:30 express train to London. We regret to inform you that the train has been delayed due to mechanical issues. The estimated departure time is now 11:15. We apologize for any inconvenience this may cause. Please remain in the waiting area for further updates.",
+    "preparation_time": 45,
+    "response_time": 45,
+    "difficulty": "easy"
+  },
+  {
+    "task_number": 2,
+    "task_type": "Describe a picture",
+    "prompt_text": "In this part of the test, you will describe the picture on your screen in as much detail as you can. You will have 45 seconds to prepare your response. Then you will have 30 seconds to speak about the picture.",
+    "prompt_image_url": "https://example.com/speaking/part2_1.jpg",
+    "preparation_time": 45,
+    "response_time": 30,
+    "difficulty": "medium"
+  },
+  {
+    "id": "spk_task3_001",
+    "task_number": 3,
+    "task_type": "respond_questions",
+    "prompt_text": "Imagine that a Canadian marketing firm is doing research in your country. You have agreed to participate in a telephone interview about reading books.",
+    "questions": [
+      "How often do you read books, and where do you usually read them?",
+      "What is the most recent book you have read, and what was it about?",
+      "Do you prefer reading physical books or e-books? Why?"
+    ],
+    "answer_times": [15, 15, 30],
+    "preparation_time": 3,
+    "response_time": 60,
+    "difficulty": "medium",
+    "max_score": 5,
+    "scoring_criteria": ["pronunciation", "intonation", "grammar", "content", "relevance"],
+    "ai_prompt": "You are a TOEIC Speaking examiner evaluating Task 3. Context: {prompt_text}. Question: {question}. Response: {transcript}. Score 1-5."
+  },
+  {
+    "id": "spk_task4_001",
+    "task_number": 4,
+    "task_type": "respond_questions_info",
+    "prompt_text": "In this part of the test, you will answer three questions based on information provided. You will have 45 seconds to read the information before the questions begin.",
+    "prompt_image_url": "https://example.com/speaking/part4_schedule.jpg",
+    "questions": [
+      "What time does the first session start, and who is the speaker?",
+      "I heard the lunch break is at 1 PM, is that correct?",
+      "Can you give me all the details about the afternoon workshops?"
+    ],
+    "answer_times": [15, 15, 30],
+    "preparation_time": 45,
+    "response_time": 60,
+    "difficulty": "hard",
+    "max_score": 5,
+    "scoring_criteria": ["pronunciation", "intonation", "grammar", "content", "relevance"],
+    "ai_prompt": "You are a TOEIC Speaking examiner evaluating Task 4. Info provided: {prompt_image_url}. Question: {question}. Response: {transcript}. Score 1-5."
+  },
+  {
+    "task_number": 5,
+    "task_type": "Express an opinion",
+    "prompt_text": "In this part of the test, you will give your opinion about a specific topic. Be sure to say as much as you can in the time allowed. You will have 15 seconds to prepare. Then you will have 60 seconds to speak.",
+    "sample_answer": "Do you agree or disagree with the following statement? 'It is better for students to study in groups than to study alone.' Support your opinion with specific reasons and examples.",
+    "preparation_time": 15,
+    "response_time": 60,
+    "difficulty": "hard"
+  }
+]
