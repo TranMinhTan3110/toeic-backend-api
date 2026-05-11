@@ -1,6 +1,7 @@
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Firestore;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,11 +34,18 @@ builder.Services.AddSingleton(sp =>
 });
 // --- KẾT THÚC SETUP FIREBASE ---
 
+builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
 
 // Đăng ký Repository và Service cho DI Container
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyRepository, ToeicBackend.Infrastructure.Repositories.VocabularyRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyService, ToeicBackend.Application.Services.VocabularyService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IUserRepository, ToeicBackend.Infrastructure.Repositories.UserRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAuthService, ToeicBackend.Infrastructure.Services.AuthService>();
+
+// Đăng ký HttpClient và AI Service cho Gemini
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAiService, ToeicBackend.Infrastructure.Services.GeminiAiService>();
 
 builder.Services.AddCors(options =>
 {
@@ -56,6 +64,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference(); // Dùng Scalar thay cho Swagger
 }
 
 app.UseCors("AllowAll");

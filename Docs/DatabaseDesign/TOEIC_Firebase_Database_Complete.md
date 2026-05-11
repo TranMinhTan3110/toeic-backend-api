@@ -39,6 +39,7 @@ Firestore Database
 └── notifications            ← Thông báo hệ thống
 ```
 
+
 ---
 
 ## Firebase Storage Structure
@@ -694,6 +695,8 @@ negotiate | verb | Đàm phán | To discuss to reach an agreement | They negotia
 | Field | Kiểu | Mô tả |
 |---|---|---|
 | id | string | Auto-ID |
+
+
 | user_id | string | UID người dùng |
 | exam_set_id | string | Bộ đề đã thi |
 | submission_ids | array | 8 ID từ writing_submissions |
