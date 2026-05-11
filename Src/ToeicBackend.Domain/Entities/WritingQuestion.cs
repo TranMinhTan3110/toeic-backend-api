@@ -1,0 +1,25 @@
+namespace ToeicBackend.Domain.Entities;
+
+public class WritingQuestion
+{
+    public string Id { get; set; } = string.Empty;
+    public int TaskNumber { get; set; }
+    public string TaskType { get; set; } = string.Empty; // write_sentence | respond_email | opinion_essay
+    public string PromptText { get; set; } = string.Empty;
+    public string? PromptImageUrl { get; set; }
+    public List<string> GivenWords { get; set; } = new(); // For write_sentence tasks
+    public string? EmailContent { get; set; } // For respond_email tasks
+    public List<string> EmailQuestions { get; set; } = new(); // For respond_email tasks
+    public int TimeLimit { get; set; } // in minutes
+    public int? MinWords { get; set; }
+    public int? MaxWords { get; set; }
+    public int MaxScore { get; set; }
+    public List<string> ScoringCriteria { get; set; } = new(); // grammar, vocabulary, cohesion, relevance
+    public string? SampleAnswer { get; set; }
+    public string? AiPrompt { get; set; }
+    public string? Topic { get; set; }
+    public string Difficulty { get; set; } = string.Empty; // easy | medium | hard
+    public string? ExamSetId { get; set; }
+    public bool IsPractice { get; set; }
+    public DateTime? CreatedAt { get; set; }
+}
