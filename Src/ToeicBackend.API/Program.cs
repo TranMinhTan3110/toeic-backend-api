@@ -38,6 +38,9 @@ builder.Services.AddControllers();
 // Đăng ký Repository và Service cho DI Container
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyRepository, ToeicBackend.Infrastructure.Repositories.VocabularyRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyService, ToeicBackend.Application.Services.VocabularyService>();
+// Reading (Part 5) registrations
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingRepository, ToeicBackend.Infrastructure.Repositories.ReadingRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingService, ToeicBackend.Application.Services.ReadingService>();
 
 builder.Services.AddCors(options =>
 {

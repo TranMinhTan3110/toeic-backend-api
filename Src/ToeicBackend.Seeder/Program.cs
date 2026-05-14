@@ -65,6 +65,14 @@ async Task SeedCollection(string collectionName, string fileName)
     }
 
     string json = await File.ReadAllTextAsync(filePath);
+    if (string.IsNullOrWhiteSpace(json))
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"  Bỏ qua '{fileName}' — file rỗng.");
+        Console.ResetColor();
+        return;
+    }
+
     var items = JsonSerializer.Deserialize<List<Dictionary<string, JsonElement>>>(json);
 
     if (items == null || items.Count == 0)
