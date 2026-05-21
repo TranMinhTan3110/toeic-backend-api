@@ -94,6 +94,8 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAiService, Toeic
 // Đăng ký Speaking (Luyện Nói) từ develop
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingRepository, ToeicBackend.Infrastructure.Repositories.SpeakingRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingService, ToeicBackend.Application.Services.SpeakingService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningRepository, ToeicBackend.Infrastructure.Repositories.ListeningRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningService, ToeicBackend.Application.Services.ListeningService>();
 
 builder.Services.AddCors(options =>
 {
