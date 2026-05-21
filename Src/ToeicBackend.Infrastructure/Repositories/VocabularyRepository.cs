@@ -70,6 +70,21 @@ public class VocabularyRepository : IVocabularyRepository
             .OrderBy(l => l);
     }
 
+    public async Task<int> GetCountAsync()
+    {
+        var countSnapshot = await _firestoreDb.Collection(CollectionName).Count().GetSnapshotAsync();
+        return (int)countSnapshot.Count;
+    }
+
+    public async Task<IEnumerable<Vocabulary>> GetByIdsAsync(IEnumerable<string> ids)
+    {
+        if (ids == null || !ids.Any()) return Enumerable.Empty<Vocabulary>();
+        var tasks = ids.Select(GetByIdAsync);
+        var results = await Task.WhenAll(tasks);
+        return results.Where(r => r != null)!;
+    }
+
+
     private Vocabulary MapToDomain(DocumentSnapshot doc)
     {
         var voc = new Vocabulary
