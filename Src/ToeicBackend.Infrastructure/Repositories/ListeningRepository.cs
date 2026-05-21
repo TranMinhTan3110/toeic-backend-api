@@ -17,13 +17,16 @@ public class ListeningRepository : IListeningRepository
 
     public async Task<IEnumerable<ListeningQuestion>> GetQuestionsByPartAsync(int part)
     {
-        var snapshot = await _firestoreDb.Collection(QuestionsCollection)
-            .WhereEqualTo("skill", "listening")
-            .WhereEqualTo("part", part)
-            .GetSnapshotAsync();
-
-        return snapshot.Documents.Select(MapToQuestion);
+         var snapshot = await _firestoreDb.Collection(QuestionsCollection)
+             .WhereEqualTo("skill", "listening")
+             .WhereEqualTo("part", part)
+             .WhereEqualTo("is_for_exam", false)      
+             .WhereEqualTo("is_for_practice", true)   
+             .GetSnapshotAsync();
+ 
+         return snapshot.Documents.Select(MapToQuestion);
     }
+
 
     public async Task<ListeningQuestion?> GetQuestionByIdAsync(string id)
     {
@@ -36,6 +39,8 @@ public class ListeningRepository : IListeningRepository
     {
         var snapshot = await _firestoreDb.Collection(GroupsCollection)
             .WhereEqualTo("part", part)
+            .WhereEqualTo("is_for_exam", false)
+            .WhereEqualTo("is_for_practice", true)
             .GetSnapshotAsync();
 
         return snapshot.Documents.Select(MapToGroup);
@@ -70,9 +75,12 @@ public class ListeningRepository : IListeningRepository
         if (doc.ContainsField("correct_answer")) question.CorrectAnswer = doc.GetValue<string>("correct_answer");
         if (doc.ContainsField("explanation")) question.Explanation = doc.GetValue<string?>("explanation");
         if (doc.ContainsField("explanation_vi")) question.ExplanationVi = doc.GetValue<string?>("explanation_vi");
+        if (doc.ContainsField("script")) question.Script = doc.GetValue<string?>("script");
         if (doc.ContainsField("group_id")) question.GroupId = doc.GetValue<string?>("group_id");
         if (doc.ContainsField("difficulty")) question.Difficulty = doc.GetValue<string>("difficulty");
         if (doc.ContainsField("skill")) question.Skill = doc.GetValue<string>("skill");
+        if (doc.ContainsField("is_for_exam")) question.IsForExam = doc.GetValue<bool>("is_for_exam");
+        if (doc.ContainsField("is_for_practice")) question.IsForPractice = doc.GetValue<bool>("is_for_practice");
 
         if (doc.ContainsField("options"))
         {
@@ -103,6 +111,7 @@ public class ListeningRepository : IListeningRepository
 
         if (doc.ContainsField("part")) group.Part = doc.GetValue<int>("part");
         if (doc.ContainsField("passage_text")) group.PassageText = doc.GetValue<string?>("passage_text");
+        if (doc.ContainsField("script")) group.Script = doc.GetValue<string?>("script");
         if (doc.ContainsField("image_url")) group.ImageUrl = doc.GetValue<string?>("image_url");
         if (doc.ContainsField("audio_url")) group.AudioUrl = doc.GetValue<string?>("audio_url");
         if (doc.ContainsField("question_count")) group.QuestionCount = doc.GetValue<int>("question_count");

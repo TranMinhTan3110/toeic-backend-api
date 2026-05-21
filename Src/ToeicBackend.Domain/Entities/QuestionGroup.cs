@@ -5,6 +5,7 @@ public class QuestionGroup
     public string Id { get; set; } = string.Empty;
     public int Part { get; set; }
     public string? PassageText { get; set; }
+    public string? Script { get; set; }
     public string? ImageUrl { get; set; }
     public string? AudioUrl { get; set; }
     public List<string> QuestionIds { get; set; } = new();

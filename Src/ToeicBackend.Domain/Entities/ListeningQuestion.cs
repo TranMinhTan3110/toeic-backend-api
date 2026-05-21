@@ -11,8 +11,11 @@ public class ListeningQuestion
     public string CorrectAnswer { get; set; } = string.Empty;
     public string? Explanation { get; set; }
     public string? ExplanationVi { get; set; }
+    public string? Script { get; set; }
     public string? GroupId { get; set; }
     public string Difficulty { get; set; } = "medium";
     public string Skill { get; set; } = "listening";
     public DateTime? CreatedAt { get; set; }
+    public bool IsForExam { get; set; } = false;      
+    public bool IsForPractice { get; set; } = true;   
 }

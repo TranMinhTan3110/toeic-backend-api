@@ -32,6 +32,7 @@ public class ListeningService : IListeningService
                 Id = group.Id,
                 Part = group.Part,
                 PassageText = group.PassageText,
+                Script = group.Script,
                 ImageUrl = group.ImageUrl,
                 AudioUrl = group.AudioUrl,
                 Source = group.Source,
@@ -55,8 +56,11 @@ public class ListeningService : IListeningService
             CorrectAnswer = entity.CorrectAnswer,
             Explanation = entity.Explanation,
             ExplanationVi = entity.ExplanationVi,
+            Script = entity.Script,
             GroupId = entity.GroupId,
-            Difficulty = entity.Difficulty
+            Difficulty = entity.Difficulty,
+            IsForExam = entity.IsForExam,
+            IsForPractice = entity.IsForPractice
         };
     }
 }
