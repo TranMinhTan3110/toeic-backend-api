@@ -21,11 +21,36 @@ public class AuthService : IAuthService
             string uid = decodedToken.Uid;
 
             var existingUser = await _userRepository.GetByIdAsync(uid);
-            if (existingUser != null) return true;
 
             decodedToken.Claims.TryGetValue("name", out object? nameObj);
             decodedToken.Claims.TryGetValue("email", out object? emailObj);
             decodedToken.Claims.TryGetValue("picture", out object? pictureObj);
+
+            if (existingUser != null)
+            {
+                // Cập nhật DisplayName / AvatarUrl nếu đang rỗng (fix lần đầu sync thiếu claim)
+                bool needsUpdate = false;
+                if (string.IsNullOrEmpty(existingUser.DisplayName) || existingUser.DisplayName == "TOEIC User")
+                {
+                    var newName = nameObj?.ToString();
+                    if (!string.IsNullOrEmpty(newName))
+                    {
+                        existingUser.DisplayName = newName;
+                        needsUpdate = true;
+                    }
+                }
+                if (string.IsNullOrEmpty(existingUser.AvatarUrl))
+                {
+                    var newAvatar = pictureObj?.ToString();
+                    if (!string.IsNullOrEmpty(newAvatar))
+                    {
+                        existingUser.AvatarUrl = newAvatar;
+                        needsUpdate = true;
+                    }
+                }
+                if (needsUpdate) await _userRepository.UpdateAsync(existingUser);
+                return true;
+            }
 
             var newUser = new User
             {

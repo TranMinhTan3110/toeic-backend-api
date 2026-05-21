@@ -8,36 +8,56 @@ public class User
     [FirestoreDocumentId]
     public string Uid { get; set; } = string.Empty;
 
-    [FirestoreProperty]
+    [FirestoreProperty("display_name")]
     public string DisplayName { get; set; } = string.Empty;
 
-    [FirestoreProperty]
+    [FirestoreProperty("email")]
     public string Email { get; set; } = string.Empty;
 
-    [FirestoreProperty]
+    [FirestoreProperty("avatar_url")]
     public string? AvatarUrl { get; set; }
 
-    [FirestoreProperty]
+    [FirestoreProperty("created_at")]
     public DateTime CreatedAt { get; set; }
 
-    [FirestoreProperty]
+    [FirestoreProperty("target_score")]
     public int TargetScore { get; set; }
 
-    [FirestoreProperty]
+    [FirestoreProperty("current_level")]
     public string CurrentLevel { get; set; } = "beginner";
 
-    [FirestoreProperty]
+    [FirestoreProperty("plan")]
     public string Plan { get; set; } = "free";
 
-    [FirestoreProperty]
+    [FirestoreProperty("streak_days")]
     public int StreakDays { get; set; }
 
-    [FirestoreProperty]
+    [FirestoreProperty("best_streak_days")]
+    public int BestStreakDays { get; set; }
+
+    /// <summary>yyyy-MM-dd theo múi giờ Asia/Ho_Chi_Minh.</summary>
+    [FirestoreProperty("last_study_date")]
+    public string? LastStudyDate { get; set; }
+
+    [FirestoreProperty("experience_points")]
     public int ExperiencePoints { get; set; }
 
-    [FirestoreProperty]
+    [FirestoreProperty("weekly_ep")]
+    public int WeeklyEp { get; set; }
+
+    [FirestoreProperty("weekly_ep_period_key")]
+    public string WeeklyEpPeriodKey { get; set; } = string.Empty;
+
+    /// <summary>yyyy-MM-dd VN — ngày đã tính daily EP.</summary>
+    [FirestoreProperty("daily_ep_date_key")]
+    public string? DailyEpDateKey { get; set; }
+
+    [FirestoreProperty("daily_ep_earned")]
+    public int DailyEpEarned { get; set; }
+
+    [FirestoreProperty("total_study_minutes")]
     public int TotalStudyMinutes { get; set; }
 
-    [FirestoreProperty]
+    [FirestoreProperty("preferred_skills")]
     public List<string> PreferredSkills { get; set; } = new();
 }

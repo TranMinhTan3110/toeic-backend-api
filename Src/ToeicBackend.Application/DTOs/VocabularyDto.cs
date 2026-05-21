@@ -17,6 +17,7 @@ public class VocabularyDto
     public List<string> Antonyms { get; set; } = new();
     public List<string> Collocations { get; set; } = new();
     public string Frequency { get; set; } = string.Empty;
+    public bool IsStarred { get; set; } = false;
 }
 
 public class VocabularyExampleDto
