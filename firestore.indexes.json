@@ -1,0 +1,39 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "users",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "weekly_ep_period_key", "order": "ASCENDING" },
+        { "fieldPath": "weekly_ep", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "ep_events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "UserId", "order": "ASCENDING" },
+        { "fieldPath": "StudyDateKey", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "ep_events",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "UserId", "order": "ASCENDING" },
+        { "fieldPath": "ActivityType", "order": "ASCENDING" },
+        { "fieldPath": "ReferenceId", "order": "ASCENDING" },
+        { "fieldPath": "StudyDateKey", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "user_vocabulary_progress",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "UserId", "order": "ASCENDING" },
+        { "fieldPath": "VocabularyId", "order": "ASCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}
