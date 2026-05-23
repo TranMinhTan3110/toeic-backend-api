@@ -73,7 +73,7 @@ public class ListeningRepository : IListeningRepository
         if (doc.ContainsField("image_url")) question.ImageUrl = doc.GetValue<string?>("image_url");
         if (doc.ContainsField("audio_url")) question.AudioUrl = doc.GetValue<string?>("audio_url");
         if (doc.ContainsField("correct_answer")) question.CorrectAnswer = doc.GetValue<string>("correct_answer");
-        if (doc.ContainsField("explanation")) question.Explanation = doc.GetValue<string?>("explanation");
+        if (doc.ContainsField("explanation")) question.Explanation = doc.GetValue<object?>("explanation");
         if (doc.ContainsField("explanation_vi")) question.ExplanationVi = doc.GetValue<string?>("explanation_vi");
         if (doc.ContainsField("script")) question.Script = doc.GetValue<string?>("script");
         if (doc.ContainsField("group_id")) question.GroupId = doc.GetValue<string?>("group_id");

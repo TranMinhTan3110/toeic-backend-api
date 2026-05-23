@@ -10,6 +10,8 @@ public static class EngagementRules
     public const int VocabMatchingEpPerPair = 2;   // 2 EP / cặp ghép đúng
     public const int VocabSentenceBaseEp    = 15;  // Đặt câu AI (mỗi lượt đặt câu)
     public const int VocabSpeakingBaseEp    = 10;  // Luyện nói từ vựng (mỗi lượt thành công)
+    public const int GrammarLessonBaseEp    = 20;  // Hoàn thành lý thuyết ngữ pháp (+20 EP)
+    public const int GrammarExerciseEpPerCorrect = 2;   // 2 EP / câu đúng trong bài tập ngữ pháp
     public const int DailyEpCap             = 500;
     public const double MaxStreakMultiplierBonus = 0.5;
 

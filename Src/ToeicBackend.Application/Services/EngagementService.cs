@@ -27,6 +27,8 @@ public class EngagementService : IEngagementService
             ActivityType.VocabMatching,
             ActivityType.VocabSentence,
             ActivityType.VocabSpeaking,
+            ActivityType.GrammarLessonComplete,
+            ActivityType.GrammarExercise
         };
         if (!allowedTypes.Contains(request.ActivityType))
         {
@@ -62,12 +64,15 @@ public class EngagementService : IEngagementService
             ActivityType.VocabMatching => request.CorrectAnswers * EngagementRules.VocabMatchingEpPerPair,
             ActivityType.VocabSentence => EngagementRules.VocabSentenceBaseEp,
             ActivityType.VocabSpeaking => EngagementRules.VocabSpeakingBaseEp,
+            ActivityType.GrammarLessonComplete => EngagementRules.GrammarLessonBaseEp,
+            ActivityType.GrammarExercise       => request.CorrectAnswers * EngagementRules.GrammarExerciseEpPerCorrect,
             _                          => 3,
         };
 
         // Đảm bảo ít nhất 1 EP nếu đã hoàn thành (tránh baseEp = 0 khi correctAnswers = 0)
         if (baseEp <= 0 && (request.ActivityType == ActivityType.VocabTyping ||
-                            request.ActivityType == ActivityType.VocabMatching))
+                            request.ActivityType == ActivityType.VocabMatching ||
+                            request.ActivityType == ActivityType.GrammarExercise))
         {
             baseEp = 1;
         }
