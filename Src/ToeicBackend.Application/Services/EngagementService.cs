@@ -26,6 +26,7 @@ public class EngagementService : IEngagementService
             ActivityType.VocabTyping,
             ActivityType.VocabMatching,
             ActivityType.VocabSentence,
+            ActivityType.VocabSpeaking,
         };
         if (!allowedTypes.Contains(request.ActivityType))
         {
@@ -60,6 +61,7 @@ public class EngagementService : IEngagementService
             ActivityType.VocabTyping   => request.CorrectAnswers * EngagementRules.VocabQuizEpPerCorrect,
             ActivityType.VocabMatching => request.CorrectAnswers * EngagementRules.VocabMatchingEpPerPair,
             ActivityType.VocabSentence => EngagementRules.VocabSentenceBaseEp,
+            ActivityType.VocabSpeaking => EngagementRules.VocabSpeakingBaseEp,
             _                          => 3,
         };
 
