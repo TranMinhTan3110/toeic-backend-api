@@ -21,13 +21,23 @@ public class ListeningService : IListeningService
 
     public async Task<IEnumerable<ListeningGroupDto>> GetGroupsByPartAsync(int part)
     {
-        var groups = await _repository.GetGroupsByPartAsync(part);
-        var result = new List<ListeningGroupDto>();
+        var groups = (await _repository.GetGroupsByPartAsync(part)).ToList();
+        if (groups.Count == 0) return Enumerable.Empty<ListeningGroupDto>();
 
-        foreach (var group in groups)
+        // Một lần query thay vì N lần (mỗi nhóm 1 request) — giảm latency Part 3/4.
+        var allIds = groups.SelectMany(g => g.QuestionIds).Distinct().ToList();
+        var allQuestions = (await _repository.GetQuestionsByIdsAsync(allIds)).ToList();
+        var questionMap = allQuestions.ToDictionary(q => q.Id);
+
+        return groups.Select(group =>
         {
-            var questions = await _repository.GetQuestionsByIdsAsync(group.QuestionIds);
-            result.Add(new ListeningGroupDto
+            var orderedQuestions = group.QuestionIds
+                .Where(id => questionMap.ContainsKey(id))
+                .Select(id => questionMap[id])
+                .Select(MapToQuestionDto)
+                .ToList();
+
+            return new ListeningGroupDto
             {
                 Id = group.Id,
                 Part = group.Part,
@@ -36,11 +46,9 @@ public class ListeningService : IListeningService
                 ImageUrl = group.ImageUrl,
                 AudioUrl = group.AudioUrl,
                 Source = group.Source,
-                Questions = questions.OrderBy(q => q.Id).Select(MapToQuestionDto).ToList()
-            });
-        }
-
-        return result;
+                Questions = orderedQuestions
+            };
+        });
     }
 
     private ListeningQuestionDto MapToQuestionDto(ListeningQuestion entity)

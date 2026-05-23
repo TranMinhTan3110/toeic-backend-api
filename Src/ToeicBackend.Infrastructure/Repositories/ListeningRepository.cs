@@ -57,11 +57,22 @@ public class ListeningRepository : IListeningRepository
     {
         if (ids == null || !ids.Any()) return Enumerable.Empty<ListeningQuestion>();
 
-        var snapshot = await _firestoreDb.Collection(QuestionsCollection)
-            .WhereIn(FieldPath.DocumentId, ids)
-            .GetSnapshotAsync();
+        // Firestore WhereIn tối đa 30 phần tử mỗi query.
+        const int chunkSize = 30;
+        var distinctIds = ids.Where(id => !string.IsNullOrWhiteSpace(id)).Distinct().ToList();
+        var results = new List<ListeningQuestion>();
 
-        return snapshot.Documents.Select(MapToQuestion);
+        for (var i = 0; i < distinctIds.Count; i += chunkSize)
+        {
+            var chunk = distinctIds.Skip(i).Take(chunkSize).ToList();
+            var snapshot = await _firestoreDb.Collection(QuestionsCollection)
+                .WhereIn(FieldPath.DocumentId, chunk)
+                .GetSnapshotAsync();
+
+            results.AddRange(snapshot.Documents.Select(MapToQuestion));
+        }
+
+        return results;
     }
 
     private ListeningQuestion MapToQuestion(DocumentSnapshot doc)
