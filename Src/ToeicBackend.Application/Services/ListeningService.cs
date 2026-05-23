@@ -22,11 +22,22 @@ public class ListeningService : IListeningService
     public async Task<IEnumerable<ListeningGroupDto>> GetGroupsByPartAsync(int part)
     {
         var groups = await _repository.GetGroupsByPartAsync(part);
+        var questions = await _repository.GetQuestionsByPartAsync(part);
+        var questionMap = questions.ToDictionary(q => q.Id);
+        
         var result = new List<ListeningGroupDto>();
 
         foreach (var group in groups)
         {
-            var questions = await _repository.GetQuestionsByIdsAsync(group.QuestionIds);
+            var groupQuestions = new List<ListeningQuestionDto>();
+            foreach (var qId in group.QuestionIds)
+            {
+                if (questionMap.TryGetValue(qId, out var q))
+                {
+                    groupQuestions.Add(MapToQuestionDto(q));
+                }
+            }
+
             result.Add(new ListeningGroupDto
             {
                 Id = group.Id,
@@ -36,7 +47,7 @@ public class ListeningService : IListeningService
                 ImageUrl = group.ImageUrl,
                 AudioUrl = group.AudioUrl,
                 Source = group.Source,
-                Questions = questions.OrderBy(q => q.Id).Select(MapToQuestionDto).ToList()
+                Questions = groupQuestions.OrderBy(q => q.Id).ToList()
             });
         }
 
