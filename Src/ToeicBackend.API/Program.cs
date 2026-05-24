@@ -1,6 +1,10 @@
+using System.Security.Claims;
 using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Firestore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,11 +37,65 @@ builder.Services.AddSingleton(sp =>
 });
 // --- KẾT THÚC SETUP FIREBASE ---
 
+var firebaseProjectId = builder.Configuration["Firebase:ProjectId"] ?? "toeic-80ff0";
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.Authority = $"https://securetoken.google.com/{firebaseProjectId}";
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = $"https://securetoken.google.com/{firebaseProjectId}",
+            ValidateAudience = true,
+            ValidAudience = firebaseProjectId,
+            ValidateLifetime = true,
+            NameClaimType = "user_id"
+        };
+        options.Events = new JwtBearerEvents
+        {
+            OnTokenValidated = ctx =>
+            {
+                var identity = (ClaimsIdentity)ctx.Principal!.Identity!;
+                var userId = ctx.Principal.FindFirst("user_id")?.Value
+                    ?? ctx.Principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (!string.IsNullOrEmpty(userId) && identity.FindFirst("user_id") == null)
+                {
+                    identity.AddClaim(new Claim("user_id", userId));
+                }
+                return Task.CompletedTask;
+            }
+        };
+    });
+builder.Services.AddAuthorization();
+
+builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
 
 // Đăng ký Repository và Service cho DI Container
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyRepository, ToeicBackend.Infrastructure.Repositories.VocabularyRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyService, ToeicBackend.Application.Services.VocabularyService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IUserRepository, ToeicBackend.Infrastructure.Repositories.UserRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAuthService, ToeicBackend.Infrastructure.Services.AuthService>();
+
+// --- PHẦN SRS VÀ TIẾN ĐỘ HỌC TẬP ---
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpacedRepetitionService, ToeicBackend.Infrastructure.Services.SpacedRepetitionService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyProgressRepository, ToeicBackend.Infrastructure.Repositories.VocabularyProgressRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyProgressService, ToeicBackend.Application.Services.VocabularyProgressService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IEpEventRepository, ToeicBackend.Infrastructure.Repositories.EpEventRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IEngagementService, ToeicBackend.Application.Services.EngagementService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IUserProfileService, ToeicBackend.Application.Services.UserProfileService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ILeaderboardService, ToeicBackend.Application.Services.LeaderboardService>();
+// ------------------------------------
+
+// Đăng ký HttpClient và AI Service cho Gemini
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAiService, ToeicBackend.Infrastructure.Services.GeminiAiService>();
+
+// Đăng ký Speaking (Luyện Nói) từ develop
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingRepository, ToeicBackend.Infrastructure.Repositories.SpeakingRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingService, ToeicBackend.Application.Services.SpeakingService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningRepository, ToeicBackend.Infrastructure.Repositories.ListeningRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningService, ToeicBackend.Application.Services.ListeningService>();
 
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionRepository, ToeicBackend.Infrastructure.Repositories.WritingQuestionRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionService, ToeicBackend.Application.Services.WritingQuestionService>();
@@ -59,9 +117,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference(); // Dùng Scalar thay cho Swagger
 }
 
 app.UseCors("AllowAll");
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 // app.UseHttpsRedirection(); // Tạm tắt nếu test local cho máy ảo đỡ lỗi chứng chỉ
 
