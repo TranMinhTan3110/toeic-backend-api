@@ -40,6 +40,8 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyReposi
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyService, ToeicBackend.Application.Services.VocabularyService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingRepository, ToeicBackend.Infrastructure.Repositories.SpeakingRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingService, ToeicBackend.Application.Services.SpeakingService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamRepository, ToeicBackend.Infrastructure.Repositories.ExamRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamService, ToeicBackend.Application.Services.ExamService>();
 
 builder.Services.AddCors(options =>
 {

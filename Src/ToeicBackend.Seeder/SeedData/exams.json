@@ -8,7 +8,24 @@
     "difficulty": "medium",
     "question_ids": [],
     "is_published": true,
-    "is_premium": true
+    "is_premium": true,
+    "is_exam": true,
+    "is_practice": false
+  },
+  {
+    "id": "test_2",
+    "title": "TOEIC Speaking & Writing - Test 2",
+    "description": "TOEIC Speaking & Writing Test 2",
+    "duration": 60,
+    "year": 2024,
+    "difficulty": "medium",
+    "question_ids": [
+      "t2_spk_task1_001"
+    ],
+    "is_published": true,
+    "is_premium": true,
+    "is_exam": false,
+    "is_practice": true
   },
   {
     "id": "test_3",
@@ -19,6 +36,8 @@
     "difficulty": "medium",
     "question_ids": [],
     "is_published": true,
-    "is_premium": true
+    "is_premium": true,
+    "is_exam": false,
+    "is_practice": true
   }
 ]

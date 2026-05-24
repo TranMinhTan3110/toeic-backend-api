@@ -23,10 +23,27 @@ public class SpeakingController : ControllerBase
     }
 
     [HttpGet("task/{taskNumber}")]
-    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByTaskNumber(int taskNumber)
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByTaskNumber(
+        int taskNumber,
+        [FromQuery] bool? isExam,
+        [FromQuery] bool? isPractice)
     {
-        var results = await _service.GetByTaskNumberAsync(taskNumber);
+        var results = await _service.GetByTaskNumberAsync(taskNumber, isExam, isPractice);
         return Ok(results);
+    }
+
+    [HttpGet("filter")]
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByFilter([FromQuery] bool? isExam, [FromQuery] bool? isPractice)
+    {
+        var results = await _service.GetByFilterAsync(isExam, isPractice);
+        return Ok(results);
+    }
+
+    [HttpGet("count")]
+    public async Task<ActionResult<int>> GetCount([FromQuery] bool? isExam, [FromQuery] bool? isPractice)
+    {
+        var result = await _service.GetCountByFilterAsync(isExam, isPractice);
+        return Ok(result);
     }
 
     [HttpGet("{id}")]

@@ -1,3 +1,5 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Google.Cloud.Firestore;
 using ToeicBackend.Application.Interfaces;
 using ToeicBackend.Domain.Entities;
@@ -19,13 +21,61 @@ public class SpeakingRepository : ISpeakingRepository
         var snapshot = await _firestoreDb.Collection(CollectionName).GetSnapshotAsync();
         return snapshot.Documents.Select(MapToDomain);
     }
-
-    public async Task<IEnumerable<SpeakingQuestion>> GetByTaskNumberAsync(int taskNumber)
+    public async Task<IEnumerable<SpeakingQuestion>> GetByTaskNumberAsync(
+        int taskNumber,
+        bool? isExam = null,
+        bool? isPractice = null)
     {
         var snapshot = await _firestoreDb.Collection(CollectionName)
             .WhereEqualTo("task_number", taskNumber)
             .GetSnapshotAsync();
+
+        IEnumerable<SpeakingQuestion> results = snapshot.Documents.Select(MapToDomain);
+
+        if (isExam.HasValue)
+            results = results.Where(q => q.IsExam == isExam.Value);
+
+        if (isPractice.HasValue)
+            results = results.Where(q => q.IsPractice == isPractice.Value);
+
+        return results;
+    }
+
+    public async Task<IEnumerable<SpeakingQuestion>> GetByFilterAsync(bool? isExam, bool? isPractice)
+    {
+        Query query = _firestoreDb.Collection(CollectionName);
+
+        if (isExam.HasValue)
+        {
+            query = query.WhereEqualTo("is_exam", isExam.Value);
+        }
+
+        if (isPractice.HasValue)
+        {
+            query = query.WhereEqualTo("is_practice", isPractice.Value);
+        }
+
+        var snapshot = await query.GetSnapshotAsync();
         return snapshot.Documents.Select(MapToDomain);
+    }
+
+    public async Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice)
+    {
+        Query query = _firestoreDb.Collection(CollectionName);
+
+        if (isExam.HasValue)
+        {
+            query = query.WhereEqualTo("is_exam", isExam.Value);
+        }
+
+        if (isPractice.HasValue)
+        {
+            query = query.WhereEqualTo("is_practice", isPractice.Value);
+        }
+
+        var aggregateQuery = query.Count();
+        var snapshot = await aggregateQuery.GetSnapshotAsync();
+        return (int)(snapshot.Count ?? 0);
     }
 
     public async Task<SpeakingQuestion?> GetByIdAsync(string id)
@@ -50,6 +100,8 @@ public class SpeakingRepository : ISpeakingRepository
         if (doc.ContainsField("prompt_text")) question.PromptText = doc.GetValue<string>("prompt_text");
         if (doc.ContainsField("prompt_image_url")) question.PromptImageUrl = doc.GetValue<string?>("prompt_image_url");
         if (doc.ContainsField("prompt_audio_url")) question.PromptAudioUrl = doc.GetValue<string?>("prompt_audio_url");
+        if (doc.ContainsField("image_url")) question.ImageUrl = doc.GetValue<string?>("image_url");
+        if (doc.ContainsField("audio_url")) question.AudioUrl = doc.GetValue<string?>("audio_url");
         if (doc.ContainsField("preparation_time")) question.PreparationTime = doc.GetValue<int>("preparation_time");
         if (doc.ContainsField("response_time")) question.ResponseTime = doc.GetValue<int>("response_time");
         if (doc.ContainsField("difficulty")) question.Difficulty = doc.GetValue<string>("difficulty");
@@ -58,6 +110,7 @@ public class SpeakingRepository : ISpeakingRepository
         if (doc.ContainsField("exam_set_id")) question.ExamSetId = doc.GetValue<string?>("exam_set_id");
         if (doc.ContainsField("topic")) question.Topic = doc.GetValue<string?>("topic");
         if (doc.ContainsField("is_practice")) question.IsPractice = doc.GetValue<bool>("is_practice");
+        if (doc.ContainsField("is_exam")) question.IsExam = doc.GetValue<bool>("is_exam");
         if (doc.ContainsField("max_score")) question.MaxScore = doc.GetValue<int>("max_score");
         if (doc.ContainsField("sample_answer")) question.SampleAnswer = doc.GetValue<string?>("sample_answer");
         
@@ -96,6 +149,188 @@ public class SpeakingRepository : ISpeakingRepository
             }
         }
 
+        question.Explanation = MapExplanation(doc);
+        EnsureExplanationFromSampleAnswer(question);
+
         return question;
+    }
+
+    private static readonly JsonSerializerOptions ExplanationJsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true,
+        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
+        NumberHandling = JsonNumberHandling.AllowReadingFromString,
+    };
+
+    private static SpeakingExplanation? MapExplanation(DocumentSnapshot doc)
+    {
+        if (!doc.ContainsField("explanation")) return null;
+
+        try
+        {
+            var raw = doc.GetValue<object>("explanation");
+            if (raw == null) return null;
+
+            var json = JsonSerializer.Serialize(raw);
+            var explanation = JsonSerializer.Deserialize<SpeakingExplanation>(json, ExplanationJsonOptions)
+                              ?? new SpeakingExplanation();
+
+            // Firestore thường lưu sample_answer / sample_answer_translation (số ít),
+            // không khớp property SampleAnswers khi deserialize JSON.
+            FillExplanationSampleFieldsFromJson(json, explanation);
+
+            explanation.SampleAnswers = NormalizeStringList(explanation.SampleAnswers);
+            explanation.SampleAnswersTranslation = NormalizeStringList(explanation.SampleAnswersTranslation);
+            explanation.QuestionsTranslation = NormalizeStringList(explanation.QuestionsTranslation);
+
+            return explanation;
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Error mapping explanation for {doc.Id}: {ex.Message}");
+            return MapExplanationManual(doc);
+        }
+    }
+
+    /// <summary>
+    /// Đọc sample_answer (string) và sample_answer_translation từ JSON explanation của Firestore.
+    /// </summary>
+    private static void FillExplanationSampleFieldsFromJson(string explanationJson, SpeakingExplanation explanation)
+    {
+        using var doc = JsonDocument.Parse(explanationJson);
+        var root = doc.RootElement;
+
+        if (!explanation.SampleAnswers.Any())
+        {
+            var answers = ReadStringListFromJson(root, "sample_answers", "sample_answer", "sampleAnswers");
+            if (answers.Any()) explanation.SampleAnswers = answers;
+        }
+
+        if (!explanation.SampleAnswersTranslation.Any())
+        {
+            var translations = ReadStringListFromJson(
+                root,
+                "sample_answers_translation",
+                "sample_answer_translation",
+                "sampleAnswersTranslation");
+            if (translations.Any()) explanation.SampleAnswersTranslation = translations;
+        }
+    }
+
+    private static List<string> ReadStringListFromJson(JsonElement root, params string[] propertyNames)
+    {
+        foreach (var name in propertyNames)
+        {
+            if (!root.TryGetProperty(name, out var el)) continue;
+
+            if (el.ValueKind == JsonValueKind.String)
+            {
+                var text = el.GetString()?.Trim();
+                if (!string.IsNullOrEmpty(text)) return new List<string> { text };
+            }
+
+            if (el.ValueKind == JsonValueKind.Array)
+            {
+                return el.EnumerateArray()
+                    .Select(i => i.GetString()?.Trim() ?? "")
+                    .Where(s => !string.IsNullOrEmpty(s))
+                    .ToList();
+            }
+        }
+
+        return new List<string>();
+    }
+
+    private static SpeakingExplanation? MapExplanationManual(DocumentSnapshot doc)
+    {
+        try
+        {
+            if (!doc.TryGetValue<Dictionary<string, object>>("explanation", out var explanationObj)
+                || explanationObj == null)
+            {
+                return null;
+            }
+
+            var explanation = new SpeakingExplanation();
+
+            if (TryGetString(explanationObj, "translation", out var translation))
+                explanation.Translation = translation;
+
+            if (TryGetString(explanationObj, "context_translation", out var contextTranslation))
+                explanation.ContextTranslation = contextTranslation;
+
+            if (explanationObj.TryGetValue("keywords", out var keywordsRaw) && keywordsRaw is IEnumerable<object> keywordsList)
+            {
+                explanation.Keywords = keywordsList.Select(k =>
+                {
+                    if (k is not Dictionary<string, object> keywordDict) return new ExplanationKeyword();
+                    return new ExplanationKeyword
+                    {
+                        Word = keywordDict.TryGetValue("word", out var w) ? w?.ToString() ?? "" : "",
+                        Ipa = keywordDict.TryGetValue("ipa", out var ipa) ? ipa?.ToString() ?? "" : "",
+                        Meaning = keywordDict.TryGetValue("meaning", out var m) ? m?.ToString() ?? "" : "",
+                    };
+                }).ToList();
+            }
+
+            explanation.QuestionsTranslation = ReadStringList(explanationObj, "questions_translation", "questionsTranslation");
+            explanation.SampleAnswers = ReadStringList(explanationObj, "sample_answers", "sample_answer", "sampleAnswers");
+            explanation.SampleAnswersTranslation = ReadStringList(
+                explanationObj,
+                "sample_answers_translation",
+                "sample_answer_translation",
+                "sampleAnswersTranslation");
+
+            return explanation;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    private static void EnsureExplanationFromSampleAnswer(SpeakingQuestion question)
+    {
+        var sample = question.SampleAnswer?.Trim();
+        if (string.IsNullOrEmpty(sample)) return;
+
+        question.Explanation ??= new SpeakingExplanation();
+
+        if (!question.Explanation.SampleAnswers.Any())
+        {
+            question.Explanation.SampleAnswers = new List<string> { sample };
+        }
+    }
+
+    private static List<string> NormalizeStringList(List<string> values)
+    {
+        return values
+            .Where(v => !string.IsNullOrWhiteSpace(v))
+            .Select(v => v.Trim())
+            .ToList();
+    }
+
+    private static List<string> ReadStringList(Dictionary<string, object> source, params string[] keys)
+    {
+        foreach (var key in keys)
+        {
+            if (!source.TryGetValue(key, out var raw) || raw == null) continue;
+
+            if (raw is string text && !string.IsNullOrWhiteSpace(text))
+                return new List<string> { text.Trim() };
+
+            if (raw is IEnumerable<object> list)
+                return list.Select(v => v?.ToString() ?? "").Where(v => !string.IsNullOrWhiteSpace(v)).ToList();
+        }
+
+        return new List<string>();
+    }
+
+    private static bool TryGetString(Dictionary<string, object> source, string key, out string value)
+    {
+        value = string.Empty;
+        if (!source.TryGetValue(key, out var raw) || raw == null) return false;
+        value = raw.ToString() ?? string.Empty;
+        return !string.IsNullOrWhiteSpace(value);
     }
 }
