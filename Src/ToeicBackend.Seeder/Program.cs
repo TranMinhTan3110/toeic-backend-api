@@ -22,11 +22,16 @@ Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine(" Kết nối Firestore thành công!\n");
 Console.ResetColor();
 
-// ====================================================
-// UPDATE TEST 6 SPEAKING QUESTIONS
-// ====================================================
-string seedDir = Path.Combine(projectRoot, "ToeicBackend.Seeder", "SeedData");
-string jsonPath = Path.Combine(seedDir, "speaking_questions_t6.json");
+// --- Seed từng collection ---
+await SeedCollection("vocabulary", "vocabulary.json");
+await SeedCollection("grammar_topics", "grammar_topics.json");
+await SeedCollection("question_groups", "question_groups.json");
+await SeedCollection("question_groups", "question_group_listening.json");
+await SeedCollection("questions", "questions.json");
+await SeedCollection("questions", "practiceListening.json");
+await SeedCollection("exams", "exams.json");
+await SeedCollection("speaking_questions", "speaking_questions.json");
+await SeedCollection("writing_questions", "writing_questions.json");
 
 if (!File.Exists(jsonPath))
 {
@@ -67,10 +72,22 @@ foreach (var item in newQuestions)
     string? existingImage = snapshot.Exists && snapshot.ContainsField("prompt_image_url")
         ? snapshot.GetValue<string?>("prompt_image_url") : null;
 
+<<<<<<< HEAD
     string? newAudio = item.TryGetValue("prompt_audio_url", out var elAudio) && elAudio.ValueKind == JsonValueKind.String
         ? elAudio.GetString() : null;
     string? newImage = item.TryGetValue("prompt_image_url", out var elImage) && elImage.ValueKind == JsonValueKind.String
         ? elImage.GetString() : null;
+=======
+    string json = await File.ReadAllTextAsync(filePath);
+    if (string.IsNullOrWhiteSpace(json))
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"  Bỏ qua '{collectionName}' — file rỗng: {fileName}");
+        Console.ResetColor();
+        return;
+    }
+    var items = JsonSerializer.Deserialize<List<Dictionary<string, JsonElement>>>(json);
+>>>>>>> 70ca1e9232d4b226a2af77e68521e35c1e8a560c
 
     var data = ConvertToFirestoreDict(item);
     data["id"] = docId;

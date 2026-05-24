@@ -8,4 +8,7 @@ public interface IVocabularyRepository
     Task<Vocabulary?> GetByIdAsync(string id);
     Task<IEnumerable<string>> GetTopicsAsync();
     Task<IEnumerable<string>> GetLevelsAsync();
+    Task<int> GetCountAsync();
+    Task<IEnumerable<Vocabulary>> GetByIdsAsync(IEnumerable<string> ids);
 }
+
