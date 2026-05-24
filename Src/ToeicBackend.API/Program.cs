@@ -97,6 +97,9 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingService,
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningRepository, ToeicBackend.Infrastructure.Repositories.ListeningRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningService, ToeicBackend.Application.Services.ListeningService>();
 
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionRepository, ToeicBackend.Infrastructure.Repositories.WritingQuestionRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionService, ToeicBackend.Application.Services.WritingQuestionService>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
