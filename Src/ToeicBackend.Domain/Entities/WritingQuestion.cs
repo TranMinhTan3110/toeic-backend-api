@@ -15,7 +15,9 @@ public class WritingQuestion
     public int? MaxWords { get; set; }
     public int MaxScore { get; set; }
     public List<string> ScoringCriteria { get; set; } = new(); // grammar, vocabulary, cohesion, relevance
-    public string? SampleAnswer { get; set; }
+    public string? SampleAnswer { get; set; } // Standard answer for all task types
+    public string? SampleAnswerTranslation { get; set; } // Vietnamese translation of sample answer (for picture_description, opinion_essay, respond_email)
+    public string? ExplanationVietnamese { get; set; } // Vietnamese explanation/prompt for respond_email task only
     public string? AiPrompt { get; set; }
     public string? Topic { get; set; }
     public string Difficulty { get; set; } = string.Empty; // easy | medium | hard

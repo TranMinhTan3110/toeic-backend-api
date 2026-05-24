@@ -81,6 +81,28 @@ public class WritingQuestionController : ControllerBase
     }
 
     /// <summary>
+    /// Get practice questions by task type
+    /// </summary>
+    [HttpGet("by-type/{taskType}/practice")]
+    public async Task<IActionResult> GetPracticeByTaskType(string taskType)
+    {
+        Console.WriteLine($"[DEBUG] GetPracticeByTaskType called with taskType: '{taskType}'");
+        var results = await _service.GetPracticeByTaskTypeAsync(taskType);
+        return Ok(results);
+    }
+
+    /// <summary>
+    /// Get exam questions by task type
+    /// </summary>
+    [HttpGet("by-type/{taskType}/exam")]
+    public async Task<IActionResult> GetExamByTaskType(string taskType)
+    {
+        Console.WriteLine($"[DEBUG] GetExamByTaskType called with taskType: '{taskType}'");
+        var results = await _service.GetExamByTaskTypeAsync(taskType);
+        return Ok(results);
+    }
+
+    /// <summary>
     /// Get available task types
     /// </summary>
     [HttpGet("types")]

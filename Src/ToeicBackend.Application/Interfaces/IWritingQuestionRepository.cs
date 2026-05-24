@@ -10,5 +10,7 @@ public interface IWritingQuestionRepository
     Task<IEnumerable<WritingQuestion>> GetByTaskNumberAsync(int taskNumber);
     Task<IEnumerable<WritingQuestion>> GetByDifficultyAsync(string difficulty);
     Task<IEnumerable<WritingQuestion>> GetPracticeQuestionsAsync();
+    Task<IEnumerable<WritingQuestion>> GetPracticeByTaskTypeAsync(string taskType);
+    Task<IEnumerable<WritingQuestion>> GetExamByTaskTypeAsync(string taskType);
     Task<IEnumerable<string>> GetAvailableTaskTypesAsync();
 }

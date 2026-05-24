@@ -49,6 +49,18 @@ public class WritingQuestionService : IWritingQuestionService
         return entities.Select(MapToDto);
     }
 
+    public async Task<IEnumerable<WritingQuestionDto>> GetPracticeByTaskTypeAsync(string taskType)
+    {
+        var entities = await _repository.GetPracticeByTaskTypeAsync(taskType);
+        return entities.Select(MapToDto);
+    }
+
+    public async Task<IEnumerable<WritingQuestionDto>> GetExamByTaskTypeAsync(string taskType)
+    {
+        var entities = await _repository.GetExamByTaskTypeAsync(taskType);
+        return entities.Select(MapToDto);
+    }
+
     public async Task<IEnumerable<string>> GetAvailableTaskTypesAsync()
     {
         return await _repository.GetAvailableTaskTypesAsync();
@@ -72,6 +84,8 @@ public class WritingQuestionService : IWritingQuestionService
             MaxScore = entity.MaxScore,
             ScoringCriteria = entity.ScoringCriteria,
             SampleAnswer = entity.SampleAnswer,
+            SampleAnswerTranslation = entity.SampleAnswerTranslation,
+            ExplanationVietnamese = entity.ExplanationVietnamese,
             Topic = entity.Topic,
             Difficulty = entity.Difficulty,
             ExamSetId = entity.ExamSetId,

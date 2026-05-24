@@ -74,6 +74,32 @@ public class WritingQuestionRepository : IWritingQuestionRepository
         return snapshot.Documents.Select(MapToDomain);
     }
 
+    public async Task<IEnumerable<WritingQuestion>> GetPracticeByTaskTypeAsync(string taskType)
+    {
+        taskType = taskType?.Trim().ToLowerInvariant() ?? "";
+        Console.WriteLine($"[DEBUG] Querying practice questions by task_type: '{taskType}'");
+        
+        var query = _firestoreDb.Collection(CollectionName)
+            .WhereEqualTo("task_type", taskType)
+            .WhereEqualTo("is_practice", true);
+        var snapshot = await query.GetSnapshotAsync();
+        
+        return snapshot.Documents.Select(MapToDomain);
+    }
+
+    public async Task<IEnumerable<WritingQuestion>> GetExamByTaskTypeAsync(string taskType)
+    {
+        taskType = taskType?.Trim().ToLowerInvariant() ?? "";
+        Console.WriteLine($"[DEBUG] Querying exam questions by task_type: '{taskType}'");
+        
+        var query = _firestoreDb.Collection(CollectionName)
+            .WhereEqualTo("task_type", taskType)
+            .WhereEqualTo("is_practice", false);
+        var snapshot = await query.GetSnapshotAsync();
+        
+        return snapshot.Documents.Select(MapToDomain);
+    }
+
     public async Task<IEnumerable<string>> GetAvailableTaskTypesAsync()
     {
         var snapshot = await _firestoreDb.Collection(CollectionName).Select("task_type").GetSnapshotAsync();
@@ -102,6 +128,8 @@ public class WritingQuestionRepository : IWritingQuestionRepository
         if (doc.ContainsField("max_words")) wq.MaxWords = doc.GetValue<int?>("max_words");
         if (doc.ContainsField("max_score")) wq.MaxScore = doc.GetValue<int>("max_score");
         if (doc.ContainsField("sample_answer")) wq.SampleAnswer = doc.GetValue<string?>("sample_answer");
+        if (doc.ContainsField("sample_answer_translation")) wq.SampleAnswerTranslation = doc.GetValue<string?>("sample_answer_translation");
+        if (doc.ContainsField("explanation_vietnamese")) wq.ExplanationVietnamese = doc.GetValue<string?>("explanation_vietnamese");
         if (doc.ContainsField("ai_prompt")) wq.AiPrompt = doc.GetValue<string?>("ai_prompt");
         if (doc.ContainsField("topic")) wq.Topic = doc.GetValue<string?>("topic");
         if (doc.ContainsField("difficulty")) wq.Difficulty = doc.GetValue<string>("difficulty");
