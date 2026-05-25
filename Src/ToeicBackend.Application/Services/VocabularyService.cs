@@ -15,11 +15,28 @@ public class VocabularyService : IVocabularyService
         _progressRepository = progressRepository;
     }
 
-    public async Task<IEnumerable<VocabularyDto>> GetVocabularyListAsync(string? topic, string? level, string? userId = null)
+    public async Task<PaginatedResultDto<VocabularyDto>> GetVocabularyListAsync(
+        string? topic, 
+        string? level, 
+        int page, 
+        int limit, 
+        string? search, 
+        string? userId = null)
     {
         var entities = await _repository.GetFilteredAsync(topic, level);
 
-        // Nếu có userId → load starred IDs để merge vào kết quả
+        // Thực hiện tìm kiếm (search) cục bộ case-insensitive trên RAM
+        if (!string.IsNullOrEmpty(search))
+        {
+            var cleanSearch = search.Trim().ToLowerInvariant();
+            entities = entities.Where(e => 
+                e.Word.ToLowerInvariant().Contains(cleanSearch) ||
+                (e.DefinitionEn != null && e.DefinitionEn.ToLowerInvariant().Contains(cleanSearch)) ||
+                (e.DefinitionVi != null && e.DefinitionVi.ToLowerInvariant().Contains(cleanSearch))
+            );
+        }
+
+        // Lấy starred IDs nếu có userId để merge vào DTO
         HashSet<string>? starredIds = null;
         if (!string.IsNullOrEmpty(userId))
         {
@@ -30,7 +47,23 @@ public class VocabularyService : IVocabularyService
                 .ToHashSet();
         }
 
-        return entities.Select(e => MapToDto(e, starredIds));
+        var totalCount = entities.Count();
+
+        // Thực hiện phân trang (Skip + Take)
+        var pagedEntities = entities
+            .Skip((page - 1) * limit)
+            .Take(limit)
+            .ToList();
+
+        var dtos = pagedEntities.Select(e => MapToDto(e, starredIds));
+
+        return new PaginatedResultDto<VocabularyDto>
+        {
+            Items = dtos,
+            TotalCount = totalCount,
+            Page = page,
+            Limit = limit
+        };
     }
 
     public async Task<VocabularyDto?> GetVocabularyByIdAsync(string id)

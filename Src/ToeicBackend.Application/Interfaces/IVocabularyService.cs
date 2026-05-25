@@ -4,7 +4,13 @@ namespace ToeicBackend.Application.Interfaces;
 
 public interface IVocabularyService
 {
-    Task<IEnumerable<VocabularyDto>> GetVocabularyListAsync(string? topic, string? level, string? userId = null);
+    Task<PaginatedResultDto<VocabularyDto>> GetVocabularyListAsync(
+        string? topic, 
+        string? level, 
+        int page, 
+        int limit, 
+        string? search, 
+        string? userId = null);
     Task<VocabularyDto?> GetVocabularyByIdAsync(string id);
     Task<IEnumerable<string>> GetTopicsAsync();
     Task<IEnumerable<string>> GetLevelsAsync();

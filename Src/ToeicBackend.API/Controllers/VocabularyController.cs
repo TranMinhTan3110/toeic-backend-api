@@ -146,14 +146,19 @@ public class VocabularyController : ControllerBase
 
     [HttpGet]
     [AllowAnonymous]
-    public async Task<IActionResult> GetAll([FromQuery] string? topic = null, [FromQuery] string? level = null)
+    public async Task<IActionResult> GetAll(
+        [FromQuery] string? topic = null, 
+        [FromQuery] string? level = null,
+        [FromQuery] int page = 1,
+        [FromQuery] int limit = 20,
+        [FromQuery] string? search = null)
     {
         // Lấy userId nếu user đã đăng nhập (optional)
         var userId = User.Identity?.IsAuthenticated == true
             ? User.GetFirebaseUserId()
             : null;
 
-        var results = await _service.GetVocabularyListAsync(topic, level, userId);
+        var results = await _service.GetVocabularyListAsync(topic, level, page, limit, search, userId);
         return Ok(results);
     }
 
