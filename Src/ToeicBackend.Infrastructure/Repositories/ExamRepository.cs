@@ -4,75 +4,61 @@ using ToeicBackend.Domain.Entities;
 
 namespace ToeicBackend.Infrastructure.Repositories;
 
-public class ListeningRepository : IListeningRepository
+public class ExamRepository : IExamRepository
 {
     private readonly FirestoreDb _firestoreDb;
     private const string QuestionsCollection = "questions";
     private const string GroupsCollection = "question_groups";
 
-    public ListeningRepository(FirestoreDb firestoreDb)
+    public ExamRepository(FirestoreDb firestoreDb)
     {
         _firestoreDb = firestoreDb;
     }
 
-    public async Task<IEnumerable<ListeningQuestion>> GetQuestionsByPartAsync(int part)
+    public async Task<IEnumerable<ListeningQuestion>> GetExamQuestionsAsync(string examId)
     {
-         var snapshot = await _firestoreDb.Collection(QuestionsCollection)
-             .WhereEqualTo("skill", "listening")
-             .WhereEqualTo("part", part)
-             .WhereEqualTo("is_for_exam", false)      
-             .WhereEqualTo("is_for_practice", true)   
-             .GetSnapshotAsync();
- 
-         return snapshot.Documents.Select(MapToQuestion);
-    }
-
-
-    public async Task<ListeningQuestion?> GetQuestionByIdAsync(string id)
-    {
-        var docRef = _firestoreDb.Collection(QuestionsCollection).Document(id);
-        var snapshot = await docRef.GetSnapshotAsync();
-        return snapshot.Exists ? MapToQuestion(snapshot) : null;
-    }
-
-    public async Task<IEnumerable<QuestionGroup>> GetGroupsByPartAsync(int part)
-    {
-        var snapshot = await _firestoreDb.Collection(GroupsCollection)
-            .WhereEqualTo("part", part)
-            .WhereEqualTo("is_for_exam", false)
-            .WhereEqualTo("is_for_practice", true)
+        var snapshot = await _firestoreDb.Collection(QuestionsCollection)
+            .WhereEqualTo("skill", "listening")
+            .WhereEqualTo("exam_id", examId)
+            .WhereEqualTo("is_for_exam", true)
             .GetSnapshotAsync();
 
-        return snapshot.Documents.Select(MapToGroup);
+        return snapshot.Documents.Select(MapToQuestion);
     }
 
-    public async Task<QuestionGroup?> GetGroupByIdAsync(string groupId)
+    public async Task<IEnumerable<QuestionGroup>> GetExamGroupsAsync(string examId)
     {
-        var docRef = _firestoreDb.Collection(GroupsCollection).Document(groupId);
-        var snapshot = await docRef.GetSnapshotAsync();
-        return snapshot.Exists ? MapToGroup(snapshot) : null;
-    }
+        // 1. Lấy tất cả các câu hỏi của part 3, 4 thuộc đề thi này để lấy danh sách group_id
+        var questionsSnapshot = await _firestoreDb.Collection(QuestionsCollection)
+            .WhereEqualTo("skill", "listening")
+            .WhereEqualTo("exam_id", examId)
+            .WhereEqualTo("is_for_exam", true)
+            .WhereIn("part", new[] { 3, 4 })
+            .GetSnapshotAsync();
 
-    public async Task<IEnumerable<ListeningQuestion>> GetQuestionsByIdsAsync(List<string> ids)
-    {
-        if (ids == null || !ids.Any()) return Enumerable.Empty<ListeningQuestion>();
+        var groupIds = questionsSnapshot.Documents
+            .Where(d => d.ContainsField("group_id"))
+            .Select(d => d.GetValue<string>("group_id"))
+            .Distinct()
+            .ToList();
 
-        // Firestore WhereIn tối đa 30 phần tử mỗi query.
-        const int chunkSize = 30;
-        var distinctIds = ids.Where(id => !string.IsNullOrWhiteSpace(id)).Distinct().ToList();
-        var results = new List<ListeningQuestion>();
+        var groups = new List<QuestionGroup>();
 
-        for (var i = 0; i < distinctIds.Count; i += chunkSize)
+        // 2. Query groups theo chuỗi id (Firestore IN query max 10 items)
+        for (int i = 0; i < groupIds.Count; i += 10)
         {
-            var chunk = distinctIds.Skip(i).Take(chunkSize).ToList();
-            var snapshot = await _firestoreDb.Collection(QuestionsCollection)
-                .WhereIn(FieldPath.DocumentId, chunk)
-                .GetSnapshotAsync();
-
-            results.AddRange(snapshot.Documents.Select(MapToQuestion));
+            var chunk = groupIds.Skip(i).Take(10).ToList();
+            if (chunk.Any())
+            {
+                var groupSnapshot = await _firestoreDb.Collection(GroupsCollection)
+                    .WhereIn(FieldPath.DocumentId, chunk)
+                    .GetSnapshotAsync();
+                
+                groups.AddRange(groupSnapshot.Documents.Select(MapToGroup));
+            }
         }
 
-        return results;
+        return groups;
     }
 
     private ListeningQuestion MapToQuestion(DocumentSnapshot doc)
