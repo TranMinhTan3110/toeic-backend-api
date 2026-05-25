@@ -1,0 +1,1490 @@
+[
+  {
+    "id": "q_gram_001",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The board of directors _______ the annual budget proposal during yesterday's emergency meeting.",
+    "options": [
+      "A. approves",
+      "B. approved",
+      "C. approving",
+      "D. will approve"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Ban giám đốc đã thông qua đề xuất ngân sách hàng năm trong cuộc họp khẩn cấp ngày hôm qua.",
+      "option_explanations": {
+        "A": "approves - Hiện tại đơn, chỉ thói quen hoặc lịch trình (Sai)",
+        "B": "approved - Quá khứ đơn (Đúng, vì hành động đã xảy ra hôm qua)",
+        "C": "approving - V-ing, không làm động từ chính khi thiếu động từ to be (Sai)",
+        "D": "will approve - Tương lai đơn, chỉ hành động sẽ xảy ra (Sai)"
+      },
+      "grammar_explanation": "Câu có dấu hiệu thời gian 'yesterday' (hôm qua) chỉ hành động đã xảy ra và chấm dứt trong quá khứ, nên động từ chính phải chia ở thì quá khứ đơn (V-ed) -> 'approved'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_002",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Mr. Henderson _______ as the lead software architect at TechVanguard for five years before transferring to the London branch.",
+    "options": [
+      "A. works",
+      "B. worked",
+      "C. working",
+      "D. has worked"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Ông Henderson đã làm việc với tư cách là kiến trúc sư phần mềm chính tại TechVanguard trong năm năm trước khi chuyển sang chi nhánh Luân Đôn.",
+      "option_explanations": {
+        "A": "works - Hiện tại đơn (Sai)",
+        "B": "worked - Quá khứ đơn (Đúng, vì sự việc làm việc đã kết thúc hoàn toàn trong quá khứ trước khi chuyển đi)",
+        "C": "working - V-ing, không làm động từ chính (Sai)",
+        "D": "has worked - Hiện tại hoàn thành, diễn tả hành động vẫn còn tiếp diễn ở hiện tại (Sai, vì ông đã chuyển đi)"
+      },
+      "grammar_explanation": "Mặc dù có khoảng thời gian 'for five years', sự việc làm việc này đã kết thúc hoàn toàn trong quá khứ trước một hành động quá khứ khác 'before transferring' (trước khi chuyển đi). Do đó, động từ phải chia ở thì quá khứ đơn -> 'worked'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "hard",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_003",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "We _______ your shipment two days ago, and it should arrive at your warehouse shortly.",
+    "options": [
+      "A. dispatch",
+      "B. dispatched",
+      "C. dispatching",
+      "D. will dispatch"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Chúng tôi đã gửi lô hàng của bạn hai ngày trước, và nó sẽ sớm đến kho của bạn.",
+      "option_explanations": {
+        "A": "dispatch - Hiện tại đơn (Sai)",
+        "B": "dispatched - Quá khứ đơn (Đúng, vì việc gửi hàng xảy ra 2 ngày trước)",
+        "C": "dispatching - V-ing (Sai)",
+        "D": "will dispatch - Tương lai đơn (Sai)"
+      },
+      "grammar_explanation": "Câu có dấu hiệu nhận biết thời gian rõ ràng 'two days ago' (hai ngày trước), chỉ sự việc xảy ra và kết thúc trong quá khứ, ta chia quá khứ đơn -> 'dispatched'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_004",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The public relations department _______ a press release responding to the rumor last night.",
+    "options": [
+      "A. issues",
+      "B. issued",
+      "C. issuing",
+      "D. is issuing"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Bộ phận quan hệ công chúng đã phát hành một thông cáo báo chí phản hồi về tin đồn tối qua.",
+      "option_explanations": {
+        "A": "issues - Hiện tại đơn (Sai)",
+        "B": "issued - Quá khứ đơn (Đúng, vì có 'last night')",
+        "C": "issuing - V-ing (Sai)",
+        "D": "is issuing - Hiện tại tiếp diễn (Sai)"
+      },
+      "grammar_explanation": "Trạng từ thời gian 'last night' (tối qua) là dấu hiệu điển hình của thì quá khứ đơn, do đó chọn động từ dạng V-ed -> 'issued'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_005",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Last year, Apex Corporation _______ its production capacity by building a new facility in Vietnam.",
+    "options": [
+      "A. expands",
+      "B. expanded",
+      "C. expanding",
+      "D. expansion"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Năm ngoái, Tập đoàn Apex đã mở rộng công suất sản xuất của mình bằng cách xây dựng một cơ sở mới tại Việt Nam.",
+      "option_explanations": {
+        "A": "expands - Động từ số ít ở hiện tại đơn (Sai)",
+        "B": "expanded - Động từ chia ở quá khứ đơn (Đúng)",
+        "C": "expanding - Dạng phân từ (Sai)",
+        "D": "expansion - Danh từ 'sự mở rộng' (Sai vì vị trí cần động từ chính)"
+      },
+      "grammar_explanation": "Trạng từ 'Last year' đứng đầu câu chỉ thời gian năm ngoái (quá khứ), do đó động từ chính của câu phải chia quá khứ đơn -> 'expanded'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_006",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The IT team quickly _______ the server issues that occurred during the database migration yesterday afternoon.",
+    "options": [
+      "A. resolve",
+      "B. resolved",
+      "C. resolving",
+      "D. resolves"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Nhóm CNTT đã nhanh chóng khắc phục sự cố máy chủ xảy ra trong quá trình di chuyển cơ sở dữ liệu chiều hôm qua.",
+      "option_explanations": {
+        "A": "resolve - Động từ nguyên mẫu (Sai)",
+        "B": "resolved - Động từ quá khứ đơn (Đúng, vì sự cố xảy ra chiều hôm qua)",
+        "C": "resolving - Phân từ hiện tại (Sai)",
+        "D": "resolves - Động từ hiện tại đơn (Sai)"
+      },
+      "grammar_explanation": "Sự việc xảy ra vào 'yesterday afternoon' (chiều hôm qua) đã chấm dứt hoàn toàn, do đó động từ chính trong câu phải chia ở thì quá khứ đơn -> 'resolved'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_007",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "When the firm was founded in 2010, the co-founders _______ only a small office space downtown.",
+    "options": [
+      "A. rent",
+      "B. rented",
+      "C. renting",
+      "D. rents"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Khi công ty được thành lập vào năm 2010, các nhà đồng sáng lập chỉ thuê một không gian văn phòng nhỏ ở trung tâm thành phố.",
+      "options_explanations": {
+        "A": "rent - Động từ nguyên mẫu (Sai)",
+        "B": "rented - Động từ quá khứ đơn (Đúng)",
+        "C": "renting - Phân từ (Sai)",
+        "D": "rents - Động từ số ít ở hiện tại đơn (Sai)"
+      },
+      "grammar_explanation": "Mệnh đề 'When the firm was founded in 2010' xác định mốc thời gian rõ ràng trong quá khứ (năm 2010), do đó mệnh đề chính sau dấu phẩy cũng phải chia quá khứ đơn -> 'rented'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_008",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Although the marketing strategy looked promising, it _______ to generate the expected sales volume last quarter.",
+    "options": [
+      "A. fails",
+      "B. failed",
+      "C. failing",
+      "D. will fail"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Mặc dù chiến lược tiếp thị trông có vẻ đầy hứa hẹn, nó đã thất bại trong việc tạo ra doanh số mong đợi trong quý trước.",
+      "option_explanations": {
+        "A": "fails - Hiện tại đơn (Sai)",
+        "B": "failed - Quá khứ đơn (Đúng, vì có 'last quarter')",
+        "C": "failing - Phân từ V-ing (Sai)",
+        "D": "will fail - Tương lai đơn (Sai)"
+      },
+      "grammar_explanation": "Có dấu hiệu chỉ thời gian quá khứ 'last quarter' (quý trước) nên ta chia động từ ở quá khứ đơn -> 'failed'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_009",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The former manager _______ all confidential documents before she officially resigned last Friday.",
+    "options": [
+      "A. shreds",
+      "B. shredded",
+      "C. shredding",
+      "D. will shred"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Cựu quản lý đã tiêu hủy tất cả các tài liệu mật trước khi bà chính thức từ chức thứ Sáu tuần trước.",
+      "option_explanations": {
+        "A": "shreds - Hiện tại đơn (Sai)",
+        "B": "shredded - Quá khứ đơn (Đúng)",
+        "C": "shredding - V-ing (Sai)",
+        "D": "will shred - Tương lai đơn (Sai)"
+      },
+      "grammar_explanation": "Mệnh đề sau 'before' dùng thì quá khứ đơn 'she officially resigned', chỉ sự việc từ chức đã diễn ra tuần trước. Hành động tiêu hủy tài liệu xảy ra trước hoặc cùng thời điểm quá khứ đó, nên chia quá khứ đơn/quá khứ hoàn thành -> 'shredded' (dạng V2/V-ed của shred)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "hard",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_010",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Yesterday's heavy downpour _______ significant delays in the evening commute for subway passengers.",
+    "options": [
+      "A. causes",
+      "B. caused",
+      "C. causing",
+      "D. will cause"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Trận mưa lớn hôm qua đã gây ra sự chậm trễ đáng kể trong việc đi lại vào buổi tối của hành khách đi tàu điện ngầm.",
+      "option_explanations": {
+        "A": "causes - Hiện tại đơn (Sai)",
+        "B": "caused - Quá khứ đơn (Đúng, sự việc xảy ra hôm qua)",
+        "C": "causing - V-ing (Sai)",
+        "D": "will cause - Tương lai đơn (Sai)"
+      },
+      "grammar_explanation": "Trận mưa lớn hôm qua 'Yesterday's heavy downpour' xác định thời gian trong quá khứ, động từ chính chia quá khứ đơn -> 'caused'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_011",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Last year, the software developers _______ several crucial security flaws in the mobile application's source code.",
+    "options": [
+      "A. identify",
+      "B. identified",
+      "C. identifying",
+      "D. identifies"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Năm ngoái, các nhà phát triển phần mềm đã xác định được một số lỗi bảo mật nghiêm trọng trong mã nguồn của ứng dụng di động.",
+      "option_explanations": {
+        "A": "identify - Động từ nguyên mẫu (Sai)",
+        "B": "identified - Quá khứ đơn (Đúng)",
+        "C": "identifying - V-ing (Sai)",
+        "D": "identifies - Động từ số ít ở hiện tại đơn (Sai)"
+      },
+      "grammar_explanation": "Có cụm từ 'Last year' chỉ mốc thời gian năm ngoái (quá khứ), chia động từ chính ở quá khứ đơn -> 'identified'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_012",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The technician _______ the broken photocopier before the office staff arrived at 8:00 AM.",
+    "options": [
+      "A. repairs",
+      "B. repaired",
+      "C. repairing",
+      "D. is repairing"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Kỹ thuật viên đã sửa chiếc máy photocopy bị hỏng trước khi nhân viên văn phòng đến lúc 8 giờ sáng.",
+      "option_explanations": {
+        "A": "repairs - Hiện tại đơn (Sai)",
+        "B": "repaired - Quá khứ đơn (Đúng)",
+        "C": "repairing - V-ing (Sai)",
+        "D": "is repairing - Hiện tại tiếp diễn (Sai)"
+      },
+      "grammar_explanation": "Mệnh đề sau 'before' ở quá khứ đơn 'office staff arrived', nên hành động sửa máy xảy ra trước/cùng thời điểm đó cũng được chia ở thì quá khứ đơn (hoặc quá khứ hoàn thành) -> 'repaired'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "past-tense"],
+    "grammar_topic_id": "gtopic_001",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_013",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The regional shuttle train _______ from Platform 4 at exactly 9:15 AM every weekday.",
+    "options": [
+      "A. depart",
+      "B. departs",
+      "C. departed",
+      "D. departing"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Tàu con thoi khu vực khởi hành từ Sân ga số 4 vào lúc đúng 9 giờ 15 phút sáng mỗi ngày trong tuần.",
+      "option_explanations": {
+        "A": "depart - Động từ nguyên mẫu số nhiều (Sai vì chủ ngữ 'shuttle train' là số ít)",
+        "B": "departs - Động từ số ít ở hiện tại đơn (Đúng, vì diễn tả lịch trình cố định)",
+        "C": "departed - Quá khứ đơn (Sai, trừ khi muốn nói về một ngày cụ thể đã qua)",
+        "D": "departing - V-ing (Sai)"
+      },
+      "grammar_explanation": "Câu diễn tả một lịch trình tàu chạy cố định 'at exactly 9:15 AM every weekday' (mỗi ngày trong tuần). Với lịch trình, thời khóa biểu, ta chia ở thì hiện tại đơn. Chủ ngữ 'shuttle train' số ít nên động từ thêm -s -> 'departs'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_014",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The chief executive officer typically _______ the financial statements of all subsidiaries once a month.",
+    "options": [
+      "A. review",
+      "B. reviews",
+      "C. reviewed",
+      "D. reviewing"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Giám đốc điều hành thường xem xét báo cáo tài chính của tất cả các công ty con mỗi tháng một lần.",
+      "option_explanations": {
+        "A": "review - Động từ nguyên mẫu (Sai vì chủ ngữ CEO là số ít)",
+        "B": "reviews - Động từ số ít hiện tại đơn (Đúng)",
+        "C": "reviewed - Quá khứ đơn (Sai vì đây là thói quen định kỳ)",
+        "D": "reviewing - V-ing (Sai)"
+      },
+      "grammar_explanation": "Trạng từ chỉ tần suất 'typically' (thường lệ) và trạng ngữ chỉ tần suất 'once a month' (mỗi tháng một lần) là dấu hiệu của hành động lặp đi lặp lại ở hiện tại (thì hiện tại đơn). Chủ ngữ 'chief executive officer' số ít nên động từ chia 'reviews'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_015",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Please make sure that the security guard _______ the main entrance before leaving the building.",
+    "options": [
+      "A. lock",
+      "B. locks",
+      "C. locked",
+      "D. locking"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Vui lòng đảm bảo rằng nhân viên bảo vệ khóa cổng chính trước khi rời khỏi tòa nhà.",
+      "option_explanations": {
+        "A": "lock - Động từ nguyên mẫu (Sai)",
+        "B": "locks - Động từ thêm s ở hiện tại đơn (Đúng)",
+        "C": "locked - Quá khứ đơn (Sai, ngữ cảnh là yêu cầu/nhắc nhở ở hiện tại/tương lai)",
+        "D": "locking - V-ing (Sai)"
+      },
+      "grammar_explanation": "Mệnh đề danh ngữ sau cấu trúc 'make sure that' diễn tả một yêu cầu, quy định chung ở hiện tại. Chủ ngữ 'security guard' số ít, động từ chia ở hiện tại đơn -> 'locks'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_016",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Because the raw materials are highly sensitive to moisture, the technician always _______ the humidity levels in the warehouse.",
+    "options": [
+      "A. monitor",
+      "B. monitors",
+      "C. monitored",
+      "D. monitoring"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Bởi vì các nguyên liệu thô rất nhạy cảm với độ ẩm, kỹ thuật viên luôn giám sát mức độ ẩm trong kho.",
+      "option_explanations": {
+        "A": "monitor - Động từ nguyên mẫu (Sai)",
+        "B": "monitors - Hiện tại đơn số ít (Đúng, vì có trạng từ 'always')",
+        "C": "monitored - Quá khứ đơn (Sai)",
+        "D": "monitoring - V-ing (Sai)"
+      },
+      "grammar_explanation": "Sự xuất hiện của trạng từ tần suất 'always' (luôn luôn) biểu thị thói quen hoặc quy trình làm việc thường xuyên ở hiện tại, động từ chia ở hiện tại đơn. Chủ ngữ 'technician' là ngôi thứ 3 số ít nên động từ thêm -s -> 'monitors'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_017",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Water _______ at 100 degrees Celsius under normal atmospheric pressure.",
+    "options": [
+      "A. boil",
+      "B. boils",
+      "C. boiled",
+      "D. boiling"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Nước sôi ở 100 độ C dưới áp suất khí quyển bình thường.",
+      "option_explanations": {
+        "A": "boil - Nguyên mẫu (Sai vì water là danh từ không đếm được/số ít)",
+        "B": "boils - Hiện tại đơn số ít (Đúng, chỉ sự thật hiển nhiên)",
+        "C": "boiled - Quá khứ đơn (Sai)",
+        "D": "boiling - V-ing (Sai)"
+      },
+      "grammar_explanation": "Câu diễn tả một chân lý, sự thật hiển nhiên trong khoa học, bắt buộc dùng thì Hiện tại đơn. Chủ ngữ 'Water' không đếm được nên chia động từ số ít -> 'boils'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_018",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The annual technology convention _______ next Monday and features over fifty prominent speakers.",
+    "options": [
+      "A. begin",
+      "B. begins",
+      "C. began",
+      "D. beginning"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Hội nghị công nghệ thường niên bắt đầu vào thứ Hai tới và có sự tham gia của hơn năm mươi diễn giả nổi tiếng.",
+      "option_explanations": {
+        "A": "begin - Nguyên mẫu (Sai)",
+        "B": "begins - Hiện tại đơn số ít (Đúng, chỉ lịch trình sự kiện)",
+        "C": "began - Quá khứ đơn (Sai)",
+        "D": "beginning - V-ing (Sai)"
+      },
+      "grammar_explanation": "Mặc dù có 'next Monday' chỉ tương lai, hội nghị 'annual technology convention' bắt đầu theo lịch trình, thời khóa biểu công bố sẵn. Với lịch trình sự kiện/lịch họp, ta dùng thì hiện tại đơn. Chủ ngữ số ít nên chọn 'begins'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_019",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Members of the Lehua Vacation Club _______ double loyalty points during the month of August.",
+    "options": [
+      "A. receive",
+      "B. receives",
+      "C. received",
+      "D. receiving"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Thành viên của Lehua Vacation Club nhận được điểm tích lũy gấp đôi trong suốt tháng Tám.",
+      "option_explanations": {
+        "A": "receive - Hiện tại đơn nguyên mẫu (Đúng, vì chủ ngữ 'Members' là số nhiều)",
+        "B": "receives - Hiện tại đơn số ít (Sai)",
+        "C": "received - Quá khứ đơn (Sai)",
+        "D": "receiving - V-ing (Sai)"
+      },
+      "grammar_explanation": "Câu nêu lên một chính sách, quy định chung của câu lạc bộ nghỉ dưỡng (được áp dụng thường xuyên hoặc lặp lại vào tháng 8 hàng năm), dùng thì hiện tại đơn. Chủ ngữ chính là danh từ số nhiều 'Members' nên động từ ở dạng nguyên mẫu -> 'receive'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_020",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Our customer service center _______ telephone inquiries 24 hours a day, 7 days a week.",
+    "options": [
+      "A. handle",
+      "B. handles",
+      "C. handled",
+      "D. is to handle"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Trung tâm dịch vụ khách hàng của chúng tôi xử lý các câu hỏi qua điện thoại 24 giờ một ngày, 7 ngày một tuần.",
+      "option_explanations": {
+        "A": "handle - Động từ nguyên mẫu (Sai)",
+        "B": "handles - Động từ số ít hiện tại đơn (Đúng, chỉ hoạt động liên tục thường nhật)",
+        "C": "handled - Quá khứ đơn (Sai)",
+        "D": "is to handle - Cấu trúc tương lai/nhiệm vụ (Sai)"
+      },
+      "grammar_explanation": "Cụm từ '24 hours a day, 7 days a week' (24/7) diễn tả một thực tế hiển nhiên, hoạt động thường xuyên liên tục ở hiện tại, chia thì hiện tại đơn. Chủ ngữ 'customer service center' số ít nên động từ thêm -s -> 'handles'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_021",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The new administrative assistant rarely _______ mistakes in filing the client invoices.",
+    "options": [
+      "A. make",
+      "B. makes",
+      "C. made",
+      "D. making"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Trợ lý hành chính mới hiếm khi mắc lỗi trong việc sắp xếp hóa đơn khách hàng.",
+      "option_explanations": {
+        "A": "make - Động từ nguyên mẫu (Sai)",
+        "B": "makes - Hiện tại đơn số ít (Đúng)",
+        "C": "made - Quá khứ đơn (Sai, trừ phi nói về một sự kiện đã kết thúc trong quá khứ)",
+        "D": "making - V-ing (Sai)"
+      },
+      "grammar_explanation": "Sự xuất hiện của trạng từ tần suất phủ định 'rarely' (hiếm khi) chỉ tần suất hành động ở hiện tại, chia thì hiện tại đơn. Chủ ngữ 'administrative assistant' số ít nên động từ thêm -s -> 'makes'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_022",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Before the shipment _______ at our facility, the inventory manager always inspects the shipping manifest.",
+    "options": [
+      "A. arrive",
+      "B. arrives",
+      "C. arrived",
+      "D. will arrive"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Trước khi lô hàng đến cơ sở của chúng tôi, quản lý kho luôn kiểm tra bảng kê khai hàng hóa.",
+      "option_explanations": {
+        "A": "arrive - Nguyên mẫu (Sai)",
+        "B": "arrives - Hiện tại đơn số ít (Đúng)",
+        "C": "arrived - Quá khứ đơn (Sai vì vế sau chia hiện tại 'inspects')",
+        "D": "will arrive - Tương lai đơn (Sai, trong mệnh đề trạng ngữ chỉ thời gian không dùng will)"
+      },
+      "grammar_explanation": "Câu diễn tả một quy trình lặp đi lặp lại 'Before... the manager always inspects' (luôn luôn kiểm tra). Hơn nữa, trong mệnh đề trạng ngữ chỉ thời gian bắt đầu bằng 'Before', 'When', 'As soon as', ta dùng thì hiện tại đơn để diễn tả một hành động tương lai/hiện tại, tuyệt đối không dùng 'will'. Chủ ngữ 'shipment' số ít nên chia 'arrives'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "hard",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_023",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Most senior analysts in our market research department _______ a master's degree in economics or statistics.",
+    "options": [
+      "A. possess",
+      "B. possesses",
+      "C. possessing",
+      "D. possessed"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Hầu hết các nhà phân tích cấp cao trong bộ phận nghiên cứu thị trường của chúng tôi đều sở hữu bằng thạc sĩ về kinh tế hoặc thống kê.",
+      "option_explanations": {
+        "A": "possess - Động từ nguyên mẫu số nhiều (Đúng)",
+        "B": "possesses - Động từ số ít (Sai)",
+        "C": "possessing - V-ing (Sai)",
+        "D": "possessed - Quá khứ đơn (Sai, vì đây là thực tế hiện trạng đang có)"
+      },
+      "grammar_explanation": "Câu mô tả một thực trạng ở hiện tại, dùng thì hiện tại đơn. Chủ ngữ chính là danh từ số nhiều 'Most senior analysts' (Hầu hết nhà phân tích) nên động từ ở dạng nguyên mẫu -> 'possess'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_024",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The marketing supervisor always _______ the social media accounts to track user engagement metrics.",
+    "options": [
+      "A. monitor",
+      "B. monitors",
+      "C. monitoring",
+      "D. monitored"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Giám sát viên tiếp thị luôn theo dõi các tài khoản mạng xã hội để theo dõi các số liệu về mức độ tương tác của người dùng.",
+      "option_explanations": {
+        "A": "monitor - Động từ số nhiều (Sai)",
+        "B": "monitors - Hiện tại đơn số ít (Đúng, chủ ngữ 'supervisor' số ít)",
+        "C": "monitoring - V-ing (Sai)",
+        "D": "monitored - Quá khứ đơn (Sai vì có 'always')"
+      },
+      "grammar_explanation": "Từ nhận biết 'always' (luôn luôn) chỉ thói quen công việc hàng ngày, chủ ngữ 'supervisor' số ít nên chọn động từ chia hiện tại số ít -> 'monitors'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "present-tense"],
+    "grammar_topic_id": "gtopic_002",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_025",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Ms. Hannah Chung proved to be extremely _______ in finalizing the joint venture contract before the deadline.",
+    "options": [
+      "A. helpfulness",
+      "B. help",
+      "C. helpfully",
+      "D. helpful"
+    ],
+    "correct_answer": "D",
+    "explanation": {
+      "translation": "Bà Hannah Chung đã chứng tỏ là cực kỳ có ích trong việc hoàn tất hợp đồng liên doanh trước thời hạn.",
+      "option_explanations": {
+        "A": "helpfulness - Danh từ 'sự giúp ích' (Sai)",
+        "B": "help - Động từ/Danh từ 'giúp đỡ' (Sai)",
+        "C": "helpfully - Trạng từ 'một cách hữu ích' (Sai vì bổ nghĩa cho chủ thể sau linking verb)",
+        "D": "helpful - Tính từ 'có ích, giúp ích nhiều' (Đúng)"
+      },
+      "grammar_explanation": "Sau động từ liên kết 'proved to be' (chứng tỏ là) và trạng từ chỉ mức độ 'extremely' (cực kỳ), ta cần một tính từ (Adj) để mô tả tính chất của chủ ngữ 'Ms. Hannah Chung' -> chọn 'helpful' (đuôi -ful nhận biết tính từ)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_026",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The management team at Apex Industries has expressed great _______ in the new artificial intelligence software.",
+    "options": [
+      "A. interest",
+      "B. interested",
+      "C. interesting",
+      "D. interestingly"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Ban quản lý tại Apex Industries đã bày tỏ sự quan tâm lớn đối với phần mềm trí tuệ nhân tạo mới.",
+      "option_explanations": {
+        "A": "interest - Danh từ 'sự quan tâm, hứng thú' (Đúng)",
+        "B": "interested - Tính từ đuôi -ed chỉ cảm xúc người (Sai)",
+        "C": "interesting - Tính từ đuôi -ing chỉ tính chất vật (Sai)",
+        "D": "interestingly - Trạng từ (Sai)"
+      },
+      "grammar_explanation": "Sau tính từ 'great' (lớn), ta cần một Danh từ (Noun) đóng vai trò làm tân ngữ cho động từ 'expressed' (bày tỏ). 'Interest' vừa là động từ vừa là danh từ, ở đây chọn danh từ -> 'interest'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_027",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Because of his extensive credentials, Mr. Wu would excel in the role of marketing _______ for our new product line.",
+    "options": [
+      "A. organized",
+      "B. organizer",
+      "C. organizes",
+      "D. organizational"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Vì có những chứng chỉ/năng lực sâu rộng, ông Wu sẽ xuất sắc trong vai trò người tổ chức tiếp thị cho dòng sản phẩm mới của chúng tôi.",
+      "option_explanations": {
+        "A": "organized - Tính từ/Động từ quá khứ (Sai)",
+        "B": "organizer - Danh từ chỉ người 'người tổ chức' (Đúng)",
+        "C": "organizes - Động từ chia hiện tại số ít (Sai)",
+        "D": "organizational - Tính từ 'thuộc về tổ chức' (Sai)"
+      },
+      "grammar_explanation": "Chỗ trống đứng sau danh từ ghép/bổ ngữ 'marketing' và cụm từ 'role of' (vai trò của). Ta cần một danh từ chỉ người/chức danh công việc ở đây -> 'organizer' (người tổ chức tiếp thị)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_028",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The northbound lane on Davis Street will be _______ closed because of the city's bridge reinforcement project.",
+    "options": [
+      "A. temporarily",
+      "B. temporary",
+      "C. temporariness",
+      "D. temporal"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Làn đường hướng bắc trên Davis Street sẽ tạm thời bị đóng vì dự án gia cố cầu của thành phố.",
+      "option_explanations": {
+        "A": "temporarily - Trạng từ 'tạm thời' (Đúng)",
+        "B": "temporary - Tính từ 'tạm thời' (Sai)",
+        "C": "temporariness - Danh từ 'sự tạm thời' (Sai)",
+        "D": "temporal - Tính từ 'thuộc thời gian/thế tục' (Sai)"
+      },
+      "grammar_explanation": "Cấu trúc câu bị động ở tương lai: 'will be + V3/V-ed (closed)'. Vị trí đứng giữa động từ to be 'be' và động từ chính dạng phân từ 'closed' chỉ có thể là một Trạng từ (Adverb) bổ nghĩa cho động từ đó -> chọn 'temporarily' (đuôi -ly nhận biết trạng từ)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_029",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Please provide a _______ estimate of the project costs before submitting the official budget request.",
+    "options": [
+      "A. reason",
+      "B. reasonably",
+      "C. reasonable",
+      "D. reasoning"
+    ],
+    "correct_answer": "C",
+    "explanation": {
+      "translation": "Vui lòng cung cấp một ước tính hợp lý về chi phí dự án trước khi gửi yêu cầu ngân sách chính thức.",
+      "option_explanations": {
+        "A": "reason - Danh từ 'lý do'/Động từ 'lập luận' (Sai)",
+        "B": "reasonably - Trạng từ 'một cách hợp lý' (Sai)",
+        "C": "reasonable - Tính từ 'hợp lý, phải chăng' (Đúng)",
+        "D": "reasoning - Danh từ 'lập luận' (Sai)"
+      },
+      "grammar_explanation": "Chỗ trống đứng sau mạo từ 'a' và đứng trước danh từ 'estimate' (bản ước tính). Vị trí này cần một Tính từ (Adj) để bổ nghĩa cho danh từ đó -> chọn 'reasonable' (đuôi -able)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_030",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The new HR policy is designed to increase employee _______ and reduce overall turnover rates.",
+    "options": [
+      "A. productive",
+      "B. productively",
+      "C. productivity",
+      "D. produce"
+    ],
+    "correct_answer": "C",
+    "explanation": {
+      "translation": "Chính sách nhân sự mới được thiết kế để gia tăng năng suất của nhân viên và giảm tỷ lệ nghỉ việc nói chung.",
+      "option_explanations": {
+        "A": "productive - Tính từ 'năng suất' (Sai)",
+        "B": "productively - Trạng từ (Sai)",
+        "C": "productivity - Danh từ 'năng suất, sức sản xuất' (Đúng)",
+        "D": "produce - Động từ 'sản xuất'/Danh từ 'nông sản' (Sai)"
+      },
+      "grammar_explanation": "Đứng sau danh từ bổ nghĩa 'employee' (nhân viên), ta cần một danh từ để tạo thành cụm danh từ ghép 'employee productivity' (năng suất nhân viên), làm tân ngữ cho động từ 'increase'. Danh từ 'productivity' có đuôi nhận biết là -ity -> chọn C."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_031",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The executive committee decided to _______ review the proposed merger before taking a vote.",
+    "options": [
+      "A. caution",
+      "B. cautious",
+      "C. cautiously",
+      "D. cautiousness"
+    ],
+    "correct_answer": "C",
+    "explanation": {
+      "translation": "Ủy ban điều hành đã quyết định xem xét một cách thận trọng đề xuất sáp nhập trước khi bỏ phiếu.",
+      "option_explanations": {
+        "A": "caution - Danh từ 'sự thận trọng'/Động từ 'cảnh báo' (Sai)",
+        "B": "cautious - Tính từ 'thận trọng' (Sai)",
+        "C": "cautiously - Trạng từ 'một cách thận trọng' (Đúng)",
+        "D": "cautiousness - Danh từ (Sai)"
+      },
+      "grammar_explanation": "Chỗ trống đứng sau cấu trúc 'decided to' và ngay trước động từ thường 'review' (xem xét). Từ duy nhất có thể chèn vào giữa để bổ nghĩa cho động từ 'review' là một Trạng từ (Adverb) -> chọn 'cautiously'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_032",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Having a highly _______ backup power generator is essential for maintaining server uptime at data centers.",
+    "options": [
+      "A. rely",
+      "B. reliable",
+      "C. reliability",
+      "D. reliably"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Có một máy phát điện dự phòng cực kỳ đáng tin cậy là điều thiết yếu để duy trì thời gian hoạt động của máy chủ tại các trung tâm dữ liệu.",
+      "option_explanations": {
+        "A": "rely - Động từ 'dựa vào, tin cậy' (Sai)",
+        "B": "reliable - Tính từ 'đáng tin cậy' (Đúng)",
+        "C": "reliability - Danh từ 'sự đáng tin cậy' (Sai)",
+        "D": "reliably - Trạng từ (Sai)"
+      },
+      "grammar_explanation": "Chỗ trống đứng sau trạng từ mức độ 'highly' (cực kỳ) và ngay trước cụm danh từ 'backup power generator' (máy phát điện dự phòng). Ta cần một Tính từ (Adj) bổ nghĩa cho danh từ đó -> chọn 'reliable' (đuôi -able)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_033",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The manager asked the team to work more _______ in order to meet the aggressive production targets.",
+    "options": [
+      "A. efficiently",
+      "B. efficient",
+      "C. efficiency",
+      "D. efficacy"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Quản lý yêu cầu nhóm làm việc hiệu quả hơn để đạt được các mục tiêu sản xuất đầy thách thức.",
+      "option_explanations": {
+        "A": "efficiently - Trạng từ 'một cách hiệu quả' (Đúng)",
+        "B": "efficient - Tính từ 'hiệu quả' (Sai)",
+        "C": "efficiency - Danh từ 'sự hiệu quả' (Sai)",
+        "D": "efficacy - Danh từ 'hiệu lực thuốc' (Sai)"
+      },
+      "grammar_explanation": "Đứng sau động từ thường 'work' (làm việc) và trạng từ so sánh 'more' (hơn), ta cần một Trạng từ (Adv) bổ nghĩa cho hành động 'work' -> chọn 'efficiently'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_034",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "To ensure the safety of the laboratory personnel, compliance with all safety guidelines is a _______.",
+    "options": [
+      "A. require",
+      "B. requirement",
+      "C. required",
+      "D. requisite"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Để đảm bảo an toàn cho nhân viên phòng thí nghiệm, việc tuân thủ tất cả các hướng dẫn an toàn là một yêu cầu bắt buộc.",
+      "option_explanations": {
+        "A": "require - Động từ 'yêu cầu' (Sai)",
+        "B": "requirement - Danh từ 'yêu cầu, điều kiện bắt buộc' (Đúng)",
+        "C": "required - Động từ phân từ/Tính từ (Sai)",
+        "D": "requisite - Tính từ/Danh từ 'vật cần thiết' (Ít dùng hơn, không đúng ngữ cảnh bằng requirement)"
+      },
+      "grammar_explanation": "Sau mạo từ 'a', ta cần một danh từ số ít làm vị ngữ cho câu sau động từ to be 'is' -> chọn 'requirement' (đuôi -ment chỉ danh từ)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_035",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The new employee showed an _______ ability to resolve customer complaints with patience and diplomacy.",
+    "options": [
+      "A. impress",
+      "B. impressive",
+      "C. impression",
+      "D. impressively"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Nhân viên mới cho thấy khả năng ấn tượng trong việc giải quyết các khiếu nại của khách hàng với sự kiên nhẫn và khéo léo.",
+      "option_explanations": {
+        "A": "impress - Động từ 'gây ấn tượng' (Sai)",
+        "B": "impressive - Tính từ 'ấn tượng' (Đúng)",
+        "C": "impression - Danh từ 'sự ấn tượng' (Sai)",
+        "D": "impressively - Trạng từ (Sai)"
+      },
+      "grammar_explanation": "Chỗ trống đứng sau mạo từ 'an' và đứng trước danh từ 'ability' (khả năng). Vị trí này cần một Tính từ (Adj) để bổ nghĩa cho danh từ đó -> chọn 'impressive' (đuôi -ive)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_036",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Before finalizing the marketing budget, we need to _______ analyze the return on investment for each advertising channel.",
+    "options": [
+      "A. care",
+      "B. careful",
+      "C. carefully",
+      "D. carefulness"
+    ],
+    "correct_answer": "C",
+    "explanation": {
+      "translation": "Trước khi hoàn tất ngân sách tiếp thị, chúng tôi cần phân tích cẩn thận lợi nhuận trên đầu tư của từng kênh quảng cáo.",
+      "option_explanations": {
+        "A": "care - Danh từ/Động từ 'quan tâm, cẩn thận' (Sai)",
+        "B": "careful - Tính từ 'cẩn thận' (Sai)",
+        "C": "carefully - Trạng từ 'một cách cẩn thận' (Đúng)",
+        "D": "carefulness - Danh từ 'sự cẩn thận' (Sai)"
+      },
+      "grammar_explanation": "Chỗ trống đứng sau cấu trúc 'need to' và ngay trước động từ thường 'analyze' (phân tích). Ta cần một Trạng từ (Adv) bổ nghĩa cho động từ 'analyze' -> chọn 'carefully'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "word-form"],
+    "grammar_topic_id": "gtopic_003",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_037",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The contract negotiations will take place at the corporate headquarters _______ Wednesday morning.",
+    "options": [
+      "A. at",
+      "B. in",
+      "C. on",
+      "D. for"
+    ],
+    "correct_answer": "C",
+    "explanation": {
+      "translation": "Các cuộc đàm phán hợp đồng sẽ diễn ra tại trụ sở chính của công ty vào sáng thứ Tư.",
+      "option_explanations": {
+        "A": "at - Dùng cho giờ giấc hoặc địa điểm nhỏ (Sai)",
+        "B": "in - Dùng cho tháng, năm, buổi chung chung (Sai vì có thứ cụ thể)",
+        "C": "on - Dùng cho các ngày trong tuần hoặc ngày cụ thể (Đúng)",
+        "D": "for - Dùng cho khoảng thời gian (Sai)"
+      },
+      "grammar_explanation": "Mặc dù có 'morning' (thông thường đi với 'in the morning'), câu này đề cập đến một ngày cụ thể trong tuần 'Wednesday morning' (sáng thứ Tư). Với bất kỳ mốc thời gian nào có gắn ngày cụ thể hoặc thứ trong tuần, ta phải dùng giới từ 'on' -> chọn 'on'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_038",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The budget review session was postponed _______ next Friday due to the absence of the financial director.",
+    "options": [
+      "A. by",
+      "B. until",
+      "C. in",
+      "D. at"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Phiên đánh giá ngân sách đã bị hoãn lại cho đến thứ Sáu tới do sự vắng mặt của giám đốc tài chính.",
+      "option_explanations": {
+        "A": "by - Trước lúc, trước khi (Sai nghĩa trong cấu trúc hoãn lại)",
+        "B": "until - Cho đến khi (Đúng, đi với động từ postponed/delayed)",
+        "C": "in - Vào trong (Sai)",
+        "D": "at - Tại (Sai)"
+      },
+      "grammar_explanation": "Động từ 'postponed' (hoãn lại) hoặc 'delayed' (trì hoãn) thường đi kèm với giới từ 'until' để diễn tả hành động bị hoãn 'cho đến một thời điểm cụ thể trong tương lai' -> chọn 'until'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_039",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "All employees are required to comply _______ the newly updated safety standards when operating heavy machinery.",
+    "options": [
+      "A. to",
+      "B. with",
+      "C. by",
+      "D. for"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Tất cả nhân viên được yêu cầu phải tuân thủ các tiêu chuẩn an toàn mới cập nhật khi vận hành máy móc hạng nặng.",
+      "option_explanations": {
+        "A": "to - Sai giới từ đi kèm (adhere to mới đúng)",
+        "B": "with - Đúng giới từ đi kèm (comply with)",
+        "C": "by - Sai giới từ đi kèm (abide by mới đúng)",
+        "D": "for - Sai giới từ đi kèm"
+      },
+      "grammar_explanation": "Đây là câu hỏi kiểm tra sự kết hợp cố định giữa Động từ + Giới từ. Động từ 'comply' (tuân thủ) bắt buộc phải đi với giới từ 'with' để tạo thành cụm 'comply with' -> chọn B. (Lưu ý phân biệt: abide by = comply with = adhere to)."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_040",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "_______ joining the marketing firm, Mr. Kim worked as an independent commercial consultant for ten years.",
+    "options": [
+      "A. Prior to",
+      "B. In spite of",
+      "C. Because of",
+      "D. Instead of"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Trước khi gia nhập công ty tiếp thị, ông Kim đã làm việc với tư cách là cố vấn thương mại độc lập trong mười năm.",
+      "option_explanations": {
+        "A": "Prior to - Trước khi (= Before, đúng ngữ cảnh)",
+        "B": "In spite of - Mặc dù (Sai nghĩa)",
+        "C": "Because of - Bởi vì (Sai nghĩa)",
+        "D": "Instead of - Thay vì (Sai nghĩa)"
+      },
+      "grammar_explanation": "Xét ý nghĩa của câu: việc ông Kim làm việc độc lập 10 năm diễn ra 'trước khi' ông gia nhập công ty tiếp thị hiện tại. Giới từ chỉ thời gian thích hợp nhất là 'Prior to' (bằng nghĩa với Before) -> chọn A."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_041",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The company decided to outsource its customer service operations _______ reduce overall labor expenses.",
+    "options": [
+      "A. in order to",
+      "B. because of",
+      "C. as a result",
+      "D. in case of"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Công ty quyết định thuê ngoài hoạt động dịch vụ khách hàng để giảm chi phí nhân công tổng thể.",
+      "option_explanations": {
+        "A": "in order to - Để mà (Đúng, theo sau là động từ nguyên mẫu 'reduce')",
+        "B": "because of - Bởi vì (Sai, vì according to grammar, because of + N/V-ing, không đi với V_inf)",
+        "C": "as a result - Kết quả là (Sai liên từ)",
+        "D": "in case of - Trong trường hợp (Sai nghĩa và sai ngữ pháp)"
+      },
+      "grammar_explanation": "Chỗ trống ngay trước động từ nguyên mẫu 'reduce' (giảm bớt) diễn tả mục đích của hành động thuê ngoài. Cụm từ thích hợp nhất để chỉ mục đích đi với động từ nguyên mẫu là 'in order to' / 'so as to' -> chọn A."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_042",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "_______ the high price of the tickets, all seats for the classical music concert were sold out in under an hour.",
+    "options": [
+      "A. Although",
+      "B. In spite of",
+      "C. Because",
+      "D. Prior to"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Mặc dù giá vé cao, tất cả các chỗ ngồi cho buổi hòa nhạc cổ điển đã được bán hết trong vòng chưa đầy một giờ.",
+      "option_explanations": {
+        "A": "Although - Mặc dù (Sai ngữ pháp vì Although + Mệnh đề, ở đây là cụm danh từ 'the high price...')",
+        "B": "In spite of - Mặc dù (Đúng ngữ pháp In spite of + Cụm danh từ và đúng nghĩa nhượng bộ)",
+        "C": "Because - Bởi vì (Sai ngữ pháp và sai nghĩa)",
+        "D": "Prior to - Trước khi (Sai nghĩa)"
+      },
+      "grammar_explanation": "Vị trí này đứng trước cụm danh từ 'the high price of the tickets'. Chúng ta cần một giới từ nhượng bộ biểu thị ý nghĩa 'mặc dù'. 'Although' cộng mệnh đề nên loại, 'In spite of' cộng cụm danh từ là sự lựa chọn hoàn hảo -> chọn B."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_043",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The laboratory technician had to conduct the chemical experiment _______ a protective glass partition.",
+    "options": [
+      "A. behind",
+      "B. among",
+      "C. through",
+      "D. between"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Kỹ thuật viên phòng thí nghiệm đã phải tiến hành thí nghiệm hóa học phía sau một tấm vách ngăn bằng kính bảo vệ.",
+      "option_explanations": {
+        "A": "behind - Phía sau (Đúng ngữ cảnh bảo vệ an toàn)",
+        "B": "among - Ở giữa nhiều vật (Sai)",
+        "C": "through - Xuyên qua (Sai, không phù hợp vị trí thực tế)",
+        "D": "between - Giữa hai vật (Sai)"
+      },
+      "grammar_explanation": "Xét ngữ cảnh phòng thí nghiệm hóa học bảo vệ an toàn, kỹ thuật viên phải đứng 'phía sau' vách ngăn bằng kính bảo vệ để tránh tiếp xúc nguy hiểm -> chọn giới từ chỉ nơi chốn 'behind'."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_044",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "Due to ongoing renovation work, the executive board meeting will be held _______ the second-floor conference room.",
+    "options": [
+      "A. at",
+      "B. on",
+      "C. in",
+      "D. to"
+    ],
+    "correct_answer": "C",
+    "explanation": {
+      "translation": "Do công việc cải tạo đang diễn ra, cuộc họp ban điều hành sẽ được tổ chức trong phòng hội nghị tầng hai.",
+      "option_explanations": {
+        "A": "at - Tại (Thường dùng cho địa chỉ cụ thể hoặc điểm cụ thể, ít tự nhiên bằng 'in' khi nói về bên trong phòng cụ thể)",
+        "B": "on - Trên bề mặt (Sai, trừ khi muốn nói 'on the second floor' nhưng ở đây danh từ chính là 'conference room')",
+        "C": "in - Trong (Đúng, vì phòng hội nghị là một không gian khép kín)",
+        "D": "to - Đến (Sai)"
+      },
+      "grammar_explanation": "Danh từ chính ở đây là 'conference room' (phòng hội nghị) - một không gian khép kín 3 chiều. Giới từ chỉ nơi chốn thích hợp nhất cho không gian phòng ốc là 'in' (trong phòng hội nghị). (Lưu ý: Nếu không có từ 'conference room' mà chỉ có 'the second floor' thì ta dùng 'on' -> on the second floor) -> chọn C."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_045",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The training session will begin _______ exactly 9:00 AM, so please arrive ten minutes early.",
+    "options": [
+      "A. at",
+      "B. on",
+      "C. in",
+      "D. by"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Buổi đào tạo sẽ bắt đầu vào lúc đúng 9 giờ sáng, vì vậy vui lòng đến sớm mười phút.",
+      "option_explanations": {
+        "A": "at - Lúc mấy giờ (Đúng, dùng cho giờ cụ thể)",
+        "B": "on - Vào ngày (Sai)",
+        "C": "in - Vào tháng/năm (Sai)",
+        "D": "by - Trước lúc (Không đúng nghĩa bắt đầu tại mốc cố định)"
+      },
+      "grammar_explanation": "Đứng trước một mốc thời gian giờ giấc cụ thể 'exactly 9:00 AM', giới từ chỉ thời gian duy nhất thích hợp là 'at' -> chọn A."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_046",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The marketing department has launched a new campaign in an effort to appeal _______ younger demographics.",
+    "options": [
+      "A. of",
+      "B. to",
+      "C. at",
+      "D. with"
+    ],
+    "correct_answer": "B",
+    "explanation": {
+      "translation": "Bộ phận tiếp thị đã phát động một chiến dịch mới nhằm nỗ lực thu hút phân khúc nhân khẩu học trẻ tuổi hơn.",
+      "option_explanations": {
+        "A": "of - Sai giới từ đi kèm (Sai)",
+        "B": "to - Đúng giới từ đi kèm 'appeal to' (Đúng)",
+        "C": "at - Sai giới từ (Sai)",
+        "D": "with - Sai giới từ (Sai)"
+      },
+      "grammar_explanation": "Cụm động từ cố định 'appeal to somebody/something' có nghĩa là thu hút, kêu gọi hoặc hấp dẫn ai đó/cái gì đó. Do đó, đi sau 'appeal' là giới từ 'to' -> chọn B."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_047",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "_______ the winter holiday season, the logistics company expects a forty percent surge in package deliveries.",
+    "options": [
+      "A. During",
+      "B. For",
+      "C. Since",
+      "D. By"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Trong suốt mùa nghỉ lễ mùa đông, công ty hậu cần dự kiến số lượng giao hàng sẽ tăng vọt bốn mươi phần trăm.",
+      "option_explanations": {
+        "A": "During - Trong suốt một khoảng thời gian/sự kiện (Đúng ngữ nghĩa và ngữ pháp)",
+        "B": "For - Cho/Trong vòng (Thường đi với số lượng thời gian cụ thể như 'for 2 weeks', không hợp ở đây)",
+        "C": "Since - Kể từ khi (Thường đi với mốc thời gian và động từ ở hiện tại hoàn thành, không hợp)",
+        "D": "By - Trước lúc (Sai nghĩa)"
+      },
+      "grammar_explanation": "Cụm danh từ đứng sau 'the winter holiday season' là một khoảng thời gian/sự kiện đặc biệt kéo dài. Giới từ thích hợp nhất để chỉ hành động diễn ra xuyên suốt sự kiện đó là 'During' (Trong suốt...) -> chọn A."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "medium",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  },
+  {
+    "id": "q_gram_048",
+    "part": 5,
+    "is_for_exam": false,
+    "is_for_practice": true,
+    "question_text": "The company relies heavily _______ its robust cybersecurity framework to prevent unauthorized access to customer data.",
+    "options": [
+      "A. on",
+      "B. with",
+      "C. at",
+      "D. by"
+    ],
+    "correct_answer": "A",
+    "explanation": {
+      "translation": "Công ty phụ thuộc rất nhiều vào khung an ninh mạng mạnh mẽ của mình để ngăn chặn truy cập trái phép vào dữ liệu khách hàng.",
+      "option_explanations": {
+        "A": "on - Đúng giới từ đi kèm 'rely on' (Đúng)",
+        "B": "with - Sai giới từ (Sai)",
+        "C": "at - Sai giới từ (Sai)",
+        "D": "by - Sai giới từ (Sai)"
+      },
+      "grammar_explanation": "Động từ 'rely' (tin cậy, phụ thuộc) bắt buộc đi kèm với giới từ 'on' hoặc 'upon' để tạo thành cụm 'rely on/upon' (phụ thuộc vào cái gì, tin cậy vào cái gì). Từ 'heavily' là trạng từ bổ nghĩa chen giữa, không làm thay đổi giới từ đi kèm -> chọn A."
+    },
+    "explanation_vi": null,
+    "group_id": null,
+    "tags": ["part5", "grammar", "preposition"],
+    "grammar_topic_id": "gtopic_004",
+    "difficulty": "easy",
+    "skill": "reading",
+    "created_at": "2026-05-23T14:00:00Z"
+  }
+]

@@ -9,7 +9,7 @@ public class ListeningQuestionDto
     public string? AudioUrl { get; set; }
     public List<string> Options { get; set; } = new();
     public string CorrectAnswer { get; set; } = string.Empty;
-    public string? Explanation { get; set; }
+    public object? Explanation { get; set; }
     public string? ExplanationVi { get; set; }
     public string? Script { get; set; }
     public string? GroupId { get; set; }

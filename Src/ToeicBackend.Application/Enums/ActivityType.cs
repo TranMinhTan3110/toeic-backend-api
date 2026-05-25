@@ -9,5 +9,6 @@ public enum ActivityType
     VocabSentence,
     PracticeComplete,
     ExamComplete,
-    GrammarLessonComplete
+    GrammarLessonComplete,
+    GrammarExercise
 }
