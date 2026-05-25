@@ -35,6 +35,14 @@ public class ListeningRepository : IListeningRepository
         return snapshot.Exists ? MapToQuestion(snapshot) : null;
     }
 
+    public async Task<IEnumerable<ListeningQuestion>> GetAllQuestionsAdminAsync()
+    {
+        var snapshot = await _firestoreDb.Collection(QuestionsCollection)
+            .WhereEqualTo("skill", "listening")
+            .GetSnapshotAsync();
+        return snapshot.Documents.Select(MapToQuestion);
+    }
+
     public async Task<IEnumerable<QuestionGroup>> GetGroupsByPartAsync(int part)
     {
         var snapshot = await _firestoreDb.Collection(GroupsCollection)
@@ -150,5 +158,59 @@ public class ListeningRepository : IListeningRepository
         }
 
         return group;
+    }
+
+    public async Task<string> AddQuestionAsync(ListeningQuestion question)
+    {
+        var docRef = string.IsNullOrEmpty(question.Id) 
+            ? _firestoreDb.Collection(QuestionsCollection).Document() 
+            : _firestoreDb.Collection(QuestionsCollection).Document(question.Id);
+            
+        var data = new Dictionary<string, object>
+        {
+            { "part", question.Part },
+            { "question_text", question.QuestionText ?? "" },
+            { "image_url", question.ImageUrl ?? "" },
+            { "audio_url", question.AudioUrl ?? "" },
+            { "options", question.Options },
+            { "correct_answer", question.CorrectAnswer },
+            { "explanation", question.Explanation ?? "" },
+            { "explanation_vi", question.ExplanationVi ?? "" },
+            { "script", question.Script ?? "" },
+            { "group_id", question.GroupId ?? "" },
+            { "difficulty", question.Difficulty },
+            { "skill", question.Skill },
+            { "is_for_exam", question.IsForExam },
+            { "is_for_practice", question.IsForPractice },
+            { "created_at", FieldValue.ServerTimestamp }
+        };
+
+        await docRef.SetAsync(data);
+        return docRef.Id;
+    }
+
+    public async Task<string> AddGroupAsync(QuestionGroup group)
+    {
+        var docRef = string.IsNullOrEmpty(group.Id) 
+            ? _firestoreDb.Collection(GroupsCollection).Document() 
+            : _firestoreDb.Collection(GroupsCollection).Document(group.Id);
+            
+        var data = new Dictionary<string, object>
+        {
+            { "part", group.Part },
+            { "passage_text", group.PassageText ?? "" },
+            { "script", group.Script ?? "" },
+            { "image_url", group.ImageUrl ?? "" },
+            { "audio_url", group.AudioUrl ?? "" },
+            { "question_count", group.QuestionCount },
+            { "source", group.Source ?? "" },
+            { "question_ids", group.QuestionIds },
+            { "is_for_exam", false },
+            { "is_for_practice", true },
+            { "created_at", FieldValue.ServerTimestamp }
+        };
+
+        await docRef.SetAsync(data);
+        return docRef.Id;
     }
 }
