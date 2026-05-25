@@ -49,6 +49,104 @@ public class VocabularyService : IVocabularyService
         return await _repository.GetLevelsAsync();
     }
 
+    public async Task<VocabularyDto> CreateVocabularyAsync(CreateVocabularyDto dto)
+    {
+        var entity = new Vocabulary
+        {
+            Id = Guid.NewGuid().ToString(),
+            Word = dto.Word.Trim(),
+            Phonetic = dto.Phonetic?.Trim(),
+            WordType = dto.WordType.Trim().ToLowerInvariant(),
+            DefinitionEn = dto.DefinitionEn.Trim(),
+            DefinitionVi = dto.DefinitionVi.Trim(),
+            AudioUrl = dto.AudioUrl?.Trim(),
+            ImageUrl = dto.ImageUrl?.Trim(),
+            Topic = dto.Topic.Trim().ToLowerInvariant(),
+            Level = dto.Level.Trim(),
+            Frequency = dto.Frequency.Trim().ToLowerInvariant(),
+            Synonyms = dto.Synonyms.Select(s => s.Trim()).ToList(),
+            Antonyms = dto.Antonyms.Select(a => a.Trim()).ToList(),
+            Collocations = dto.Collocations.Select(c => c.Trim()).ToList(),
+            Examples = dto.Examples.Select(e => new VocabularyExample
+            {
+                Sentence = e.Sentence.Trim(),
+                SentenceVi = e.SentenceVi.Trim()
+            }).ToList(),
+            CreatedAt = DateTime.UtcNow
+        };
+
+        await _repository.CreateAsync(entity);
+        return MapToDto(entity, null);
+    }
+
+    public async Task<VocabularyDto?> UpdateVocabularyAsync(string id, CreateVocabularyDto dto)
+    {
+        var existing = await _repository.GetByIdAsync(id);
+        if (existing == null) return null;
+
+        existing.Word = dto.Word.Trim();
+        existing.Phonetic = dto.Phonetic?.Trim();
+        existing.WordType = dto.WordType.Trim().ToLowerInvariant();
+        existing.DefinitionEn = dto.DefinitionEn.Trim();
+        existing.DefinitionVi = dto.DefinitionVi.Trim();
+        existing.AudioUrl = dto.AudioUrl?.Trim();
+        existing.ImageUrl = dto.ImageUrl?.Trim();
+        existing.Topic = dto.Topic.Trim().ToLowerInvariant();
+        existing.Level = dto.Level.Trim();
+        existing.Frequency = dto.Frequency.Trim().ToLowerInvariant();
+        existing.Synonyms = dto.Synonyms.Select(s => s.Trim()).ToList();
+        existing.Antonyms = dto.Antonyms.Select(a => a.Trim()).ToList();
+        existing.Collocations = dto.Collocations.Select(c => c.Trim()).ToList();
+        existing.Examples = dto.Examples.Select(e => new VocabularyExample
+        {
+            Sentence = e.Sentence.Trim(),
+            SentenceVi = e.SentenceVi.Trim()
+        }).ToList();
+
+        await _repository.UpdateAsync(existing);
+        return MapToDto(existing, null);
+    }
+
+    public async Task<bool> DeleteVocabularyAsync(string id)
+    {
+        var existing = await _repository.GetByIdAsync(id);
+        if (existing == null) return false;
+
+        await _repository.DeleteAsync(id);
+        return true;
+    }
+
+    public async Task<int> BulkCreateVocabularyAsync(List<CreateVocabularyDto> dtos)
+    {
+        if (dtos == null || !dtos.Any()) return 0;
+
+        var entities = dtos.Select(dto => new Vocabulary
+        {
+            Id = Guid.NewGuid().ToString(),
+            Word = dto.Word.Trim(),
+            Phonetic = dto.Phonetic?.Trim(),
+            WordType = dto.WordType.Trim().ToLowerInvariant(),
+            DefinitionEn = dto.DefinitionEn.Trim(),
+            DefinitionVi = dto.DefinitionVi.Trim(),
+            AudioUrl = dto.AudioUrl?.Trim(),
+            ImageUrl = dto.ImageUrl?.Trim(),
+            Topic = dto.Topic.Trim().ToLowerInvariant(),
+            Level = dto.Level.Trim(),
+            Frequency = dto.Frequency.Trim().ToLowerInvariant(),
+            Synonyms = dto.Synonyms.Select(s => s.Trim()).ToList(),
+            Antonyms = dto.Antonyms.Select(a => a.Trim()).ToList(),
+            Collocations = dto.Collocations.Select(c => c.Trim()).ToList(),
+            Examples = dto.Examples.Select(e => new VocabularyExample
+            {
+                Sentence = e.Sentence.Trim(),
+                SentenceVi = e.SentenceVi.Trim()
+            }).ToList(),
+            CreatedAt = DateTime.UtcNow
+        }).ToList();
+
+        return await _repository.BulkCreateAsync(entities);
+    }
+
     private VocabularyDto MapToDto(Vocabulary entity, HashSet<string>? starredIds)
     {
         return new VocabularyDto
