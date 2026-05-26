@@ -9,4 +9,5 @@ public interface ISpeakingService
     Task<SpeakingQuestionDto?> GetByIdAsync(string id);
     Task<IEnumerable<SpeakingQuestionDto>> GetByFilterAsync(bool? isExam, bool? isPractice);
     Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice);
+    Task<IEnumerable<SpeakingQuestionDto>> GetByExamSetIdAsync(string examSetId);
 }

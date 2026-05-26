@@ -39,6 +39,12 @@ public class SpeakingService : ISpeakingService
         return await _repository.GetCountByFilterAsync(isExam, isPractice);
     }
 
+    public async Task<IEnumerable<SpeakingQuestionDto>> GetByExamSetIdAsync(string examSetId)
+    {
+        var entities = await _repository.GetByExamSetIdAsync(examSetId);
+        return entities.Select(MapToDto);
+    }
+
     public async Task<SpeakingQuestionDto?> GetByIdAsync(string id)
     {
         var entity = await _repository.GetByIdAsync(id);
