@@ -14,8 +14,9 @@
       "D"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "(A) She's eating in a picnic area.\n(B) She's waiting in line at a food truck.\n(C) She's wiping off a bench.\n(D) She's throwing away a plate.",
+    "explanation": "This is a 1-person photo describing a person's action/state. (A) Correct. The woman is eating in a picnic area (is eating in a picnic area). (B) Incorrect. The woman is not waiting in line at a food truck. (C) Incorrect. The woman is not wiping off a bench. (D) Incorrect. The woman is not throwing away a plate.",
+    "explanation_vi": "Đây là ảnh 1 người – mô tả hành động/trạng thái của người đó. (A) Đúng. Hình ảnh cho thấy người phụ nữ đang ăn trong khu vực dã ngoại (picnic area). (B) Sai. Người phụ nữ không đứng xếp hàng ở xe bán thức ăn. (C) Sai. Người phụ nữ không lau ghế băng. (D) Sai. Người phụ nữ không vứt đĩa đi.",
     "group_id": null,
     "tags": [
       "part1",
@@ -44,8 +45,9 @@
       "D"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "(A) The man is brushing snow off the roof of a car.\n(B) The man is standing in the snow beside a car.\n(C) The man is shoveling snow from a walkway.\n(D) The man is running through the snow.",
+    "explanation": "This is a 1-person photo describing a person's action/state. (A) Incorrect. The man is not brushing snow off the roof of a car. (B) Correct. The man is standing in the snow beside a car. (C) Incorrect. The man is not shoveling snow from a walkway. (D) Incorrect. The man is not running through the snow.",
+    "explanation_vi": "Đây là ảnh 1 người – mô tả hành động/trạng thái của người đó. (A) Sai. Người đàn ông không phủi tuyết trên mái xe ô tô. (B) Đúng. Người đàn ông đang đứng trong tuyết cạnh một chiếc ô tô. (C) Sai. Người đàn ông không xúc tuyết từ lối đi bộ. (D) Sai. Người đàn ông không chạy qua tuyết.",
     "group_id": null,
     "tags": [
       "part1",
@@ -75,8 +77,9 @@
       "D"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "(A) Some workers are hanging art in a gallery.\n(B) Two of the people are having a conversation.\n(C) One of the men is rearranging cushions on a sofa.\n(D) One of the men is painting a picture.",
+    "explanation": "This is a photo with 2 or more people describing their actions/states. (A) Incorrect. There are no workers hanging art visible in the photo. (B) Correct. Two people on the left side are having a conversation. (C) Incorrect. There are no cushions on a sofa visible in the photo. (D) Incorrect. No one is painting a picture.",
+    "explanation_vi": "Đây là ảnh có từ 2 người trở lên – mô tả hành động/trạng thái của họ. (A) Sai. Trong ảnh không thấy hình ảnh những người treo tranh trong phòng trưng bày. (B) Đúng. Hai người ở phía bên trái đang trò chuyện với nhau. (C) Sai. Trong ảnh không có hình ảnh đệm sofa. (D) Sai. Không có ai đang vẽ tranh.",
     "group_id": null,
     "tags": [
       "part1",
@@ -106,8 +109,9 @@
       "D"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "(A) Vehicles are entering a parking garage.\n(B) Clothes hangers are scattered on the ground.\n(C) Empty racks are lined up next to a building.\n(D) Clothing is being displayed under a tent.",
+    "explanation": "This is an object/scenery photo describing objects. (A) Incorrect. No vehicles are entering a parking garage. (B) Incorrect. Clothes hangers are not scattered on the ground. (C) Incorrect. There are no empty racks visible in the photo. (D) Correct. Clothing is being displayed under a tent. Note: 'be being displayed' describes a state of display, not an active action — this is a common pattern in object/scenery photos.",
+    "explanation_vi": "Đây là ảnh đồ vật/phong cảnh – mô tả đồ vật. (A) Sai. Không có xe cộ nào đang đi vào bãi đậu xe. (B) Sai. Móc quần áo không bị vứt vương vãi trên mặt đất. (C) Sai. Trong ảnh không thấy những kệ trống xếp hàng dọc. (D) Đúng. Quần áo đang được trưng bày dưới lều. Lưu ý: 'be being displayed' diễn tả trạng thái đang được trưng bày, không phải hành động đang diễn ra – đây là cấu trúc thường gặp trong ảnh đồ vật/phong cảnh.",
     "group_id": null,
     "tags": [
       "part1",
@@ -137,8 +141,9 @@
       "D"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "(A) Potted plants have been suspended from a ceiling.\n(B) Chairs have been stacked in front of an entryway.\n(C) A computer station has been set up on a desk.\n(D) A rug has been rolled up against a wall.",
+    "explanation": "This is an object/scenery photo describing objects. (A) Incorrect. Potted plants have not been suspended from a ceiling. (B) Incorrect. Chairs have not been stacked in front of an entryway. (C) Correct. A computer station has been set up on a desk. (D) Incorrect. A rug has not been rolled up against a wall.",
+    "explanation_vi": "Đây là ảnh đồ vật/phong cảnh – mô tả đồ vật. (A) Sai. Cây trồng trong chậu không được treo lên trần nhà. (B) Sai. Các ghế không được xếp chồng trước lối vào. (C) Đúng. Một trạm máy tính đã được thiết lập trên bàn. (D) Sai. Tấm thảm không được cuộn lại dựa vào tường.",
     "group_id": null,
     "tags": [
       "part1",
@@ -167,8 +172,9 @@
       "D"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "(A) One of the men is sweeping a patio.\n(B) One of the men is replacing some flooring.\n(C) A door has been taken off its frame.\n(D) A light fixture has been left on the ground.",
+    "explanation": "This is a mixed photo (people/objects/scenery). (A) Incorrect. There is no patio visible in the photo. (B) Incorrect. No man is replacing flooring. (C) Correct. A door has been taken off its frame. (D) Incorrect. A light fixture has not been left on the ground.",
+    "explanation_vi": "Đây là ảnh hỗn hợp (người/đồ vật/phong cảnh). (A) Sai. Trong ảnh không thấy sân hiên (patio). (B) Sai. Không có người đàn ông nào đang thay sàn nhà. (C) Đúng. Một cánh cửa đã bị tháo ra khỏi khung. (D) Sai. Đồ đèn chiếu sáng không bị để lại trên sàn.",
     "group_id": null,
     "tags": [
       "part1",
@@ -195,8 +201,9 @@
       "C"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Br: How old is this building?\nM-Au: (A) To ship some materials.\n      (B) About ten years old.\n      (C) Company offices, I think.",
+    "explanation": "This is a 'How' question asking about the age of a building. (A) Incorrect — uses the associated word 'ship/material' distracted from 'building', but does not answer the age question. (B) Correct — directly answers the age question with 'About ten years old.' (C) Incorrect — uses the associated word 'company offices' from 'building', but does not answer the age question.",
+    "explanation_vi": "Đây là câu hỏi 'How' hỏi về tuổi của tòa nhà. (A) Sai – dùng từ liên quan 'ship/material' đánh lừa từ 'building', nhưng không trả lời câu hỏi về tuổi. (B) Đúng – trả lời trực tiếp câu hỏi tuổi tòa nhà với '10 năm'. (C) Sai – dùng từ liên quan 'company offices' từ 'building', nhưng không trả lời câu hỏi về tuổi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -222,8 +229,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Am: Can you come to my jazz performance tonight?\nM-Cn: (A) I'm sorry I was late for the meeting.\n      (B) Mostly just local musicians.\n      (C) Sure, I'll be there!",
+    "explanation": "This is a request/invitation question. (A) Incorrect — uses the associated word 'late' from 'come', but is unrelated to the invitation. (B) Incorrect — uses the associated word 'local musicians' from 'jazz performance', but does not respond to the invitation. (C) Correct — accepts the invitation with 'Sure, I'll be there!' and adds a related positive response.",
+    "explanation_vi": "Đây là câu hỏi mời/nhờ vả. (A) Sai – dùng từ liên quan 'late' từ 'come', nhưng không liên quan đến lời mời. (B) Sai – dùng từ liên quan 'local musicians' từ 'jazz performance', nhưng không phản hồi lời mời. (C) Đúng – chấp nhận lời mời với 'Sure, I'll be there!' và bổ sung phản hồi tích cực.",
     "group_id": null,
     "tags": [
       "part2",
@@ -249,8 +257,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Br: Which apartment submitted a work order?\nM-Am: (A) It's what you did for a living.\n      (B) Submit your assignment here.\n      (C) It came from the tenants in B23.",
+    "explanation": "This is a 'Which' question asking which apartment submitted a work order. (A) Incorrect — uses the associated word 'living' from 'work order', but does not answer. (B) Incorrect — uses the related word 'submit' from 'submitted', but does not answer which apartment. (C) Correct — specifically identifies the source as the tenants in B23, directly answering the question.",
+    "explanation_vi": "Đây là câu hỏi 'Which' hỏi căn hộ nào đã nộp phiếu yêu cầu công việc. (A) Sai – dùng từ liên quan 'living' từ 'work', không trả lời câu hỏi. (B) Sai – dùng từ đồng nghĩa 'submit' từ 'submitted', nhưng không trả lời căn hộ nào. (C) Đúng – xác định cụ thể nguồn là các cư dân ở B23, trả lời trực tiếp câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -276,8 +285,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: Will you contact the vendor about changing our delivery date?\nW-Br: (A) Of course, I'll take care of it.\n      (B) An e-mail receipt.\n      (C) Could I get change for a dollar?",
+    "explanation": "This is a Will question asking whether someone will contact the vendor. (A) Correct — responds positively with 'Of course' and confirms with 'I'll take care of it', a natural and complete response. (B) Incorrect — uses the associated word 'e-mail' from 'contact', but is unrelated. (C) Incorrect — uses the word 'change' from 'changing' as a distractor.",
+    "explanation_vi": "Đây là câu hỏi Will hỏi liệu có liên hệ nhà cung cấp không. (A) Đúng – phản hồi tích cực với 'Of course' và xác nhận bằng 'I'll take care of it', câu trả lời tự nhiên và đầy đủ. (B) Sai – dùng từ liên quan 'e-mail' từ 'contact', nhưng không liên quan. (C) Sai – dùng từ 'change' từ 'changing' để đánh lừa.",
     "group_id": null,
     "tags": [
       "part2",
@@ -303,8 +313,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: Why was the maintenance worker here?\nW-Am: (A) No, he didn't.\n      (B) From three o'clock until four.\n      (C) Because a light needed to be fixed.",
+    "explanation": "This is a 'Why' question asking the reason the maintenance worker came. (A) Incorrect — a Yes/No answer is not possible for a Why question. (B) Incorrect — answers with a time range, which would suit a 'How long' question, not Why. (C) Correct — provides a specific reason ('a light needed to be fixed'), directly answering the Why question.",
+    "explanation_vi": "Đây là câu hỏi 'Why' hỏi lý do người thợ bảo trì đến. (A) Sai – Yes/No không thể trả lời câu hỏi Why. (B) Sai – trả lời bằng khoảng thời gian, phù hợp với câu hỏi 'How long', không phải Why. (C) Đúng – đưa ra lý do cụ thể ('cần sửa bóng đèn'), trả lời trực tiếp câu hỏi Why.",
     "group_id": null,
     "tags": [
       "part2",
@@ -330,8 +341,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Am: Did management make a hiring decision yet?\nM-Cn: (A) Put it on the highest shelf.\n      (B) The personnel department.\n      (C) Yes, they chose Jacob Borgman.",
+    "explanation": "This is a Did question asking whether management made a hiring decision. (A) Incorrect — unrelated to the question. (B) Incorrect — uses the associated word 'personnel department' from 'hiring/management', but does not answer yes or no. (C) Correct — answers 'Yes' and provides specific details (they chose Jacob Borgman), fully responding to the question.",
+    "explanation_vi": "Đây là câu hỏi Did hỏi ban quản lý đã đưa ra quyết định tuyển dụng chưa. (A) Sai – không liên quan đến câu hỏi. (B) Sai – dùng từ liên quan 'personnel department' từ 'hiring/management', nhưng không trả lời có hay không. (C) Đúng – trả lời 'Yes' và cung cấp thông tin cụ thể (họ đã chọn Jacob Borgman), trả lời đầy đủ câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -357,8 +369,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: Do you want to eat here in our cafeteria or go out?\nW-Am: (A) He went there yesterday.\n      (B) Well, maybe a sandwich.\n      (C) Let's eat here.",
+    "explanation": "This is a choice question asking between two options (eat here or go out). (A) Incorrect — uses the associated word 'there' from 'here', but refers to a third person (He) not in the question. (B) Incorrect — uses the associated word 'sandwich' from 'cafeteria', but does not choose between the two options. (C) Correct — directly selects one of the two choices ('eat here'), giving a clear and natural answer.",
+    "explanation_vi": "Đây là câu hỏi lựa chọn hỏi giữa hai phương án (ăn ở đây hay ra ngoài). (A) Sai – dùng từ liên quan 'there' từ 'here', nhưng nhắc đến người thứ ba (He) không có trong câu hỏi. (B) Sai – dùng từ liên quan 'sandwich' từ 'cafeteria', nhưng không chọn một trong hai phương án. (C) Đúng – chọn trực tiếp một trong hai ('ăn ở đây'), câu trả lời rõ ràng và tự nhiên.",
     "group_id": null,
     "tags": [
       "part2",
@@ -384,8 +397,9 @@
       "C"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: Didn't you e-mail the employment contract to Mr. Patel yesterday?\nW-Br: (A) Yes, I would agree.\n      (B) No, I'll send it now.\n      (C) Check the employee manual.",
+    "explanation": "This is a negative question asking whether someone e-mailed the employment contract. (A) Incorrect — unrelated; 'I would agree' does not address sending a contract. (B) Correct — answers 'No' and adds a follow-up action ('I'll send it now'), a perfect indirect-negative reply to the tag question. (C) Incorrect — uses the associated word 'employee' from 'employment', but does not answer the question.",
+    "explanation_vi": "Đây là câu hỏi phủ định xác nhận hỏi liệu có gửi email hợp đồng không. (A) Sai – không liên quan; 'I would agree' không đề cập đến việc gửi hợp đồng. (B) Đúng – trả lời 'No' và bổ sung hành động tiếp theo ('I'll send it now'), câu trả lời phủ định gián tiếp hoàn hảo. (C) Sai – dùng từ liên quan 'employee' từ 'employment', nhưng không trả lời câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -411,8 +425,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: Our division's picnic is this Saturday, right?\nW-Cn: (A) There's a lot of rain in the forecast.\n      (B) Sure, I like salad.\n      (C) At the end of this corridor.",
+    "explanation": "This is a tag question confirming whether the division's picnic is this Saturday. (A) Correct — indirectly expresses concern by saying there is a lot of rain in the forecast, implying the event may be affected. (B) Incorrect — uses the associated word 'salad' from 'picnic', but is unrelated to confirming the date. (C) Incorrect — uses the associated word 'end' from 'this Saturday', but answers a 'Where' question instead.",
+    "explanation_vi": "Đây là câu hỏi đuôi xác nhận buổi dã ngoại bộ phận có phải thứ Bảy không. (A) Đúng – gián tiếp bày tỏ lo lắng bằng cách nói có nhiều mưa trong dự báo, ám chỉ sự kiện có thể bị ảnh hưởng. (B) Sai – dùng từ liên quan 'salad' từ 'picnic', nhưng không liên quan đến xác nhận ngày. (C) Sai – dùng từ liên quan 'corridor' không phù hợp, trả lời câu hỏi 'Where' thay vì câu đuôi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -438,8 +453,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Br: Would you like coffee or tea?\nM-Am: (A) Just water, please.\n      (B) For a few dollars more.\n      (C) A fifteen-minute break.",
+    "explanation": "This is a choice question offering coffee or tea. (A) Correct — declines both options and requests a third alternative (water), a natural response when neither option is wanted. (B) Incorrect — unrelated to choosing a beverage. (C) Incorrect — uses the associated word 'break' from 'coffee/tea break', but is unrelated to the question.",
+    "explanation_vi": "Đây là câu hỏi lựa chọn đưa ra hai phương án cà phê hoặc trà. (A) Đúng – từ chối cả hai phương án và yêu cầu lựa chọn thứ ba (nước lọc), câu trả lời tự nhiên khi không muốn chọn phương án nào được đề xuất. (B) Sai – không liên quan đến việc chọn đồ uống. (C) Sai – dùng từ liên quan 'break' từ 'coffee/tea', nhưng không trả lời câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -465,8 +481,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Am: We achieved our sales targets this month.\nM-Cn: (A) That's excellent news!\n      (B) A few times a day.\n      (C) To the end of April.",
+    "explanation": "This is a statement sharing good news about achieving sales targets. (A) Correct — responds enthusiastically and appropriately to the good news. (B) Incorrect — answers a 'How often' question, unrelated to the statement. (C) Incorrect — answers a 'When' question, unrelated to the statement.",
+    "explanation_vi": "Đây là câu trần thuật thông báo tin tức tốt về việc đạt mục tiêu doanh số. (A) Đúng – phản hồi nhiệt tình và phù hợp với tin tốt. (B) Sai – trả lời câu hỏi 'How often', không liên quan đến câu trần thuật. (C) Sai – trả lời câu hỏi 'When', không liên quan đến câu trần thuật.",
     "group_id": null,
     "tags": [
       "part2",
@@ -492,8 +509,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: How often do you travel for your job?\nW-Br: (A) It turned out well.\n      (B) Yes, I did find one.\n      (C) About once a month.",
+    "explanation": "This is a 'How often' question asking about travel frequency for work. (A) Incorrect — unrelated; 'It turned out well' does not address frequency. (B) Incorrect — a Yes/No answer is not suitable for a 'How often' question. (C) Correct — provides a specific and direct frequency ('about once a month'), perfectly answering the question.",
+    "explanation_vi": "Đây là câu hỏi 'How often' hỏi tần suất đi công tác. (A) Sai – không liên quan; 'It turned out well' không đề cập đến tần suất. (B) Sai – câu trả lời Yes/No không phù hợp với câu hỏi 'How often'. (C) Đúng – cung cấp tần suất cụ thể và trực tiếp ('khoảng một lần một tháng'), trả lời hoàn hảo câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -519,8 +537,9 @@
       "C"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: We should hike the Wildflower Trail today.\nW-Br: (A) This seat is available.\n      (B) I didn't bring boots.\n      (C) At the visitors' center.",
+    "explanation": "This is a suggestion/recommendation statement. (A) Incorrect — uses the associated word 'seat' misheard from 'trail', but is completely unrelated. (B) Correct — indirectly declines the suggestion by giving a practical reason (didn't bring boots), a natural indirect response. (C) Incorrect — answers a 'Where' question, unrelated to the suggestion.",
+    "explanation_vi": "Đây là câu đề xuất/khuyến nghị. (A) Sai – dùng từ liên quan 'seat' nhầm từ 'trail', nhưng hoàn toàn không liên quan. (B) Đúng – gián tiếp từ chối đề xuất bằng lý do thực tế (không mang giày bốt), câu trả lời gián tiếp tự nhiên. (C) Sai – trả lời câu hỏi 'Where', không liên quan đến đề xuất.",
     "group_id": null,
     "tags": [
       "part2",
@@ -546,8 +565,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: You've booked a hotel in London, haven't you?\nW-Am: (A) Very enjoyable, thanks.\n      (B) He usually takes the train.\n      (C) Yes, I made a reservation last week.",
+    "explanation": "This is a tag question confirming whether someone has booked a hotel in London. (A) Incorrect — uses the associated word 'enjoyable' from 'hotel/London', but does not confirm or deny booking. (B) Incorrect — refers to a third person (He) not mentioned in the question. (C) Correct — confirms with 'Yes' and provides specific details (made a reservation last week), directly answering the tag question.",
+    "explanation_vi": "Đây là câu hỏi đuôi xác nhận xem có đặt khách sạn ở London không. (A) Sai – dùng từ liên quan 'enjoyable' từ 'hotel/London', nhưng không xác nhận hay phủ nhận. (B) Sai – nhắc đến người thứ ba (He) không được đề cập trong câu hỏi. (C) Đúng – xác nhận bằng 'Yes' và cung cấp thông tin cụ thể (đặt phòng tuần trước), trả lời trực tiếp câu hỏi đuôi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -573,8 +593,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Am: Are there any tickets left for tonight's concert?\nM-Au: (A) It's sold out.\n      (B) He's a concert violinist.\n      (C) They already left.",
+    "explanation": "This is a Be-verb question asking whether any concert tickets remain. (A) Correct — 'It's sold out' indirectly conveys that no tickets are left, a natural and precise answer. (B) Incorrect — repeats the word 'concert' as a distractor. (C) Incorrect — repeats the word 'left' from the question as a distractor.",
+    "explanation_vi": "Đây là câu hỏi Be-verb hỏi còn vé buổi hòa nhạc tối nay không. (A) Đúng – 'It's sold out' gián tiếp thông báo không còn vé, câu trả lời tự nhiên và chính xác. (B) Sai – lặp lại từ 'concert' để đánh lừa. (C) Sai – lặp lại từ 'left' từ câu hỏi để đánh lừa.",
     "group_id": null,
     "tags": [
       "part2",
@@ -600,8 +621,9 @@
       "C"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Br: Haven't you used this software before?\nM-Cn: (A) Can I take your order?\n      (B) I haven't had the chance.\n      (C) About 40 dollars.",
+    "explanation": "This is a negative question asking whether someone has used the software. (A) Incorrect — unrelated to the question. (B) Correct — indirectly answers 'No' by saying 'I haven't had the chance', a natural indirect negative reply. (C) Incorrect — answers with a price, unrelated to the question.",
+    "explanation_vi": "Đây là câu hỏi phủ định xác nhận hỏi liệu có đã dùng phần mềm này chưa. (A) Sai – không liên quan đến câu hỏi. (B) Đúng – gián tiếp trả lời 'Không' bằng 'I haven't had the chance', câu trả lời phủ định gián tiếp tự nhiên. (C) Sai – trả lời bằng giá tiền, không liên quan đến câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -627,8 +649,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: When is the new blender going to be released?\nW-Br: (A) Only with fruits and vegetables.\n      (B) In the kitchen cabinet.\n      (C) The prototype is still being tested.",
+    "explanation": "This is a 'When' question asking about the release date of a new blender. (A) Incorrect — uses the associated words 'fruits and vegetables' from 'blender', but does not answer when. (B) Incorrect — uses the associated word 'kitchen cabinet' from 'blender', but answers a 'Where' question instead. (C) Correct — indirectly conveys that the release date is unknown because the prototype is still being tested, a natural evasive response.",
+    "explanation_vi": "Đây là câu hỏi 'When' hỏi thời gian phát hành máy xay mới. (A) Sai – dùng từ liên quan 'fruits and vegetables' từ 'blender', nhưng không trả lời câu hỏi khi nào. (B) Sai – dùng từ liên quan 'kitchen cabinet' từ 'blender', nhưng trả lời câu hỏi 'Where' thay vì When. (C) Đúng – gián tiếp cho biết chưa có ngày phát hành vì sản phẩm mẫu vẫn đang được thử nghiệm, câu trả lời né tránh tự nhiên.",
     "group_id": null,
     "tags": [
       "part2",
@@ -654,8 +677,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: Who's picking up our clients at the airport?\nW-Am: (A) They decided to drive.\n      (B) At terminal 2.\n      (C) It's a marketing position.",
+    "explanation": "This is a 'Who' question asking who will pick up clients at the airport. (A) Correct — indirectly answers the question by saying 'they decided to drive', implying the clients are getting there on their own. (B) Incorrect — uses the associated word 'terminal' from 'airport', but answers a 'Where' question instead. (C) Incorrect — uses the associated word 'marketing position' loosely related to 'clients', but does not answer who.",
+    "explanation_vi": "Đây là câu hỏi 'Who' hỏi ai sẽ đón khách hàng ở sân bay. (A) Đúng – gián tiếp trả lời bằng cách nói 'họ quyết định tự lái xe', ngụ ý khách hàng tự di chuyển. (B) Sai – dùng từ liên quan 'terminal' từ 'airport', nhưng trả lời câu hỏi 'Where' thay vì Who. (C) Sai – dùng từ liên quan 'marketing position' liên quan lỏng lẻo đến 'clients', nhưng không trả lời ai.",
     "group_id": null,
     "tags": [
       "part2",
@@ -681,8 +705,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: Where are the red roses that came in this morning?\nW-Au: (A) About three liters of water.\n      (B) No, I didn't check out the sale.\n      (C) I needed some for a large bouquet.",
+    "explanation": "This is a 'Where' question asking about the location of red roses. (A) Incorrect — uses the associated word 'water' from 'roses', but answers a 'How much' question instead. (B) Incorrect — a Yes/No answer is not suitable for a 'Where' question. (C) Correct — indirectly answers the question by explaining the roses were used for a large bouquet, implying they are no longer where they were.",
+    "explanation_vi": "Đây là câu hỏi 'Where' hỏi vị trí của những bông hoa hồng đỏ. (A) Sai – dùng từ liên quan 'water' từ 'roses', nhưng trả lời câu hỏi 'How much' thay vì Where. (B) Sai – câu trả lời Yes/No không phù hợp với câu hỏi 'Where'. (C) Đúng – gián tiếp trả lời bằng cách giải thích hoa hồng đã được dùng cho một bó hoa lớn, ngụ ý chúng không còn ở chỗ cũ.",
     "group_id": null,
     "tags": [
       "part2",
@@ -708,8 +733,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Au: This film has been nominated for several awards.\nW-Am: (A) Why don't we go see it?\n      (B) After the announcement.\n      (C) He made a great speech.",
+    "explanation": "This is a statement sharing information about a film being nominated for awards. (A) Correct — responds enthusiastically to the news by suggesting they go watch it, a natural and related response. (B) Incorrect — uses the associated word 'announcement' from 'nominated/awards', but does not respond to the statement. (C) Incorrect — refers to a third person (He) not mentioned in the statement.",
+    "explanation_vi": "Đây là câu trần thuật chia sẻ thông tin về bộ phim được đề cử giải thưởng. (A) Đúng – phản hồi nhiệt tình với tin tức bằng cách đề xuất đi xem phim, câu trả lời tự nhiên và liên quan. (B) Sai – dùng từ liên quan 'announcement' từ 'nominated/awards', nhưng không phản hồi câu trần thuật. (C) Sai – nhắc đến người thứ ba (He) không được đề cập trong câu trần thuật.",
     "group_id": null,
     "tags": [
       "part2",
@@ -735,8 +761,9 @@
       "C"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: Who's interested in starting a car pool program?\nW-Br: (A) Thanks, but I can't swim.\n      (B) Clara's already organizing one.\n      (C) It's a very interesting article.",
+    "explanation": "This is a 'Who' question asking who is interested in starting a car pool program. (A) Incorrect — confuses 'car pool' with 'swimming pool'. (B) Correct — directly identifies who is interested (Clara) and adds that she is already organizing one. (C) Incorrect — uses the associated word 'interesting' from 'interested', but is unrelated to the question.",
+    "explanation_vi": "Đây là câu hỏi 'Who' hỏi ai quan tâm đến việc khởi động chương trình đi chung xe. (A) Sai – nhầm lẫn 'car pool' với 'swimming pool'. (B) Đúng – xác định trực tiếp ai quan tâm (Clara) và bổ sung cô ấy đang tổ chức một chương trình rồi. (C) Sai – dùng từ liên quan 'interesting' từ 'interested', nhưng không liên quan đến câu hỏi.",
     "group_id": null,
     "tags": [
       "part2",
@@ -762,8 +789,9 @@
       "C"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Br: Where will I teach my workshop this month?\nM-Cn: (A) We just sent an e-mail to all instructors.\n      (B) Five to seven months.\n      (C) Yes, it's a beautiful building.",
+    "explanation": "This is a 'Where' question asking about the workshop location. (A) Correct — indirectly answers the question by saying an e-mail was sent to all instructors, implying the location information was already communicated. (B) Incorrect — uses the associated word 'months' from 'month', but answers a 'How long' question instead. (C) Incorrect — a Yes/No answer is not suitable for a 'Where' question.",
+    "explanation_vi": "Đây là câu hỏi 'Where' hỏi nơi tổ chức workshop tháng này. (A) Đúng – gián tiếp trả lời bằng cách cho biết email đã được gửi đến tất cả giảng viên, ngụ ý thông tin địa điểm đã được thông báo. (B) Sai – dùng từ liên quan 'months' từ 'month', nhưng trả lời câu hỏi 'How long' thay vì Where. (C) Sai – câu trả lời Yes/No không phù hợp với câu hỏi 'Where'.",
     "group_id": null,
     "tags": [
       "part2",
@@ -789,8 +817,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: Why are we moving these sweaters to the back of the store?\nW-Am: (A) In the new shopping mall.\n      (B) Yes, they come in other colors.\n      (C) Our spring merchandise is arriving soon.",
+    "explanation": "This is a 'Why' question asking the reason for moving sweaters to the back. (A) Incorrect — uses the associated word 'shopping mall' from 'store', but answers a 'Where' question instead. (B) Incorrect — a Yes/No answer is not suitable for a 'Why' question. (C) Correct — explains the reason by saying spring merchandise is arriving soon, which logically requires making space at the front of the store.",
+    "explanation_vi": "Đây là câu hỏi 'Why' hỏi lý do chuyển áo len ra phía sau cửa hàng. (A) Sai – dùng từ liên quan 'shopping mall' từ 'store', nhưng trả lời câu hỏi 'Where' thay vì Why. (B) Sai – câu trả lời Yes/No không phù hợp với câu hỏi 'Why'. (C) Đúng – giải thích lý do bằng cách nói hàng hóa mùa xuân sắp đến, điều này có lý vì cần nhường chỗ ở phía trước cửa hàng.",
     "group_id": null,
     "tags": [
       "part2",
@@ -816,8 +845,9 @@
       "C"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "W-Br: Would you be interested in working on some of these contracts?\nM-Au: (A) Thank you for meeting me.\n      (B) A contact lens prescription.\n      (C) I have very limited time.",
+    "explanation": "This is a suggestion/offer question asking whether someone would like to work on some contracts. (A) Incorrect — unrelated to the question. (B) Incorrect — uses the sound-alike word 'contact lens' from 'contracts' as a distractor. (C) Correct — indirectly declines the offer by stating limited availability ('I have very limited time'), a natural indirect refusal.",
+    "explanation_vi": "Đây là câu hỏi đề xuất/mời hỏi liệu có muốn làm một số hợp đồng không. (A) Sai – không liên quan đến câu hỏi. (B) Sai – dùng từ nghe giống 'contact lens' từ 'contracts' để đánh lừa. (C) Đúng – gián tiếp từ chối đề xuất bằng cách nêu lý do không có nhiều thời gian, câu từ chối gián tiếp tự nhiên.",
     "group_id": null,
     "tags": [
       "part2",
@@ -843,8 +873,9 @@
       "C"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "script": "M-Cn: What type of job are you looking for?\nW-Am: (A) No, at ten A.M.\n      (B) I really like working with computers.\n      (C) Just a résumé is needed.",
+    "explanation": "This is a 'What' question asking what type of job someone is looking for. (A) Incorrect — a Yes/No answer is not suitable for a 'What' question. (B) Correct — indirectly answers by expressing a preference (working with computers), giving a clear sense of the type of job sought. (C) Incorrect — uses the associated word 'résumé' from 'job', but does not answer what type of job.",
+    "explanation_vi": "Đây là câu hỏi 'What' hỏi loại công việc nào đang tìm kiếm. (A) Sai – câu trả lời Yes/No không phù hợp với câu hỏi 'What'. (B) Đúng – gián tiếp trả lời bằng cách bày tỏ sở thích (làm việc với máy tính), cho thấy rõ loại công việc mong muốn. (C) Sai – dùng từ liên quan 'résumé' từ 'job', nhưng không trả lời loại công việc nào.",
     "group_id": null,
     "tags": [
       "part2",
@@ -871,8 +902,8 @@
       "D. A company picnic"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman mentions the annual company picnic in her first line: 'Thank you so much for organizing the annual company picnic, Jingdao. Everybody seemed to enjoy it.' This directly indicates the event she is referring to.",
+    "explanation_vi": "Người phụ nữ đề cập đến buổi dã ngoại công ty hằng năm ngay trong câu đầu tiên: 'Cảm ơn anh rất nhiều vì đã tổ chức buổi dã ngoại công ty hằng năm, Jingdao. Mọi người đều có vẻ thích thú.' Điều này trực tiếp cho thấy sự kiện cô ấy đang nhắc đến.",
     "group_id": "group_part3_01",
     "tags": [
       "part3",
@@ -901,8 +932,8 @@
       "D. A promotional code"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman compliments the peach pie and asks: 'Would you mind sharing the recipe?' This shows she is asking for a dessert recipe. Note the paraphrasing: 'peach pie' in the conversation corresponds to 'dessert' in the answer.",
+    "explanation_vi": "Người phụ nữ khen ngợi chiếc bánh đào và hỏi: 'Anh có thể chia sẻ công thức không?' Điều này cho thấy cô ấy đang xin công thức làm món tráng miệng. Lưu ý cách diễn đạt lại: 'peach pie' (bánh đào) trong hội thoại tương ứng với 'dessert' (món tráng miệng) trong đáp án.",
     "group_id": "group_part3_01",
     "tags": [
       "part3",
@@ -931,8 +962,8 @@
       "D. Reading a review"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'There's a really helpful video that walks you through all the steps. I recommend you watch it first.' This clearly shows he recommends watching a video. The paraphrasing here is: 'watch it' → 'Watching a video'.",
+    "explanation_vi": "Người đàn ông nói: 'Có một video rất hữu ích hướng dẫn tất cả các bước. Tôi khuyên bạn nên xem nó trước.' Điều này rõ ràng cho thấy ông ấy khuyên nên xem video. Cách diễn đạt lại: 'watch it' → 'Watching a video'.",
     "group_id": "group_part3_01",
     "tags": [
       "part3",
@@ -960,8 +991,8 @@
       "D. Marketing"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says he wants to finish calculating the company's expense reports and asks if the travel reimbursement forms have been reviewed. These financial tasks — expense reports and reimbursements — indicate they work in the Accounting department.",
+    "explanation_vi": "Người đàn ông nói muốn hoàn thành việc tính toán báo cáo chi phí công ty và hỏi về việc xem xét các mẫu hoàn trả chi phí đi lại. Những công việc tài chính này — báo cáo chi phí và hoàn trả — cho thấy họ làm việc trong bộ phận Kế toán.",
     "group_id": "group_part3_02",
     "tags": [
       "part3",
@@ -990,8 +1021,8 @@
       "D. An order has not been delivered."
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman states: 'Our policy is for employees to stay at a hotel that's on our list of approved accommodations. This one isn't on the list.' This means a company policy was not followed by the employee who submitted the hotel receipt.",
+    "explanation_vi": "Người phụ nữ nói: 'Chính sách của chúng tôi là nhân viên phải ở tại khách sạn trong danh sách chỗ ở được phê duyệt. Khách sạn này không có trong danh sách.' Điều này có nghĩa là một chính sách công ty đã không được tuân thủ bởi nhân viên đã nộp hóa đơn khách sạn.",
     "group_id": "group_part3_02",
     "tags": [
       "part3",
@@ -1020,8 +1051,8 @@
       "D. Review a spreadsheet"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'As a supervisor, I can approve the expense this one time.' Approving an expense is paraphrased as 'Authorize a reimbursement' in the answer choices.",
+    "explanation_vi": "Người đàn ông nói: 'Với tư cách là giám sát, tôi có thể phê duyệt khoản chi phí này một lần.' Việc phê duyệt chi phí được diễn đạt lại thành 'Authorize a reimbursement' (Cho phép hoàn tiền) trong các lựa chọn đáp án.",
     "group_id": "group_part3_02",
     "tags": [
       "part3",
@@ -1050,8 +1081,8 @@
       "D. Meteorology"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman mentions 'our cargo ship still hasn't moved yet,' which is a key clue indicating they work in the shipping industry. Keywords like 'cargo ship,' 'harbor,' and 'port authority' further confirm this.",
+    "explanation_vi": "Người phụ nữ đề cập đến 'tàu hàng của chúng ta vẫn chưa di chuyển,' đây là manh mối quan trọng cho thấy họ làm việc trong ngành vận chuyển. Các từ khóa như 'cargo ship' (tàu hàng), 'harbor' (bến cảng), và 'port authority' (cảng vụ) xác nhận thêm điều này.",
     "group_id": "group_part3_03",
     "tags": [
       "part3",
@@ -1080,8 +1111,8 @@
       "D. Several staff members are absent."
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'The ship won't be able to leave until the weather improves.' This directly states that poor weather conditions are causing the delay.",
+    "explanation_vi": "Người phụ nữ nói: 'Con tàu sẽ không thể rời đi cho đến khi thời tiết cải thiện.' Điều này trực tiếp cho thấy điều kiện thời tiết xấu là nguyên nhân gây ra sự chậm trễ.",
     "group_id": "group_part3_03",
     "tags": [
       "part3",
@@ -1110,8 +1141,8 @@
       "D. Place a call"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'I'll be sure to call the port authority soon for an update on when we'll be cleared to leave.' This is paraphrased as 'Place a call' in the answer choices.",
+    "explanation_vi": "Người đàn ông nói: 'Tôi chắc chắn sẽ gọi cho cảng vụ sớm để cập nhật thông tin về thời điểm chúng ta được phép rời đi.' Điều này được diễn đạt lại thành 'Place a call' (Thực hiện cuộc gọi) trong các lựa chọn.",
     "group_id": "group_part3_03",
     "tags": [
       "part3",
@@ -1139,8 +1170,8 @@
       "D. To write an article"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'I've made a reservation to meet with some clients for lunch today.' This directly states her reason for being at the restaurant.",
+    "explanation_vi": "Người phụ nữ nói: 'Tôi đã đặt chỗ để gặp một số khách hàng ăn trưa hôm nay.' Điều này trực tiếp nêu lý do cô ấy đến nhà hàng.",
     "group_id": "group_part3_04",
     "tags": [
       "part3",
@@ -1169,8 +1200,8 @@
       "D. She wants to change a seating request."
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman originally requested an outdoor terrace seat, but then says 'it's very hot today' right after the man offers an indoor table instead. This implies she is reconsidering her seating preference and agreeing to change it — she wants to change her seating request.",
+    "explanation_vi": "Người phụ nữ ban đầu yêu cầu ngồi ở sân thượng ngoài trời, nhưng sau đó nói 'hôm nay rất nóng' ngay sau khi người đàn ông đề nghị bàn trong nhà. Điều này ngụ ý cô ấy đang xem xét lại sở thích chỗ ngồi và đồng ý thay đổi — cô ấy muốn thay đổi yêu cầu chỗ ngồi.",
     "group_id": "group_part3_04",
     "tags": [
       "part3",
@@ -1199,14 +1230,14 @@
       "D. It offers monthly contracts."
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'Our customers can park for free in the garage across the street.' This directly states that parking is free for customers.",
+    "explanation_vi": "Người đàn ông nói: 'Khách hàng của chúng tôi có thể đỗ xe miễn phí tại bãi đỗ xe bên kia đường.' Điều này trực tiếp cho thấy việc đỗ xe là miễn phí cho khách hàng.",
     "group_id": "group_part3_04",
     "tags": [
       "part3",
       "conversation",
-      "parking",
-      "facility"
+      "detail",
+      "restaurant"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1229,14 +1260,14 @@
       "D. At a grocery store"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'I know the store will be busy because we're having a big sale on laptop computers and tablets.' The mention of laptop computers and tablets — electronics — indicates she works at an electronics store.",
+    "explanation_vi": "Người phụ nữ nói: 'Tôi biết cửa hàng sẽ bận rộn vì chúng tôi đang có đợt giảm giá lớn cho máy tính xách tay và máy tính bảng.' Việc đề cập đến máy tính xách tay và máy tính bảng — đồ điện tử — cho thấy cô ấy làm việc tại một cửa hàng điện tử.",
     "group_id": "group_part3_05",
     "tags": [
       "part3",
       "conversation",
       "workplace",
-      "location"
+      "retail"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1259,14 +1290,14 @@
       "D. Where to set up some equipment"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "Murat asks: 'Yes — where can I put our demonstration table?' He is asking about where to place equipment (the demonstration table), which is paraphrased as 'Where to set up some equipment.'",
+    "explanation_vi": "Murat hỏi: 'Vâng — tôi có thể đặt bàn trình diễn của chúng tôi ở đâu?' Ông ấy đang hỏi về nơi đặt thiết bị (bàn trình diễn), được diễn đạt lại thành 'Where to set up some equipment' (Nơi để lắp đặt thiết bị).",
     "group_id": "group_part3_05",
     "tags": [
       "part3",
       "conversation",
-      "question",
-      "event"
+      "detail",
+      "retail"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1289,14 +1320,14 @@
       "D. Visiting a registration table"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'If you brought any brochures with you, it'll be helpful to put those out for people to take.' Brochures are informational materials, so this is paraphrased as 'Displaying informational materials.'",
+    "explanation_vi": "Người phụ nữ nói: 'Nếu bạn mang theo tờ rơi, sẽ rất hữu ích nếu để chúng ra cho mọi người lấy.' Tờ rơi là tài liệu thông tin, vì vậy điều này được diễn đạt lại thành 'Displaying informational materials' (Trưng bày tài liệu thông tin).",
     "group_id": "group_part3_05",
     "tags": [
       "part3",
       "conversation",
       "suggestion",
-      "marketing"
+      "retail"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1319,14 +1350,14 @@
       "D. Hospitality"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says she is pleased with 'the sales of our brands of cakes, pies, and cookies this past holiday season.' Products like cakes, pies, and cookies indicate the food production industry.",
+    "explanation_vi": "Người phụ nữ nói cô ấy hài lòng với 'doanh số bán hàng của các thương hiệu bánh ngọt, bánh pie và bánh quy của chúng ta trong mùa lễ vừa qua.' Các sản phẩm như bánh ngọt, bánh pie và bánh quy cho thấy ngành sản xuất thực phẩm.",
     "group_id": "group_part3_06",
     "tags": [
       "part3",
       "conversation",
       "industry",
-      "workplace"
+      "food"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1349,8 +1380,8 @@
       "D. Increased competition"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The second speaker says: 'The public wants healthier products, but the same great taste. That'll be our biggest challenge.' This is about shifting consumer preferences, paraphrased as 'Changes in consumer preferences.'",
+    "explanation_vi": "Người nói thứ hai nói: 'Người tiêu dùng muốn sản phẩm lành mạnh hơn nhưng vẫn có hương vị tuyệt vời. Đó sẽ là thách thức lớn nhất của chúng ta.' Đây là về sự thay đổi trong sở thích của người tiêu dùng, được diễn đạt lại thành 'Changes in consumer preferences' (Thay đổi trong sở thích người tiêu dùng).",
     "group_id": "group_part3_06",
     "tags": [
       "part3",
@@ -1379,13 +1410,14 @@
       "D. Train a new employee"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'I'd have to do some investigation to find out more about that.' This means he plans to research more information, paraphrased as 'Research more information.'",
+    "explanation_vi": "Người đàn ông nói: 'Tôi sẽ phải điều tra thêm để tìm hiểu về điều đó.' Điều này có nghĩa là ông ấy dự định nghiên cứu thêm thông tin, được diễn đạt lại thành 'Research more information' (Nghiên cứu thêm thông tin).",
     "group_id": "group_part3_06",
     "tags": [
       "part3",
       "conversation",
-      "next-action"
+      "next-action",
+      "food"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1408,14 +1440,14 @@
       "D. To invite the woman to speak at a conference"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'I'm calling to see if you'd have time to work on a project for my marketing firm.' This means he is offering the woman a work assignment.",
+    "explanation_vi": "Người đàn ông nói: 'Tôi gọi để xem liệu bạn có thời gian để làm một dự án cho công ty tiếp thị của tôi không.' Điều này có nghĩa là ông ấy đang đề nghị giao công việc cho người phụ nữ.",
     "group_id": "group_part3_07",
     "tags": [
       "part3",
       "conversation",
       "reason",
-      "phone-call"
+      "business"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1438,14 +1470,14 @@
       "D. Creating a marketing campaign"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'We have a new client in Brazil who's interested in creating a marketing campaign for social media sites.' This directly states the client's interest.",
+    "explanation_vi": "Người đàn ông nói: 'Chúng tôi có một khách hàng mới ở Brazil quan tâm đến việc tạo chiến dịch tiếp thị cho các trang mạng xã hội.' Điều này trực tiếp nêu rõ mối quan tâm của khách hàng.",
     "group_id": "group_part3_07",
     "tags": [
       "part3",
       "conversation",
-      "client",
-      "business"
+      "detail",
+      "marketing"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1468,13 +1500,14 @@
       "D. Some contact information"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'Why don't you send me a detailed description of the work?' A detailed description of the work is paraphrased as 'A project description.'",
+    "explanation_vi": "Người phụ nữ nói: 'Sao anh không gửi cho tôi mô tả chi tiết về công việc?' Mô tả chi tiết về công việc được diễn đạt lại thành 'A project description' (Mô tả dự án).",
     "group_id": "group_part3_07",
     "tags": [
       "part3",
       "conversation",
-      "request"
+      "request",
+      "marketing"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1497,14 +1530,14 @@
       "D. Traffic is heavy."
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'We were about to pack van number five for the music festival when we noticed it's got a flat tire.' A van with a flat tire is a vehicle that is out of service.",
+    "explanation_vi": "Người phụ nữ nói: 'Chúng tôi sắp chất hàng vào xe tải số năm cho lễ hội âm nhạc thì phát hiện nó bị xịt lốp.' Một chiếc xe có lốp bị xịt là phương tiện bị hỏng, không thể sử dụng.",
     "group_id": "group_part3_08",
     "tags": [
       "part3",
       "conversation",
       "problem",
-      "transportation"
+      "catering"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1527,14 +1560,14 @@
       "D. At a car dealership"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'We've got a lot of catering jobs today.' The word 'catering' directly indicates they work at a catering company.",
+    "explanation_vi": "Người đàn ông nói: 'Hôm nay chúng ta có nhiều công việc phục vụ ăn uống.' Từ 'catering' (phục vụ ăn uống) trực tiếp cho thấy họ làm việc tại một công ty cung cấp dịch vụ ăn uống.",
     "group_id": "group_part3_08",
     "tags": [
       "part3",
       "conversation",
       "workplace",
-      "location"
+      "catering"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1557,13 +1590,14 @@
       "D. Offer a refund"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman explains that the serving utensils, napkins, and food coolers all need to be brought to the parking area. The man replies: 'All right; I can help with that.' He will carry those items, paraphrased as 'Carry some items.'",
+    "explanation_vi": "Người phụ nữ giải thích rằng đồ dùng phục vụ, khăn ăn và thùng lạnh đựng thức ăn đều cần được mang ra khu vực đỗ xe. Người đàn ông trả lời: 'Được rồi, tôi có thể giúp việc đó.' Ông ấy sẽ vận chuyển những đồ đó, được diễn đạt lại thành 'Carry some items' (Mang một số đồ vật).",
     "group_id": "group_part3_08",
     "tags": [
       "part3",
       "conversation",
-      "next-action"
+      "next-action",
+      "catering"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1586,14 +1620,13 @@
       "D. To accept a job offer"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'I'm interested in working in your field. But I'm talking to some professionals first so I can find out more about it.' His purpose is to learn about the woman's career, which is paraphrased as 'To discuss a career path.'",
+    "explanation_vi": "Người đàn ông nói: 'Tôi quan tâm đến việc làm trong lĩnh vực của bạn. Nhưng tôi đang nói chuyện với một số chuyên gia trước để tìm hiểu thêm.' Mục đích của ông ấy là tìm hiểu về sự nghiệp của người phụ nữ, được diễn đạt lại thành 'To discuss a career path' (Để thảo luận về con đường sự nghiệp).",
     "group_id": "group_part3_09",
     "tags": [
       "part3",
       "conversation",
       "reason",
-      "phone-call",
       "career"
     ],
     "grammar_topic_id": null,
@@ -1617,13 +1650,14 @@
       "D. A professional actor"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'At my university, I joined the newspaper and eventually worked my way up to being an editor.' This directly identifies her as a newspaper editor.",
+    "explanation_vi": "Người phụ nữ nói: 'Khi học đại học, tôi tham gia vào tờ báo và cuối cùng đã làm việc để trở thành biên tập viên.' Điều này trực tiếp xác định cô ấy là biên tập viên báo.",
     "group_id": "group_part3_09",
     "tags": [
       "part3",
       "conversation",
-      "occupation"
+      "occupation",
+      "career"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1646,13 +1680,14 @@
       "D. Describe a work schedule"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man asks: 'So what's your schedule like?' This question prompts the woman to describe her work schedule next.",
+    "explanation_vi": "Người đàn ông hỏi: 'Vậy lịch làm việc của bạn như thế nào?' Câu hỏi này khiến người phụ nữ tiếp theo sẽ mô tả lịch làm việc của mình.",
     "group_id": "group_part3_09",
     "tags": [
       "part3",
       "conversation",
-      "next-action"
+      "next-action",
+      "career"
     ],
     "grammar_topic_id": null,
     "difficulty": "medium",
@@ -1675,8 +1710,8 @@
       "D. A medical facility design"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man opens with: 'I just read the article on the company Web site about the proposed merger with QZ Corporation.' The entire conversation revolves around this potential company merger.",
+    "explanation_vi": "Người đàn ông mở đầu bằng: 'Tôi vừa đọc bài báo trên website công ty về đề xuất sáp nhập với QZ Corporation.' Toàn bộ cuộc trò chuyện xoay quanh việc sáp nhập công ty tiềm năng này.",
     "group_id": "group_part3_10",
     "tags": [
       "part3",
@@ -1705,8 +1740,8 @@
       "D. To update some information"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says the merger has advantages but adds 'they also talked about it last year' — implying that the merger was discussed before but did not proceed. She is using this to express skepticism or doubt about whether the merger will actually happen this time.",
+    "explanation_vi": "Người phụ nữ nói việc sáp nhập có nhiều lợi ích nhưng thêm 'họ cũng đã thảo luận về điều đó năm ngoái' — ngụ ý rằng việc sáp nhập đã được đề cập trước đó nhưng không tiến hành. Cô ấy đang dùng điều này để bày tỏ sự hoài nghi về việc liệu lần này việc sáp nhập có thực sự xảy ra không.",
     "group_id": "group_part3_10",
     "tags": [
       "part3",
@@ -1734,8 +1769,8 @@
       "D. Relocating to another city"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says it looks like the company won't be relocating. The woman responds: 'I really don't want to move, so that's a relief.' This confirms she wants to avoid relocating to another city.",
+    "explanation_vi": "Người đàn ông nói có vẻ công ty sẽ không di chuyển. Người phụ nữ trả lời: 'Tôi thực sự không muốn chuyển đi, vì vậy thật nhẹ nhõm.' Điều này xác nhận cô ấy muốn tránh việc chuyển đến thành phố khác.",
     "group_id": "group_part3_10",
     "tags": [
       "part3",
@@ -1764,8 +1799,8 @@
       "D. Clients"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'My company wants to give every employee a gift.' This directly states that the gift is intended for employees.",
+    "explanation_vi": "Người phụ nữ nói: 'Công ty của tôi muốn tặng quà cho mỗi nhân viên.' Điều này trực tiếp cho thấy quà là dành cho nhân viên.",
     "group_id": "group_part3_11",
     "tags": [
       "part3",
@@ -1794,8 +1829,8 @@
       "D. $15"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man recommends the metal bottle with the wide-mouthed lid. According to the graphic, the Wide-Mouthed Steel Water Bottle is priced at $24.",
+    "explanation_vi": "Người đàn ông khuyên dùng bình kim loại có nắp miệng rộng. Theo hình ảnh, bình nước thép miệng rộng (Wide-Mouthed Steel Water Bottle) có giá $24.",
     "group_id": "group_part3_11",
     "tags": [
       "part3",
@@ -1824,8 +1859,8 @@
       "D. An account number"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'You'll just need to send me the graphic file.' The woman agrees: 'I can do that.' So she will send a graphic file containing the company logo.",
+    "explanation_vi": "Người đàn ông nói: 'Bạn chỉ cần gửi cho tôi tệp đồ họa.' Người phụ nữ đồng ý: 'Tôi có thể làm điều đó.' Vì vậy, cô ấy sẽ gửi tệp đồ họa chứa logo công ty.",
     "group_id": "group_part3_11",
     "tags": [
       "part3",
@@ -1853,8 +1888,8 @@
       "D. Pencil drawings"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'I just finished recording the audio guide for the pencil drawings that'll be included in our modern art exhibit next week.' This directly states that pencil drawings will be displayed.",
+    "explanation_vi": "Người phụ nữ nói: 'Tôi vừa hoàn thành việc ghi âm hướng dẫn cho các bức tranh bút chì sẽ được đưa vào triển lãm nghệ thuật hiện đại của chúng tôi vào tuần tới.' Điều này trực tiếp cho thấy tranh bút chì sẽ được trưng bày.",
     "group_id": "group_part3_12",
     "tags": [
       "part3",
@@ -1883,8 +1918,8 @@
       "D. The Moment"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'The drawing by Claudia Hoffman will no longer be in the exhibit.' Looking at the graphic, Claudia Hoffman's work is 'Stormy Sea,' so that is the piece being removed.",
+    "explanation_vi": "Người đàn ông nói: 'Bức tranh của Claudia Hoffman sẽ không còn được trưng bày trong triển lãm nữa.' Nhìn vào hình ảnh, tác phẩm của Claudia Hoffman là 'Stormy Sea' (Biển Bão), vì vậy đó là tác phẩm bị loại bỏ.",
     "group_id": "group_part3_12",
     "tags": [
       "part3",
@@ -1913,8 +1948,8 @@
       "D. Greet some visitors"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'Then I'll make that change to the audio-guide recording. I'll do that right away.' Making a change to a recording means editing it, paraphrased as 'Edit a recording.'",
+    "explanation_vi": "Người phụ nữ nói: 'Vậy tôi sẽ thực hiện thay đổi đó trong bản ghi âm hướng dẫn. Tôi sẽ làm ngay bây giờ.' Thực hiện thay đổi trong bản ghi âm có nghĩa là chỉnh sửa nó, được diễn đạt lại thành 'Edit a recording' (Chỉnh sửa bản ghi âm).",
     "group_id": "group_part3_12",
     "tags": [
       "part3",
@@ -1943,8 +1978,8 @@
       "D. Environmental scientists"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'I'm glad we were assigned to cover the press conference earlier today.' The phrase 'cover the press conference' is a typical journalistic task, identifying both speakers as journalists.",
+    "explanation_vi": "Người đàn ông nói: 'Tôi vui vì chúng ta được phân công đưa tin về buổi họp báo hôm nay.' Cụm từ 'cover the press conference' (đưa tin về buổi họp báo) là công việc điển hình của nhà báo, xác định cả hai người là nhà báo.",
     "group_id": "group_part3_13",
     "tags": [
       "part3",
@@ -1972,8 +2007,8 @@
       "D. Site D"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The woman says: 'The largest cluster of wind turbines — off the coast of Winston — is already built.' According to the map graphic, Winston corresponds to Site D (70 Wind Turbines), confirming that Site D is the completed one.",
+    "explanation_vi": "Người phụ nữ nói: 'Cụm tua-bin gió lớn nhất — ngoài khơi bờ biển Winston — đã được xây dựng xong.' Theo bản đồ, Winston tương ứng với Công trường D (70 tua-bin gió), xác nhận rằng Công trường D là nơi đã hoàn thành.",
     "group_id": "group_part3_13",
     "tags": [
       "part3",
@@ -2002,8 +2037,8 @@
       "D. Power capacity"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The man says: 'I think it's crucial for us to focus on how many new jobs related to assembling and maintaining the turbines are opening up in the area as a result of this.' New jobs are paraphrased as 'Work opportunities.'",
+    "explanation_vi": "Người đàn ông nói: 'Tôi nghĩ điều quan trọng là chúng ta cần tập trung vào việc bao nhiêu việc làm mới liên quan đến lắp ráp và bảo trì tua-bin đang mở ra trong khu vực.' Việc làm mới được diễn đạt lại thành 'Work opportunities' (Cơ hội việc làm).",
     "group_id": "group_part3_13",
     "tags": [
       "part3",
@@ -2032,8 +2067,8 @@
       "D. A building management office"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The message begins with 'You have reached the information line for the Cranbury Apartments management office,' which clearly identifies the source of the recorded message as a building management office.",
+    "explanation_vi": "Tin nhắn bắt đầu bằng câu 'Bạn đã gọi đến đường dây thông tin của văn phòng quản lý căn hộ Cranbury,' cho thấy rõ ràng người ghi âm tin nhắn là văn phòng quản lý tòa nhà.",
     "group_id": "group_part4_01",
     "tags": [
       "part4",
@@ -2062,8 +2097,8 @@
       "D. Participate in a meeting"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'All Cranbury residents should move their vehicles from their designated parking spots before eight A.M. on Monday,' so the listeners are asked to move their vehicles.",
+    "explanation_vi": "Người nói cho biết 'Tất cả cư dân Cranbury nên di chuyển xe của mình ra khỏi chỗ đậu xe được chỉ định trước 8 giờ sáng thứ Hai,' vì vậy người nghe được yêu cầu di chuyển xe.",
     "group_id": "group_part4_01",
     "tags": [
       "part4",
@@ -2092,8 +2127,8 @@
       "D. A coupon"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker states 'A map of alternate parking sites was mailed to residents last week,' so the correct answer is a map.",
+    "explanation_vi": "Người nói đề cập rằng 'Bản đồ các bãi đậu xe thay thế đã được gửi qua đường bưu điện cho cư dân vào tuần trước,' vì vậy đáp án đúng là bản đồ.",
     "group_id": "group_part4_01",
     "tags": [
       "part4",
@@ -2122,8 +2157,8 @@
       "D. Kitchen renovations"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'we'll go over how you can maintain and make minor repairs to the roof of your home,' which paraphrases as 'Roof maintenance,' the topic of the episode.",
+    "explanation_vi": "Người nói cho biết 'chúng tôi sẽ hướng dẫn cách bảo trì và sửa chữa nhỏ mái nhà của bạn,' tương đương với chủ đề 'Bảo trì mái nhà' của tập phát sóng.",
     "group_id": "group_part4_02",
     "tags": [
       "part4",
@@ -2152,8 +2187,8 @@
       "D. They can be easily stored."
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker emphasizes 'It's important to choose some that are high quality because you'll use them for many years,' indicating tools should be of high quality.",
+    "explanation_vi": "Người nói nhấn mạnh rằng 'Điều quan trọng là chọn những dụng cụ có chất lượng cao vì bạn sẽ sử dụng chúng trong nhiều năm,' cho thấy công cụ cần phải có chất lượng cao.",
     "group_id": "group_part4_02",
     "tags": [
       "part4",
@@ -2182,8 +2217,8 @@
       "D. Draining some water"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker recommends 'I highly recommend you take photos of your roof every year so that you can track its overall condition,' so taking photos annually is the correct answer.",
+    "explanation_vi": "Người nói khuyến nghị 'Tôi rất muốn bạn chụp ảnh mái nhà mỗi năm để có thể theo dõi tình trạng tổng thể của nó,' vì vậy chụp ảnh hàng năm là câu trả lời đúng.",
     "group_id": "group_part4_02",
     "tags": [
       "part4",
@@ -2212,8 +2247,8 @@
       "D. A professor"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'Thanks again for joining me on today's tour of the beautiful Wallingford Conservatory,' which indicates the speaker is a tour guide.",
+    "explanation_vi": "Người nói cho biết 'Cảm ơn các bạn đã tham gia cùng tôi trong chuyến tham quan hôm nay tại Nhà kính Wallingford tuyệt đẹp,' điều này cho thấy người nói là hướng dẫn viên du lịch.",
     "group_id": "group_part4_03",
     "tags": [
       "part4",
@@ -2242,8 +2277,8 @@
       "D. A park will close."
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker mentions 'world-renowned botanist Samantha Hughes will be giving a lecture on the care of flowering orchid plants at two o'clock in the community room,' so a lecture will begin at two o'clock.",
+    "explanation_vi": "Người nói đề cập rằng 'nhà thực vật học nổi tiếng thế giới Samantha Hughes sẽ thuyết trình về cách chăm sóc cây lan hoa lúc 2 giờ trong phòng cộng đồng,' vì vậy một bài giảng sẽ bắt đầu lúc 2 giờ.",
     "group_id": "group_part4_03",
     "tags": [
       "part4",
@@ -2272,8 +2307,8 @@
       "D. A magazine"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'Samantha's work has also been featured in a documentary film called Orchid Caretakers,' so Orchid Caretakers is a film.",
+    "explanation_vi": "Người nói cho biết 'Tác phẩm của Samantha cũng đã xuất hiện trong một bộ phim tài liệu có tên Orchid Caretakers,' vì vậy Orchid Caretakers là một bộ phim.",
     "group_id": "group_part4_03",
     "tags": [
       "part4",
@@ -2302,8 +2337,8 @@
       "D. An awards ceremony"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'Before the benefit concert begins,' which indicates the event taking place is a fund-raising concert.",
+    "explanation_vi": "Người nói đề cập 'Trước khi buổi hòa nhạc từ thiện bắt đầu,' điều này cho thấy sự kiện đang diễn ra là một buổi hòa nhạc quyên tiền.",
     "group_id": "group_part4_04",
     "tags": [
       "part4",
@@ -2332,8 +2367,8 @@
       "D. Sponsor a team"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker mentions 'our facilities have been in need of some repairs for quite a while' and 'Eighty percent of the proceeds will go to construction at the Hillcaster Community Center,' so the organization plans to repair a building.",
+    "explanation_vi": "Người nói đề cập rằng 'các cơ sở vật chất của chúng tôi đã cần được sửa chữa từ khá lâu' và '80% doanh thu sẽ dành cho công trình xây dựng tại Trung tâm Cộng đồng Hillcaster,' vì vậy tổ chức có kế hoạch sửa chữa tòa nhà.",
     "group_id": "group_part4_04",
     "tags": [
       "part4",
@@ -2362,8 +2397,8 @@
       "D. Donate clothing"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker encourages listeners 'to buy food and drinks from the concession stand,' which paraphrases as 'Purchase refreshments.'",
+    "explanation_vi": "Người nói khuyến khích người nghe 'mua đồ ăn và thức uống tại quầy bán hàng,' tương đương với việc 'Mua đồ ăn nhẹ.'",
     "group_id": "group_part4_04",
     "tags": [
       "part4",
@@ -2392,8 +2427,8 @@
       "D. Professional networking"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'we'll be focusing on using time efficiently as a business owner,' which corresponds to 'Time management' as the workshop topic.",
+    "explanation_vi": "Người nói cho biết 'chúng tôi sẽ tập trung vào việc sử dụng thời gian hiệu quả với tư cách là chủ doanh nghiệp,' tương ứng với chủ đề hội thảo là 'Quản lý thời gian.'",
     "group_id": "group_part4_05",
     "tags": [
       "part4",
@@ -2422,8 +2457,8 @@
       "D. An extra chair should be provided."
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "By saying 'Erina's at the back of the room,' the speaker implies that assistance is available — listeners without a packet can get one from Erina.",
+    "explanation_vi": "Khi nói 'Erina đang ở phía sau phòng,' người nói ngụ ý rằng có sự trợ giúp — những người nghe chưa có tập tài liệu có thể nhận từ Erina.",
     "group_id": "group_part4_05",
     "tags": [
       "part4",
@@ -2452,8 +2487,8 @@
       "D. Fill out a questionnaire"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'to start off, we'll do an exercise to get to know one another better,' which corresponds to participating in an introductory activity.",
+    "explanation_vi": "Người nói cho biết 'để bắt đầu, chúng ta sẽ thực hiện một bài tập để hiểu nhau hơn,' tương ứng với việc tham gia một hoạt động giới thiệu.",
     "group_id": "group_part4_05",
     "tags": [
       "part4",
@@ -2482,8 +2517,8 @@
       "D. Some artwork"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'archaeologists have uncovered the remains of a fifth-century marketplace with colorful mosaic tiles on the walls. This is what the ruins are most famous for,' indicating the site is famous for its artwork (mosaic tiles).",
+    "explanation_vi": "Người nói cho biết 'các nhà khảo cổ đã khai quật được tàn tích của một khu chợ từ thế kỷ thứ 5 với những viên gạch khảm màu sắc trên tường. Đây là điều mà những tàn tích này nổi tiếng nhất,' cho thấy địa điểm nổi tiếng vì các tác phẩm nghệ thuật (gạch khảm).",
     "group_id": "group_part4_06",
     "tags": [
       "part4",
@@ -2512,8 +2547,8 @@
       "D. A tour started late."
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker apologizes by saying 'I'm sorry, but taking photos is not allowed, as the flash would damage the tiles,' so the listeners cannot take pictures.",
+    "explanation_vi": "Người nói xin lỗi bằng cách nói 'Tôi xin lỗi, nhưng chụp ảnh không được phép vì đèn flash có thể làm hỏng các viên gạch,' vì vậy người nghe không thể chụp ảnh.",
     "group_id": "group_part4_06",
     "tags": [
       "part4",
@@ -2542,8 +2577,8 @@
       "D. Speak quietly"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker asks 'please hold on to the handrails on either side,' which paraphrases as 'Use some handrails.'",
+    "explanation_vi": "Người nói yêu cầu 'hãy bám vào lan can ở cả hai bên,' tương đương với việc 'Sử dụng lan can.'",
     "group_id": "group_part4_06",
     "tags": [
       "part4",
@@ -2572,8 +2607,8 @@
       "D. Some audit procedures"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker discusses developing 30-second and 20-second ads for a new client, Parker Auto Parts Company, making the main topic an advertising campaign.",
+    "explanation_vi": "Người nói thảo luận về việc phát triển các quảng cáo 30 giây và 20 giây cho khách hàng mới, Công ty Parker Auto Parts, làm cho chủ đề chính là một chiến dịch quảng cáo.",
     "group_id": "group_part4_07",
     "tags": [
       "part4",
@@ -2603,8 +2638,8 @@
       "D. A supervisor will be observing closely."
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "By saying 'this is a priority,' the speaker implies that the deadline must be met — the tight schedule makes it urgent to complete the ads on time.",
+    "explanation_vi": "Khi nói 'đây là ưu tiên,' người nói ngụ ý rằng thời hạn phải được đáp ứng — lịch trình chặt chẽ khiến việc hoàn thành quảng cáo đúng hạn trở nên cấp bách.",
     "group_id": "group_part4_07",
     "tags": [
       "part4",
@@ -2633,8 +2668,8 @@
       "D. Do some research"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'there's a rough ad we can start editing. Let's work on that now,' indicating the listeners will next revise some existing work.",
+    "explanation_vi": "Người nói cho biết 'có một bản quảng cáo thô mà chúng ta có thể bắt đầu chỉnh sửa. Hãy làm việc đó ngay bây giờ,' cho thấy người nghe sẽ tiếp theo chỉnh sửa một số công việc hiện có.",
     "group_id": "group_part4_07",
     "tags": [
       "part4",
@@ -2663,8 +2698,8 @@
       "D. At an electronics store"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker begins by saying 'Excuse me, nurses,' which directly identifies the listeners as nurses working at a hospital.",
+    "explanation_vi": "Người nói bắt đầu bằng câu 'Xin lỗi, các y tá,' điều này trực tiếp xác định người nghe là các y tá làm việc tại bệnh viện.",
     "group_id": "group_part4_08",
     "tags": [
       "part4",
@@ -2693,8 +2728,8 @@
       "D. To explain a technical process"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker's main purpose is to address complaints about the free snacks in the hospital break rooms and propose a solution, so the purpose is to address staff complaints.",
+    "explanation_vi": "Mục đích chính của người nói là giải quyết các phàn nàn về đồ ăn nhẹ miễn phí trong phòng nghỉ ngơi của bệnh viện và đề xuất giải pháp, vì vậy mục đích là giải quyết phàn nàn của nhân viên.",
     "group_id": "group_part4_08",
     "tags": [
       "part4",
@@ -2723,8 +2758,8 @@
       "D. A change will not be immediate."
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "By saying 'That will require management approval,' the speaker implies the proposed change (putting money into staff spending accounts) will not happen immediately because it needs to go through an approval process first.",
+    "explanation_vi": "Khi nói 'Điều đó sẽ cần được ban quản lý phê duyệt,' người nói ngụ ý rằng sự thay đổi được đề xuất (nạp tiền vào tài khoản chi tiêu của nhân viên) sẽ không xảy ra ngay lập tức vì cần phải trải qua quy trình phê duyệt trước.",
     "group_id": "group_part4_08",
     "tags": [
       "part4",
@@ -2753,8 +2788,8 @@
       "D. A conservation project"
     ],
     "correct_answer": "B",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'I'm pleased to welcome you to the celebration for our town's newly renovated Lakeville Park,' indicating that a park renovation was recently completed.",
+    "explanation_vi": "Người nói cho biết 'Tôi rất vui khi chào đón các bạn đến lễ kỷ niệm công viên Lakeville mới được cải tạo của thị trấn chúng ta,' cho thấy việc cải tạo công viên vừa được hoàn thành.",
     "group_id": "group_part4_09",
     "tags": [
       "part4",
@@ -2783,8 +2818,8 @@
       "D. Location 4"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'We'll end our walk on the hill on the north side of the park. There we'll be having some free snacks and ice cream.' According to the map, the hill is at Location 1, so refreshments will be served at Location 1.",
+    "explanation_vi": "Người nói cho biết 'Chúng ta sẽ kết thúc cuộc đi bộ trên ngọn đồi ở phía bắc của công viên. Ở đó chúng ta sẽ có đồ ăn nhẹ và kem miễn phí.' Theo bản đồ, ngọn đồi ở vị trí số 1, vì vậy đồ ăn nhẹ sẽ được phục vụ ở Địa điểm 1.",
     "group_id": "group_part4_09",
     "tags": [
       "part4",
@@ -2814,8 +2849,8 @@
       "D. Post some photographs"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker reminds listeners 'For those of you taking photos, don't forget to post them on the city's Web site,' which corresponds to posting photographs.",
+    "explanation_vi": "Người nói nhắc nhở người nghe 'Đối với những ai đang chụp ảnh, đừng quên đăng chúng lên trang web của thành phố,' tương ứng với việc đăng ảnh.",
     "group_id": "group_part4_09",
     "tags": [
       "part4",
@@ -2844,8 +2879,8 @@
       "D. Which flowers need more sun"
     ],
     "correct_answer": "C",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'we've received lots of requests for information on growing a vegetable garden. People want to know how to keep their garden healthy and get the vegetables they want,' making the topic 'How to grow vegetables.'",
+    "explanation_vi": "Người nói cho biết 'chúng tôi đã nhận được nhiều yêu cầu thông tin về cách trồng vườn rau. Mọi người muốn biết cách giữ vườn khỏe mạnh và có được rau củ họ muốn,' làm cho chủ đề là 'Cách trồng rau.'",
     "group_id": "group_part4_10",
     "tags": [
       "part4",
@@ -2874,8 +2909,8 @@
       "D. 8 inches"
     ],
     "correct_answer": "A",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'Since this is September, all soil samples in the next six weeks should be taken from the same depth, as seen on this chart.' According to the Soil Sampling Timeline chart, September–October requires samples from all plants at 12 inches depth.",
+    "explanation_vi": "Người nói cho biết 'Vì hiện tại là tháng 9, tất cả các mẫu đất trong 6 tuần tới nên được lấy từ cùng một độ sâu, như được thấy trên biểu đồ này.' Theo bảng Lịch lấy mẫu đất, tháng 9–10 yêu cầu lấy mẫu từ tất cả các loại cây ở độ sâu 12 inch.",
     "group_id": "group_part4_10",
     "tags": [
       "part4",
@@ -2905,8 +2940,8 @@
       "D. Sign up for a mailing list"
     ],
     "correct_answer": "D",
-    "explanation": null,
-    "explanation_vi": null,
+    "explanation": "The speaker says 'before you leave today, please sign up for our mailing list to stay informed of future lectures,' so the listeners are encouraged to sign up for a mailing list.",
+    "explanation_vi": "Người nói cho biết 'trước khi ra về hôm nay, hãy đăng ký danh sách gửi thư của chúng tôi để cập nhật các buổi giảng trong tương lai,' vì vậy người nghe được khuyến khích đăng ký danh sách gửi thư.",
     "group_id": "group_part4_10",
     "tags": [
       "part4",
@@ -2935,7 +2970,16 @@
       "D. himself"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Cựu CEO của Công ty Sendai, Ken Nakata, đã nói về những kinh nghiệm nghề nghiệp của mình.",
+      "option_explanations": {
+        "A": "he (đại từ chủ ngữ) — không đứng trước danh từ 'career experiences'.",
+        "B": "his (tính từ sở hữu) — đúng, bổ nghĩa cho danh từ 'career experiences'.",
+        "C": "him (đại từ tân ngữ) — không hợp ngữ cảnh trước danh từ.",
+        "D": "himself (đại từ phản thân) — chỉ dùng khi chủ ngữ và tân ngữ là cùng một người."
+      },
+      "grammar_explanation": "Cần một tính từ sở hữu trước danh từ 'career experiences' -> 'his career experiences'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -2943,7 +2987,7 @@
       "pronoun",
       "possessive"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -2964,7 +3008,16 @@
       "D. connecting"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Hành khách sẽ đi chuyến bay nội địa nối chuyến nên hãy đến Nhà ga A.",
+      "option_explanations": {
+        "A": "connectivity (danh từ) — không phù hợp trước 'domestic flight'.",
+        "B": "connects (động từ) — không hợp ngữ pháp ở vị trí này.",
+        "C": "connect (động từ nguyên mẫu) — không đúng hình thức khi mô tả 'flight'.",
+        "D": "connecting (phân từ hiện tại) — đúng, 'connecting flight' = chuyến bay nối chuyến."
+      },
+      "grammar_explanation": "Phần bổ nghĩa cho 'flight' cần tính từ (phân từ) 'connecting' để tạo cụm danh từ 'connecting flight'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -2972,7 +3025,7 @@
       "verb-form",
       "participle"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -2993,7 +3046,16 @@
       "D. free"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "translation": "Bánh rán táo với nước ép táo tươi và ngon có sẵn tại cửa hàng bán lẻ Oakcrest Orchard với giá £6 mỗi tá.",
+      "option_explanations": {
+        "A": "eaten (quá khứ phân từ) — không phù hợp để mô tả tính chất đang có của bánh.",
+        "B": "open (tính từ) — không hợp nghĩa với 'apple-cider donuts'.",
+        "C": "tasty (tính từ) — đúng, mô tả hương vị của bánh.",
+        "D": "free (tính từ) — 'miễn phí' không phù hợp với câu ghi giá."
+      },
+      "grammar_explanation": "Cần một tính từ mô tả danh từ 'apple-cider donuts' — 'tasty' là lựa chọn phù hợp."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3001,7 +3063,7 @@
       "adjective",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3022,7 +3084,16 @@
       "D. curtains"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Zahn Flooring có bộ sưu tập gạch lát rộng nhất ở Vương quốc Anh.",
+      "option_explanations": {
+        "A": "paints (sơn) — không liên quan đến sàn.",
+        "B": "tiles (gạch lát) — đúng, phù hợp với sản phẩm của cửa hàng sàn.",
+        "C": "furniture (đồ nội thất) — không phải lựa chọn ưu tiên cho cửa hàng sàn.",
+        "D": "curtains (rèm) — không phù hợp."
+      },
+      "grammar_explanation": "Cụm 'selection of' đi kèm với danh từ số nhiều 'tiles' hợp nghĩa."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3030,7 +3101,7 @@
       "vocabulary",
       "noun"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3051,7 +3122,16 @@
       "D. updated"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Một trong những trách nhiệm của phòng CNTT là đảm bảo rằng công ty sử dụng phần mềm được cập nhật.",
+      "option_explanations": {
+        "A": "update (danh từ/động từ) — không đúng hình thức khi đứng trước 'software' ở đây.",
+        "B": "updating (đang cập nhật) — không hợp ngữ nghĩa; cần tính từ miêu tả trạng thái.",
+        "C": "updates (danh từ số nhiều) — không hợp khi nói 'using updates software'.",
+        "D": "updated (tính từ) — đúng, 'updated software' = phần mềm đã được cập nhật."
+      },
+      "grammar_explanation": "Cần một tính từ phân từ ('updated') để mô tả trạng thái của 'software'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3059,7 +3139,7 @@
       "adjective",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3080,7 +3160,16 @@
       "D. before"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Nên kiểm tra quy định về ăn mặc của công ty trước khi đến thăm trụ sở chính của họ.",
+      "option_explanations": {
+        "A": "so — không đúng ngữ pháp trong cụm này.",
+        "B": "how — hỏi cách thức, không phù hợp.",
+        "C": "like — giống như; không phù hợp trước 'visiting'.",
+        "D": "before — đúng, 'before visiting' = trước khi đến thăm."
+      },
+      "grammar_explanation": "Cần liên từ chỉ thời gian 'before' để nói về hành động xảy ra trước khi đến thăm."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3088,7 +3177,7 @@
       "preposition",
       "conjunction"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3109,7 +3198,16 @@
       "D. enthused"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Ban giám đốc Wexler Store mong đợi nhân viên sẽ hỗ trợ nhiệt tình bất kỳ nhân viên mới nào.",
+      "option_explanations": {
+        "A": "enthusiastically (trạng từ) — đúng, bổ nghĩa cho động từ 'support'.",
+        "B": "enthusiasm (danh từ) — không hợp vị trí ngữ pháp.",
+        "C": "enthusiastic (tính từ) — cần trạng từ sau 'will' + động từ.",
+        "D": "enthused (tính từ/được kích thích) — ít phù hợp."
+      },
+      "grammar_explanation": "Cần trạng từ để sửa đổi động từ 'support' -> 'support enthusiastically'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3117,7 +3215,7 @@
       "adverb",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3138,7 +3236,16 @@
       "D. inspections"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Cân chỉnh bánh xe và kiểm tra hệ thống phanh là một phần trong gói dịch vụ xe của chúng tôi.",
+      "option_explanations": {
+        "A": "inspects (động từ số ít) — không đúng vì cần danh từ.",
+        "B": "inspector (danh từ người kiểm tra) — không phù hợp.",
+        "C": "inspected (quá khứ phân từ) — không hợp khi liệt kê dịch vụ.",
+        "D": "inspections (danh từ) — đúng, danh từ phù hợp sau 'brake system'."
+      },
+      "grammar_explanation": "Cần một danh từ để song hành với 'wheel alignments' -> 'inspections'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3146,7 +3253,7 @@
       "noun",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3167,7 +3274,16 @@
       "D. while"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Đăng ký Hội nghị Liên minh Tiếp thị hiện đã mở đến ngày 30 tháng 9.",
+      "option_explanations": {
+        "A": "until (đến) — đúng, chỉ thời hạn đến ngày 30/9.",
+        "B": "into — không đúng trong ngữ cảnh này.",
+        "C": "yet — chưa, không hợp.",
+        "D": "while — trong khi, không phù hợp cho thời hạn."
+      },
+      "grammar_explanation": "Dùng 'until' để chỉ thời hạn kết thúc một hành động."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3175,7 +3291,7 @@
       "preposition",
       "time"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_004",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3196,7 +3312,16 @@
       "D. assorted"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Tăng trưởng trong ngành giải trí gia đình đã bị hạn chế trong quý này.",
+      "option_explanations": {
+        "A": "separate (tách biệt) — không phù hợp.",
+        "B": "limited (bị hạn chế) — đúng, diễn tả mức độ tăng trưởng.",
+        "C": "willing (sẵn lòng) — không liên quan.",
+        "D": "assorted (đa dạng) — không phù hợp."
+      },
+      "grammar_explanation": "Cần tính từ mô tả 'growth' -> 'limited growth' là phù hợp."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3204,7 +3329,7 @@
       "adjective",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3225,7 +3350,16 @@
       "D. deliverable"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Hawson Furniture sẽ thực hiện các lần giao hàng ở phía đông thành phố vào thứ Năm.",
+      "option_explanations": {
+        "A": "deliveries (danh từ số nhiều) — đúng, 'making deliveries' là cụm cố định.",
+        "B": "delivered (quá khứ phân từ) — không phù hợp ngữ pháp ở vị trí này.",
+        "C": "deliver (động từ) — cần danh từ tại vị trí này.",
+        "D": "deliverable (tính từ) — 'có thể giao', không thích hợp."
+      },
+      "grammar_explanation": "Cần danh từ khi nói về hành động thực hiện — 'making deliveries' là cấu trúc phù hợp."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3233,7 +3367,7 @@
       "noun",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3254,7 +3388,16 @@
       "D. travel"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Hội đồng thành phố Marlton không có thẩm quyền cấm đỗ xe trên đường phố thành phố.",
+      "option_explanations": {
+        "A": "drive — lái xe, không liên quan đến 'authority to'.",
+        "B": "prohibit — cấm; đúng, 'authority to prohibit parking'.",
+        "C": "bother — làm phiền, vô nghĩa ở đây.",
+        "D": "travel — đi lại, không hợp."
+      },
+      "grammar_explanation": "Sau 'authority to' cần động từ nguyên mẫu 'prohibit' để chỉ hành động mà hội đồng không có quyền thực hiện."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3283,7 +3426,16 @@
       "D. leaning"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Dự án Project Earth đang tìm kiếm các cách để giảm phát thải khí nhà kính liên quan đến vận chuyển.",
+      "option_explanations": {
+        "A": "looking (động từ -ing) — đúng, 'is looking for' = đang tìm kiếm.",
+        "B": "seeing — 'thấy', không phù hợp ngữ cảnh.",
+        "C": "driving — lái xe, không phù hợp.",
+        "D": "leaning — nghiêng về, không hợp."
+      },
+      "grammar_explanation": "Sau 'is' cần dạng -ing để tạo cấu trúc 'is looking for'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3312,7 +3464,16 @@
       "D. perfection"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "translation": "Thợ may lành nghề của chúng tôi sẵn lòng thiết kế bộ com-lê may đo phù hợp phong cách và ngân sách của bạn một cách hoàn hảo.",
+      "option_explanations": {
+        "A": "perfect (tính từ) — không phù hợp để sửa động từ 'fits'.",
+        "B": "perfects (động từ) — không phù hợp ngữ pháp.",
+        "C": "perfectly (trạng từ) — đúng, sửa động từ 'fits'.",
+        "D": "perfection (danh từ) — không phù hợp."
+      },
+      "grammar_explanation": "Cần trạng từ để mô tả cách thức 'fits' hoạt động -> 'fits ... perfectly'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3320,7 +3481,7 @@
       "adverb",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3341,7 +3502,16 @@
       "D. helpful"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Quản lý dự án Hannah Chung đã chứng tỏ là rất hữu ích trong việc hoàn thành các dự án của công ty.",
+      "option_explanations": {
+        "A": "helpfulness (danh từ) — không phù hợp sau 'be'.",
+        "B": "help (danh từ) — không đúng.",
+        "C": "helpfully (trạng từ) — không hợp khi mô tả người.",
+        "D": "helpful (tính từ) — đúng, mô tả người/năng lực."
+      },
+      "grammar_explanation": "Sau 'be' cần tính từ để miêu tả người -> 'be helpful'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3349,7 +3519,7 @@
       "adjective",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3370,7 +3540,16 @@
       "D. between"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "translation": "Thành viên Lehua Vacation Club sẽ nhận điểm gấp đôi trong suốt tháng Tám tại các khách sạn tham gia chương trình.",
+      "option_explanations": {
+        "A": "onto — sai, không đúng nghĩa.",
+        "B": "above — sai, không phù hợp.",
+        "C": "during — đúng, chỉ khoảng thời gian 'during the month of August'.",
+        "D": "between — cần hai mốc thời gian, không phù hợp."
+      },
+      "grammar_explanation": "Dùng 'during' để chỉ hành động xảy ra trong một khoảng thời gian cụ thể."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3378,7 +3557,7 @@
       "preposition",
       "time"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_004",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3399,7 +3578,16 @@
       "D. soon"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Trang phục không được nhận kịp thời để sử dụng trong buổi diễn tập mặc đầu tiên.",
+      "option_explanations": {
+        "A": "far — xa, không phù hợp.",
+        "B": "very — rất; không phù hợp cấu trúc 'enough' ở đây.",
+        "C": "almost — gần như; không hợp ngữ cảnh 'received'.",
+        "D": "soon (sớm) — đúng trong cụm 'not received soon enough'."
+      },
+      "grammar_explanation": "Cụm 'not received soon enough' diễn đạt hành động không xảy ra kịp thời."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3407,7 +3595,7 @@
       "adverb",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3428,7 +3616,16 @@
       "D. organizational"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Là một cựu nhân viên truyền thông cho nhiều dàn nhạc nổi tiếng, ông Wu sẽ xuất sắc trong vai trò người tổ chức sự kiện.",
+      "option_explanations": {
+        "A": "organized (tính từ) — không phù hợp để chỉ người.",
+        "B": "organizer (danh từ) — đúng, người tổ chức sự kiện.",
+        "C": "organizes (động từ) — không hợp.",
+        "D": "organizational (tính từ) — miêu tả tính chất, không phải vai trò."
+      },
+      "grammar_explanation": "Cần một danh từ để chỉ vai trò/chức danh -> 'event organizer'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3436,7 +3633,7 @@
       "noun",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3457,7 +3654,16 @@
       "D. collectively"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Làn đường hướng bắc trên Davis Street sẽ tạm thời bị đóng vì dự án gia cố cầu của thành phố.",
+      "option_explanations": {
+        "A": "temporarily (tạm thời) — đúng, chỉ sự đóng cửa không vĩnh viễn.",
+        "B": "competitively (mang tính cạnh tranh) — không phù hợp.",
+        "C": "recently (gần đây) — không phù hợp ngữ cảnh.",
+        "D": "collectively (cùng nhau) — không phù hợp."
+      },
+      "grammar_explanation": "Cần trạng từ mô tả cách thức/khung thời gian -> 'temporarily closed'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3465,7 +3671,7 @@
       "adverb",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3486,7 +3692,16 @@
       "D. against"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Đại diện hãng hàng không phải xử lý nhiều vấn đề của hành khách, từ việc bỏ lỡ chuyến nối đến hành lý thất lạc.",
+      "option_explanations": {
+        "A": "from — đúng, biểu thị phạm vi 'from ... to ...'.",
+        "B": "under — dưới, không phù hợp.",
+        "C": "on — trên, không đúng cấu trúc phạm vi.",
+        "D": "against — chống lại, không phù hợp."
+      },
+      "grammar_explanation": "Sử dụng 'from ... to ...' để liệt kê phạm vi các vấn đề."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3494,7 +3709,7 @@
       "preposition",
       "range"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_004",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3515,7 +3730,16 @@
       "D. accidentally"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Các ghi chú cuộc họp đã bị xóa nhầm, nhưng ông Hahm đã có thể tái tạo lại chúng bằng trí nhớ.",
+      "option_explanations": {
+        "A": "accident (danh từ) — không phù hợp ngữ pháp.",
+        "B": "accidental (tính từ) — không đúng hoàn toàn cho vị trí này.",
+        "C": "accidents (danh từ số nhiều) — không phù hợp.",
+        "D": "accidentally (trạng từ) — đúng, 'were accidentally deleted'."
+      },
+      "grammar_explanation": "Cần trạng từ để mô tả cách thức hành động 'deleted' xảy ra -> 'accidentally deleted'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3523,7 +3747,7 @@
       "adverb",
       "word-form"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3544,7 +3768,16 @@
       "D. now"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Số hiện tại của tạp chí Farming Scene dự đoán rằng giá ngô sẽ tăng 5 phần trăm trong năm tới.",
+      "option_explanations": {
+        "A": "next (tiếp theo) — đúng, 'over the next year' nghĩa là trong năm tới.",
+        "B": "with — với, không phù hợp.",
+        "C": "which — đại từ quan hệ, không phù hợp.",
+        "D": "now — bây giờ, không phù hợp."
+      },
+      "grammar_explanation": "'Over the next year' là cụm cố định để nói về sự thay đổi trong khoảng thời gian sắp tới."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3552,7 +3785,7 @@
       "adjective",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3573,7 +3806,16 @@
       "D. were needing"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Bất kỳ ai vẫn cần tham gia khóa đào tạo an toàn cháy nổ nên làm trước cuối tháng.",
+      "option_explanations": {
+        "A": "needing — dạng -ing không phù hợp sau 'who still'.",
+        "B": "needs — đúng, chia động từ cho chủ ngữ 'Anyone who still needs'.",
+        "C": "has needed — thì hoàn thành không phù hợp.",
+        "D": "were needing — thì quá khứ tiếp diễn, không phù hợp."
+      },
+      "grammar_explanation": "'Anyone who' là số ít, nên dùng 'needs' cho động từ chính."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3581,7 +3823,7 @@
       "verb-tense",
       "subject-verb"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_001",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3602,7 +3844,16 @@
       "D. closely"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "translation": "Các công nghệ mới đã bắt đầu chuyển đổi ngành vận tải theo những cách từng không thể tưởng tượng được.",
+      "option_explanations": {
+        "A": "already — đúng, 'have already begun' là cụm hay dùng.",
+        "B": "exactly — chính xác, không phù hợp ngữ cảnh.",
+        "C": "hardly — hầu như không, trái nghĩa.",
+        "D": "closely — chặt chẽ, không phù hợp."
+      },
+      "grammar_explanation": "'have already begun' diễn đạt rằng hành động đã bắt đầu trước thời điểm hiện tại."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3610,7 +3861,7 @@
       "adverb",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "easy",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3631,7 +3882,16 @@
       "D. standards"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Sổ tay công ty nêu rõ các tiêu chuẩn cao mà nhân viên được kỳ vọng đáp ứng hàng ngày.",
+      "option_explanations": {
+        "A": "experts — chuyên gia, không phù hợp.",
+        "B": "accounts — tài khoản, không phù hợp.",
+        "C": "recommendations — khuyến nghị, không phù hợp cho 'expected to meet'.",
+        "D": "standards — tiêu chuẩn; đúng."
+      },
+      "grammar_explanation": "'Standards' là danh từ phù hợp với 'expected to meet'."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3639,7 +3899,7 @@
       "noun",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3660,7 +3920,16 @@
       "D. some"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "translation": "Vì một số thành viên hội đồng có xung đột lịch trình, cuộc họp hội đồng sẽ được dời sang ngày mà tất cả có thể tham dự.",
+      "option_explanations": {
+        "A": "any — bất kỳ, không phù hợp ở đây.",
+        "B": "everybody — mọi người, mang nghĩa khác.",
+        "C": "those — những người đó, cần cụm định ngữ rõ hơn.",
+        "D": "some — đúng, 'some of the board members'."
+      },
+      "grammar_explanation": "Dùng 'some of' để chỉ một phần của tập hợp; phù hợp trong câu này."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3668,7 +3937,7 @@
       "pronoun",
       "determiner"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3689,7 +3958,16 @@
       "D. performed"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "translation": "Dự án đòi hỏi sự hợp tác của nhiều nhóm trong công ty.",
+      "option_explanations": {
+        "A": "passed — vượt qua, không phù hợp.",
+        "B": "decided — quyết định, không phù hợp.",
+        "C": "required — yêu cầu; đúng, 'required the collaboration'.",
+        "D": "performed — thực hiện, không phù hợp."
+      },
+      "grammar_explanation": "Động từ 'require' phù hợp khi nói rằng dự án cần sự hợp tác."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3718,7 +3996,16 @@
       "D. will be approved"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "translation": "Chúng tôi không thể gửi sách phiếu giảm giá của cửa hàng đến nhà in cho đến khi nó được Ms. Jeon phê duyệt.",
+      "option_explanations": {
+        "A": "is approving — đang phê duyệt, không phù hợp.",
+        "B": "approves — Ms. Jeon phê duyệt (chủ động) nhưng cấu trúc 'until it approves' sai chủ ngữ.",
+        "C": "has been approved — đúng, hoàn tất hành động phê duyệt trước khi gửi in.",
+        "D": "will be approved — tương lai, ít phù hợp với 'until' diễn tả điều kiện hoàn thành."
+      },
+      "grammar_explanation": "Dùng thì hoàn thành bị động 'has been approved' để chỉ trạng thái đã được phê duyệt trước khi hành động tiếp theo xảy ra."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3747,7 +4034,16 @@
       "D. According to"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "translation": "Do sự đóng cửa của Verdigold Transport Services, chúng tôi đang tìm một công ty vận chuyển mới.",
+      "option_explanations": {
+        "A": "In spite of — mặc dù, trái nghĩa.",
+        "B": "Just as — đúng lúc, không phù hợp.",
+        "C": "In light of — xét thấy, phù hợp khi đưa ra lý do.",
+        "D": "According to — theo như, không phù hợp."
+      },
+      "grammar_explanation": "'In light of' được dùng để nêu lý do/điều kiện dẫn đến hành động tiếp theo."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3755,7 +4051,7 @@
       "conjunction",
       "transition"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "medium",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3776,7 +4072,16 @@
       "D. potential"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "translation": "Thông tin bổ sung được cung cấp trong sách hướng dẫn của Uniss Bank giúp người nộp đơn hiểu các điều khoản vay.",
+      "option_explanations": {
+        "A": "arbitrary — tùy tiện, không phù hợp.",
+        "B": "supplemental — bổ sung; đúng, thông tin thêm giúp giải thích điều khoản.",
+        "C": "superfluous — thừa thãi, trái nghĩa.",
+        "D": "potential — tiềm năng, không phù hợp."
+      },
+      "grammar_explanation": "'Supplemental information' là cụm hay dùng để chỉ thông tin bổ sung giúp làm rõ."
+    },
     "explanation_vi": null,
     "group_id": null,
     "tags": [
@@ -3784,7 +4089,7 @@
       "adjective",
       "vocabulary"
     ],
-    "grammar_topic_id": null,
+    "grammar_topic_id": "gtopic_003",
     "difficulty": "hard",
     "skill": "reading",
     "created_at": "2026-04-12T00:00:00Z",
@@ -3805,7 +4110,15 @@
       "D. Next Saturday at 4 P.M., we are hosting a free workshop for the public."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Trẻ em ở mọi lứa tuổi sẽ thích các triển lãm mới.",
+        "B": "Tìm hiểu về mô hình lượng mưa trong khu vực.",
+        "C": "Xây một bộ bàn ghế sân đơn giản với vật liệu dễ tìm.",
+        "D": "Thứ Bảy tới lúc 4 giờ chiều, chúng tôi tổ chức một hội thảo miễn phí cho công chúng."
+      },
+      "grammar_or_vocab_explanation": "Phương án A khớp với giọng điệu mời gọi của đoạn quảng bá và liên quan trực tiếp tới 'exhibits' và hoạt động cộng đồng; các phương án khác nói về nội dung cụ thể hoặc thời gian, không phù hợp cho chỗ trống này."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_01",
     "tags": [
@@ -3835,7 +4148,15 @@
       "D. that uses"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "để sử dụng",
+        "B": "đã từng",
+        "C": "bằng cách sử dụng",
+        "D": "mà sử dụng"
+      },
+      "grammar_or_vocab_explanation": "Cấu trúc yêu cầu một mệnh đề quan hệ mô tả 'a shallow sunken garden' — 'that uses' (D) là mệnh đề quan hệ phù hợp; các lựa chọn khác không tạo thành mệnh đề xác định đúng ngữ pháp."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_01",
     "tags": [
@@ -3865,7 +4186,15 @@
       "D. As a matter of fact"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Điều hay nhất là",
+        "B": "Ví dụ",
+        "C": "Dù sao đi nữa",
+        "D": "Thực tế là"
+      },
+      "grammar_or_vocab_explanation": "Câu liệt kê các đặc điểm của rain gardens rồi nêu một cách cụ thể điều có thể làm được; 'For example' (B) thích hợp để giới thiệu ví dụ minh họa."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_01",
     "tags": [
@@ -3895,7 +4224,15 @@
       "D. yours"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "chúng ta",
+        "B": "chúng (họ)",
+        "C": "cả hai",
+        "D": "của bạn"
+      },
+      "grammar_or_vocab_explanation": "'They' (B) là đại từ tham chiếu tới 'rain gardens' đã được nhắc trước đó; các lựa chọn khác không tham chiếu chính xác đến chủ thể số nhiều này."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_01",
     "tags": [
@@ -3925,7 +4262,15 @@
       "D. amazingly"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "kinh ngạc (tính từ mô tả người cảm thấy)",
+        "B": "sự kinh ngạc (danh từ)",
+        "C": "tuyệt vời/đáng kinh ngạc (tính từ mô tả sự ủng hộ)",
+        "D": "một cách đáng kinh ngạc (trạng từ)"
+      },
+      "grammar_or_vocab_explanation": "Cần một tính từ để mô tả 'support' (danh từ), vì vậy 'amazing' (C) là hợp lệ; các dạng khác (danh từ hoặc trạng từ) không phù hợp ngữ pháp."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_02",
     "tags": [
@@ -3955,7 +4300,15 @@
       "D. criticism"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "sự chú ý",
+        "B": "đề xuất",
+        "C": "sự đổi mới",
+        "D": "chỉ trích"
+      },
+      "grammar_or_vocab_explanation": "Trong ngữ cảnh 'received a lot of ___ on social media', 'attention' (A) là danh từ phù hợp; 'proposals' hay 'criticism' không phù hợp với ý văn mô tả phản hồi tích cực."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_02",
     "tags": [
@@ -3985,7 +4338,15 @@
       "D. Tokyo is a top tourism destination for many reasons."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Một số sự kiện khác đã diễn ra rất tốt.",
+        "B": "Cảm ơn ông về sự linh hoạt trong việc lập kế hoạch sự kiện.",
+        "C": "Xin hãy ghé qua văn phòng chúng tôi khi ông tới thành phố.",
+        "D": "Tokyo là điểm đến du lịch hàng đầu vì nhiều lý do."
+      },
+      "grammar_or_vocab_explanation": "Đoạn thư đang cảm ơn và ghi nhận sự hỗ trợ của người nhận; câu B là lời cảm ơn phù hợp về tính linh hoạt trong lập kế hoạch và nối tiếp logic của đoạn thư."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_02",
     "tags": [
@@ -4015,7 +4376,15 @@
       "D. benefits"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "sẽ mang lại lợi ích",
+        "B": "để có lợi",
+        "C": "đã mang lại lợi ích",
+        "D": "(thông thường) mang lại lợi ích"
+      },
+      "grammar_or_vocab_explanation": "Câu nói về việc tổ chức đấu giá trong tương lai; 'will benefit' (A) diễn tả rõ ràng rằng cuộc đấu giá sắp tới sẽ hỗ trợ chương trình, phù hợp về thì và ý nghĩa."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_02",
     "tags": [
@@ -4045,7 +4414,15 @@
       "D. Each"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Nó",
+        "B": "Bạn",
+        "C": "Của chúng tôi",
+        "D": "Mỗi"
+      },
+      "grammar_or_vocab_explanation": "Câu '_______ must be renewed if you intend to keep your membership' yêu cầu đại từ thay thế cho 'your Mena Chin Library card' — 'It' (A) là lựa chọn đúng để nói về thẻ."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_03",
     "tags": [
@@ -4075,7 +4452,15 @@
       "D. You may opt out of this program at any time."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Để đăng ký một thẻ, đến chi nhánh thư viện địa phương.",
+        "B": "Để biết về hội viên, xin truy cập Web site của chúng tôi.",
+        "C": "Việc gia hạn phải hoàn tất ít nhất một tuần trước khi thẻ hết hạn.",
+        "D": "Bạn có thể chọn rút khỏi chương trình bất cứ lúc nào."
+      },
+      "grammar_or_vocab_explanation": "Đoạn sau nói về 'renewal' và thủ tục cần làm trước khi thẻ hết hạn; câu C cung cấp hướng dẫn thời hạn phù hợp với thông báo về việc gia hạn."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_03",
     "tags": [
@@ -4105,7 +4490,15 @@
       "D. Although"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Cũng",
+        "B": "Nếu",
+        "C": "Bởi vì",
+        "D": "Mặc dù"
+      },
+      "grammar_or_vocab_explanation": "Cấu trúc đảo ngữ 'Should you decide...' tương ứng với lựa chọn B 'Should' để diễn đạt điều kiện lịch sự; 'Should' dùng cho câu điều kiện thay cho 'If'."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_03",
     "tags": [
@@ -4135,7 +4528,15 @@
       "D. specificity"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "cụ thể (trạng từ)",
+        "B": "chi tiết",
+        "C": "được chỉ định",
+        "D": "tính cụ thể"
+      },
+      "grammar_or_vocab_explanation": "Câu nói 'Failure to complete your renewal by the _______ date' yêu cầu một tính từ bị động mô tả ngày — 'specified' (C) là lựa chọn phù hợp để chỉ 'ngày đã được chỉ định'."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_03",
     "tags": [
@@ -4165,7 +4566,15 @@
       "D. It was the first studio of its kind to open in this area."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Tôi muốn giới thiệu doanh nghiệp của chúng tôi với bạn.",
+        "B": "Những bức ảnh đẹp có thể làm nổi bật bất động sản của bạn.",
+        "C": "Chúng tôi mong chờ chuyến thăm của bạn.",
+        "D": "Đó là studio đầu tiên loại này trong khu vực."
+      },
+      "grammar_or_vocab_explanation": "Bức thư mở đầu bằng câu chào và giới thiệu dịch vụ; câu A là lời giới thiệu phù hợp cho phần mở đầu của thư giới thiệu doanh nghiệp."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_04",
     "tags": [
@@ -4195,7 +4604,15 @@
       "D. displaying"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "nghiên cứu",
+        "B": "tạo ra",
+        "C": "mua sắm",
+        "D": "trưng bày"
+      },
+      "grammar_or_vocab_explanation": "Câu 'Droplight Studio spares no effort in _______ superior digital images' yêu cầu một danh động từ (gerund) để làm tân ngữ của giới từ 'in' — 'creating' (B) là đúng; các lựa chọn khác không phù hợp chức năng ngữ pháp."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_04",
     "tags": [
@@ -4225,7 +4642,15 @@
       "D. Indeed"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "Nếu không",
+        "B": "So sánh",
+        "C": "Ngược lại",
+        "D": "Thật vậy/Quả thật"
+      },
+      "grammar_or_vocab_explanation": "Câu tiếp theo nhấn mạnh năng lực của studio và liệt kê nguyên nhân; 'Indeed' (D) là trạng ngữ chuyển tiếp phù hợp để nhấn mạnh thông tin tiếp theo về thiết bị chuyên nghiệp."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_04",
     "tags": [
@@ -4255,7 +4680,15 @@
       "D. had to receive"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "word_meaning": {
+        "A": "nhận được",
+        "B": "đang được nhận",
+        "C": "đã nhận được",
+        "D": "đã phải nhận"
+      },
+      "grammar_or_vocab_explanation": "Câu mô tả quy trình hậu kỳ: 'every image _______ expert editing' — thể hiện hành động thường xuyên/hiện tại thụ động, nên 'receives' (A) là phù hợp."
+    },
     "explanation_vi": null,
     "group_id": "group_part6_04",
     "tags": [
@@ -4285,7 +4718,10 @@
       "D. On a Web site"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Lắp ráp sản phẩm trên bề mặt mềm hoặc trên hộp rỗng đã được xếp phẳng.",
+      "reason": "Hướng dẫn này là thông tin đi kèm với sản phẩm đóng gói, do đó thông tin rất có khả năng được tìm thấy trong một chiếc hộp (bao bì)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_01",
     "tags": [
@@ -4315,7 +4751,10 @@
       "D. A power tool"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Lắp ráp sản phẩm ... bạn có thể làm hỏng gỗ hoặc lớp đệm.",
+      "reason": "Đề cập đến gỗ và lớp đệm cho thấy đối tượng là đồ đạc (một món nội thất), không phải thiết bị gia dụng hay dụng cụ điện."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_01",
     "tags": [
@@ -4345,7 +4784,10 @@
       "D. Some meeting times have been changed."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Winnipeg       Toulouse\n7:00 A.M.  —  2:00 P.M.\n8:00 A.M.  —  3:00 P.M.",
+      "reason": "Bảng giờ liệt kê hai thành phố với múi giờ khác nhau, gợi ý rằng công ty có văn phòng hoạt động ở hai khu vực thời gian."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_02",
     "tags": [
@@ -4376,7 +4818,10 @@
       "D. It has just been added to the schedule."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "(Note: Winnipeg hours 7:00 A.M. to 10:00 A.M. are underlined.)",
+      "reason": "Giờ được gạch dưới (7:00–10:00) được khuyến nghị; 11:00 không nằm trong khoảng gạch dưới nên không phải thời điểm ưu tiên họp."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_02",
     "tags": [
@@ -4406,7 +4851,10 @@
       "D. It is reserved solely for corporate events."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Built in 1897, it was the home of the Francona Charitable Trust until its renovation just over a year ago.",
+      "reason": "Câu nêu rõ nơi này đã được cải tạo hơn một năm trước, trực tiếp chỉ ra rằng nó vừa trải qua việc tu sửa."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_03",
     "tags": [
@@ -4436,7 +4884,10 @@
       "D. It is very popular with local residents."
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Area residents know to plan far in advance to get a seat.",
+      "reason": "Câu này cho thấy nhà hàng rất được người dân địa phương ưa chuộng và thường kín chỗ, nên phương án 'rất phổ biến với cư dân địa phương' là phù hợp."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_03",
     "tags": [
@@ -4466,7 +4917,10 @@
       "D. Some measurements must be double-checked."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Mina Evers (12:59 P.M.): Get me a chicken sandwich.\nJoan Chi (1:00 P.M.): Sure thing, Mina.",
+      "reason": "Joan đồng ý yêu cầu cụ thể về một chiếc bánh mì gà, nên 'Sure thing' ở đây tức là cô ấy sẽ mang bữa trưa (bánh mì gà) cho Mina."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_04",
     "tags": [
@@ -4496,7 +4950,10 @@
       "D. Ms. Lim will begin taking measurements."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "I'm afraid you and Ms. Lim will have to go to lunch without me today. ... This is going to take some time.",
+      "reason": "Tin nhắn cho biết Mina sẽ mất thời gian do sự cố, và Joan cùng Ms. Lim sẽ đi ăn trưa mà không có Mina — nghĩa là Joan và Ms. Lim sẽ ra ngoài một lúc."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_04",
     "tags": [
@@ -4526,7 +4983,10 @@
       "D. Supermarket managers"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Those of you wishing to donate surplus produce to community organizations can do so by visiting Vosey Farm and Garden's Web site...",
+      "reason": "Nội dung nhắm tới người trồng trọt và việc quyên góp sản phẩm nông nghiệp dư thừa, do đó đối tượng chính là nông dân (farmers)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_05",
     "tags": [
@@ -4556,7 +5016,10 @@
       "D. It was beneficial for crops."
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "This season’s excellent weather has yielded a substantial harvest of fruits and vegetables...",
+      "reason": "Mô tả vụ thu hoạch tốt là dấu hiệu thời tiết có lợi cho mùa màng, nên phương án 'có lợi cho cây trồng' đúng."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_05",
     "tags": [
@@ -4586,7 +5049,10 @@
       "D. Gardening workshops"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "We will reach out to one of the many independent truck drivers who have kindly volunteered to transport and quickly distribute your food donations to vetted groups that need it.",
+      "reason": "Đoạn này mô tả việc thu gom và phân phối thực phẩm bằng xe tải tới các tổ chức, nên dịch vụ được đề cập là thu gom và phân phối thực phẩm."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_05",
     "tags": [
@@ -4616,7 +5082,10 @@
       "D. At a post office"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Upon entering the venue, please put any and all electronic devices in silent mode. ... audience members are not allowed to make an audio or visual recording of the performance.",
+      "reason": "Các hướng dẫn về thiết bị điện tử và ghi âm phù hợp với quy định trong khán phòng buổi biểu diễn (concert hall), nên vị trí đăng là ở một hội trường biểu diễn."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_06",
     "tags": [
@@ -4646,7 +5115,10 @@
       "D. They must be stored under a seat."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "If your bag is too big to fit properly under a seat, consider storing it in a locker for just $2.",
+      "reason": "Câu này nêu rõ túi lớn có thể được gửi vào tủ khóa với phí $2, tương ứng với lựa chọn A."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_06",
     "tags": [
@@ -4677,7 +5149,10 @@
       "D. [4]"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Upon entering the venue, please put any and all electronic devices in silent mode. Ringtones and lit screens are very distracting to both the performers and your fellow audience members.",
+      "reason": "Nội dung về tắt chuông/không dùng điện thoại liên quan trực tiếp đến vị trí [2] (mục hướng dẫn về thiết bị); do đó câu 'Please refrain from making phone calls or texting at all times.' phù hợp nhất chèn vào [2]."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_06",
     "tags": [
@@ -4707,7 +5182,10 @@
       "D. To promote new dessert products"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Please review the attached order form and return it to me within seven days.",
+      "reason": "Yêu cầu xem và trả lại mẫu đơn cho thấy người gửi đang xin xác nhận/hoàn tất đơn hàng, nên mục đích chính là yêu cầu xác nhận đơn hàng."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_07",
     "tags": [
@@ -4737,7 +5215,10 @@
       "D. She received a positive recommendation about a chef."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Thank you for selecting our business to provide baked goods ... We are honored that you chose us for a fourth year in a row!",
+      "reason": "Câu 'chose us for a fourth year in a row' chứng tỏ bà Ayala là khách hàng đã sử dụng dịch vụ nhiều năm trước, tức là đã là khách hàng của Sweeter Specialties trong quá khứ."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_07",
     "tags": [
@@ -4767,7 +5248,10 @@
       "D. It is a new flavor combination for Sweeter Specialties."
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Our head pastry chef will produce it according to your specifications. In fact, he created a sample of the complete recipe earlier today—almond crème cake with fresh raspberry filling.",
+      "reason": "Đoạn mô tả chiếc bánh mẫu mới với nhân mâm xôi tươi cho thấy đây là một kết hợp hương vị mới, phù hợp với lựa chọn D."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_07",
     "tags": [
@@ -4797,7 +5281,10 @@
       "D. described"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "We have judged it to be a delectable treat, and we are sure that you will be pleased.",
+      "reason": "'Judged' ở đây mang nghĩa 'đánh giá, kết luận', tương đương với 'determined'/'được đánh giá là', nên lựa chọn C 'determined' là gần nghĩa nhất."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_07",
     "tags": [
@@ -4827,7 +5314,10 @@
       "D. It was the same brand as her other appliances."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "all of the reviews were excellent. So, I decided to spend the extra money.",
+      "reason": "Người viết nói rõ các bài đánh giá rất cao, đó là lý do chính dẫn tới quyết định mua; vì vậy 'rated very highly' (C) là câu trả lời phù hợp."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_08",
     "tags": [
@@ -4857,7 +5347,10 @@
       "D. operating"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "the machine is so quiet, you do not even know it is running.",
+      "reason": "Trong ngữ cảnh thiết bị hoạt động, 'running' có nghĩa là đang vận hành/hoạt động, tương đương với 'operating' (D)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_08",
     "tags": [
@@ -4887,7 +5380,10 @@
       "D. She remodels kitchens professionally."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "it is designed to use water efficiently, which is very important to me.",
+      "reason": "Người viết nhấn mạnh tính tiết kiệm nước là điều quan trọng đối với cô ấy, cho thấy cô ấy quan tâm tới việc tiết kiệm nước (A)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_08",
     "tags": [
@@ -4917,7 +5413,10 @@
       "D. Current job seekers"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "We’re growing fast and have many positions available... there’s probably a place for you on our team.",
+      "reason": "Nội dung kêu gọi ứng tuyển và liệt kê quyền lợi dành cho nhân viên hướng đến người tìm việc, do đó đối tượng là người đang tìm việc (job seekers)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_09",
     "tags": [
@@ -4947,7 +5446,10 @@
       "D. Paid days off"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "our discount program enables them to fly to any of our destinations for a fraction of the average ticket price.",
+      "reason": "Thông tin nêu ra chương trình giảm giá cho phép bay với một phần giá vé, nhưng không đề cập tới 'vé miễn phí', nên 'Free airline tickets' không được liệt kê."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_09",
     "tags": [
@@ -4978,7 +5480,10 @@
       "D. It has replaced its seats with more comfortable ones."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Skyler Airlines was named “Best Airline to Work For” by Travel Vista Journal three years in a row.",
+      "reason": "Đoạn này cho thấy hãng được tạp chí chuyên ngành khen ngợi, tức là được ca ngợi bởi một ấn phẩm thương mại (trade publication)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_09",
     "tags": [
@@ -5008,7 +5513,10 @@
       "D. [4]"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Skyler employees enjoy many perks. — [2] —. For example, our discount program enables them to fly...",
+      "reason": "Câu 'Our openings cover a broad range of skill sets.' phù hợp là một câu giới thiệu vị trí tuyển dụng nằm ngay sau phần nêu về quy mô và các vị trí tuyển dụng, nên chèn vào vị trí [1]."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_09",
     "tags": [
@@ -5038,7 +5546,10 @@
       "D. It will be sent to multiple locations."
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "The presentation slides ... are almost ready for distribution to our many partner stores. We are on track to send them out next Monday.",
+      "reason": "Câu 'we are on track to send them out' cho thấy các slide sẽ được gửi tới nhiều cửa hàng đối tác, nghĩa là sẽ được gửi đi tới nhiều địa điểm (multiple locations)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_10",
     "tags": [
@@ -5068,7 +5579,10 @@
       "D. Partner stores must be notified about an upcoming report."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "We mainly need the information from the user studies that reviewed the headphones for sport use.",
+      "reason": "Câu 'let's not overlook that' ám chỉ thông tin từ các nghiên cứu người dùng (user studies) là quan trọng và không nên bỏ qua, nên phương án B là hợp lý."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_10",
     "tags": [
@@ -5098,7 +5612,10 @@
       "D. An advertising executive"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "please contact Matt Harven and remind him to expedite a summary to us.",
+      "reason": "Yêu cầu liên hệ để gửi tóm tắt từ người có trách nhiệm nghiên cứu cho thấy ông Harven có liên quan tới bộ phận nghiên cứu/sản phẩm, phù hợp với 'product researcher'."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_10",
     "tags": [
@@ -5128,7 +5645,10 @@
       "D. On Friday"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Let's try for Thursday afternoon. Then we will still have Friday to make any necessary changes.",
+      "reason": "Câu này cho biết thời gian lên lịch chạy thử là chiều thứ Năm, nên đáp án là Thứ Năm."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_10",
     "tags": [
@@ -5158,7 +5678,10 @@
       "D. To congratulate an award recipient"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Kitchen Swifts and Chef Darius Cordero are joining together to give home cooks a new culinary experience.",
+      "reason": "Câu này thông báo sự hợp tác giữa Kitchen Swifts và đầu bếp Cordero, tức là việc công bố một quan hệ đối tác kinh doanh."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_11",
     "tags": [
@@ -5188,7 +5711,10 @@
       "D. thinks about"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "his cooking reflects his Filipino heritage, which is a blend of many cultures.",
+      "reason": "'Reflects' ở đây có nghĩa là 'thể hiện/cho thấy' (shows), nên phương án C là gần nghĩa nhất."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_11",
     "tags": [
@@ -5218,7 +5744,10 @@
       "D. It has a new vice president."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Kitchen Swifts supplies menus, recipes, and ingredients for two people, four people, or six people, including a range of vegetarian selections.",
+      "reason": "Danh sách các lựa chọn suất ăn và kích cỡ khác nhau cho thấy Kitchen Swifts cung cấp nhiều lựa chọn bữa ăn, phù hợp với phương án C."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_11",
     "tags": [
@@ -5248,7 +5777,10 @@
       "D. She regularly orders from Kitchen Swifts."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "A colleague arranged for us to eat at Enriqua's while I was at a conference in Sydney. ... We had a wonderful lunch there instead.",
+      "reason": "Người viết nói rõ bà đã ăn tại Enriqua's trong lúc ở Sydney, vì vậy phương án A là đúng."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_11",
     "tags": [
@@ -5278,7 +5810,10 @@
       "D. It has a location in Hong Kong."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "It is usually fully booked for dinner; you may need to call months in advance for a table.",
+      "reason": "Câu này cho biết Enriqua's nhận đặt bàn cho bữa tối và thường kín chỗ, nên phù hợp với ý 'it takes dinner reservations'."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_11",
     "tags": [
@@ -5308,7 +5843,10 @@
       "D. To request feedback on a policy"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "I am happy to deliver your items to you in Stranraer myself. ... I look forward to meeting you on 5 June.",
+      "reason": "Nội dung e-mail xác nhận phương án giao hàng và cuộc gặp cụ thể, mục đích là hoàn tất/hoàn thiện kế hoạch giao nhận (finalize a plan)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_12",
     "tags": [
@@ -5338,7 +5876,10 @@
       "D. To visit with family members"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "It so happens that my sister and her children live nearby in Kirkcolm.",
+      "reason": "Tác giả nói chị gái sống gần Kirkcolm và sẽ đến thăm họ, nên lý do di chuyển là để thăm người thân (family members)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_12",
     "tags": [
@@ -5369,7 +5910,10 @@
       "D. Ms. Savard prefers a specific brand of luggage."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Over the years, I've seen too much damage done by inattentive baggage handlers. My policy is to deliver items personally whenever feasible.",
+      "reason": "Tác giả bày tỏ thất vọng về dịch vụ vận chuyển vì hư hỏng hàng hóa, cho thấy ông đã gặp vấn đề với các hãng vận tải đường hàng không và đường sắt."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_12",
     "tags": [
@@ -5399,7 +5943,10 @@
       "D. She will meet Mr. Boyle at the rental car office."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Thank you for your kind offer to either pick up your online order from my shop or to pay extra for air or train transport.",
+      "reason": "Câu này cho thấy bà Savard đã đề nghị trả thêm phí vận chuyển; do đó có khả năng bà đã trả thêm để được giao tận tay (phương án B)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_12",
     "tags": [
@@ -5429,7 +5976,10 @@
       "D. By plane"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Departing Belfast: Friday, 5 June, 1:05 PM\nDocking at Cairnryan: Friday, 5 June, 3:20 PM",
+      "reason": "Lịch trình cho thấy hành trình bằng phà (ferry) từ Belfast đến Cairnryan, tức là đi bằng thuyền/tàu thủy."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_12",
     "tags": [
@@ -5460,7 +6010,10 @@
       "D. It has classroom facilities in cities across West Africa."
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "All classes include individualized instruction and are taught by recognized professionals in their respective fields.",
+      "reason": "Đoạn nêu rõ các lớp được giảng dạy bởi các chuyên gia được công nhận, nên TTA cung cấp các lớp do chuyên gia ngành hướng dẫn (C)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_13",
     "tags": [
@@ -5490,7 +6043,10 @@
       "D. A certification document"
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Upon successful completion of a class, you will receive an official Certificate of Training.",
+      "reason": "Câu này nói rõ học viên nhận được một chứng chỉ chính thức khi hoàn thành khóa học, phù hợp với lựa chọn 'a certification document'."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_13",
     "tags": [
@@ -5520,7 +6076,10 @@
       "D. He recently sold a bakery food truck."
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "I remembered chatting with some of you on the forum for January's poster design class.",
+      "reason": "Tác giả nói nhớ đã trao đổi trong một lớp trước đây, cho thấy ông đã từng tham gia một lớp TTA — phù hợp với phương án B."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_13",
     "tags": [
@@ -5550,7 +6109,10 @@
       "D. Basics of Graphic Design"
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Discussion forum for students enrolled in Train to Achieve Class TTA1504",
+      "reason": "Dòng tiêu đề diễn đàn nêu rõ lớp học TTA1504, nên ông Egbe đang theo lớp 'Introduction to Social Media Marketing' (TTA1504)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_13",
     "tags": [
@@ -5580,7 +6142,10 @@
       "D. Section 4"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "he suggested that I add a section with vivid images of all my baked goods.",
+      "reason": "Ông Akpan gợi ý thêm phần hình ảnh sống động của sản phẩm, tương ứng với Section 2 (Browse photos)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_13",
     "tags": [
@@ -5610,7 +6175,10 @@
       "D. It opened six months ago."
     ],
     "correct_answer": "D",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Orange Bay Kitchen has been serving up an infusion of Jamaican flavours in a laid-back Caribbean atmosphere for six months now.",
+      "reason": "Câu này nói rõ nhà hàng đã hoạt động sáu tháng, trực tiếp chỉ ra thời gian mở cửa."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_14",
     "tags": [
@@ -5640,7 +6208,10 @@
       "D. Curried goat"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "The restaurant is most famous for its jerk chicken.",
+      "reason": "Đoạn nêu rõ món nổi tiếng nhất của nhà hàng là 'jerk chicken', nên đó là mục phổ biến nhất."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_14",
     "tags": [
@@ -5670,7 +6241,10 @@
       "D. She ordered dessert."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "If you stop in on any Friday night between 7 and 11 P.M., you will enjoy live reggae music.\n... We arrived there at 7 P.M. yesterday, keen to enjoy live music.",
+      "reason": "Bài viết nói rằng nhạc sống diễn ra vào tối thứ Sáu và người đánh giá đến lúc 7 P.M. để nghe nhạc, suy ra chuyến thăm của họ diễn ra vào một tối thứ Sáu."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_14",
     "tags": [
@@ -5700,7 +6274,10 @@
       "D. To confirm a reservation"
     ],
     "correct_answer": "B",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Please accept the attached £20 gift certificate; I do hope that you will give us another try.\n... our failure to live up to your expectations that evening.",
+      "reason": "Chủ nhà hàng gửi phiếu quà tặng và thừa nhận thất vọng về trải nghiệm khách hàng, cho thấy mục đích thư là xin lỗi và bù đắp — một lời xin lỗi."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_14",
     "tags": [
@@ -5730,7 +6307,10 @@
       "D. Ms. Smith"
     ],
     "correct_answer": "C",
-    "explanation": null,
+    "explanation": {
+      "evidence": "The head chef came out to apologise and was extremely nice.",
+      "reason": "Câu này cho biết người ra xin lỗi là bếp trưởng, tương ứng với Mr. Brown (Head Chef)."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_14",
     "tags": [
@@ -5760,7 +6340,10 @@
       "D. It operates a farm."
     ],
     "correct_answer": "A",
-    "explanation": null,
+    "explanation": {
+      "evidence": "Garden soil, 33 cubic meters... Crushed gravel, 30 metric tons... 70 paving stones...",
+      "reason": "Các mục hóa đơn (đất vườn, sỏi nghiền, lát đá) là vật liệu dùng cho công việc làm vườn/thi công cảnh quan, chứng tỏ Green Canyon thực hiện các dự án cảnh quan."
+    },
     "explanation_vi": null,
     "group_id": "group_part7_15",
     "tags": [

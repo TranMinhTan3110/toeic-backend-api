@@ -25,10 +25,12 @@ Console.ResetColor();
 // --- Seed từng collection ---
 await SeedCollection("vocabulary", "vocabulary.json");
 await SeedCollection("grammar_topics", "grammar_topics.json");
+await SeedCollection("grammar_lessons", "grammar_lessons.json");
 await SeedCollection("question_groups", "question_groups.json");
 await SeedCollection("question_groups", "question_group_listening.json");
 await SeedCollection("questions", "questions.json");
 await SeedCollection("questions", "practiceListening.json");
+await SeedCollection("questions", "grammar_questions.json");
 await SeedCollection("exams", "exams.json");
 await SeedCollection("speaking_questions", "speaking_questions.json");
 await SeedCollection("writing_questions", "writing_questions.json");
