@@ -84,6 +84,90 @@ public class VocabularyRepository : IVocabularyRepository
         return results.Where(r => r != null)!;
     }
 
+    public async Task CreateAsync(Vocabulary vocabulary)
+    {
+        if (string.IsNullOrEmpty(vocabulary.Id))
+        {
+            vocabulary.Id = Guid.NewGuid().ToString();
+        }
+        var docRef = _firestoreDb.Collection(CollectionName).Document(vocabulary.Id);
+        var data = MapToFirestore(vocabulary);
+        await docRef.SetAsync(data);
+    }
+
+    public async Task UpdateAsync(Vocabulary vocabulary)
+    {
+        if (string.IsNullOrEmpty(vocabulary.Id))
+        {
+            throw new ArgumentException("Vocabulary ID cannot be null or empty for update.");
+        }
+        var docRef = _firestoreDb.Collection(CollectionName).Document(vocabulary.Id);
+        var data = MapToFirestore(vocabulary);
+        await docRef.SetAsync(data, SetOptions.Overwrite);
+    }
+
+    public async Task DeleteAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        await docRef.DeleteAsync();
+    }
+
+    public async Task<int> BulkCreateAsync(IEnumerable<Vocabulary> vocabularies)
+    {
+        if (vocabularies == null || !vocabularies.Any()) return 0;
+
+        int count = 0;
+        var batch = _firestoreDb.StartBatch();
+        foreach (var vocab in vocabularies)
+        {
+            if (string.IsNullOrEmpty(vocab.Id))
+            {
+                vocab.Id = Guid.NewGuid().ToString();
+            }
+            var docRef = _firestoreDb.Collection(CollectionName).Document(vocab.Id);
+            var data = MapToFirestore(vocab);
+            batch.Set(docRef, data);
+            count++;
+        }
+
+        await batch.CommitAsync();
+        return count;
+    }
+
+    private Dictionary<string, object> MapToFirestore(Vocabulary entity)
+    {
+        var dict = new Dictionary<string, object>
+        {
+            { "id", entity.Id },
+            { "word", entity.Word },
+            { "phonetic", entity.Phonetic ?? string.Empty },
+            { "word_type", entity.WordType },
+            { "definition_en", entity.DefinitionEn },
+            { "definition_vi", entity.DefinitionVi },
+            { "topic", entity.Topic },
+            { "level", entity.Level },
+            { "frequency", entity.Frequency },
+            { "synonyms", entity.Synonyms },
+            { "antonyms", entity.Antonyms },
+            { "collocations", entity.Collocations }
+        };
+
+        if (entity.AudioUrl != null) dict["audio_url"] = entity.AudioUrl;
+        if (entity.ImageUrl != null) dict["image_url"] = entity.ImageUrl;
+
+        var examplesList = new List<Dictionary<string, object>>();
+        foreach (var ex in entity.Examples)
+        {
+            examplesList.Add(new Dictionary<string, object>
+            {
+                { "sentence", ex.Sentence },
+                { "sentence_vi", ex.SentenceVi }
+            });
+        }
+        dict["examples"] = examplesList;
+
+        return dict;
+    }
 
     private Vocabulary MapToDomain(DocumentSnapshot doc)
     {

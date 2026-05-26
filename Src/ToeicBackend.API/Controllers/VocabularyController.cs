@@ -146,14 +146,19 @@ public class VocabularyController : ControllerBase
 
     [HttpGet]
     [AllowAnonymous]
-    public async Task<IActionResult> GetAll([FromQuery] string? topic = null, [FromQuery] string? level = null)
+    public async Task<IActionResult> GetAll(
+        [FromQuery] string? topic = null, 
+        [FromQuery] string? level = null,
+        [FromQuery] int page = 1,
+        [FromQuery] int limit = 20,
+        [FromQuery] string? search = null)
     {
         // Lấy userId nếu user đã đăng nhập (optional)
         var userId = User.Identity?.IsAuthenticated == true
             ? User.GetFirebaseUserId()
             : null;
 
-        var results = await _service.GetVocabularyListAsync(topic, level, userId);
+        var results = await _service.GetVocabularyListAsync(topic, level, page, limit, search, userId);
         return Ok(results);
     }
 
@@ -180,5 +185,67 @@ public class VocabularyController : ControllerBase
         var result = await _service.GetVocabularyByIdAsync(id);
         if (result == null) return NotFound(new { Message = "Vocabulary not found" });
         return Ok(result);
+    }
+
+    [HttpPost]
+    [Authorize]
+    public async Task<IActionResult> Create([FromBody] CreateVocabularyDto dto)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var created = await _service.CreateVocabularyAsync(dto);
+        return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+    }
+
+    [HttpPut("{id}")]
+    [Authorize]
+    public async Task<IActionResult> Update(string id, [FromBody] CreateVocabularyDto dto)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var updated = await _service.UpdateVocabularyAsync(id, dto);
+        if (updated == null)
+        {
+            return NotFound(new { Message = "Không tìm thấy từ vựng để cập nhật" });
+        }
+
+        return Ok(updated);
+    }
+
+    [HttpDelete("{id}")]
+    [Authorize]
+    public async Task<IActionResult> Delete(string id)
+    {
+        var success = await _service.DeleteVocabularyAsync(id);
+        if (!success)
+        {
+            return NotFound(new { Message = "Không tìm thấy từ vựng để xóa" });
+        }
+
+        return NoContent();
+    }
+
+    [HttpPost("bulk")]
+    [Authorize]
+    public async Task<IActionResult> BulkCreate([FromBody] List<CreateVocabularyDto> dtos)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        if (dtos == null || !dtos.Any())
+        {
+            return BadRequest(new { Message = "Dữ liệu rỗng." });
+        }
+
+        var importedCount = await _service.BulkCreateVocabularyAsync(dtos);
+        return Ok(new { Message = $"Đã nhập thành công {importedCount} từ vựng mới.", Count = importedCount });
     }
 }
