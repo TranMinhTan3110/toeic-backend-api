@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Google.Cloud.Firestore;
+using Microsoft.Extensions.Caching.Memory;
 using ToeicBackend.Application.Interfaces;
 using ToeicBackend.Domain.Entities;
 
@@ -9,28 +10,46 @@ namespace ToeicBackend.Infrastructure.Repositories;
 public class SpeakingRepository : ISpeakingRepository
 {
     private readonly FirestoreDb _firestoreDb;
+    private readonly IMemoryCache _cache;
     private const string CollectionName = "speaking_questions";
 
-    public SpeakingRepository(FirestoreDb firestoreDb)
+    public SpeakingRepository(FirestoreDb firestoreDb, IMemoryCache cache)
     {
         _firestoreDb = firestoreDb;
+        _cache = cache;
     }
 
     public async Task<IEnumerable<SpeakingQuestion>> GetAllAsync()
     {
+        const string cacheKey = "speaking_questions_all";
+        if (_cache.TryGetValue(cacheKey, out List<SpeakingQuestion>? cachedList) && cachedList != null)
+        {
+            return cachedList;
+        }
+
         var snapshot = await _firestoreDb.Collection(CollectionName).GetSnapshotAsync();
-        return snapshot.Documents.Select(MapToDomain);
+        var results = snapshot.Documents.Select(MapToDomain).ToList();
+        
+        _cache.Set(cacheKey, results, TimeSpan.FromHours(4));
+        return results;
     }
     public async Task<IEnumerable<SpeakingQuestion>> GetByTaskNumberAsync(
         int taskNumber,
         bool? isExam = null,
         bool? isPractice = null)
     {
-        var snapshot = await _firestoreDb.Collection(CollectionName)
-            .WhereEqualTo("task_number", taskNumber)
-            .GetSnapshotAsync();
+        var cacheKey = $"speaking_questions_task_{taskNumber}";
+        if (!_cache.TryGetValue(cacheKey, out List<SpeakingQuestion>? cachedList) || cachedList == null)
+        {
+            var snapshot = await _firestoreDb.Collection(CollectionName)
+                .WhereEqualTo("task_number", taskNumber)
+                .GetSnapshotAsync();
 
-        IEnumerable<SpeakingQuestion> results = snapshot.Documents.Select(MapToDomain);
+            cachedList = snapshot.Documents.Select(MapToDomain).ToList();
+            _cache.Set(cacheKey, cachedList, TimeSpan.FromHours(4));
+        }
+
+        IEnumerable<SpeakingQuestion> results = cachedList;
 
         if (isExam.HasValue)
             results = results.Where(q => q.IsExam == isExam.Value);
@@ -43,6 +62,12 @@ public class SpeakingRepository : ISpeakingRepository
 
     public async Task<IEnumerable<SpeakingQuestion>> GetByFilterAsync(bool? isExam, bool? isPractice)
     {
+        var cacheKey = $"speaking_questions_filter_{isExam}_{isPractice}";
+        if (_cache.TryGetValue(cacheKey, out List<SpeakingQuestion>? cachedList) && cachedList != null)
+        {
+            return cachedList;
+        }
+
         Query query = _firestoreDb.Collection(CollectionName);
 
         if (isExam.HasValue)
@@ -56,11 +81,20 @@ public class SpeakingRepository : ISpeakingRepository
         }
 
         var snapshot = await query.GetSnapshotAsync();
-        return snapshot.Documents.Select(MapToDomain);
+        var results = snapshot.Documents.Select(MapToDomain).ToList();
+        
+        _cache.Set(cacheKey, results, TimeSpan.FromHours(4));
+        return results;
     }
 
     public async Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice)
     {
+        var cacheKey = $"speaking_questions_count_{isExam}_{isPractice}";
+        if (_cache.TryGetValue(cacheKey, out int count))
+        {
+            return count;
+        }
+
         Query query = _firestoreDb.Collection(CollectionName);
 
         if (isExam.HasValue)
@@ -75,17 +109,28 @@ public class SpeakingRepository : ISpeakingRepository
 
         var aggregateQuery = query.Count();
         var snapshot = await aggregateQuery.GetSnapshotAsync();
-        return (int)(snapshot.Count ?? 0);
+        var resultCount = (int)(snapshot.Count ?? 0);
+        
+        _cache.Set(cacheKey, resultCount, TimeSpan.FromHours(4));
+        return resultCount;
     }
 
     public async Task<SpeakingQuestion?> GetByIdAsync(string id)
     {
+        var cacheKey = $"speaking_question_id_{id}";
+        if (_cache.TryGetValue(cacheKey, out SpeakingQuestion? cachedQuestion) && cachedQuestion != null)
+        {
+            return cachedQuestion;
+        }
+
         var docRef = _firestoreDb.Collection(CollectionName).Document(id);
         var snapshot = await docRef.GetSnapshotAsync();
         
         if (!snapshot.Exists) return null;
         
-        return MapToDomain(snapshot);
+        var result = MapToDomain(snapshot);
+        _cache.Set(cacheKey, result, TimeSpan.FromHours(4));
+        return result;
     }
 
     private SpeakingQuestion MapToDomain(DocumentSnapshot doc)
