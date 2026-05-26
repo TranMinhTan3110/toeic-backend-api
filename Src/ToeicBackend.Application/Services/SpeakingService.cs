@@ -19,10 +19,24 @@ public class SpeakingService : ISpeakingService
         return entities.Select(MapToDto);
     }
 
-    public async Task<IEnumerable<SpeakingQuestionDto>> GetByTaskNumberAsync(int taskNumber)
+    public async Task<IEnumerable<SpeakingQuestionDto>> GetByTaskNumberAsync(
+        int taskNumber,
+        bool? isExam = null,
+        bool? isPractice = null)
     {
-        var entities = await _repository.GetByTaskNumberAsync(taskNumber);
+        var entities = await _repository.GetByTaskNumberAsync(taskNumber, isExam, isPractice);
         return entities.Select(MapToDto);
+    }
+
+    public async Task<IEnumerable<SpeakingQuestionDto>> GetByFilterAsync(bool? isExam, bool? isPractice)
+    {
+        var entities = await _repository.GetByFilterAsync(isExam, isPractice);
+        return entities.Select(MapToDto);
+    }
+
+    public async Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice)
+    {
+        return await _repository.GetCountByFilterAsync(isExam, isPractice);
     }
 
     public async Task<SpeakingQuestionDto?> GetByIdAsync(string id)
@@ -33,7 +47,7 @@ public class SpeakingService : ISpeakingService
 
     private SpeakingQuestionDto MapToDto(SpeakingQuestion entity)
     {
-        return new SpeakingQuestionDto
+        var dto = new SpeakingQuestionDto
         {
             Id = entity.Id,
             TaskType = entity.TaskType,
@@ -41,6 +55,8 @@ public class SpeakingService : ISpeakingService
             PromptText = entity.PromptText,
             PromptImageUrl = entity.PromptImageUrl,
             PromptAudioUrl = entity.PromptAudioUrl,
+            ImageUrl = entity.ImageUrl,
+            AudioUrl = entity.AudioUrl,
             PreparationTime = entity.PreparationTime,
             ResponseTime = entity.ResponseTime,
             Difficulty = entity.Difficulty,
@@ -49,11 +65,38 @@ public class SpeakingService : ISpeakingService
             ExamSetId = entity.ExamSetId,
             Topic = entity.Topic,
             IsPractice = entity.IsPractice,
+            IsExam = entity.IsExam,
             MaxScore = entity.MaxScore,
             SampleAnswer = entity.SampleAnswer,
             Questions = entity.Questions,
             AnswerTimes = entity.AnswerTimes,
             CreatedAt = entity.CreatedAt
+        };
+
+        // Map explanation if available
+        if (entity.Explanation != null)
+        {
+            dto.Explanation = MapExplanationToDto(entity.Explanation);
+        }
+
+        return dto;
+    }
+
+    private SpeakingExplanationDto MapExplanationToDto(SpeakingExplanation explanation)
+    {
+        return new SpeakingExplanationDto
+        {
+            Translation = explanation.Translation,
+            ContextTranslation = explanation.ContextTranslation,
+            Keywords = explanation.Keywords.Select(k => new ExplanationKeywordDto
+            {
+                Word = k.Word,
+                Ipa = k.Ipa,
+                Meaning = k.Meaning
+            }).ToList(),
+            QuestionsTranslation = explanation.QuestionsTranslation,
+            SampleAnswers = explanation.SampleAnswers,
+            SampleAnswersTranslation = explanation.SampleAnswersTranslation
         };
     }
 }
