@@ -13,4 +13,10 @@ public interface IListeningService
 
     /// <summary>Trả về số lượng câu/nhóm của 1 part — cực nhanh, dùng Firestore Count Aggregation.</summary>
     Task<int> GetCountByPartAsync(int part);
+
+    // --- History Practice Methods ---
+    Task<string> SaveHistoryAsync(string userId, SaveListeningHistoryRequestDto request);
+    Task<IEnumerable<ListeningHistoryDto>> GetUserHistoryAsync(string userId);
+    Task<ListeningHistoryDto?> GetHistoryByIdAsync(string id);
 }
+

@@ -180,4 +180,84 @@ public class ListeningService : IListeningService
             IsForPractice = entity.IsForPractice
         };
     }
+
+    // --- History Practice Implementations ---
+    private static string UserHistoryCacheKey(string userId) => $"user_listening_history_list_{userId}";
+    private static string HistoryDetailCacheKey(string id) => $"listening_history_detail_{id}";
+    private static readonly TimeSpan HistoryCacheDuration = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan DetailCacheDuration = TimeSpan.FromMinutes(10);
+
+    public async Task<string> SaveHistoryAsync(string userId, SaveListeningHistoryRequestDto request)
+    {
+        var entity = new ListeningHistory
+        {
+            UserId = userId,
+            Part = request.Part,
+            CorrectCount = request.CorrectCount,
+            TotalCount = request.TotalCount,
+            Percent = request.Percent,
+            Date = DateTime.UtcNow,
+            IncorrectQuestionIds = request.IncorrectQuestionIds ?? new(),
+            SelectedAnswers = request.SelectedAnswers ?? new()
+        };
+
+        var id = await _repository.AddHistoryAsync(entity);
+        entity.Id = id;
+
+        // Clear user history list cache so next call fetches latest
+        _cache.Remove(UserHistoryCacheKey(userId));
+
+        // Pre-warm detail cache so detail click is instant
+        _cache.Set(HistoryDetailCacheKey(id), MapToHistoryDto(entity), DetailCacheDuration);
+
+        return id;
+    }
+
+    public async Task<IEnumerable<ListeningHistoryDto>> GetUserHistoryAsync(string userId)
+    {
+        var cacheKey = UserHistoryCacheKey(userId);
+        if (_cache.TryGetValue(cacheKey, out List<ListeningHistoryDto>? cachedList) && cachedList != null)
+        {
+            return cachedList;
+        }
+
+        var entities = await _repository.GetHistoryByUserIdAsync(userId);
+        var dtos = entities.Select(MapToHistoryDto).ToList();
+
+        _cache.Set(cacheKey, dtos, HistoryCacheDuration);
+        return dtos;
+    }
+
+    public async Task<ListeningHistoryDto?> GetHistoryByIdAsync(string id)
+    {
+        var cacheKey = HistoryDetailCacheKey(id);
+        if (_cache.TryGetValue(cacheKey, out ListeningHistoryDto? cachedDetail) && cachedDetail != null)
+        {
+            return cachedDetail;
+        }
+
+        var entity = await _repository.GetHistoryByIdAsync(id);
+        if (entity == null) return null;
+
+        var dto = MapToHistoryDto(entity);
+        _cache.Set(cacheKey, dto, DetailCacheDuration);
+        return dto;
+    }
+
+    private ListeningHistoryDto MapToHistoryDto(ListeningHistory entity)
+    {
+        return new ListeningHistoryDto
+        {
+            Id = entity.Id,
+            UserId = entity.UserId,
+            Part = entity.Part,
+            CorrectCount = entity.CorrectCount,
+            TotalCount = entity.TotalCount,
+            Percent = entity.Percent,
+            Date = entity.Date,
+            IncorrectQuestionIds = entity.IncorrectQuestionIds ?? new(),
+            SelectedAnswers = entity.SelectedAnswers ?? new()
+        };
+    }
 }
+
