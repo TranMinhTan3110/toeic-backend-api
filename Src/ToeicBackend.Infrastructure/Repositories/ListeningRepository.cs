@@ -54,6 +54,38 @@ public class ListeningRepository : IListeningRepository
         return snapshot.Documents.Select(MapToGroup);
     }
 
+    /// <summary>
+    /// Dùng Firestore Count Aggregation — chỉ tốn 1 read, không tải document nào.
+    /// Dùng để hiển thị nhanh số câu ở DetailScreen mà không cần fetch toàn bộ data.
+    /// </summary>
+    public async Task<int> GetQuestionCountByPartAsync(int part)
+    {
+        var aggregateQuery = _firestoreDb.Collection(QuestionsCollection)
+            .WhereEqualTo("skill", "listening")
+            .WhereEqualTo("part", part)
+            .WhereEqualTo("is_for_exam", false)
+            .WhereEqualTo("is_for_practice", true)
+            .Count();
+
+        var snapshot = await aggregateQuery.GetSnapshotAsync();
+        return (int)(snapshot.Count ?? 0);
+    }
+
+    /// <summary>
+    /// Dùng Firestore Count Aggregation — chỉ tốn 1 read, không tải document nào.
+    /// </summary>
+    public async Task<int> GetGroupCountByPartAsync(int part)
+    {
+        var aggregateQuery = _firestoreDb.Collection(GroupsCollection)
+            .WhereEqualTo("part", part)
+            .WhereEqualTo("is_for_exam", false)
+            .WhereEqualTo("is_for_practice", true)
+            .Count();
+
+        var snapshot = await aggregateQuery.GetSnapshotAsync();
+        return (int)(snapshot.Count ?? 0);
+    }
+
     public async Task<QuestionGroup?> GetGroupByIdAsync(string groupId)
     {
         var docRef = _firestoreDb.Collection(GroupsCollection).Document(groupId);
@@ -68,19 +100,20 @@ public class ListeningRepository : IListeningRepository
         // Firestore WhereIn tối đa 30 phần tử mỗi query.
         const int chunkSize = 30;
         var distinctIds = ids.Where(id => !string.IsNullOrWhiteSpace(id)).Distinct().ToList();
-        var results = new List<ListeningQuestion>();
+        
+        var tasks = new List<Task<QuerySnapshot>>();
 
         for (var i = 0; i < distinctIds.Count; i += chunkSize)
         {
             var chunk = distinctIds.Skip(i).Take(chunkSize).ToList();
-            var snapshot = await _firestoreDb.Collection(QuestionsCollection)
+            var task = _firestoreDb.Collection(QuestionsCollection)
                 .WhereIn(FieldPath.DocumentId, chunk)
                 .GetSnapshotAsync();
-
-            results.AddRange(snapshot.Documents.Select(MapToQuestion));
+            tasks.Add(task);
         }
 
-        return results;
+        var snapshots = await Task.WhenAll(tasks);
+        return snapshots.SelectMany(s => s.Documents.Select(MapToQuestion)).ToList();
     }
 
     private ListeningQuestion MapToQuestion(DocumentSnapshot doc)

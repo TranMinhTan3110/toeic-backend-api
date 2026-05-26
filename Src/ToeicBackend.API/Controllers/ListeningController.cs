@@ -29,6 +29,25 @@ public class ListeningController : ControllerBase
         return Ok(results);
     }
 
+    /// <summary>
+    /// Trả về số lượng câu/nhóm của 1 part — cực nhanh (1 Firestore read).
+    /// Dùng cho DetailScreen để hiển thị số câu mà không cần load toàn bộ data.
+    /// </summary>
+    [HttpGet("count/{part}")]
+    public async Task<ActionResult<object>> GetCountByPart(int part)
+    {
+        try
+        {
+            var count = await _service.GetCountByPartAsync(part);
+            return Ok(new { part, count, type = part <= 2 ? "questions" : "groups" });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Count Error] Part {part}: {ex.Message}");
+            return Ok(new { part, count = 0, type = part <= 2 ? "questions" : "groups" });
+        }
+    }
+
     [HttpGet("admin/all")]
     public async Task<ActionResult<IEnumerable<ListeningQuestionDto>>> GetAllAdmin()
     {

@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Caching.Memory;
 using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.Interfaces;
 using ToeicBackend.Domain.Entities;
@@ -7,16 +8,32 @@ namespace ToeicBackend.Application.Services;
 public class ListeningService : IListeningService
 {
     private readonly IListeningRepository _repository;
+    private readonly IMemoryCache _cache;
 
-    public ListeningService(IListeningRepository repository)
+    // Cache data trong 30 phút để giảm Firebase reads đáng kể.
+    private static readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(30);
+
+    private static string QuestionsCacheKey(int part) => $"listening_questions_part_{part}";
+    private static string GroupsCacheKey(int part) => $"listening_groups_part_{part}";
+    private static string CountCacheKey(int part) => $"listening_count_part_{part}";
+    private static readonly TimeSpan CountCacheDuration = TimeSpan.FromHours(1);
+
+    public ListeningService(IListeningRepository repository, IMemoryCache cache)
     {
         _repository = repository;
+        _cache = cache;
     }
 
     public async Task<IEnumerable<ListeningQuestionDto>> GetQuestionsByPartAsync(int part)
     {
+        var cacheKey = QuestionsCacheKey(part);
+        if (_cache.TryGetValue(cacheKey, out List<ListeningQuestionDto>? cached) && cached != null)
+            return cached;
+
         var entities = await _repository.GetQuestionsByPartAsync(part);
-        return entities.Select(MapToQuestionDto);
+        var result = entities.Select(MapToQuestionDto).ToList();
+        _cache.Set(cacheKey, result, CacheDuration);
+        return result;
     }
 
     public async Task<IEnumerable<ListeningQuestionDto>> GetAllQuestionsAdminAsync()
@@ -54,6 +71,10 @@ public class ListeningService : IListeningService
 
     public async Task<IEnumerable<ListeningGroupDto>> GetGroupsByPartAsync(int part)
     {
+        var cacheKey = GroupsCacheKey(part);
+        if (_cache.TryGetValue(cacheKey, out List<ListeningGroupDto>? cachedGroups) && cachedGroups != null)
+            return cachedGroups;
+
         var groups = (await _repository.GetGroupsByPartAsync(part)).ToList();
         if (groups.Count == 0) return Enumerable.Empty<ListeningGroupDto>();
 
@@ -62,7 +83,7 @@ public class ListeningService : IListeningService
         var allQuestions = (await _repository.GetQuestionsByIdsAsync(allIds)).ToList();
         var questionMap = allQuestions.ToDictionary(q => q.Id);
 
-        return groups.Select(group =>
+        var result = groups.Select(group =>
         {
             var orderedQuestions = group.QuestionIds
                 .Where(id => questionMap.ContainsKey(id))
@@ -81,7 +102,10 @@ public class ListeningService : IListeningService
                 Source = group.Source,
                 Questions = orderedQuestions
             };
-        });
+        }).ToList();
+
+        _cache.Set(cacheKey, result, CacheDuration);
+        return result;
     }
 
     private ListeningGroupDto MapToGroupDto(QuestionGroup entity)
@@ -98,14 +122,42 @@ public class ListeningService : IListeningService
         };
     }
 
-    public Task<string> AddQuestionAsync(ListeningQuestion question)
+    public async Task<string> AddQuestionAsync(ListeningQuestion question)
     {
-        return _repository.AddQuestionAsync(question);
+        var result = await _repository.AddQuestionAsync(question);
+        // Xóa cache của part tương ứng để lần sau fetch data mới nhất.
+        _cache.Remove(QuestionsCacheKey(question.Part));
+        _cache.Remove(CountCacheKey(question.Part));
+        return result;
     }
 
-    public Task<string> AddGroupAsync(QuestionGroup group)
+    public async Task<string> AddGroupAsync(QuestionGroup group)
     {
-        return _repository.AddGroupAsync(group);
+        var result = await _repository.AddGroupAsync(group);
+        // Xóa cache của part tương ứng.
+        _cache.Remove(GroupsCacheKey(group.Part));
+        _cache.Remove(CountCacheKey(group.Part));
+        return result;
+    }
+
+    /// <summary>
+    /// Trả về số lượng câu/nhóm cực nhanh — dùng Count Aggregation (1 read).
+    /// Cache 1 giờ vì count ít thay đổi hơn nội dung.
+    /// </summary>
+    public async Task<int> GetCountByPartAsync(int part)
+    {
+        var cacheKey = CountCacheKey(part);
+        if (_cache.TryGetValue(cacheKey, out int cachedCount))
+            return cachedCount;
+
+        int count;
+        if (part <= 2)
+            count = await _repository.GetQuestionCountByPartAsync(part);
+        else
+            count = await _repository.GetGroupCountByPartAsync(part);
+
+        _cache.Set(cacheKey, count, CountCacheDuration);
+        return count;
     }
 
     private ListeningQuestionDto MapToQuestionDto(ListeningQuestion entity)

@@ -10,4 +10,7 @@ public interface IListeningService
     Task<IEnumerable<ListeningQuestionDto>> GetAllQuestionsAdminAsync();
     Task<string> AddQuestionAsync(ListeningQuestion question);
     Task<string> AddGroupAsync(QuestionGroup group);
+
+    /// <summary>Trả về số lượng câu/nhóm của 1 part — cực nhanh, dùng Firestore Count Aggregation.</summary>
+    Task<int> GetCountByPartAsync(int part);
 }
