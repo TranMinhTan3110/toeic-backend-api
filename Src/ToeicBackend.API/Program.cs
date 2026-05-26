@@ -101,6 +101,8 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IGrammarService, 
 
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionRepository, ToeicBackend.Infrastructure.Repositories.WritingQuestionRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionService, ToeicBackend.Application.Services.WritingQuestionService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamRepository, ToeicBackend.Infrastructure.Repositories.ExamRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamService, ToeicBackend.Application.Services.ExamService>();
 
 builder.Services.AddCors(options =>
 {
