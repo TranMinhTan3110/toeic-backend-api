@@ -246,4 +246,42 @@ public class ListeningRepository : IListeningRepository
         await docRef.SetAsync(data);
         return docRef.Id;
     }
+
+    // --- History Practice Implementations ---
+    private const string HistoryCollection = "user_listening_history";
+
+    public async Task<string> AddHistoryAsync(ListeningHistory history)
+    {
+        if (string.IsNullOrEmpty(history.Id))
+        {
+            var docRef = await _firestoreDb.Collection(HistoryCollection).AddAsync(history);
+            history.Id = docRef.Id;
+            return docRef.Id;
+        }
+        else
+        {
+            var docRef = _firestoreDb.Collection(HistoryCollection).Document(history.Id);
+            await docRef.SetAsync(history, SetOptions.Overwrite);
+            return history.Id;
+        }
+    }
+
+    public async Task<IEnumerable<ListeningHistory>> GetHistoryByUserIdAsync(string userId)
+    {
+        var snapshot = await _firestoreDb.Collection(HistoryCollection)
+            .WhereEqualTo("user_id", userId)
+            .GetSnapshotAsync();
+
+        return snapshot.Documents
+            .Select(doc => doc.ConvertTo<ListeningHistory>())
+            .OrderByDescending(h => h.Date);
+    }
+
+    public async Task<ListeningHistory?> GetHistoryByIdAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(HistoryCollection).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        return snapshot.Exists ? snapshot.ConvertTo<ListeningHistory>() : null;
+    }
 }
+

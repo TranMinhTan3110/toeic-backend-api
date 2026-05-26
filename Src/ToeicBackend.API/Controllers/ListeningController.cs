@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using ToeicBackend.API.Extensions;
 using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.Interfaces;
 
@@ -139,4 +141,49 @@ public class ListeningController : ControllerBase
         
         return Ok(new { success = true, id = groupEntity.Id });
     }
+
+    // --- History Practice Endpoints ---
+
+    [HttpPost("history")]
+    [Authorize]
+    public async Task<IActionResult> SaveHistory([FromBody] SaveListeningHistoryRequestDto dto)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var historyId = await _service.SaveHistoryAsync(userId, dto);
+        return Ok(new { success = true, id = historyId });
+    }
+
+    [HttpGet("history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<ListeningHistoryDto>>> GetUserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var results = await _service.GetUserHistoryAsync(userId);
+        return Ok(results);
+    }
+
+    [HttpGet("history/{id}")]
+    [Authorize]
+    public async Task<ActionResult<ListeningHistoryDto>> GetHistoryById(string id)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var result = await _service.GetHistoryByIdAsync(id);
+        if (result == null)
+            return NotFound(new { message = "Không tìm thấy lịch sử với ID này" });
+
+        if (result.UserId != userId)
+            return Forbid();
+
+        return Ok(result);
+    }
 }
+

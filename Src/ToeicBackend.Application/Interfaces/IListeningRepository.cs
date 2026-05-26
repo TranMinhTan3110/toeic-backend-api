@@ -18,4 +18,10 @@ public interface IListeningRepository
 
     /// <summary>Đếm số nhóm Part 3/4 bằng Firestore Count Aggregation — chỉ tốn 1 read.</summary>
     Task<int> GetGroupCountByPartAsync(int part);
+
+    // --- History Practice Methods ---
+    Task<string> AddHistoryAsync(ListeningHistory history);
+    Task<IEnumerable<ListeningHistory>> GetHistoryByUserIdAsync(string userId);
+    Task<ListeningHistory?> GetHistoryByIdAsync(string id);
 }
+
