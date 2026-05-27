@@ -136,20 +136,27 @@ Nội dung JSON của bộ câu hỏi thực hành cho '{topicTitle}':";
         string taskPrompt,
         IReadOnlyList<string> sampleAnswers,
         string userTranscript,
-        int taskNumber)
+        int taskNumber,
+        byte[]? audioBytes = null,
+        string? mimeType = null)
     {
         var samplesBlock = sampleAnswers.Count > 0
             ? string.Join("\n---\n", sampleAnswers.Select((s, i) => $"[Mẫu {i + 1}]\n{s}"))
             : "(Không có bài mẫu — chấm theo tiêu chí TOEIC Speaking.)";
 
         var prompt = $@"
-Bạn là giám khảo TOEIC Speaking chuyên nghiệp. Chấm câu trả lời của học viên bằng cách SO SÁNH với bài mẫu và đề bài.
+Bạn là giám khảo TOEIC Speaking chuyên nghiệp. Hãy lắng nghe trực tiếp và chấm câu trả lời của học viên bằng cách SO SÁNH với bài mẫu và đề bài.
 
 - Part / Task: {taskNumber}
 - Đề bài / Prompt: {taskPrompt}
 - Bài mẫu tham chiếu:
 {samplesBlock}
-- Câu trả lời học viên (transcript): {userTranscript}
+- Câu trả lời học viên (transcript để tham khảo): {userTranscript}
+
+YÊU CẦU ĐÁNH GIÁ ĐA PHƯƠNG THỨC CHUYÊN SÂU:
+1. Hãy LẮNG NGHE trực tiếp file ghi âm đính kèm để đánh giá chính xác Ngữ âm (Pronunciation), Ngữ điệu & Trọng âm (Intonation & Stress) và Độ lưu loát (Fluency).
+2. Hãy chỉ rõ những từ bị phát âm sai, thiếu âm đuôi (ending sounds) hoặc nhấn sai trọng âm nghe thấy từ file âm thanh nếu có.
+3. Chấm điểm theo thang điểm 10 cho từng tiêu chí và cho điểm trung bình tổng quan.
 
 TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải thích thêm) theo schema:
 {{
@@ -161,16 +168,16 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
     ""Ngữ pháp"": <0-10>,
     ""Từ vựng"": <0-10>
   }},
-  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, nêu điểm mạnh/yếu so với bài mẫu>""
+  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, nêu rõ thế mạnh và lỗi phát âm/ngữ điệu nghe thấy từ file audio để giúp học viên sửa đổi>""
 }}";
 
-        var cacheKey = $"speaking_eval_{taskNumber}_{userTranscript.ToLower().Trim().GetHashCode()}";
+        var cacheKey = $"speaking_eval_{taskNumber}_{userTranscript.ToLower().Trim().GetHashCode()}_{(audioBytes != null ? audioBytes.Length : 0)}";
         if (_cache.TryGetValue(cacheKey, out SpeakingEvaluationDto? cachedEval) && cachedEval != null)
         {
             return cachedEval;
         }
 
-        var raw = await CallGeminiAsync(prompt, 2000);
+        var raw = await CallGeminiAsync(prompt, 2000, audioBytes, mimeType);
         var dto = ParseSpeakingEvaluationJson(raw, userTranscript);
 
         if (dto.OverallScore > 0)
@@ -243,16 +250,41 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
         return match.Success ? match.Value : trimmed;
     }
 
-    private async Task<string> CallGeminiAsync(string prompt, int maxTokens)
+    private async Task<string> CallGeminiAsync(string prompt, int maxTokens, byte[]? audioBytes = null, string? mimeType = null)
     {
         // Debug để xác nhận Backend đang chạy bản mới nhất
-        Console.WriteLine($"[GEMINI DEBUG] Đang gọi AI với maxTokens: {maxTokens}");
+        Console.WriteLine($"[GEMINI DEBUG] Đang gọi AI với maxTokens: {maxTokens}, có audio: {audioBytes != null}");
+
+        object partsArray;
+
+        if (audioBytes != null && audioBytes.Length > 0)
+        {
+            var base64Audio = Convert.ToBase64String(audioBytes);
+            var resolvedMime = string.IsNullOrWhiteSpace(mimeType) ? "audio/m4a" : mimeType;
+            partsArray = new object[]
+            {
+                new { text = prompt },
+                new { 
+                    inlineData = new {
+                        mimeType = resolvedMime,
+                        data = base64Audio
+                    }
+                }
+            };
+        }
+        else
+        {
+            partsArray = new object[]
+            {
+                new { text = prompt }
+            };
+        }
 
         var requestBody = new
         {
             contents = new[]
             {
-                new { parts = new[] { new { text = prompt } } }
+                new { parts = partsArray }
             },
             generationConfig = new
             {

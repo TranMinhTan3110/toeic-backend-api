@@ -12,5 +12,7 @@ public interface IAiService
         string taskPrompt,
         IReadOnlyList<string> sampleAnswers,
         string userTranscript,
-        int taskNumber);
+        int taskNumber,
+        byte[]? audioBytes = null,
+        string? mimeType = null);
 }
