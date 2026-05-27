@@ -1,7 +1,9 @@
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Caching.Memory;
+using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.Interfaces;
 
 namespace ToeicBackend.Infrastructure.Services;
@@ -85,6 +87,117 @@ Ví dụ hay:
 Thử thách cho từ '{word}':";
 
         return await CallGeminiAsync(prompt, 1000); // Tăng kịch trần để tránh bị cụt câu
+    }
+
+    public async Task<SpeakingEvaluationDto> EvaluateSpeakingAsync(
+        string taskPrompt,
+        IReadOnlyList<string> sampleAnswers,
+        string userTranscript,
+        int taskNumber)
+    {
+        var samplesBlock = sampleAnswers.Count > 0
+            ? string.Join("\n---\n", sampleAnswers.Select((s, i) => $"[Mẫu {i + 1}]\n{s}"))
+            : "(Không có bài mẫu — chấm theo tiêu chí TOEIC Speaking.)";
+
+        var prompt = $@"
+Bạn là giám khảo TOEIC Speaking chuyên nghiệp. Chấm câu trả lời của học viên bằng cách SO SÁNH với bài mẫu và đề bài.
+
+- Part / Task: {taskNumber}
+- Đề bài / Prompt: {taskPrompt}
+- Bài mẫu tham chiếu:
+{samplesBlock}
+- Câu trả lời học viên (transcript): {userTranscript}
+
+TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải thích thêm) theo schema:
+{{
+  ""overallScore"": <số 0-10, một chữ số thập phân>,
+  ""passed"": <true nếu overallScore >= 6.0>,
+  ""criteriaScores"": {{
+    ""Phát âm"": <0-10>,
+    ""Lưu loát"": <0-10>,
+    ""Ngữ pháp"": <0-10>,
+    ""Từ vựng"": <0-10>
+  }},
+  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, nêu điểm mạnh/yếu so với bài mẫu>""
+}}";
+
+        var cacheKey = $"speaking_eval_{taskNumber}_{userTranscript.ToLower().Trim().GetHashCode()}";
+        if (_cache.TryGetValue(cacheKey, out SpeakingEvaluationDto? cachedEval) && cachedEval != null)
+        {
+            return cachedEval;
+        }
+
+        var raw = await CallGeminiAsync(prompt, 2000);
+        var dto = ParseSpeakingEvaluationJson(raw, userTranscript);
+
+        if (dto.OverallScore > 0)
+        {
+            _cache.Set(cacheKey, dto, TimeSpan.FromMinutes(30));
+        }
+
+        return dto;
+    }
+
+    private static SpeakingEvaluationDto ParseSpeakingEvaluationJson(string raw, string transcript)
+    {
+        try
+        {
+            var json = ExtractJsonObject(raw);
+            using var doc = JsonDocument.Parse(json);
+            var root = doc.RootElement;
+
+            var criteria = new Dictionary<string, double>();
+            if (root.TryGetProperty("criteriaScores", out var criteriaEl) &&
+                criteriaEl.ValueKind == JsonValueKind.Object)
+            {
+                foreach (var prop in criteriaEl.EnumerateObject())
+                {
+                    if (prop.Value.TryGetDouble(out var val))
+                    {
+                        criteria[prop.Name] = val;
+                    }
+                }
+            }
+
+            var overall = root.TryGetProperty("overallScore", out var scoreEl) && scoreEl.TryGetDouble(out var s)
+                ? s
+                : 0;
+
+            var passed = root.TryGetProperty("passed", out var passedEl) && passedEl.ValueKind == JsonValueKind.True
+                ? true
+                : overall >= 6.0;
+
+            var feedback = root.TryGetProperty("feedback", out var fbEl)
+                ? fbEl.GetString() ?? string.Empty
+                : string.Empty;
+
+            return new SpeakingEvaluationDto
+            {
+                OverallScore = overall,
+                Passed = passed,
+                CriteriaScores = criteria,
+                Feedback = feedback,
+                Transcript = transcript
+            };
+        }
+        catch
+        {
+            return new SpeakingEvaluationDto
+            {
+                OverallScore = 0,
+                Passed = false,
+                Feedback = "Không thể phân tích phản hồi AI. Vui lòng thử lại.",
+                Transcript = transcript,
+                CriteriaScores = new Dictionary<string, double>()
+            };
+        }
+    }
+
+    private static string ExtractJsonObject(string raw)
+    {
+        var trimmed = raw.Trim();
+        var match = Regex.Match(trimmed, @"\{[\s\S]*\}");
+        return match.Success ? match.Value : trimmed;
     }
 
     private async Task<string> CallGeminiAsync(string prompt, int maxTokens)
