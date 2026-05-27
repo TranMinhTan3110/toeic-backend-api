@@ -35,6 +35,13 @@ public class UserProfileService : IUserProfileService
         if (dto.TargetScore.HasValue) user.TargetScore = dto.TargetScore.Value;
         if (!string.IsNullOrWhiteSpace(dto.CurrentLevel)) user.CurrentLevel = dto.CurrentLevel;
         if (dto.PreferredSkills != null) user.PreferredSkills = dto.PreferredSkills;
+        
+        // Cập nhật các trường thông tin cá nhân mới
+        if (dto.DisplayName != null) user.DisplayName = dto.DisplayName;
+        if (dto.AvatarUrl != null) user.AvatarUrl = dto.AvatarUrl;
+        if (dto.PhoneNumber != null) user.PhoneNumber = dto.PhoneNumber;
+        if (dto.Gender != null) user.Gender = dto.Gender;
+        if (dto.BirthDate != null) user.BirthDate = dto.BirthDate;
 
         await _userRepository.UpdateAsync(user);
         
@@ -179,6 +186,9 @@ public class UserProfileService : IUserProfileService
         TotalStudyMinutes = user.TotalStudyMinutes,
         CreatedAt = user.CreatedAt,
         IsLocked = user.IsLocked,
-        Role = user.Role
+        Role = user.Role,
+        PhoneNumber = user.PhoneNumber,
+        Gender = user.Gender,
+        BirthDate = user.BirthDate
     };
 }

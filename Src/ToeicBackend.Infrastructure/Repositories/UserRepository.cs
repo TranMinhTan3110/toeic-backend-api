@@ -49,6 +49,9 @@ public class UserRepository : IUserRepository
                                 : new List<string>(),
             IsLocked         = Get<bool>("is_locked", false),
             Role             = Get<string>("role", Get<string>("email", "").Contains("admin") || Get<string>("email", "") == "nguyengamo@gmail.com" ? "admin" : "user"),
+            PhoneNumber      = Get<string>("phone_number", null!),
+            Gender           = Get<string>("gender", null!),
+            BirthDate        = Get<string>("birth_date", null!),
         };
     }
 

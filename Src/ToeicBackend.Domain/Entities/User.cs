@@ -66,6 +66,15 @@ public class User
 
     [FirestoreProperty("role")]
     public string Role { get; set; } = "user";
+
+    [FirestoreProperty("phone_number")]
+    public string? PhoneNumber { get; set; }
+
+    [FirestoreProperty("gender")]
+    public string? Gender { get; set; }
+
+    [FirestoreProperty("birth_date")]
+    public string? BirthDate { get; set; }
 }
 
 
