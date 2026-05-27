@@ -87,6 +87,49 @@ Thử thách cho từ '{word}':";
         return await CallGeminiAsync(prompt, 1000); // Tăng kịch trần để tránh bị cụt câu
     }
 
+    public async Task<string> GenerateGrammarLessonAsync(string topicTitle, string topicTitleEn)
+    {
+        var prompt = $@"
+Bạn là một giáo viên TOEIC hàng đầu thế giới. Hãy biên soạn một bài học lý thuyết ngữ pháp chuyên sâu, khoa học và cực kỳ chi tiết cho chủ đề: '{topicTitle}' (tên tiếng Anh: '{topicTitleEn}').
+
+Yêu cầu bài viết:
+1. Viết hoàn toàn bằng định dạng Markdown chuẩn.
+2. TUYỆT ĐỐI KHÔNG CHÀO HỎI. KHÔNG GIỚI THIỆU BẢN THÂN. KHÔNG CHÈN PHẦN CẢM ƠN.
+3. Phải bao gồm các phần chính sau:
+   - # {topicTitle}
+   - ## 1. Khái niệm & Cách dùng (Usage): Giải thích ngắn gọn dễ hiểu, gắn liền với các tình huống giao tiếp TOEIC.
+   - ## 2. Công thức (Formula): Trình bày rõ ràng công thức cho các thể Khẳng định, Phủ định, Nghi vấn. Dùng in đậm (**) cho công thức.
+   - ## 3. Ví dụ mẫu kèm dịch nghĩa tiếng Việt chi tiết.
+   - ## 4. Dấu hiệu nhận biết (Signal Words): Liệt kê các từ khóa nhận biết hay gặp trong đề thi TOEIC.
+   - ## 5. Lưu ý / Mẹo làm bài thi TOEIC: Những bẫy ngữ pháp liên quan cần tránh trong Part 5 & Part 6.
+4. Trình bày thật thoáng đãng, chia các dòng rõ ràng để dễ hiển thị.
+
+Nội dung biên soạn lý thuyết cho '{topicTitle}':";
+
+        return await CallGeminiAsync(prompt, 4000);
+    }
+
+    public async Task<string> GenerateGrammarExercisesAsync(string topicTitle, string topicTitleEn, int count)
+    {
+        var prompt = $@"
+Bạn là một chuyên gia khảo thí TOEIC hàng đầu thế giới. Hãy tạo ra đúng {count} câu hỏi trắc nghiệm ngữ pháp TOEIC Part 5 để ôn tập cho chủ đề ngữ pháp: '{topicTitle}' (tên tiếng Anh: '{topicTitleEn}').
+
+Yêu cầu định dạng đầu ra:
+- TUYỆT ĐỐI KHÔNG CHÀO HỎI. KHÔNG GIỚI THIỆU BẢN THÂN.
+- TRẢ VỀ DUY NHẤT một chuỗi JSON hợp lệ biểu diễn một mảng các đối tượng câu hỏi.
+- Không bọc JSON trong các từ khóa ```json ```, chỉ trả về chuỗi văn bản thuần JSON.
+- Mỗi câu hỏi phải là một đối tượng có các trường chính xác như sau:
+  - ""questionText"": Chuỗi câu hỏi tiếng Anh chứa phần điền khuyết dạng ""_____"" (ví dụ: ""The manager asked his employees to submit their reports _____ Friday."")
+  - ""options"": Một mảng gồm đúng 4 phần tử chuỗi, bắt buộc phải có tiền tố ""A. "", ""B. "", ""C. "", ""D. "" (ví dụ: [""A. for"", ""B. since"", ""C. during"", ""D. in""])
+  - ""correctAnswer"": Đáp án đúng, nhận một trong các giá trị sau: ""A"", ""B"", ""C"", ""D""
+  - ""difficulty"": Mức độ khó của câu hỏi, nhận một trong các giá trị: ""easy"", ""medium"", ""hard""
+  - ""explanationVi"": Giải thích chi tiết câu hỏi bằng tiếng Việt (vì sao chọn đáp án này, dịch nghĩa toàn bộ câu, các bẫy cần tránh)
+
+Nội dung JSON của bộ câu hỏi thực hành cho '{topicTitle}':";
+
+        return await CallGeminiAsync(prompt, 4000);
+    }
+
     private async Task<string> CallGeminiAsync(string prompt, int maxTokens)
     {
         // Debug để xác nhận Backend đang chạy bản mới nhất

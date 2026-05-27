@@ -53,4 +53,11 @@ public class SpeakingController : ControllerBase
         if (result == null) return NotFound(new { Message = "Speaking question not found" });
         return Ok(result);
     }
+
+    [HttpGet("exam/{examSetId}")]
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByExamSetId(string examSetId)
+    {
+        var results = await _service.GetByExamSetIdAsync(examSetId);
+        return Ok(results);
+    }
 }

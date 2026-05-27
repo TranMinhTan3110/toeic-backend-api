@@ -19,4 +19,5 @@ public class ListeningQuestion
     public bool IsForExam { get; set; } = false;      
     public bool IsForPractice { get; set; } = true;   
     public string? ExamId { get; set; }
+    public string? GrammarTopicId { get; set; }
 }
