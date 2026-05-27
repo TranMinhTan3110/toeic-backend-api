@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ToeicBackend.API.Extensions;
 using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.Interfaces;
 
@@ -9,10 +11,12 @@ namespace ToeicBackend.API.Controllers;
 public class SpeakingController : ControllerBase
 {
     private readonly ISpeakingService _service;
+    private readonly ISpeakingHistoryService _historyService;
 
-    public SpeakingController(ISpeakingService service)
+    public SpeakingController(ISpeakingService service, ISpeakingHistoryService historyService)
     {
         _service = service;
+        _historyService = historyService;
     }
 
     [HttpGet]
@@ -51,6 +55,90 @@ public class SpeakingController : ControllerBase
     {
         var result = await _service.GetByIdAsync(id);
         if (result == null) return NotFound(new { Message = "Speaking question not found" });
+        return Ok(result);
+    }
+
+    /// <summary>Chấm bài nói bằng Gemini — so sánh transcript với bài mẫu trên Firestore.</summary>
+    [HttpPost("evaluate")]
+    [Authorize]
+    public async Task<ActionResult<SpeakingEvaluationDto>> Evaluate(
+        [FromForm] string questionId,
+        [FromForm] string? transcript,
+        [FromForm] int? subQuestionIndex)
+    {
+        if (string.IsNullOrWhiteSpace(questionId))
+        {
+            return BadRequest(new { message = "questionId là bắt buộc" });
+        }
+
+        try
+        {
+            var result = await _historyService.EvaluateAsync(
+                questionId,
+                transcript ?? string.Empty,
+                subQuestionIndex);
+            return Ok(result);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return NotFound(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Lỗi chấm điểm AI", detail = ex.Message });
+        }
+    }
+
+    [HttpPost("history")]
+    [Authorize]
+    public async Task<IActionResult> SaveHistory([FromBody] SaveSpeakingHistoryRequestDto dto)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        var historyId = await _historyService.SaveHistoryAsync(userId, dto);
+        return Ok(new { success = true, id = historyId });
+    }
+
+    [HttpGet("history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<SpeakingHistoryDto>>> GetUserHistory(
+        [FromQuery] string? sessionType)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        var results = await _historyService.GetUserHistoryAsync(userId, sessionType);
+        return Ok(results);
+    }
+
+    [HttpGet("history/{id}")]
+    [Authorize]
+    public async Task<ActionResult<SpeakingHistoryDto>> GetHistoryById(string id)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        var result = await _historyService.GetHistoryByIdAsync(id);
+        if (result == null)
+        {
+            return NotFound(new { message = "Không tìm thấy lịch sử với ID này" });
+        }
+
+        if (result.UserId != userId)
+        {
+            return Forbid();
+        }
+
         return Ok(result);
     }
 }
