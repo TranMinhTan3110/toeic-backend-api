@@ -185,5 +185,16 @@ public class ListeningController : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpDelete("admin/{id}")]
+    public async Task<IActionResult> DeleteQuestion(string id)
+    {
+        var result = await _service.DeleteQuestionAsync(id);
+        if (!result)
+        {
+            return NotFound(new { message = "Không tìm thấy câu hỏi." });
+        }
+        return Ok(new { success = true, message = "Đã xóa câu hỏi thành công." });
+    }
 }
 

@@ -60,4 +60,12 @@ public class User
 
     [FirestoreProperty("preferred_skills")]
     public List<string> PreferredSkills { get; set; } = new();
+
+    [FirestoreProperty("is_locked")]
+    public bool IsLocked { get; set; } = false;
+
+    [FirestoreProperty("role")]
+    public string Role { get; set; } = "user";
 }
+
+

@@ -53,4 +53,39 @@ public class UsersController : ControllerBase
 
         return Ok(profile);
     }
+
+    [HttpGet("admin/all")]
+    public async Task<IActionResult> GetAllAdmin(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 9,
+        [FromQuery] string? searchTerm = null,
+        [FromQuery] string? status = null,
+        [FromQuery] string? role = null)
+    {
+        var result = await _profileService.GetPagedUsersAdminAsync(page, pageSize, searchTerm, status, role);
+        return Ok(result);
+    }
+
+    [HttpPost("admin/lock/{userId}")]
+    public async Task<IActionResult> LockUser(string userId)
+    {
+        var result = await _profileService.LockUserAsync(userId);
+        if (!result)
+        {
+            return NotFound(new { message = "Không tìm thấy người dùng." });
+        }
+        return Ok(new { success = true, message = "Đã khóa người dùng thành công." });
+    }
+
+    [HttpPost("admin/unlock/{userId}")]
+    public async Task<IActionResult> UnlockUser(string userId)
+    {
+        var result = await _profileService.UnlockUserAsync(userId);
+        if (!result)
+        {
+            return NotFound(new { message = "Không tìm thấy người dùng." });
+        }
+        return Ok(new { success = true, message = "Đã mở khóa người dùng thành công." });
+    }
 }
+
