@@ -77,6 +77,20 @@ public class ListeningController : ControllerBase
     {
         try
         {
+            object? explanationValue = dto.Explanation;
+            if (explanationValue is System.Text.Json.JsonElement jsonElement)
+            {
+                explanationValue = jsonElement.ValueKind switch
+                {
+                    System.Text.Json.JsonValueKind.String => jsonElement.GetString(),
+                    System.Text.Json.JsonValueKind.Number => jsonElement.GetDouble(),
+                    System.Text.Json.JsonValueKind.True => true,
+                    System.Text.Json.JsonValueKind.False => false,
+                    System.Text.Json.JsonValueKind.Null => null,
+                    _ => jsonElement.ToString()
+                };
+            }
+
             var entity = new ToeicBackend.Domain.Entities.ListeningQuestion
             {
                 Id = string.IsNullOrEmpty(dto.Id) ? "admin_p_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : dto.Id,
@@ -86,7 +100,7 @@ public class ListeningController : ControllerBase
                 AudioUrl = dto.AudioUrl,
                 Options = dto.Options ?? new List<string>(),
                 CorrectAnswer = dto.CorrectAnswer ?? string.Empty,
-                Explanation = dto.Explanation,
+                Explanation = explanationValue,
                 ExplanationVi = dto.ExplanationVi,
                 Script = dto.Script,
                 GroupId = dto.GroupId,
