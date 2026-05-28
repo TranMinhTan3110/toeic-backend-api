@@ -1,0 +1,71 @@
+[
+  {
+    "id": "spk_hist_demo_001",
+    "user_id": "seed_demo_user",
+    "part": 1,
+    "correct_count": 8,
+    "total_count": 15,
+    "percent": 53.3,
+    "score": 7.8,
+    "feedback_summary": "Phát âm rõ ràng, trôi chảy. Cần chú ý ngắt nghỉ đúng chỗ ở các câu ghép so với bài mẫu.",
+    "criteria": {
+      "Phát âm": 8.5,
+      "Lưu loát": 9.0,
+      "Ngữ điệu": 8.0
+    },
+    "session_type": "practice",
+    "date": "2026-04-16T10:30:00Z",
+    "answers": [
+      {
+        "question_id": "t2_spk_task1_001",
+        "transcript": "In this picture, I can see a group of people sitting around a conference table.",
+        "overall_score": 8.5,
+        "passed": true,
+        "feedback": "Gần với bài mẫu, phát âm tốt.",
+        "criteria_scores": { "Phát âm": 8.5, "Lưu loát": 9.0 },
+        "ai_feedback": {
+          "pronunciation": 4,
+          "grammar": 4,
+          "vocabulary": 4,
+          "feedback_vi": "Phát âm rõ ràng."
+        }
+      }
+    ]
+  },
+  {
+    "id": "spk_hist_demo_002",
+    "user_id": "seed_demo_user",
+    "part": 2,
+    "correct_count": 4,
+    "total_count": 5,
+    "percent": 80.0,
+    "score": 7.2,
+    "feedback_summary": "Mô tả có cấu trúc tốt. Cần bổ sung chi tiết như trong bài mẫu.",
+    "criteria": {
+      "Phát âm": 7.5,
+      "Lưu loát": 7.0,
+      "Từ vựng": 7.0
+    },
+    "session_type": "practice",
+    "date": "2026-04-15T14:20:00Z",
+    "answers": []
+  },
+  {
+    "id": "spk_hist_demo_003",
+    "user_id": "seed_demo_user",
+    "part": 5,
+    "correct_count": 0,
+    "total_count": 2,
+    "percent": 0.0,
+    "score": 6.5,
+    "feedback_summary": "Ý kiến rõ ràng nhưng lập luận chưa sâu so với bài mẫu.",
+    "criteria": {
+      "Ngữ pháp": 6.0,
+      "Từ vựng": 7.0,
+      "Lưu loát": 6.5
+    },
+    "session_type": "practice",
+    "date": "2026-04-14T09:05:00Z",
+    "answers": []
+  }
+]
