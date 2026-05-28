@@ -47,4 +47,7 @@ public class SaveWritingSessionRequestDto
     public int? CorrectCount { get; set; }
     public int? TimeSpent { get; set; }
     public List<string>? IncorrectIds { get; set; }
+    public int? AiScore { get; set; }
+    public WritingHistoryAiFeedbackDto? AiFeedback { get; set; }
 }
+

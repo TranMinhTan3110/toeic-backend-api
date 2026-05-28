@@ -10,5 +10,8 @@ public enum ActivityType
     PracticeComplete,
     ExamComplete,
     GrammarLessonComplete,
-    GrammarExercise
+    GrammarExercise,
+    ListeningComplete,
+    SpeakingComplete,
+    WritingComplete
 }

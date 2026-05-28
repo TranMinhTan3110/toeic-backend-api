@@ -68,7 +68,9 @@ public class SpeakingHistoryService : ISpeakingHistoryService
     public async Task<SpeakingEvaluationDto> EvaluateAsync(
         string questionId,
         string transcript,
-        int? subQuestionIndex)
+        int? subQuestionIndex,
+        byte[]? audioBytes = null,
+        string? mimeType = null)
     {
         var question = await _questionRepository.GetByIdAsync(questionId)
             ?? throw new InvalidOperationException("Không tìm thấy câu hỏi Speaking.");
@@ -91,7 +93,9 @@ public class SpeakingHistoryService : ISpeakingHistoryService
             prompt,
             samples,
             transcript.Trim(),
-            question.TaskNumber);
+            question.TaskNumber,
+            audioBytes,
+            mimeType);
     }
 
     private static string BuildTaskPrompt(SpeakingQuestion question, int? subQuestionIndex)

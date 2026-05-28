@@ -10,5 +10,7 @@ public interface ISpeakingHistoryService
     Task<SpeakingEvaluationDto> EvaluateAsync(
         string questionId,
         string transcript,
-        int? subQuestionIndex);
+        int? subQuestionIndex,
+        byte[]? audioBytes = null,
+        string? mimeType = null);
 }
