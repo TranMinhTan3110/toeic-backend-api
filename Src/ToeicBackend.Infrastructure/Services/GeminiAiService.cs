@@ -177,7 +177,7 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             return cachedEval;
         }
 
-        var raw = await CallGeminiAsync(prompt, 2000, audioBytes, mimeType);
+        var raw = await CallGeminiAsync(prompt, 2000, audioBytes, mimeType, isJson: true);
         var dto = ParseSpeakingEvaluationJson(raw, userTranscript);
 
         if (dto.OverallScore > 0)
@@ -311,7 +311,7 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             return cachedEval;
         }
 
-        var raw = await CallGeminiAsync(prompt, 3000);
+        var raw = await CallGeminiAsync(prompt, 3000, isJson: true);
         var dto = ParseWritingEvaluationJson(raw, userAnswer);
 
         if (dto.OverallScore > 0)
@@ -396,10 +396,10 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
         return match.Success ? match.Value : trimmed;
     }
 
-    private async Task<string> CallGeminiAsync(string prompt, int maxTokens, byte[]? audioBytes = null, string? mimeType = null)
+    private async Task<string> CallGeminiAsync(string prompt, int maxTokens, byte[]? audioBytes = null, string? mimeType = null, bool isJson = false)
     {
         // Debug để xác nhận Backend đang chạy bản mới nhất
-        Console.WriteLine($"[GEMINI DEBUG] Đang gọi AI với maxTokens: {maxTokens}, có audio: {audioBytes != null}");
+        Console.WriteLine($"[GEMINI DEBUG] Đang gọi AI với maxTokens: {maxTokens}, có audio: {audioBytes != null}, isJson: {isJson}");
 
         object partsArray;
 
@@ -432,11 +432,18 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             {
                 new { parts = partsArray }
             },
-            generationConfig = new
-            {
-                maxOutputTokens = maxTokens,
-                temperature = 0.7
-            }
+            generationConfig = isJson
+                ? (object)new
+                {
+                    maxOutputTokens = maxTokens,
+                    temperature = 0.7,
+                    responseMimeType = "application/json"
+                }
+                : new
+                {
+                    maxOutputTokens = maxTokens,
+                    temperature = 0.7
+                }
         };
 
         var json = JsonSerializer.Serialize(requestBody);

@@ -108,6 +108,13 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingHistorySe
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamRepository, ToeicBackend.Infrastructure.Repositories.ExamRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamService, ToeicBackend.Application.Services.ExamService>();
 
+// --- EXAM FLOW (SPEAKING & WRITING FULL TEST) ---
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingExamHistoryRepository, ToeicBackend.Infrastructure.Repositories.SpeakingExamHistoryRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingExamHistoryService, ToeicBackend.Application.Services.SpeakingExamHistoryService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingExamHistoryRepository, ToeicBackend.Infrastructure.Repositories.WritingExamHistoryRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingExamHistoryService, ToeicBackend.Application.Services.WritingExamHistoryService>();
+// ------------------------------------------------
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>

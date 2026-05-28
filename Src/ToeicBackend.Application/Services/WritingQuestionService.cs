@@ -69,8 +69,39 @@ public class WritingQuestionService : IWritingQuestionService
     public async Task<IEnumerable<WritingQuestionDto>> GetQuestionsByExamSetIdAsync(string examSetId)
     {
         var entities = await _repository.GetQuestionsByExamSetIdAsync(examSetId);
+        
+        if (entities == null || !entities.Any())
+        {
+            string? alternateId = null;
+            if (examSetId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
+            {
+                if (int.TryParse(examSetId.Substring(5), out int num))
+                {
+                    alternateId = $"ETS-WRT-2024-{num:D2}";
+                }
+            }
+            else if (examSetId.StartsWith("ETS-WRT-2024-", StringComparison.OrdinalIgnoreCase))
+            {
+                if (int.TryParse(examSetId.Substring(13), out int num))
+                {
+                    alternateId = $"test_{num}";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(alternateId))
+            {
+                Console.WriteLine($"[DEBUG] No writing questions found for '{examSetId}'. Retrying with alternate ID: '{alternateId}'");
+                var altEntities = await _repository.GetQuestionsByExamSetIdAsync(alternateId);
+                if (altEntities != null && altEntities.Any())
+                {
+                    entities = altEntities;
+                }
+            }
+        }
+        
         return entities.Select(MapToDto);
     }
+
 
     private WritingQuestionDto MapToDto(WritingQuestion entity)
     {

@@ -27,30 +27,27 @@ Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine(" Kết nối Firestore thành công!\n");
 Console.ResetColor();
 
-// Chỉ seed 1 collection: dotnet run --project Src/ToeicBackend.Seeder -- user_speaking_history
-if (args.Length > 0 && args[0] == "user_speaking_history")
-{
-    await SeedCollection("user_speaking_history", "user_speaking_history.json");
-}
-else
-{
-    await SeedCollection("vocabulary", "vocabulary.json");
-    await SeedCollection("grammar_topics", "grammar_topics.json");
-    await SeedCollection("grammar_lessons", "grammar_lessons.json");
-    await SeedCollection("question_groups", "question_groups.json");
-    await SeedCollection("question_groups", "question_group_listening.json");
-    await SeedCollection("questions", "questions.json");
-    await SeedCollection("questions", "practiceListening.json");
-    await SeedCollection("questions", "grammar_questions.json");
-    await SeedCollection("exams", "exams.json");
-    await SeedCollection("speaking_questions", "speaking_questions.json");
-    await SeedCollection("writing_questions", "writing_questions.json");
-    await SeedCollection("user_speaking_history", "user_speaking_history.json");
-}
+// TEMPORARY QUERY
+Console.WriteLine("--- WRITING QUESTIONS exam_set_id ---");
+var writingSnapshot = await db.Collection("writing_questions").GetSnapshotAsync();
+var writingIds = writingSnapshot.Documents
+    .Where(d => d.ContainsField("exam_set_id"))
+    .Select(d => d.GetValue<string>("exam_set_id"))
+    .Distinct()
+    .ToList();
+foreach (var id in writingIds) Console.WriteLine($"- {id}");
 
-Console.ForegroundColor = ConsoleColor.Cyan;
-Console.WriteLine("\n Seed data hoàn tất!");
-Console.ResetColor();
+Console.WriteLine("--- SPEAKING QUESTIONS exam_set_id ---");
+var speakingSnapshot = await db.Collection("speaking_questions").GetSnapshotAsync();
+var speakingIds = speakingSnapshot.Documents
+    .Where(d => d.ContainsField("exam_set_id"))
+    .Select(d => d.GetValue<string>("exam_set_id"))
+    .Distinct()
+    .ToList();
+foreach (var id in speakingIds) Console.WriteLine($"- {id}");
+
+return;
+
 
 async Task SeedCollection(string collectionName, string fileName)
 {

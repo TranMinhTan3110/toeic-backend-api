@@ -13,5 +13,8 @@ public enum ActivityType
     GrammarExercise,
     ListeningComplete,
     SpeakingComplete,
-    WritingComplete
+    WritingComplete,
+    // Exam types — lifetime anti-spam (mỗi examSetId chỉ cộng 1 lần vĩnh viễn)
+    SpeakingExamComplete,
+    WritingExamComplete,
 }

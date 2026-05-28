@@ -31,7 +31,9 @@ public class EngagementService : IEngagementService
             ActivityType.GrammarExercise,
             ActivityType.ListeningComplete,
             ActivityType.SpeakingComplete,
-            ActivityType.WritingComplete
+            ActivityType.WritingComplete,
+            ActivityType.SpeakingExamComplete,
+            ActivityType.WritingExamComplete,
         };
         if (!allowedTypes.Contains(request.ActivityType))
         {
@@ -44,19 +46,29 @@ public class EngagementService : IEngagementService
         var todayKey = VietnamTimeHelper.GetTodayDateKey();
         var activityTypeName = request.ActivityType.ToString();
 
-        if (!string.IsNullOrEmpty(request.ReferenceId) &&
-            await _epEventRepository.ExistsForReferenceOnDateAsync(userId, activityTypeName, request.ReferenceId, todayKey))
+        var isExamType = request.ActivityType is ActivityType.SpeakingExamComplete or ActivityType.WritingExamComplete;
+
+        if (!string.IsNullOrEmpty(request.ReferenceId))
         {
-            return new EngagementResultDto
+            // Exam: kiểm tra lifetime (vĩnh viễn) — mỗi examSetId chỉ cộng 1 lần
+            // Practice: kiểm tra theo ngày
+            var alreadyAwarded = isExamType
+                ? await _epEventRepository.ExistsForReferenceEverAsync(userId, activityTypeName, request.ReferenceId)
+                : await _epEventRepository.ExistsForReferenceOnDateAsync(userId, activityTypeName, request.ReferenceId, todayKey);
+
+            if (alreadyAwarded)
             {
-                EpAwarded = 0,
-                TotalExperiencePoints = user.ExperiencePoints,
-                WeeklyEp = user.WeeklyEp,
-                StreakDays = user.StreakDays,
-                BestStreakDays = user.BestStreakDays,
-                StreakMultiplier = EngagementRules.GetStreakMultiplier(user.StreakDays),
-                AlreadyAwardedForReference = true
-            };
+                return new EngagementResultDto
+                {
+                    EpAwarded = 0,
+                    TotalExperiencePoints = user.ExperiencePoints,
+                    WeeklyEp = user.WeeklyEp,
+                    StreakDays = user.StreakDays,
+                    BestStreakDays = user.BestStreakDays,
+                    StreakMultiplier = EngagementRules.GetStreakMultiplier(user.StreakDays),
+                    AlreadyAwardedForReference = true
+                };
+            }
         }
 
         var baseEp = request.ActivityType switch
@@ -80,8 +92,12 @@ public class EngagementService : IEngagementService
             ActivityType.WritingComplete => request.CorrectAnswers > 0
                 ? (request.CorrectAnswers * EngagementRules.WritingEpPerPoint) + EngagementRules.WritingCompleteBonusEp
                 : 0,
-                
-            _                          => 3,
+
+            // Exam: +30 EP flat (lifetime, không nhân nhân vật liệu gì cả)
+            ActivityType.SpeakingExamComplete => EngagementRules.ExamCompleteEp,
+            ActivityType.WritingExamComplete  => EngagementRules.ExamCompleteEp,
+
+            _ => 3,
         };
 
         // Đảm bảo ít nhất 1 EP nếu đã hoàn thành (tránh baseEp = 0 khi correctAnswers = 0)

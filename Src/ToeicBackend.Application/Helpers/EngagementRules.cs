@@ -25,6 +25,9 @@ public static class EngagementRules
     public const int WritingEpPerPoint = 4;             // 4 EP / điểm AI đánh giá (aiScore 0-10)
     public const int WritingCompleteBonusEp = 8;         // +8 EP thưởng hoàn thành (nếu score > 0)
 
+    // Exam Gamification (lifetime — mỗi đề thi chỉ cộng 1 lần duy nhất)
+    public const int ExamCompleteEp = 30;               // +30 EP hoàn thành 1 đề thi lần đầu
+
     public const int DailyEpCap             = 500;
     public const double MaxStreakMultiplierBonus = 0.5;
 
