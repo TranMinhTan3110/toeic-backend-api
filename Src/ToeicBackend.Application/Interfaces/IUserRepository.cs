@@ -8,4 +8,6 @@ public interface IUserRepository
     Task CreateAsync(User user);
     Task UpdateAsync(User user);
     Task<IReadOnlyList<User>> GetWeeklyLeaderboardAsync(string periodKey, int limit);
+    Task<IReadOnlyList<User>> GetAllUsersAsync();
 }
+

@@ -47,6 +47,11 @@ public class UserRepository : IUserRepository
             PreferredSkills  = d.TryGetValue("preferred_skills", out var ps) && ps is List<object> list
                                 ? list.Select(x => x.ToString()!).ToList()
                                 : new List<string>(),
+            IsLocked         = Get<bool>("is_locked", false),
+            Role             = Get<string>("role", Get<string>("email", "").Contains("admin") || Get<string>("email", "") == "nguyengamo@gmail.com" ? "admin" : "user"),
+            PhoneNumber      = Get<string>("phone_number", null!),
+            Gender           = Get<string>("gender", null!),
+            BirthDate        = Get<string>("birth_date", null!),
         };
     }
 
@@ -83,6 +88,14 @@ public class UserRepository : IUserRepository
         return snapshot.Documents
             .Select(SnapshotToUser)
             .Where(u => u.WeeklyEp > 0)
+            .ToList();
+    }
+
+    public async Task<IReadOnlyList<User>> GetAllUsersAsync()
+    {
+        var snapshot = await _firestoreDb.Collection(CollectionName).GetSnapshotAsync();
+        return snapshot.Documents
+            .Select(SnapshotToUser)
             .ToList();
     }
 }
