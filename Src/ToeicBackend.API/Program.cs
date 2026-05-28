@@ -107,6 +107,7 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingHistoryRe
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingHistoryService, ToeicBackend.Application.Services.WritingHistoryService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamRepository, ToeicBackend.Infrastructure.Repositories.ExamRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamService, ToeicBackend.Application.Services.ExamService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IDashboardService, ToeicBackend.Application.Services.DashboardService>();
 
 builder.Services.AddCors(options =>
 {
