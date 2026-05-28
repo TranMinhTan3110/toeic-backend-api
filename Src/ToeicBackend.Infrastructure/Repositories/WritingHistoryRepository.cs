@@ -9,7 +9,7 @@ public class WritingHistoryRepository : IWritingHistoryRepository
 {
     private readonly FirestoreDb _firestoreDb;
     private readonly IMemoryCache _cache;
-    private const string CollectionName = "user_writing_history";
+    private const string CollectionName = "writing_submissions";
     private static readonly TimeSpan CacheDuration = TimeSpan.FromMinutes(5);
 
     public WritingHistoryRepository(FirestoreDb firestoreDb, IMemoryCache cache)
@@ -32,6 +32,8 @@ public class WritingHistoryRepository : IWritingHistoryRepository
         }
 
         _cache.Remove(UserListCacheKey(history.UserId));
+        _cache.Remove(UserListCacheKey(history.UserId, history.SessionType));
+        _cache.Remove(WritingHistoryDetailCacheKey(history.Id));
         return history.Id;
     }
 

@@ -1,4 +1,3 @@
-using System.Linq;
 using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.Interfaces;
 using ToeicBackend.Domain.Entities;
@@ -16,16 +15,9 @@ public class WritingHistoryService : IWritingHistoryService
 
     public async Task<string> SaveHistoryAsync(string userId, SaveWritingHistoryRequestDto request)
     {
-        var questionIds = request.QuestionIds != null && request.QuestionIds.Any()
-            ? request.QuestionIds
-            : string.IsNullOrWhiteSpace(request.QuestionId)
-                ? new List<string>()
-                : new List<string> { request.QuestionId };
-
-        var answers = request.Answers ?? new Dictionary<string, string>();
-        if (!answers.Any() && !string.IsNullOrWhiteSpace(request.QuestionId))
+        if (string.IsNullOrWhiteSpace(request.QuestionId))
         {
-            answers[request.QuestionId] = request.UserAnswer ?? string.Empty;
+            throw new ArgumentException("QuestionId không được để trống");
         }
 
         var history = new WritingHistory
@@ -34,19 +26,66 @@ public class WritingHistoryService : IWritingHistoryService
             QuestionId = request.QuestionId,
             TaskNumber = request.TaskNumber,
             TaskType = request.TaskType,
-            QuestionIds = questionIds,
-            QuestionCount = request.QuestionCount ?? Math.Max(questionIds.Count, 1),
-            Answers = answers,
             SessionType = string.IsNullOrWhiteSpace(request.SessionType) ? "practice" : request.SessionType,
             UserAnswer = request.UserAnswer ?? string.Empty,
             WordCount = request.WordCount,
             TimeUsed = request.TimeUsed,
             AiScore = request.AiScore,
             AiFeedback = MapToEntityFeedback(request.AiFeedback),
-            AiModel = request.AiModel,
-            Status = DetermineDefaultStatus(request),
-            ScoredAt = request.ScoredAt,
-            ResultId = request.ResultId,
+            SubmittedAt = DateTime.UtcNow
+        };
+
+        return await _repository.AddAsync(history);
+    }
+
+    public async Task<string> SaveSessionAsync(string userId, SaveWritingSessionRequestDto request)
+    {
+        if (!string.IsNullOrWhiteSpace(request.Id))
+        {
+            var existing = await _repository.GetByIdAsync(request.Id);
+            if (existing != null && existing.UserId != userId)
+            {
+                throw new UnauthorizedAccessException("Bạn không có quyền cập nhật lịch sử writing này");
+            }
+        }
+
+        var questionIds = (request.QuestionIds ?? new List<string>())
+            .Where(id => !string.IsNullOrWhiteSpace(id))
+            .Distinct()
+            .ToList();
+
+        if (questionIds.Count == 0)
+        {
+            throw new ArgumentException("QuestionIds không được để trống");
+        }
+
+        var answers = request.Answers?
+            .Where(answer => !string.IsNullOrWhiteSpace(answer.Key))
+            .ToDictionary(answer => answer.Key, answer => answer.Value ?? string.Empty);
+
+        var firstQuestionId = questionIds[0];
+        var firstAnswer = answers != null && answers.TryGetValue(firstQuestionId, out var answer)
+            ? answer
+            : string.Empty;
+
+        var history = new WritingHistory
+        {
+            Id = request.Id ?? string.Empty,
+            UserId = userId,
+            QuestionId = firstQuestionId,
+            TaskNumber = request.TaskNumber,
+            TaskType = request.TaskType,
+            SessionType = string.IsNullOrWhiteSpace(request.SessionType) ? "practice" : request.SessionType,
+            UserAnswer = firstAnswer,
+            QuestionIds = questionIds,
+            Answers = answers,
+            QuestionCount = request.QuestionCount,
+            CorrectCount = request.CorrectCount,
+            TimeSpent = request.TimeSpent,
+            IncorrectIds = request.IncorrectIds?
+                .Where(id => !string.IsNullOrWhiteSpace(id))
+                .Distinct()
+                .ToList(),
             SubmittedAt = DateTime.UtcNow
         };
 
@@ -65,16 +104,6 @@ public class WritingHistoryService : IWritingHistoryService
         return entity == null ? null : MapToDto(entity);
     }
 
-    private static string DetermineDefaultStatus(SaveWritingHistoryRequestDto request)
-    {
-        if (!string.IsNullOrWhiteSpace(request.Status))
-        {
-            return request.Status;
-        }
-
-        return request.AiScore.HasValue ? "scored" : "pending";
-    }
-
     private static WritingHistoryDto MapToDto(WritingHistory entity)
     {
         return new WritingHistoryDto
@@ -84,20 +113,19 @@ public class WritingHistoryService : IWritingHistoryService
             QuestionId = entity.QuestionId,
             TaskNumber = entity.TaskNumber,
             TaskType = entity.TaskType,
-            QuestionIds = entity.QuestionIds,
-            QuestionCount = entity.QuestionCount,
-            Answers = entity.Answers,
             SessionType = entity.SessionType,
             UserAnswer = entity.UserAnswer,
             WordCount = entity.WordCount,
             TimeUsed = entity.TimeUsed,
             AiScore = entity.AiScore,
             AiFeedback = MapToDtoFeedback(entity.AiFeedback),
-            AiModel = entity.AiModel,
-            Status = entity.Status,
-            ScoredAt = entity.ScoredAt,
-            ResultId = entity.ResultId,
-            SubmittedAt = entity.SubmittedAt
+            SubmittedAt = entity.SubmittedAt,
+            QuestionIds = entity.QuestionIds,
+            Answers = entity.Answers,
+            QuestionCount = entity.QuestionCount,
+            CorrectCount = entity.CorrectCount,
+            TimeSpent = entity.TimeSpent,
+            IncorrectIds = entity.IncorrectIds
         };
     }
 

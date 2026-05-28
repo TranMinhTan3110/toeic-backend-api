@@ -31,16 +31,50 @@ public class WritingHistoryController : ControllerBase
             return Unauthorized(new { message = "Token không hợp lệ" });
         }
 
-        var hasSingleAnswer = !string.IsNullOrWhiteSpace(dto.QuestionId) && !string.IsNullOrWhiteSpace(dto.UserAnswer);
-        var hasMultipleAnswers = dto.QuestionIds != null && dto.QuestionIds.Any() && dto.Answers != null && dto.Answers.Any();
-
-        if (!hasSingleAnswer && !hasMultipleAnswers)
+        if (string.IsNullOrWhiteSpace(dto.QuestionId) || string.IsNullOrWhiteSpace(dto.UserAnswer))
         {
-            return BadRequest(new { message = "Thông tin lịch sử writing không hợp lệ. Cần questionId+userAnswer hoặc questionIds+answers." });
+            return BadRequest(new { message = "QuestionId và UserAnswer không được để trống" });
         }
 
-        var historyId = await _service.SaveHistoryAsync(userId, dto);
-        return Ok(new { success = true, id = historyId });
+        try
+        {
+            var historyId = await _service.SaveHistoryAsync(userId, dto);
+            return Ok(new { success = true, id = historyId });
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+    }
+
+    [HttpPost("session")]
+    [Authorize]
+    public async Task<IActionResult> SaveSession([FromBody] SaveWritingSessionRequestDto dto)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        if (dto.QuestionIds == null || dto.QuestionIds.Count == 0)
+        {
+            return BadRequest(new { message = "QuestionIds không được để trống" });
+        }
+
+        try
+        {
+            var historyId = await _service.SaveSessionAsync(userId, dto);
+            return Ok(new { success = true, id = historyId });
+        }
+        catch (ArgumentException ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (UnauthorizedAccessException)
+        {
+            return Forbid();
+        }
     }
 
     [HttpGet]
