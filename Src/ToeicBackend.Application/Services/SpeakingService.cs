@@ -51,12 +51,6 @@ public class SpeakingService : ISpeakingService
         return entity == null ? null : MapToDto(entity);
     }
 
-    public async Task<IEnumerable<SpeakingQuestionDto>> GetByExamSetIdAsync(string examSetId)
-    {
-        var entities = await _repository.GetByExamSetIdAsync(examSetId);
-        return entities.Select(MapToDto);
-    }
-
     private SpeakingQuestionDto MapToDto(SpeakingQuestion entity)
     {
         var dto = new SpeakingQuestionDto
