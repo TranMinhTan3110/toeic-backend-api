@@ -118,6 +118,16 @@ public class WritingQuestionRepository : IWritingQuestionRepository
             .OrderBy(t => t);
     }
 
+    public async Task<IEnumerable<WritingQuestion>> GetQuestionsByExamSetIdAsync(string examSetId)
+    {
+        Console.WriteLine($"[DEBUG] Querying writing questions by exam_set_id: '{examSetId}'");
+        var query = _firestoreDb.Collection(CollectionName)
+            .WhereEqualTo("exam_set_id", examSetId);
+        
+        var snapshot = await query.GetSnapshotAsync();
+        return snapshot.Documents.Select(MapToDomain).OrderBy(wq => wq.TaskNumber).ToList();
+    }
+
     private WritingQuestion MapToDomain(DocumentSnapshot doc)
     {
         var wq = new WritingQuestion

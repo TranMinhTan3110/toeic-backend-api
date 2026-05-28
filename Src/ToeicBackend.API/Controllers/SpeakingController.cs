@@ -50,6 +50,13 @@ public class SpeakingController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("exam/{examSetId}")]
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByExamSetId(string examSetId)
+    {
+        var results = await _service.GetByExamSetIdAsync(examSetId);
+        return Ok(results);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<SpeakingQuestionDto>> GetById(string id)
     {

@@ -87,6 +87,25 @@ public class SpeakingRepository : ISpeakingRepository
         return results;
     }
 
+    public async Task<IEnumerable<SpeakingQuestion>> GetByExamSetIdAsync(string examSetId)
+    {
+        var cacheKey = $"speaking_questions_exam_set_{examSetId}";
+        if (_cache.TryGetValue(cacheKey, out List<SpeakingQuestion>? cachedList) && cachedList != null)
+        {
+            return cachedList;
+        }
+
+        Console.WriteLine($"[DEBUG] Querying speaking questions by exam_set_id: '{examSetId}'");
+        var query = _firestoreDb.Collection(CollectionName)
+            .WhereEqualTo("exam_set_id", examSetId);
+        
+        var snapshot = await query.GetSnapshotAsync();
+        var results = snapshot.Documents.Select(MapToDomain).OrderBy(q => q.TaskNumber).ToList();
+        
+        _cache.Set(cacheKey, results, TimeSpan.FromHours(4));
+        return results;
+    }
+
     public async Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice)
     {
         var cacheKey = $"speaking_questions_count_{isExam}_{isPractice}";

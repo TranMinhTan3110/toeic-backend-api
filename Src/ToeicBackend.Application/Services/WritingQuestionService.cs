@@ -72,6 +72,12 @@ public class WritingQuestionService : IWritingQuestionService
         return await _repository.GetAvailableTaskTypesAsync();
     }
 
+    public async Task<IEnumerable<WritingQuestionDto>> GetQuestionsByExamSetIdAsync(string examSetId)
+    {
+        var entities = await _repository.GetQuestionsByExamSetIdAsync(examSetId);
+        return entities.Select(MapToDto);
+    }
+
     private WritingQuestionDto MapToDto(WritingQuestion entity)
     {
         return new WritingQuestionDto

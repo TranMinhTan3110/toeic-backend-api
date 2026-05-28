@@ -112,10 +112,14 @@ public class WritingQuestionController : ControllerBase
         return Ok(types);
     }
 
+    /// <summary>
+    /// Get writing questions by exam set ID
+    /// </summary>
     [HttpGet("exam/{examSetId}")]
-    public async Task<IActionResult> GetByExamSetId(string examSetId)
+    public async Task<IActionResult> GetQuestionsByExamSetId(string examSetId)
     {
-        var results = await _service.GetByExamSetIdAsync(examSetId);
+        Console.WriteLine($"[DEBUG] GetQuestionsByExamSetId called with examSetId: '{examSetId}'");
+        var results = await _service.GetQuestionsByExamSetIdAsync(examSetId);
         return Ok(results);
     }
 }
