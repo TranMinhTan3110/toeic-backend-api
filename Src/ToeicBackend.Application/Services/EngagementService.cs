@@ -28,7 +28,10 @@ public class EngagementService : IEngagementService
             ActivityType.VocabSentence,
             ActivityType.VocabSpeaking,
             ActivityType.GrammarLessonComplete,
-            ActivityType.GrammarExercise
+            ActivityType.GrammarExercise,
+            ActivityType.ListeningComplete,
+            ActivityType.SpeakingComplete,
+            ActivityType.WritingComplete
         };
         if (!allowedTypes.Contains(request.ActivityType))
         {
@@ -66,6 +69,18 @@ public class EngagementService : IEngagementService
             ActivityType.VocabSpeaking => EngagementRules.VocabSpeakingBaseEp,
             ActivityType.GrammarLessonComplete => EngagementRules.GrammarLessonBaseEp,
             ActivityType.GrammarExercise       => request.CorrectAnswers * EngagementRules.GrammarExerciseEpPerCorrect,
+            
+            // Listening, Speaking, Writing practices
+            ActivityType.ListeningComplete => request.CorrectAnswers > 0
+                ? (request.CorrectAnswers * EngagementRules.ListeningEpPerCorrect) + EngagementRules.ListeningCompleteBonusEp
+                : 0,
+            ActivityType.SpeakingComplete => request.CorrectAnswers > 0
+                ? (request.CorrectAnswers * EngagementRules.SpeakingEpPerCorrect) + EngagementRules.SpeakingCompleteBonusEp
+                : 0,
+            ActivityType.WritingComplete => request.CorrectAnswers > 0
+                ? (request.CorrectAnswers * EngagementRules.WritingEpPerPoint) + EngagementRules.WritingCompleteBonusEp
+                : 0,
+                
             _                          => 3,
         };
 

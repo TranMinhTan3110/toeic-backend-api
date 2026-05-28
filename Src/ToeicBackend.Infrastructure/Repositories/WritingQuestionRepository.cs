@@ -100,6 +100,14 @@ public class WritingQuestionRepository : IWritingQuestionRepository
         return snapshot.Documents.Select(MapToDomain);
     }
 
+    public async Task<IEnumerable<WritingQuestion>> GetByExamSetIdAsync(string examSetId)
+    {
+        Console.WriteLine($"[DEBUG] Querying writing questions by exam_set_id: '{examSetId}'");
+        var query = _firestoreDb.Collection(CollectionName).WhereEqualTo("exam_set_id", examSetId);
+        var snapshot = await query.GetSnapshotAsync();
+        return snapshot.Documents.Select(MapToDomain);
+    }
+
     public async Task<IEnumerable<string>> GetAvailableTaskTypesAsync()
     {
         var snapshot = await _firestoreDb.Collection(CollectionName).Select("task_type").GetSnapshotAsync();

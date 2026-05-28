@@ -2,6 +2,13 @@
 
 Tạo trong [Firebase Console](https://console.firebase.google.com) → Firestore → Indexes nếu query báo lỗi thiếu index.
 
+## Collection `user_speaking_history` — lịch sử Speaking
+
+| Collection | Fields | Query scope |
+|------------|--------|-------------|
+| user_speaking_history | `user_id` Asc, `submitted_at` Desc | Collection |
+| user_speaking_history | `user_id` Asc, `session_type` Asc, `submitted_at` Desc | Collection |
+
 ## Collection `users` — leaderboard tuần
 
 | Collection | Fields | Query scope |

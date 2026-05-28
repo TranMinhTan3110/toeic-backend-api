@@ -60,4 +60,21 @@ public class User
 
     [FirestoreProperty("preferred_skills")]
     public List<string> PreferredSkills { get; set; } = new();
+
+    [FirestoreProperty("is_locked")]
+    public bool IsLocked { get; set; } = false;
+
+    [FirestoreProperty("role")]
+    public string Role { get; set; } = "user";
+
+    [FirestoreProperty("phone_number")]
+    public string? PhoneNumber { get; set; }
+
+    [FirestoreProperty("gender")]
+    public string? Gender { get; set; }
+
+    [FirestoreProperty("birth_date")]
+    public string? BirthDate { get; set; }
 }
+
+

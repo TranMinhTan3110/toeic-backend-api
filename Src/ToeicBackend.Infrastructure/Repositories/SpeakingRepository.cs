@@ -152,6 +152,23 @@ public class SpeakingRepository : ISpeakingRepository
         return result;
     }
 
+    public async Task<IEnumerable<SpeakingQuestion>> GetByExamSetIdAsync(string examSetId)
+    {
+        var cacheKey = $"speaking_questions_exam_{examSetId}";
+        if (_cache.TryGetValue(cacheKey, out List<SpeakingQuestion>? cachedList) && cachedList != null)
+        {
+            return cachedList;
+        }
+
+        var snapshot = await _firestoreDb.Collection(CollectionName)
+            .WhereEqualTo("exam_set_id", examSetId)
+            .GetSnapshotAsync();
+
+        var results = snapshot.Documents.Select(MapToDomain).ToList();
+        _cache.Set(cacheKey, results, TimeSpan.FromHours(4));
+        return results;
+    }
+
     private SpeakingQuestion MapToDomain(DocumentSnapshot doc)
     {
         var question = new SpeakingQuestion

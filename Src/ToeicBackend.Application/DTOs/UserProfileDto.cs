@@ -17,4 +17,11 @@ public class UserProfileDto
     public int BestStreakDays { get; set; }
     public int TotalStudyMinutes { get; set; }
     public DateTime CreatedAt { get; set; }
+    public bool IsLocked { get; set; }
+    public string Role { get; set; } = "user";
+    public string? PhoneNumber { get; set; }
+    public string? Gender { get; set; }
+    public string? BirthDate { get; set; }
 }
+
+

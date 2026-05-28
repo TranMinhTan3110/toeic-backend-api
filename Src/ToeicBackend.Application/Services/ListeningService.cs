@@ -259,5 +259,19 @@ public class ListeningService : IListeningService
             SelectedAnswers = entity.SelectedAnswers ?? new()
         };
     }
+
+    public async Task<bool> DeleteQuestionAsync(string id)
+    {
+        var question = await _repository.GetQuestionByIdAsync(id);
+        if (question == null) return false;
+
+        var result = await _repository.DeleteQuestionAsync(id);
+        if (result)
+        {
+            _cache.Remove(QuestionsCacheKey(question.Part));
+            _cache.Remove(CountCacheKey(question.Part));
+        }
+        return result;
+    }
 }
 
