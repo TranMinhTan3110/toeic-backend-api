@@ -103,6 +103,8 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IGrammarService, 
 
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionRepository, ToeicBackend.Infrastructure.Repositories.WritingQuestionRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionService, ToeicBackend.Application.Services.WritingQuestionService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingHistoryRepository, ToeicBackend.Infrastructure.Repositories.WritingHistoryRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingHistoryService, ToeicBackend.Application.Services.WritingHistoryService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamRepository, ToeicBackend.Infrastructure.Repositories.ExamRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamService, ToeicBackend.Application.Services.ExamService>();
 
