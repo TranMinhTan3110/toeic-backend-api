@@ -75,71 +75,101 @@ public class ListeningController : ControllerBase
     [HttpPost("admin/add-single")]
     public async Task<ActionResult> AddSingleQuestion([FromBody] ListeningQuestionDto dto)
     {
-        var entity = new ToeicBackend.Domain.Entities.ListeningQuestion
+        try
         {
-            Id = string.IsNullOrEmpty(dto.Id) ? "admin_p_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : dto.Id,
-            Part = dto.Part,
-            QuestionText = dto.QuestionText,
-            ImageUrl = dto.ImageUrl,
-            AudioUrl = dto.AudioUrl,
-            Options = dto.Options,
-            CorrectAnswer = dto.CorrectAnswer,
-            Explanation = dto.Explanation,
-            ExplanationVi = dto.ExplanationVi,
-            Script = dto.Script,
-            GroupId = dto.GroupId,
-            Difficulty = dto.Difficulty ?? "medium",
-            IsForExam = false,
-            IsForPractice = true,
-            Skill = "listening"
-        };
-        await _service.AddQuestionAsync(entity);
-        return Ok(new { success = true, id = entity.Id });
+            object? explanationValue = dto.Explanation;
+            if (explanationValue is System.Text.Json.JsonElement jsonElement)
+            {
+                explanationValue = jsonElement.ValueKind switch
+                {
+                    System.Text.Json.JsonValueKind.String => jsonElement.GetString(),
+                    System.Text.Json.JsonValueKind.Number => jsonElement.GetDouble(),
+                    System.Text.Json.JsonValueKind.True => true,
+                    System.Text.Json.JsonValueKind.False => false,
+                    System.Text.Json.JsonValueKind.Null => null,
+                    _ => jsonElement.ToString()
+                };
+            }
+
+            var entity = new ToeicBackend.Domain.Entities.ListeningQuestion
+            {
+                Id = string.IsNullOrEmpty(dto.Id) ? "admin_p_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : dto.Id,
+                Part = dto.Part,
+                QuestionText = dto.QuestionText,
+                ImageUrl = dto.ImageUrl,
+                AudioUrl = dto.AudioUrl,
+                Options = dto.Options ?? new List<string>(),
+                CorrectAnswer = dto.CorrectAnswer ?? string.Empty,
+                Explanation = explanationValue,
+                ExplanationVi = dto.ExplanationVi,
+                Script = dto.Script,
+                GroupId = dto.GroupId,
+                Difficulty = dto.Difficulty ?? "medium",
+                IsForExam = false,
+                IsForPractice = true,
+                Skill = "listening"
+            };
+            await _service.AddQuestionAsync(entity);
+            return Ok(new { success = true, id = entity.Id });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error AddSingleQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
     }
 
     [HttpPost("admin/add-group")]
     public async Task<ActionResult> AddGroupQuestion([FromBody] ListeningGroupDto groupDto)
     {
-        var groupId = string.IsNullOrEmpty(groupDto.Id) ? "admin_group_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : groupDto.Id;
-        
-        // Tạo các câu hỏi con
-        var questionIds = new List<string>();
-        foreach(var q in groupDto.Questions)
+        try
         {
-            var qId = string.IsNullOrEmpty(q.Id) ? "admin_p_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() + Guid.NewGuid().ToString().Substring(0, 4) : q.Id;
-            questionIds.Add(qId);
-            var entity = new ToeicBackend.Domain.Entities.ListeningQuestion
+            var groupId = string.IsNullOrEmpty(groupDto.Id) ? "admin_group_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : groupDto.Id;
+            
+            // Tạo các câu hỏi con
+            var questionIds = new List<string>();
+            foreach(var q in groupDto.Questions)
             {
-                Id = qId,
-                Part = q.Part,
-                QuestionText = q.QuestionText,
-                Options = q.Options,
-                CorrectAnswer = q.CorrectAnswer,
-                Difficulty = q.Difficulty ?? "medium",
-                Skill = "listening",
-                GroupId = groupId, // set GroupId just in case
-                IsForExam = false,
-                IsForPractice = true
-            };
-            await _service.AddQuestionAsync(entity);
-        }
+                var qId = string.IsNullOrEmpty(q.Id) ? "admin_p_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() + Guid.NewGuid().ToString().Substring(0, 4) : q.Id;
+                questionIds.Add(qId);
+                var entity = new ToeicBackend.Domain.Entities.ListeningQuestion
+                {
+                    Id = qId,
+                    Part = q.Part,
+                    QuestionText = q.QuestionText,
+                    Options = q.Options ?? new List<string>(),
+                    CorrectAnswer = q.CorrectAnswer ?? string.Empty,
+                    Difficulty = q.Difficulty ?? "medium",
+                    Skill = "listening",
+                    GroupId = groupId, // set GroupId just in case
+                    IsForExam = false,
+                    IsForPractice = true
+                };
+                await _service.AddQuestionAsync(entity);
+            }
 
-        var groupEntity = new ToeicBackend.Domain.Entities.QuestionGroup
+            var groupEntity = new ToeicBackend.Domain.Entities.QuestionGroup
+            {
+                Id = groupId,
+                Part = groupDto.Part,
+                Script = groupDto.Script,
+                PassageText = groupDto.PassageText,
+                ImageUrl = groupDto.ImageUrl,
+                AudioUrl = groupDto.AudioUrl,
+                Source = groupDto.Source,
+                QuestionCount = groupDto.Questions.Count,
+                QuestionIds = questionIds
+            };
+            
+            await _service.AddGroupAsync(groupEntity);
+            
+            return Ok(new { success = true, id = groupEntity.Id });
+        }
+        catch (Exception ex)
         {
-            Id = groupId,
-            Part = groupDto.Part,
-            Script = groupDto.Script,
-            PassageText = groupDto.PassageText,
-            ImageUrl = groupDto.ImageUrl,
-            AudioUrl = groupDto.AudioUrl,
-            Source = groupDto.Source,
-            QuestionCount = groupDto.Questions.Count,
-            QuestionIds = questionIds
-        };
-        
-        await _service.AddGroupAsync(groupEntity);
-        
-        return Ok(new { success = true, id = groupEntity.Id });
+            Console.WriteLine($"[Error AddGroupQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
     }
 
     // --- History Practice Endpoints ---
@@ -184,6 +214,17 @@ public class ListeningController : ControllerBase
             return Forbid();
 
         return Ok(result);
+    }
+
+    [HttpDelete("admin/{id}")]
+    public async Task<IActionResult> DeleteQuestion(string id)
+    {
+        var result = await _service.DeleteQuestionAsync(id);
+        if (!result)
+        {
+            return NotFound(new { message = "Không tìm thấy câu hỏi." });
+        }
+        return Ok(new { success = true, message = "Đã xóa câu hỏi thành công." });
     }
 }
 

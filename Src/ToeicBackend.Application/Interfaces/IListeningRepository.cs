@@ -23,5 +23,6 @@ public interface IListeningRepository
     Task<string> AddHistoryAsync(ListeningHistory history);
     Task<IEnumerable<ListeningHistory>> GetHistoryByUserIdAsync(string userId);
     Task<ListeningHistory?> GetHistoryByIdAsync(string id);
+    Task<bool> DeleteQuestionAsync(string id);
 }
 

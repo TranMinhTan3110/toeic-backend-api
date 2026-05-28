@@ -283,5 +283,14 @@ public class ListeningRepository : IListeningRepository
         var snapshot = await docRef.GetSnapshotAsync();
         return snapshot.Exists ? snapshot.ConvertTo<ListeningHistory>() : null;
     }
+
+    public async Task<bool> DeleteQuestionAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(QuestionsCollection).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+        await docRef.DeleteAsync();
+        return true;
+    }
 }
 
