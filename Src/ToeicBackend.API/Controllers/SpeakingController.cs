@@ -65,13 +65,6 @@ public class SpeakingController : ControllerBase
         return Ok(result);
     }
 
-    [HttpGet("exam/{examSetId}")]
-    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByExamSetId(string examSetId)
-    {
-        var results = await _service.GetByExamSetIdAsync(examSetId);
-        return Ok(results);
-    }
-
     /// <summary>Chấm bài nói bằng Gemini — so sánh transcript với bài mẫu trên Firestore.</summary>
     [HttpPost("evaluate")]
     [Authorize]
