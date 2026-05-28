@@ -111,4 +111,15 @@ public class WritingQuestionController : ControllerBase
         var types = await _service.GetAvailableTaskTypesAsync();
         return Ok(types);
     }
+
+    /// <summary>
+    /// Get writing questions by exam set ID
+    /// </summary>
+    [HttpGet("exam/{examSetId}")]
+    public async Task<IActionResult> GetQuestionsByExamSetId(string examSetId)
+    {
+        Console.WriteLine($"[DEBUG] GetQuestionsByExamSetId called with examSetId: '{examSetId}'");
+        var results = await _service.GetQuestionsByExamSetIdAsync(examSetId);
+        return Ok(results);
+    }
 }

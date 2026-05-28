@@ -7,10 +7,17 @@ namespace ToeicBackend.Application.Services;
 public class WritingHistoryService : IWritingHistoryService
 {
     private readonly IWritingHistoryRepository _repository;
+    private readonly IWritingQuestionRepository _questionRepository;
+    private readonly IAiService _aiService;
 
-    public WritingHistoryService(IWritingHistoryRepository repository)
+    public WritingHistoryService(
+        IWritingHistoryRepository repository,
+        IWritingQuestionRepository questionRepository,
+        IAiService aiService)
     {
         _repository = repository;
+        _questionRepository = questionRepository;
+        _aiService = aiService;
     }
 
     public async Task<string> SaveHistoryAsync(string userId, SaveWritingHistoryRequestDto request)
@@ -86,6 +93,8 @@ public class WritingHistoryService : IWritingHistoryService
                 .Where(id => !string.IsNullOrWhiteSpace(id))
                 .Distinct()
                 .ToList(),
+            AiScore = request.AiScore,
+            AiFeedback = MapToEntityFeedback(request.AiFeedback),
             SubmittedAt = DateTime.UtcNow
         };
 
@@ -161,5 +170,47 @@ public class WritingHistoryService : IWritingHistoryService
             CorrectionsVi = feedback.CorrectionsVi,
             SuggestedImprovement = feedback.SuggestedImprovement
         };
+    }
+
+    public async Task<WritingEvaluationDto> EvaluateAsync(string questionId, string userAnswer)
+    {
+        var question = await _questionRepository.GetByIdAsync(questionId)
+            ?? throw new InvalidOperationException("Không tìm thấy câu hỏi Writing.");
+
+        if (string.IsNullOrWhiteSpace(userAnswer))
+        {
+            return new WritingEvaluationDto
+            {
+                OverallScore = 0,
+                Passed = false,
+                Feedback = "Câu trả lời của bạn đang để trống. Hãy viết gì đó để AI đánh giá.",
+                CorrectionsVi = string.Empty,
+                SuggestedImprovement = string.Empty,
+                UserAnswer = string.Empty,
+                CriteriaScores = new Dictionary<string, double>()
+            };
+        }
+
+        // Collect question data
+        var prompt = question.PromptText;
+        var taskType = question.TaskType;
+        var givenWords = question.GivenWords ?? new List<string>();
+        var emailContent = question.EmailContent;
+        var emailQuestions = question.EmailQuestions ?? new List<string>();
+        
+        var samples = new List<string>();
+        if (!string.IsNullOrWhiteSpace(question.SampleAnswer))
+        {
+            samples.Add(question.SampleAnswer.Trim());
+        }
+
+        return await _aiService.EvaluateWritingAsync(
+            prompt,
+            taskType,
+            givenWords,
+            emailContent,
+            emailQuestions,
+            samples,
+            userAnswer.Trim());
     }
 }

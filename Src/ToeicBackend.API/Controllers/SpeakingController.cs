@@ -50,6 +50,13 @@ public class SpeakingController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("exam/{examSetId}")]
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByExamSetId(string examSetId)
+    {
+        var results = await _service.GetByExamSetIdAsync(examSetId);
+        return Ok(results);
+    }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<SpeakingQuestionDto>> GetById(string id)
     {
@@ -58,13 +65,21 @@ public class SpeakingController : ControllerBase
         return Ok(result);
     }
 
+    [HttpGet("exam/{examSetId}")]
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetByExamSetId(string examSetId)
+    {
+        var results = await _service.GetByExamSetIdAsync(examSetId);
+        return Ok(results);
+    }
+
     /// <summary>Chấm bài nói bằng Gemini — so sánh transcript với bài mẫu trên Firestore.</summary>
     [HttpPost("evaluate")]
     [Authorize]
     public async Task<ActionResult<SpeakingEvaluationDto>> Evaluate(
         [FromForm] string questionId,
         [FromForm] string? transcript,
-        [FromForm] int? subQuestionIndex)
+        [FromForm] int? subQuestionIndex,
+        IFormFile? audio = null)
     {
         if (string.IsNullOrWhiteSpace(questionId))
         {
@@ -73,10 +88,25 @@ public class SpeakingController : ControllerBase
 
         try
         {
+            byte[]? audioBytes = null;
+            string? mimeType = null;
+
+            if (audio != null && audio.Length > 0)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    await audio.CopyToAsync(ms);
+                    audioBytes = ms.ToArray();
+                }
+                mimeType = audio.ContentType;
+            }
+
             var result = await _historyService.EvaluateAsync(
                 questionId,
                 transcript ?? string.Empty,
-                subQuestionIndex);
+                subQuestionIndex,
+                audioBytes,
+                mimeType);
             return Ok(result);
         }
         catch (InvalidOperationException ex)

@@ -47,6 +47,30 @@ public class WritingHistoryController : ControllerBase
         }
     }
 
+    [HttpPost("evaluate")]
+    [Authorize]
+    public async Task<ActionResult<WritingEvaluationDto>> Evaluate([FromBody] EvaluateWritingRequestDto dto)
+    {
+        if (string.IsNullOrWhiteSpace(dto.QuestionId))
+        {
+            return BadRequest(new { message = "questionId là bắt buộc" });
+        }
+
+        try
+        {
+            var result = await _service.EvaluateAsync(dto.QuestionId, dto.UserAnswer);
+            return Ok(result);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return NotFound(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Lỗi chấm điểm AI", detail = ex.Message });
+        }
+    }
+
     [HttpPost("session")]
     [Authorize]
     public async Task<IActionResult> SaveSession([FromBody] SaveWritingSessionRequestDto dto)
