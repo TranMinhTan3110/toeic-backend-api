@@ -15,4 +15,13 @@ public interface IAiService
         int taskNumber,
         byte[]? audioBytes = null,
         string? mimeType = null);
+
+    Task<WritingEvaluationDto> EvaluateWritingAsync(
+        string taskPrompt,
+        string taskType,
+        IReadOnlyList<string> givenWords,
+        string? emailContent,
+        IReadOnlyList<string> emailQuestions,
+        IReadOnlyList<string> sampleAnswers,
+        string userAnswer);
 }

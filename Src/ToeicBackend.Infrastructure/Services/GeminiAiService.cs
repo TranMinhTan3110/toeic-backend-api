@@ -243,6 +243,152 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
         }
     }
 
+    public async Task<WritingEvaluationDto> EvaluateWritingAsync(
+        string taskPrompt,
+        string taskType,
+        IReadOnlyList<string> givenWords,
+        string? emailContent,
+        IReadOnlyList<string> emailQuestions,
+        IReadOnlyList<string> sampleAnswers,
+        string userAnswer)
+    {
+        var samplesBlock = sampleAnswers.Count > 0
+            ? string.Join("\n---\n", sampleAnswers.Select((s, i) => $"[Mẫu {i + 1}]\n{s}"))
+            : "(Không có bài mẫu — chấm theo tiêu chí TOEIC Writing.)";
+
+        var givenWordsBlock = givenWords.Count > 0
+            ? string.Join(", ", givenWords)
+            : "(Không có từ bắt buộc)";
+
+        var emailContentBlock = !string.IsNullOrWhiteSpace(emailContent)
+            ? $"Thư nhận được:\n{emailContent}"
+            : "";
+
+        var emailQuestionsBlock = emailQuestions.Count > 0
+            ? $"Các câu hỏi/yêu cầu cần phản hồi:\n{string.Join("\n", emailQuestions.Select((q, i) => $"- Yêu cầu {i + 1}: {q}"))}"
+            : "";
+
+        var prompt = $@"
+Bạn là giám khảo TOEIC Writing chuyên nghiệp. Hãy chấm điểm câu trả lời/bài viết của học viên dựa trên các tiêu chí TOEIC Writing.
+
+- Dạng bài (Task Type): {taskType}
+- Đề bài / Prompt: {taskPrompt}
+- Từ vựng bắt buộc (nếu có): {givenWordsBlock}
+{emailContentBlock}
+{emailQuestionsBlock}
+
+- Bài mẫu tham chiếu:
+{samplesBlock}
+
+- Bài viết của học viên: {userAnswer}
+
+YÊU CẦU ĐÁNH GIÁ CHUYÊN SÂU:
+1. Hãy đánh giá tính chính xác ngữ pháp, sự đa dạng của từ vựng, tính liên kết mạch lạc (cohesion), và tính liên quan/đáp ứng đầy đủ yêu cầu đề bài.
+2. Đối với dạng 'write_sentence' (viết câu dựa trên tranh), học viên bắt buộc phải dùng đúng 2 từ cho sẵn ({givenWordsBlock}) và viết đúng ngữ pháp mô tả tranh.
+3. Đối với dạng 'respond_email' (trả lời email), học viên phải phản hồi tất cả các câu hỏi/yêu cầu trong đề bài một cách tự nhiên, chuyên nghiệp.
+4. Đối với dạng 'opinion_essay' (viết luận), học viên phải bày tỏ rõ ràng quan điểm, có các luận điểm và ví dụ minh họa chặt chẽ, mạch lạc.
+5. Chấm điểm theo thang điểm 10 cho từng tiêu chí và cho điểm trung bình tổng quan.
+6. Cung cấp chi tiết các lỗi sai, bản sửa lỗi (Corrections) bằng tiếng Việt, và bài viết đề xuất cải tiến (Suggested Improvement) để học viên học hỏi.
+
+TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải thích thêm) theo schema:
+{{
+  ""overallScore"": <số 0-10, một chữ số thập phân>,
+  ""passed"": <true nếu overallScore >= 6.0>,
+  ""criteriaScores"": {{
+    ""Ngữ pháp"": <0-10>,
+    ""Từ vựng"": <0-10>,
+    ""Bố cục & Liên kết"": <0-10>,
+    ""Độ phù hợp"": <0-10>
+  }},
+  ""feedback"": ""<nhận xét tổng quan bằng tiếng Việt, 2-3 câu, nêu thế mạnh và điểm cần cải thiện>"",
+  ""correctionsVi"": ""<phân tích chi tiết các lỗi ngữ pháp, dùng từ, chính tả bằng tiếng Việt và cách sửa tương ứng>"",
+  ""suggestedImprovement"": ""<bài viết mẫu cải tiến nâng cấp từ chính bài làm của học viên, giúp câu văn tự nhiên và chuyên nghiệp hơn>""
+}}";
+
+        var cacheKey = $"writing_eval_{taskType}_{userAnswer.ToLower().Trim().GetHashCode()}_{taskPrompt.GetHashCode()}";
+        if (_cache.TryGetValue(cacheKey, out WritingEvaluationDto? cachedEval) && cachedEval != null)
+        {
+            return cachedEval;
+        }
+
+        var raw = await CallGeminiAsync(prompt, 3000);
+        var dto = ParseWritingEvaluationJson(raw, userAnswer);
+
+        if (dto.OverallScore > 0)
+        {
+            _cache.Set(cacheKey, dto, TimeSpan.FromMinutes(30));
+        }
+
+        return dto;
+    }
+
+    private static WritingEvaluationDto ParseWritingEvaluationJson(string raw, string userAnswer)
+    {
+        try
+        {
+            var json = ExtractJsonObject(raw);
+            using var doc = JsonDocument.Parse(json);
+            var root = doc.RootElement;
+
+            var criteria = new Dictionary<string, double>();
+            if (root.TryGetProperty("criteriaScores", out var criteriaEl) &&
+                criteriaEl.ValueKind == JsonValueKind.Object)
+            {
+                foreach (var prop in criteriaEl.EnumerateObject())
+                {
+                    if (prop.Value.TryGetDouble(out var val))
+                    {
+                        criteria[prop.Name] = val;
+                    }
+                }
+            }
+
+            var overall = root.TryGetProperty("overallScore", out var scoreEl) && scoreEl.TryGetDouble(out var s)
+                ? s
+                : 0;
+
+            var passed = root.TryGetProperty("passed", out var passedEl) && passedEl.ValueKind == JsonValueKind.True
+                ? true
+                : overall >= 6.0;
+
+            var feedback = root.TryGetProperty("feedback", out var fbEl)
+                ? fbEl.GetString() ?? string.Empty
+                : string.Empty;
+
+            var corrections = root.TryGetProperty("correctionsVi", out var corrEl)
+                ? corrEl.GetString() ?? string.Empty
+                : (root.TryGetProperty("corrections_vi", out var corrEl2) ? corrEl2.GetString() ?? string.Empty : string.Empty);
+
+            var suggested = root.TryGetProperty("suggestedImprovement", out var sugEl)
+                ? sugEl.GetString() ?? string.Empty
+                : (root.TryGetProperty("suggested_improvement", out var sugEl2) ? sugEl2.GetString() ?? string.Empty : string.Empty);
+
+            return new WritingEvaluationDto
+            {
+                OverallScore = overall,
+                Passed = passed,
+                CriteriaScores = criteria,
+                Feedback = feedback,
+                CorrectionsVi = corrections,
+                SuggestedImprovement = suggested,
+                UserAnswer = userAnswer
+            };
+        }
+        catch
+        {
+            return new WritingEvaluationDto
+            {
+                OverallScore = 0,
+                Passed = false,
+                Feedback = "Không thể phân tích phản hồi AI. Vui lòng thử lại.",
+                CorrectionsVi = string.Empty,
+                SuggestedImprovement = string.Empty,
+                UserAnswer = userAnswer,
+                CriteriaScores = new Dictionary<string, double>()
+            };
+        }
+    }
+
     private static string ExtractJsonObject(string raw)
     {
         var trimmed = raw.Trim();
