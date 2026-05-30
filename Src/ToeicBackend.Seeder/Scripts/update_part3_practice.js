@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Đường dẫn các file dữ liệu
-const groupFilePath = path.join(__dirname, 'SeedData', 'question_group_listening.json');
-const questionFilePath = path.join(__dirname, 'SeedData', 'practiceListening.json');
+const groupFilePath = path.join(__dirname, '..', 'SeedData', 'question_group_listening.json');
+const questionFilePath = path.join(__dirname, '..', 'SeedData', 'practiceListening.json');
 
 console.log('--- KHỞI CHẠY THAY ĐỔI DỮ LIỆU PART 3 LUYỆN TẬP ---');
 

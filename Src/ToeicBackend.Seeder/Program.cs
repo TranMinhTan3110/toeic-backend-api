@@ -27,25 +27,12 @@ Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine(" Kết nối Firestore thành công!\n");
 Console.ResetColor();
 
-// TEMPORARY QUERY
-Console.WriteLine("--- WRITING QUESTIONS exam_set_id ---");
-var writingSnapshot = await db.Collection("writing_questions").GetSnapshotAsync();
-var writingIds = writingSnapshot.Documents
-    .Where(d => d.ContainsField("exam_set_id"))
-    .Select(d => d.GetValue<string>("exam_set_id"))
-    .Distinct()
-    .ToList();
-foreach (var id in writingIds) Console.WriteLine($"- {id}");
-
-Console.WriteLine("--- SPEAKING QUESTIONS exam_set_id ---");
-var speakingSnapshot = await db.Collection("speaking_questions").GetSnapshotAsync();
-var speakingIds = speakingSnapshot.Documents
-    .Where(d => d.ContainsField("exam_set_id"))
-    .Select(d => d.GetValue<string>("exam_set_id"))
-    .Distinct()
-    .ToList();
-foreach (var id in speakingIds) Console.WriteLine($"- {id}");
-
+// SEEDING PART 6 & 7 PRACTICE QUESTIONS & GROUPS
+Console.WriteLine("--- SEEDING PART 6 & 7 PRACTICE DATA ---");
+await SeedCollection("questions", "practice_part6.json");
+await SeedCollection("question_groups", "practice_part6_group.json");
+await SeedCollection("questions", "practice_part7.json");
+await SeedCollection("question_groups", "practice_part7_group.json");
 return;
 
 
