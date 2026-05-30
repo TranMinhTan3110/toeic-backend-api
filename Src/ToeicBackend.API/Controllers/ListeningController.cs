@@ -226,5 +226,24 @@ public class ListeningController : ControllerBase
         }
         return Ok(new { success = true, message = "Đã xóa câu hỏi thành công." });
     }
+
+    [HttpPut("admin/{id}")]
+    public async Task<IActionResult> UpdateQuestion(string id, [FromBody] ListeningQuestionDto dto)
+    {
+        try
+        {
+            var result = await _service.UpdateQuestionAsync(id, dto);
+            if (!result)
+            {
+                return NotFound(new { success = false, message = "Không tìm thấy câu hỏi để cập nhật." });
+            }
+            return Ok(new { success = true, message = "Đã cập nhật câu hỏi thành công." });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error UpdateQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
+    }
 }
 

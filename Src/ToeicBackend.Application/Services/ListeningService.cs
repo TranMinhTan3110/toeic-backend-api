@@ -273,5 +273,48 @@ public class ListeningService : IListeningService
         }
         return result;
     }
+
+    public async Task<bool> UpdateQuestionAsync(string id, ListeningQuestionDto dto)
+    {
+        var question = await _repository.GetQuestionByIdAsync(id);
+        if (question == null) return false;
+
+        // Cập nhật các trường chính của câu hỏi
+        if (dto.QuestionText != null) question.QuestionText = dto.QuestionText;
+        if (dto.Difficulty != null) question.Difficulty = dto.Difficulty;
+        if (dto.CorrectAnswer != null) question.CorrectAnswer = dto.CorrectAnswer;
+        if (dto.Options != null && dto.Options.Any()) question.Options = dto.Options;
+        if (dto.ImageUrl != null) question.ImageUrl = dto.ImageUrl;
+        if (dto.AudioUrl != null) question.AudioUrl = dto.AudioUrl;
+        if (dto.Explanation != null) question.Explanation = dto.Explanation;
+        if (dto.ExplanationVi != null) question.ExplanationVi = dto.ExplanationVi;
+
+        // Xử lý Script cho câu hỏi
+        if (dto.Script != null)
+        {
+            if (!string.IsNullOrEmpty(question.GroupId))
+            {
+                // Nếu thuộc nhóm (Part 3, Part 4), lưu script vào Group
+                var group = await _repository.GetGroupByIdAsync(question.GroupId);
+                if (group != null)
+                {
+                    group.Script = dto.Script;
+                    await _repository.UpdateGroupAsync(group);
+                    _cache.Remove(GroupsCacheKey(group.Part));
+                }
+            }
+            
+            // Đồng thời lưu vào câu hỏi để đảm bảo tính nhất quán (hoặc cho Part 1, Part 2)
+            question.Script = dto.Script;
+        }
+
+        var result = await _repository.UpdateQuestionAsync(question);
+        if (result)
+        {
+            _cache.Remove(QuestionsCacheKey(question.Part));
+            _cache.Remove(CountCacheKey(question.Part));
+        }
+        return result;
+    }
 }
 
