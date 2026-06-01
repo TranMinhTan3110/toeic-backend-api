@@ -100,6 +100,8 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningReposit
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningService, ToeicBackend.Application.Services.ListeningService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IGrammarRepository, ToeicBackend.Infrastructure.Repositories.GrammarRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IGrammarService, ToeicBackend.Application.Services.GrammarService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingRepository, ToeicBackend.Infrastructure.Repositories.ReadingRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingService, ToeicBackend.Application.Services.ReadingService>();
 
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionRepository, ToeicBackend.Infrastructure.Repositories.WritingQuestionRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingQuestionService, ToeicBackend.Application.Services.WritingQuestionService>();
