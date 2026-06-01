@@ -14,4 +14,8 @@ public interface IWritingQuestionService
     Task<IEnumerable<WritingQuestionDto>> GetExamByTaskTypeAsync(string taskType);
     Task<IEnumerable<string>> GetAvailableTaskTypesAsync();
     Task<IEnumerable<WritingQuestionDto>> GetQuestionsByExamSetIdAsync(string examSetId);
+    Task<Dictionary<string, int>> GetPracticeCountsByTaskTypeAsync();
+    Task<string> AddAsync(WritingQuestionDto dto);
+    Task<bool> UpdateAsync(string id, WritingQuestionDto dto);
+    Task<bool> DeleteAsync(string id);
 }

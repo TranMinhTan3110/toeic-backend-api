@@ -128,6 +128,93 @@ public class WritingQuestionRepository : IWritingQuestionRepository
         return snapshot.Documents.Select(MapToDomain).OrderBy(wq => wq.TaskNumber).ToList();
     }
 
+    public async Task<Dictionary<string, int>> GetPracticeCountsByTaskTypeAsync()
+    {
+        var taskTypes = new[] { "write_sentence", "respond_email", "opinion_essay" };
+        var result = new Dictionary<string, int>();
+
+        foreach (var taskType in taskTypes)
+        {
+            var aggregateQuery = _firestoreDb.Collection(CollectionName)
+                .WhereEqualTo("task_type", taskType)
+                .WhereEqualTo("is_practice", true)
+                .Count();
+
+            var snapshot = await aggregateQuery.GetSnapshotAsync();
+            result[taskType] = (int)(snapshot.Count ?? 0);
+        }
+
+        return result;
+    }
+
+    public async Task<string> AddAsync(WritingQuestion question)
+    {
+        var docRef = string.IsNullOrWhiteSpace(question.Id)
+            ? _firestoreDb.Collection(CollectionName).Document()
+            : _firestoreDb.Collection(CollectionName).Document(question.Id);
+
+        question.Id = docRef.Id;
+        var data = ToFirestoreData(question, includeCreatedAt: true);
+        await docRef.SetAsync(data, SetOptions.Overwrite);
+        return docRef.Id;
+    }
+
+    public async Task<bool> UpdateAsync(string id, WritingQuestion question)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+
+        question.Id = id;
+        var data = ToFirestoreData(question, includeCreatedAt: false);
+        data["updated_at"] = FieldValue.ServerTimestamp;
+        await docRef.SetAsync(data, SetOptions.MergeAll);
+        return true;
+    }
+
+    public async Task<bool> DeleteAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+
+        await docRef.DeleteAsync();
+        return true;
+    }
+
+    private static Dictionary<string, object> ToFirestoreData(WritingQuestion question, bool includeCreatedAt)
+    {
+        var data = new Dictionary<string, object>
+        {
+            { "id", question.Id },
+            { "task_number", question.TaskNumber },
+            { "task_type", question.TaskType ?? "" },
+            { "prompt_text", question.PromptText ?? "" },
+            { "prompt_image_url", question.PromptImageUrl ?? "" },
+            { "given_words", question.GivenWords ?? new List<string>() },
+            { "email_content", question.EmailContent ?? "" },
+            { "email_questions", question.EmailQuestions ?? new List<string>() },
+            { "time_limit", question.TimeLimit },
+            { "min_words", question.MinWords ?? 0 },
+            { "max_words", question.MaxWords ?? 0 },
+            { "max_score", question.MaxScore },
+            { "scoring_criteria", question.ScoringCriteria ?? new List<string>() },
+            { "sample_answer", question.SampleAnswer ?? "" },
+            { "sample_answer_translation", question.SampleAnswerTranslation ?? "" },
+            { "explanation_vietnamese", question.ExplanationVietnamese ?? "" },
+            { "ai_prompt", question.AiPrompt ?? "" },
+            { "topic", question.Topic ?? "" },
+            { "difficulty", question.Difficulty ?? "medium" },
+            { "exam_set_id", question.ExamSetId ?? "" },
+            { "is_practice", question.IsPractice }
+        };
+
+        if (includeCreatedAt)
+            data["created_at"] = FieldValue.ServerTimestamp;
+
+        return data;
+    }
+
     private WritingQuestion MapToDomain(DocumentSnapshot doc)
     {
         var wq = new WritingQuestion
