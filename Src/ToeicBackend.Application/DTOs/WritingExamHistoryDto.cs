@@ -16,6 +16,7 @@ public class WritingExamHistoryDto
     public int TimeSpent { get; set; }
     public DateTime Date { get; set; }
     public List<WritingExamTaskResultDto> TaskResults { get; set; } = new();
+    public int EpAwarded { get; set; }
 }
 
 public class WritingExamTaskResultDto

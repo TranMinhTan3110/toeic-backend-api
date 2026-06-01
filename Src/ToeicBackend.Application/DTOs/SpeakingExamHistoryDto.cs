@@ -14,6 +14,7 @@ public class SpeakingExamHistoryDto
     public int TotalTasks { get; set; }
     public DateTime Date { get; set; }
     public List<SpeakingExamTaskResultDto> TaskResults { get; set; } = new();
+    public int EpAwarded { get; set; }
 }
 
 public class SpeakingExamTaskResultDto

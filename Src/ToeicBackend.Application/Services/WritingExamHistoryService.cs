@@ -110,14 +110,16 @@ public class WritingExamHistoryService : IWritingExamHistoryService
         var savedId = await _repository.AddAsync(historyDto);
         historyDto.Id = savedId;
 
-        // Ghi nhận EP gamification (+30 EP vĩnh viễn cho đề thi này)
+        // Ghi nhận EP gamification (+30 EP, chỉ lần đầu hoàn thành đề này)
         try
         {
-            await _engagementService.RecordActivityAsync(userId, new RecordActivityRequest
+            var epResult = await _engagementService.RecordActivityAsync(userId, new RecordActivityRequest
             {
                 ActivityType = ActivityType.WritingExamComplete,
                 ReferenceId = request.ExamSetId
             });
+            // Gán EP thực tế trả về để Frontend hiển thị đúng (0 nếu đã làm rồi)
+            historyDto.EpAwarded = epResult?.EpAwarded ?? 0;
         }
         catch (Exception ex)
         {
