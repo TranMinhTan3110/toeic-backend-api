@@ -331,8 +331,8 @@ public class ReadingController : ControllerBase
     [Authorize]
     public Task<IActionResult> SaveHistory_Part5([FromBody] SaveReadingHistoryRequestDto dto)
     {
-        // ensure dto.Part is set to 5 if omitted
-        if (dto != null && dto.Part == 0) dto.Part = 5;
+        if (dto == null) return Task.FromResult<IActionResult>(BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" }));
+        dto.Part = 5;
         return SaveHistory(dto);
     }
 
@@ -340,7 +340,8 @@ public class ReadingController : ControllerBase
     [Authorize]
     public Task<IActionResult> SaveHistory_Part([FromRoute] int part, [FromBody] SaveReadingHistoryRequestDto dto)
     {
-        if (dto != null) dto.Part = part;
+        if (dto == null) return Task.FromResult<IActionResult>(BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" }));
+        dto.Part = part;
         return SaveHistory(dto);
     }
 
@@ -348,7 +349,8 @@ public class ReadingController : ControllerBase
     [Authorize]
     public Task<IActionResult> SaveHistory_Part6([FromBody] SaveReadingHistoryRequestDto dto)
     {
-        if (dto != null) dto.Part = 6;
+        if (dto == null) return Task.FromResult<IActionResult>(BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" }));
+        dto.Part = 6;
         return SaveHistory(dto);
     }
 
@@ -361,6 +363,18 @@ public class ReadingController : ControllerBase
             return Unauthorized(new { message = "Token không hợp lệ" });
 
         var results = await _service.GetUserHistoryAsync(userId);
+        return Ok(results);
+    }
+
+    [HttpGet("part5/history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<ReadingHistoryDto>>> GetPart5UserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var results = await _service.GetPart5HistoryAsync(userId);
         return Ok(results);
     }
 
@@ -410,7 +424,8 @@ public class ReadingController : ControllerBase
     [Authorize]
     public async Task<IActionResult> SaveHistory_Part7([FromBody] SaveReadingHistoryRequestDto dto)
     {
-        if (dto != null) dto.Part = 7;
+        if (dto == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" });
+        dto.Part = 7;
         return await SaveHistory(dto);
     }
 

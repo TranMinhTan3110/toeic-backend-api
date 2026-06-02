@@ -18,6 +18,7 @@ public interface IReadingService
     Task<string> SavePart6HistoryAsync(string userId, ToeicBackend.Application.DTOs.SaveReadingHistoryRequestDto request);
     Task<string> SavePart7HistoryAsync(string userId, ToeicBackend.Application.DTOs.SaveReadingHistoryRequestDto request);
     Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetUserHistoryAsync(string userId);
+    Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart5HistoryAsync(string userId);
     Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart6HistoryAsync(string userId);
     Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart7HistoryAsync(string userId);
     Task<ToeicBackend.Application.DTOs.ReadingHistoryDto?> GetHistoryByIdAsync(string id);

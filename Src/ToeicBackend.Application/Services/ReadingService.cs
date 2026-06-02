@@ -444,10 +444,10 @@ public class ReadingService : IReadingService
         return await SaveHistoryAsync(userId, request);
     }
 
-    public async Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart7HistoryAsync(string userId)
+    public async Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart5HistoryAsync(string userId)
     {
         var all = await GetUserHistoryAsync(userId);
-        return all.Where(h => h.Part == 7);
+        return all.Where(h => h.Part == 5);
     }
 
     public async Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart6HistoryAsync(string userId)
@@ -455,6 +455,12 @@ public class ReadingService : IReadingService
         // currently history stored with Part field; filter by part == 6
         var all = await GetUserHistoryAsync(userId);
         return all.Where(h => h.Part == 6);
+    }
+
+    public async Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart7HistoryAsync(string userId)
+    {
+        var all = await GetUserHistoryAsync(userId);
+        return all.Where(h => h.Part == 7);
     }
 
     public async Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetUserHistoryAsync(string userId)
