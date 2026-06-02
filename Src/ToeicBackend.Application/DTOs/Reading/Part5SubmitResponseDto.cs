@@ -13,5 +13,6 @@ public class Part5QuestionResultDto
     public string SelectedOption { get; set; } = string.Empty;
     public bool IsCorrect { get; set; }
     public string? Explanation { get; set; }
+    public string? ExplanationVi { get; set; }
     public string? CorrectAnswer { get; set; }
 }

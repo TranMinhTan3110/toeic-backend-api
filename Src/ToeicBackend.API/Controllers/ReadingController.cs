@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using ToeicBackend.Application.Common;
 using ToeicBackend.Application.DTOs.Reading;
 using ToeicBackend.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using ToeicBackend.API.Extensions;
+using ToeicBackend.Application.DTOs;
 
 namespace ToeicBackend.API.Controllers;
 
@@ -295,9 +298,9 @@ public class ReadingController : ControllerBase
         if (answers == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Invalid request payload" });
         if (answers.Count == 0) return BadRequest(new ApiResponse<string> { Success = false, Message = "No answers provided" });
 
-        var request = new Part5SubmitRequestDto { Answers = answers };
+        var request = new Part6SubmitRequestDto { Answers = answers };
         var result = await _service.SubmitPart6AnswersAsync(request);
-        var resp = new ApiResponse<Part5SubmitResponseDto> { Data = result };
+        var resp = new ApiResponse<Part6SubmitResponseDto> { Data = result };
         return Ok(resp);
     }
 
@@ -305,8 +308,90 @@ public class ReadingController : ControllerBase
     public async Task<IActionResult> GetPart7Questions()
     {
         var groups = await _service.GetPart7PassagesAsync();
-        var resp = new ApiResponse<IEnumerable<Part6PassageDto>> { Data = groups };
+        var resp = new ApiResponse<IEnumerable<Part7PassageDto>> { Data = groups };
         return Ok(resp);
+    }
+
+    // --- History Practice Endpoints for Reading ---
+
+    [HttpPost("history")]
+    [Authorize]
+    public async Task<IActionResult> SaveHistory([FromBody] SaveReadingHistoryRequestDto dto)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var historyId = await _service.SaveHistoryAsync(userId, dto);
+        return Ok(new { success = true, id = historyId });
+    }
+
+    // compatibility aliases: some frontends call part-specific history routes
+    [HttpPost("part5/history")]
+    [Authorize]
+    public Task<IActionResult> SaveHistory_Part5([FromBody] SaveReadingHistoryRequestDto dto)
+    {
+        // ensure dto.Part is set to 5 if omitted
+        if (dto != null && dto.Part == 0) dto.Part = 5;
+        return SaveHistory(dto);
+    }
+
+    [HttpPost("part/{part}/history")]
+    [Authorize]
+    public Task<IActionResult> SaveHistory_Part([FromRoute] int part, [FromBody] SaveReadingHistoryRequestDto dto)
+    {
+        if (dto != null) dto.Part = part;
+        return SaveHistory(dto);
+    }
+
+    [HttpPost("part6/history")]
+    [Authorize]
+    public Task<IActionResult> SaveHistory_Part6([FromBody] SaveReadingHistoryRequestDto dto)
+    {
+        if (dto != null) dto.Part = 6;
+        return SaveHistory(dto);
+    }
+
+    [HttpGet("history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<ReadingHistoryDto>>> GetUserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var results = await _service.GetUserHistoryAsync(userId);
+        return Ok(results);
+    }
+
+    [HttpGet("part6/history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<ReadingHistoryDto>>> GetPart6UserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var results = await _service.GetPart6HistoryAsync(userId);
+        return Ok(results);
+    }
+
+    [HttpGet("history/{id}")]
+    [Authorize]
+    public async Task<ActionResult<ReadingHistoryDto>> GetHistoryById(string id)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var result = await _service.GetHistoryByIdAsync(id);
+        if (result == null)
+            return NotFound(new { message = "Không tìm thấy lịch sử với ID này" });
+
+        if (result.UserId != userId)
+            return Forbid();
+
+        return Ok(result);
     }
 
     [HttpPost("part7/submit")]
@@ -315,10 +400,29 @@ public class ReadingController : ControllerBase
         var answers = ParseAnswers(body);
         if (answers == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Invalid request payload" });
         if (answers.Count == 0) return BadRequest(new ApiResponse<string> { Success = false, Message = "No answers provided" });
-
-        var request = new Part5SubmitRequestDto { Answers = answers };
+        var request = new Part7SubmitRequestDto { Answers = answers };
         var result = await _service.SubmitPart7AnswersAsync(request);
-        var resp = new ApiResponse<Part5SubmitResponseDto> { Data = result };
+        var resp = new ApiResponse<Part7SubmitResponseDto> { Data = result };
         return Ok(resp);
+    }
+
+    [HttpPost("part7/history")]
+    [Authorize]
+    public async Task<IActionResult> SaveHistory_Part7([FromBody] SaveReadingHistoryRequestDto dto)
+    {
+        if (dto != null) dto.Part = 7;
+        return await SaveHistory(dto);
+    }
+
+    [HttpGet("part7/history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<ReadingHistoryDto>>> GetPart7UserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var results = await _service.GetPart7HistoryAsync(userId);
+        return Ok(results);
     }
 }

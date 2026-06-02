@@ -9,4 +9,8 @@ public interface IReadingRepository
     Task<IEnumerable<Part5Question>> GetQuestionsByIdsAsync(IEnumerable<string> ids);
     Task<IEnumerable<ToeicBackend.Domain.Entities.Reading.Part6Passage>> GetPart6PassagesAsync();
     Task<IEnumerable<ToeicBackend.Domain.Entities.Reading.Part6Passage>> GetPart7PassagesAsync();
+    // History practice for Reading
+    Task<string> AddReadingHistoryAsync(ToeicBackend.Domain.Entities.Reading.ReadingHistory history);
+    Task<IEnumerable<ToeicBackend.Domain.Entities.Reading.ReadingHistory>> GetReadingHistoryByUserIdAsync(string userId);
+    Task<ToeicBackend.Domain.Entities.Reading.ReadingHistory?> GetReadingHistoryByIdAsync(string id);
 }
