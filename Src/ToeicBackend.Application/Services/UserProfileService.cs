@@ -29,26 +29,58 @@ public class UserProfileService : IUserProfileService
 
     public async Task<UserProfileDto?> UpdateProfileAsync(string userId, UpdateUserProfileDto dto)
     {
-        var user = await _userRepository.GetByIdAsync(userId);
-        if (user == null) return null;
+        var updates = new Dictionary<string, object?>();
+        var profile = new UserProfileDto { Uid = userId };
 
-        if (dto.TargetScore.HasValue) user.TargetScore = dto.TargetScore.Value;
-        if (!string.IsNullOrWhiteSpace(dto.CurrentLevel)) user.CurrentLevel = dto.CurrentLevel;
-        if (dto.PreferredSkills != null) user.PreferredSkills = dto.PreferredSkills;
-        
-        // Cập nhật các trường thông tin cá nhân mới
-        if (dto.DisplayName != null) user.DisplayName = dto.DisplayName;
-        if (dto.AvatarUrl != null) user.AvatarUrl = dto.AvatarUrl;
-        if (dto.PhoneNumber != null) user.PhoneNumber = dto.PhoneNumber;
-        if (dto.Gender != null) user.Gender = dto.Gender;
-        if (dto.BirthDate != null) user.BirthDate = dto.BirthDate;
+        if (dto.TargetScore.HasValue)
+        {
+            profile.TargetScore = dto.TargetScore.Value;
+            updates["target_score"] = profile.TargetScore;
+        }
+        if (!string.IsNullOrWhiteSpace(dto.CurrentLevel))
+        {
+            profile.CurrentLevel = dto.CurrentLevel.Trim();
+            updates["current_level"] = profile.CurrentLevel;
+        }
+        if (dto.PreferredSkills != null)
+        {
+            profile.PreferredSkills = dto.PreferredSkills;
+            updates["preferred_skills"] = profile.PreferredSkills;
+        }
 
-        await _userRepository.UpdateAsync(user);
+        var displayName = NormalizeOptional(dto.DisplayName);
+        if (dto.DisplayName != null && displayName != null)
+        {
+            profile.DisplayName = displayName;
+            updates["display_name"] = profile.DisplayName;
+        }
+        if (dto.AvatarUrl != null)
+        {
+            profile.AvatarUrl = NormalizeOptional(dto.AvatarUrl);
+            updates["avatar_url"] = profile.AvatarUrl;
+        }
+        if (dto.PhoneNumber != null)
+        {
+            profile.PhoneNumber = NormalizeOptional(dto.PhoneNumber);
+            updates["phone_number"] = profile.PhoneNumber;
+        }
+        if (dto.Gender != null)
+        {
+            profile.Gender = NormalizeOptional(dto.Gender);
+            updates["gender"] = profile.Gender;
+        }
+        if (dto.BirthDate != null)
+        {
+            profile.BirthDate = NormalizeOptional(dto.BirthDate);
+            updates["birth_date"] = profile.BirthDate;
+        }
+
+        await _userRepository.UpdateFieldsAsync(userId, updates);
         
         // Xóa cache vì thông tin user đã thay đổi
         _cache.Remove(AdminUsersCacheKey);
 
-        return MapToDto(user);
+        return profile;
     }
 
     public async Task<IEnumerable<UserProfileDto>> GetAllUsersAdminAsync()
@@ -191,4 +223,11 @@ public class UserProfileService : IUserProfileService
         Gender = user.Gender,
         BirthDate = user.BirthDate
     };
+
+    private static string? NormalizeOptional(string? value)
+    {
+        if (value == null) return null;
+        var trimmed = value.Trim();
+        return string.IsNullOrEmpty(trimmed) ? null : trimmed;
+    }
 }
