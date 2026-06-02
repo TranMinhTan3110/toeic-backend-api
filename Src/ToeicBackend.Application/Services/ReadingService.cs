@@ -151,9 +151,9 @@ public class ReadingService : IReadingService
                     OptionB = q.OptionB,
                     OptionC = q.OptionC,
                     OptionD = q.OptionD,
-                    // avoid spoilers in list
+                    // avoid full explanation text but include Vietnamese explanation when present
                     Explanation = null,
-                    ExplanationVi = null,
+                    ExplanationVi = q.ExplanationVi,
                     CorrectAnswer = q.CorrectAnswer,
                     Translation = q.Translation,
                     GrammarExplanation = q.GrammarExplanation,
@@ -195,7 +195,7 @@ public class ReadingService : IReadingService
                     OptionC = q.OptionC,
                     OptionD = q.OptionD,
                     Explanation = null,
-                    ExplanationVi = null,
+                    ExplanationVi = q.ExplanationVi,
                     CorrectAnswer = q.CorrectAnswer,
                     Translation = q.Translation,
                     GrammarExplanation = q.GrammarExplanation,

@@ -75,7 +75,9 @@ public class ReadingRepository : IReadingRepository
         {
             var passage = new ToeicBackend.Domain.Entities.Reading.Part6Passage { Id = g.Id };
             if (g.ContainsField("passage_text")) passage.PassageText = g.GetValue<string>("passage_text");
-            if (g.ContainsField("passage_translation")) passage.PassageTranslation = SafeGetString(g, "passage_translation");
+            // prefer localized field if present (some docs use passage_translation_vi)
+            if (g.ContainsField("passage_translation_vi")) passage.PassageTranslation = SafeGetString(g, "passage_translation_vi");
+            else if (g.ContainsField("passage_translation")) passage.PassageTranslation = SafeGetString(g, "passage_translation");
             if (g.ContainsField("image_url")) passage.ImageUrl = g.GetValue<string?>("image_url");
             if (g.ContainsField("audio_url")) passage.AudioUrl = g.GetValue<string?>("audio_url");
 
@@ -89,9 +91,25 @@ public class ReadingRepository : IReadingRepository
                 {
                     var qref = _firestoreDb.Collection(CollectionName).Document(qid);
                     var qsnap = await qref.GetSnapshotAsync();
-                    if (qsnap.Exists && qsnap.ContainsField("part") && qsnap.GetValue<int>("part") == 6)
+                    if (qsnap.Exists)
                     {
-                        passage.Questions.Add(MapToDomain(qsnap));
+                        // Soft check: if part field exists, verify it matches; otherwise load anyway since it's in question_ids
+                        if (qsnap.ContainsField("part"))
+                        {
+                            try
+                            {
+                                var part = qsnap.GetValue<int>("part");
+                                if (part != 6) continue;
+                            }
+                            catch
+                            {
+                                // If part field is not an int, still try to load
+                            }
+                        }
+                            var qdom = MapToDomain(qsnap);
+                            // Only include questions marked for practice
+                            if (!qdom.IsForPractice) continue;
+                            passage.Questions.Add(qdom);
                     }
                 }
             }
@@ -125,7 +143,9 @@ public class ReadingRepository : IReadingRepository
         {
             var passage = new ToeicBackend.Domain.Entities.Reading.Part6Passage { Id = g.Id };
             if (g.ContainsField("passage_text")) passage.PassageText = g.GetValue<string>("passage_text");
-            if (g.ContainsField("passage_translation")) passage.PassageTranslation = SafeGetString(g, "passage_translation");
+            // prefer localized field if present (some docs use passage_translation_vi)
+            if (g.ContainsField("passage_translation_vi")) passage.PassageTranslation = SafeGetString(g, "passage_translation_vi");
+            else if (g.ContainsField("passage_translation")) passage.PassageTranslation = SafeGetString(g, "passage_translation");
             if (g.ContainsField("image_url")) passage.ImageUrl = g.GetValue<string?>("image_url");
             if (g.ContainsField("audio_url")) passage.AudioUrl = g.GetValue<string?>("audio_url");
 
@@ -138,9 +158,25 @@ public class ReadingRepository : IReadingRepository
                 {
                     var qref = _firestoreDb.Collection(CollectionName).Document(qid);
                     var qsnap = await qref.GetSnapshotAsync();
-                    if (qsnap.Exists && qsnap.ContainsField("part") && qsnap.GetValue<int>("part") == 7)
+                    if (qsnap.Exists)
                     {
-                        passage.Questions.Add(MapToDomain(qsnap));
+                        // Soft check: if part field exists, verify it matches; otherwise load anyway since it's in question_ids
+                        if (qsnap.ContainsField("part"))
+                        {
+                            try
+                            {
+                                var part = qsnap.GetValue<int>("part");
+                                if (part != 7) continue;
+                            }
+                            catch
+                            {
+                                // If part field is not an int, still try to load
+                            }
+                        }
+                            var qdom = MapToDomain(qsnap);
+                            // Only include questions marked for practice
+                            if (!qdom.IsForPractice) continue;
+                            passage.Questions.Add(qdom);
                     }
                 }
             }
