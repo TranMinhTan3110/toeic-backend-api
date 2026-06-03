@@ -136,4 +136,14 @@ public class SpeakingService : ISpeakingService
             SampleAnswersTranslation = explanation.SampleAnswersTranslation
         };
     }
+
+    public async Task AddQuestionAsync(SpeakingQuestion entity)
+    {
+        await _repository.AddAsync(entity);
+    }
+
+    public async Task<bool> DeleteQuestionAsync(string id)
+    {
+        return await _repository.DeleteAsync(id);
+    }
 }

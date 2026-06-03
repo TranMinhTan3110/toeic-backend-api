@@ -164,4 +164,118 @@ public class SpeakingController : ControllerBase
 
         return Ok(result);
     }
+
+    [HttpGet("admin/all")]
+    public async Task<ActionResult<IEnumerable<SpeakingQuestionDto>>> GetAllAdmin()
+    {
+        try
+        {
+            var results = await _service.GetAllAsync();
+            return Ok(results);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Firebase Quota/Error] {ex.Message}");
+            var mockData = new List<SpeakingQuestionDto>
+            {
+                new SpeakingQuestionDto 
+                { 
+                    Id = "quota_err_spk_1", 
+                    TaskNumber = 1, 
+                    TaskType = "Read Aloud", 
+                    PromptText = "The personnel managers have decided to make staff changes in the finance department. This is expected to be finalized by early next month.", 
+                    Difficulty = "easy",
+                    IsPractice = true
+                },
+                new SpeakingQuestionDto 
+                { 
+                    Id = "quota_err_spk_2", 
+                    TaskNumber = 2, 
+                    TaskType = "Describe Picture", 
+                    PromptText = "Describe this classroom scene.", 
+                    Difficulty = "medium",
+                    IsPractice = true
+                }
+            };
+            return Ok(mockData);
+        }
+    }
+
+    [HttpPost("admin/add")]
+    public async Task<ActionResult> AddQuestion([FromBody] SpeakingQuestionDto dto)
+    {
+        try
+        {
+            var entity = new ToeicBackend.Domain.Entities.SpeakingQuestion
+            {
+                Id = string.IsNullOrEmpty(dto.Id) ? "admin_spk_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : dto.Id,
+                TaskType = dto.TaskType ?? string.Empty,
+                TaskNumber = dto.TaskNumber,
+                PromptText = dto.PromptText ?? string.Empty,
+                PromptImageUrl = dto.PromptImageUrl,
+                PromptAudioUrl = dto.PromptAudioUrl,
+                ImageUrl = dto.ImageUrl,
+                AudioUrl = dto.AudioUrl,
+                PreparationTime = dto.PreparationTime,
+                ResponseTime = dto.ResponseTime,
+                Difficulty = dto.Difficulty ?? "medium",
+                AiPrompt = dto.AiPrompt ?? string.Empty,
+                ScoringCriteria = dto.ScoringCriteria ?? new List<string>(),
+                ExamSetId = dto.ExamSetId,
+                Topic = dto.Topic,
+                IsPractice = dto.IsPractice,
+                IsExam = dto.IsExam,
+                MaxScore = dto.MaxScore,
+                SampleAnswer = dto.SampleAnswer,
+                Questions = dto.Questions ?? new List<string>(),
+                AnswerTimes = dto.AnswerTimes ?? new List<int>(),
+                CreatedAt = DateTime.UtcNow
+            };
+
+            if (dto.Explanation != null)
+            {
+                entity.Explanation = new ToeicBackend.Domain.Entities.SpeakingExplanation
+                {
+                    Translation = dto.Explanation.Translation,
+                    ContextTranslation = dto.Explanation.ContextTranslation,
+                    QuestionsTranslation = dto.Explanation.QuestionsTranslation ?? new List<string>(),
+                    SampleAnswers = dto.Explanation.SampleAnswers ?? new List<string>(),
+                    SampleAnswersTranslation = dto.Explanation.SampleAnswersTranslation ?? new List<string>(),
+                    Keywords = dto.Explanation.Keywords?.Select(k => new ToeicBackend.Domain.Entities.ExplanationKeyword
+                    {
+                        Word = k.Word,
+                        Ipa = k.Ipa,
+                        Meaning = k.Meaning
+                    }).ToList() ?? new List<ToeicBackend.Domain.Entities.ExplanationKeyword>()
+                };
+            }
+
+            await _service.AddQuestionAsync(entity);
+            return Ok(new { success = true, id = entity.Id });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error AddQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
+    }
+
+    [HttpDelete("admin/{id}")]
+    public async Task<IActionResult> DeleteQuestion(string id)
+    {
+        try
+        {
+            var result = await _service.DeleteQuestionAsync(id);
+            if (!result)
+            {
+                return NotFound(new { success = false, message = "Không tìm thấy câu hỏi." });
+            }
+            return Ok(new { success = true, message = "Đã xóa câu hỏi thành công." });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error DeleteQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message });
+        }
+    }
 }
