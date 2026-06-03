@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const filePath = path.join(__dirname, 'SeedData', 'practiceListening.json');
+const filePath = path.join(__dirname, '..', 'SeedData', 'practiceListening.json');
 console.log('Reading practiceListening.json from:', filePath);
 
 if (!fs.existsSync(filePath)) {
@@ -26,7 +26,7 @@ data.forEach(q => {
         count_id++;
         count_audio++;
     } else if (qid.startsWith('p_q_part2_')) {
-        let pure_id = qid.substring(2); 
+        let pure_id = qid.substring(2); // Remove 'p_'
         q.audio_url = `${AUDIO_BASE}${pure_id}.mp3`;
         count_audio++;
     }
