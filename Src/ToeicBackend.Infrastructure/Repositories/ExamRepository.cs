@@ -19,27 +19,29 @@ public class ExamRepository : IExamRepository
     public async Task<IEnumerable<ListeningQuestion>> GetExamQuestionsAsync(string examId)
     {
         var snapshot = await _firestoreDb.Collection(QuestionsCollection)
-            .WhereEqualTo("skill", "listening")
             .WhereEqualTo("exam_id", examId)
             .WhereEqualTo("is_for_exam", true)
             .GetSnapshotAsync();
 
-        return snapshot.Documents.Select(MapToQuestion);
+        return snapshot.Documents
+            .Select(MapToQuestion)
+            .Where(q => q.IsForPractice == false);
     }
 
     public async Task<IEnumerable<QuestionGroup>> GetExamGroupsAsync(string examId)
     {
-        // 1. Lấy tất cả các câu hỏi của part 3, 4 thuộc đề thi này để lấy danh sách group_id
+        // 1. Lấy tất cả các câu hỏi thuộc đề thi này
         var questionsSnapshot = await _firestoreDb.Collection(QuestionsCollection)
-            .WhereEqualTo("skill", "listening")
             .WhereEqualTo("exam_id", examId)
             .WhereEqualTo("is_for_exam", true)
-            .WhereIn("part", new[] { 3, 4 })
             .GetSnapshotAsync();
 
         var groupIds = questionsSnapshot.Documents
-            .Where(d => d.ContainsField("group_id"))
-            .Select(d => d.GetValue<string>("group_id"))
+            .Select(MapToQuestion)
+            .Where(q => q.IsForPractice == false)
+            .Where(q => q.Part == 3 || q.Part == 4 || q.Part == 6 || q.Part == 7)
+            .Where(q => !string.IsNullOrEmpty(q.GroupId))
+            .Select(q => q.GroupId!)
             .Distinct()
             .ToList();
 
@@ -105,7 +107,7 @@ public class ExamRepository : IExamRepository
         if (doc.ContainsField("image_url")) question.ImageUrl = doc.GetValue<string?>("image_url");
         if (doc.ContainsField("audio_url")) question.AudioUrl = doc.GetValue<string?>("audio_url");
         if (doc.ContainsField("correct_answer")) question.CorrectAnswer = doc.GetValue<string>("correct_answer");
-        if (doc.ContainsField("explanation")) question.Explanation = doc.GetValue<string?>("explanation");
+        if (doc.ContainsField("explanation")) question.Explanation = doc.GetValue<object?>("explanation");
         if (doc.ContainsField("explanation_vi")) question.ExplanationVi = doc.GetValue<string?>("explanation_vi");
         if (doc.ContainsField("script")) question.Script = doc.GetValue<string?>("script");
         if (doc.ContainsField("group_id")) question.GroupId = doc.GetValue<string?>("group_id");
@@ -203,5 +205,44 @@ public class ExamRepository : IExamRepository
         }
 
         return exam;
+    }
+
+    private const string FullTestHistoryCollection = "user_results";
+
+    public async Task<string> AddFullTestHistoryAsync(FullTestHistory history)
+    {
+        if (string.IsNullOrEmpty(history.Id))
+        {
+            var docRef = await _firestoreDb.Collection(FullTestHistoryCollection).AddAsync(history);
+            history.Id = docRef.Id;
+            return docRef.Id;
+        }
+        else
+        {
+            var docRef = _firestoreDb.Collection(FullTestHistoryCollection).Document(history.Id);
+            await docRef.SetAsync(history, SetOptions.Overwrite);
+            return history.Id;
+        }
+    }
+
+    public async Task<IEnumerable<FullTestHistory>> GetFullTestHistoryByUserIdAsync(string userId)
+    {
+        var snapshot = await _firestoreDb.Collection(FullTestHistoryCollection)
+            .WhereEqualTo("user_id", userId)
+            .GetSnapshotAsync();
+
+        return snapshot.Documents
+            .Select(doc => doc.ConvertTo<FullTestHistory>())
+            .OrderByDescending(h => h.CompletedAt);
+    }
+
+    public async Task<FullTestHistory?> GetFullTestHistoryByIdAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(FullTestHistoryCollection).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+
+        if (!snapshot.Exists) return null;
+
+        return snapshot.ConvertTo<FullTestHistory>();
     }
 }

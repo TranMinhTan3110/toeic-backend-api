@@ -9,4 +9,8 @@ public interface IExamRepository
     Task<IEnumerable<Exam>> GetAllAsync();
     Task<Exam?> GetByIdAsync(string id);
     Task<IEnumerable<Exam>> GetByFilterAsync(bool? isExam, bool? isPractice);
+    Task<string> AddFullTestHistoryAsync(FullTestHistory history);
+    Task<IEnumerable<FullTestHistory>> GetFullTestHistoryByUserIdAsync(string userId);
+    Task<FullTestHistory?> GetFullTestHistoryByIdAsync(string id);
 }
+
