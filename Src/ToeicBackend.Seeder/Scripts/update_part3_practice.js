@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 // Đường dẫn các file dữ liệu
-const groupFilePath = path.join(__dirname, 'SeedData', 'question_group_listening.json');
-const questionFilePath = path.join(__dirname, 'SeedData', 'practiceListening.json');
+const groupFilePath = path.join(__dirname, '..', 'SeedData', 'question_group_listening.json');
+const questionFilePath = path.join(__dirname, '..', 'SeedData', 'practiceListening.json');
 
 console.log('--- KHỞI CHẠY THAY ĐỔI DỮ LIỆU PART 3 LUYỆN TẬP ---');
 
@@ -112,8 +112,8 @@ groups.forEach(group => {
 });
 
 fs.writeFileSync(groupFilePath, JSON.stringify(groups, null, 2), 'utf8');
-console.log(` Cập nhật thành công ${updatedGroupsCount} nhóm trong question_group_listening.json`);
-console.log(` Đã gán ${updatedAudioCount} link Audio và ${updatedImageCount} link Image cho các nhóm phù hợp.`);
+console.log(`✔ Cập nhật thành công ${updatedGroupsCount} nhóm trong question_group_listening.json`);
+console.log(`✔ Đã gán ${updatedAudioCount} link Audio và ${updatedImageCount} link Image cho các nhóm phù hợp.`);
 
 
 // ==========================================
@@ -149,6 +149,6 @@ questions.forEach(q => {
 });
 
 fs.writeFileSync(questionFilePath, JSON.stringify(questions, null, 2), 'utf8');
-console.log(` Cập nhật thành công ${updatedQuestionsCount} câu hỏi Part 3 trong practiceListening.json`);
-console.log(` Cập nhật thành công ${updatedGroupRefsCount} tham chiếu group_id sang định dạng 'p_group_part3_xxx'.`);
+console.log(`✔ Cập nhật thành công ${updatedQuestionsCount} câu hỏi Part 3 trong practiceListening.json`);
+console.log(`✔ Cập nhật thành công ${updatedGroupRefsCount} tham chiếu group_id sang định dạng 'p_group_part3_xxx'.`);
 console.log('--- HOÀN TẤT THAY ĐỔI DỮ LIỆU ---');

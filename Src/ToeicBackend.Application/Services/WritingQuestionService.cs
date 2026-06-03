@@ -144,6 +144,36 @@ public class WritingQuestionService : IWritingQuestionService
             return cached;
 
         var entities = await _repository.GetQuestionsByExamSetIdAsync(examSetId);
+        
+        if (entities == null || !entities.Any())
+        {
+            string? alternateId = null;
+            if (examSetId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
+            {
+                if (int.TryParse(examSetId.Substring(5), out int num))
+                {
+                    alternateId = $"ETS-WRT-2024-{num:D2}";
+                }
+            }
+            else if (examSetId.StartsWith("ETS-WRT-2024-", StringComparison.OrdinalIgnoreCase))
+            {
+                if (int.TryParse(examSetId.Substring(13), out int num))
+                {
+                    alternateId = $"test_{num}";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(alternateId))
+            {
+                Console.WriteLine($"[DEBUG] No writing questions found for '{examSetId}'. Retrying with alternate ID: '{alternateId}'");
+                var altEntities = await _repository.GetQuestionsByExamSetIdAsync(alternateId);
+                if (altEntities != null && altEntities.Any())
+                {
+                    entities = altEntities;
+                }
+            }
+        }
+
         var result = entities.Select(MapToDto).ToList();
         _cache.Set(cacheKey, result, CacheDuration);
         return result;
@@ -246,6 +276,7 @@ public class WritingQuestionService : IWritingQuestionService
             IsPractice = dto.IsPractice
         };
     }
+
 
     private WritingQuestionDto MapToDto(WritingQuestion entity)
     {

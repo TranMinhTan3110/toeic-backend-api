@@ -89,11 +89,11 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IEngagementServic
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IUserProfileService, ToeicBackend.Application.Services.UserProfileService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ILeaderboardService, ToeicBackend.Application.Services.LeaderboardService>();
 // ------------------------------------
-
-// Đăng ký HttpClient và AI Service cho Gemini
+// Đăng ký HttpClient và các AI Services (OpenAI + Gemini)
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAiService, ToeicBackend.Infrastructure.Services.GeminiAiService>();
-
+builder.Services.AddKeyedScoped<ToeicBackend.Application.Interfaces.IAiService, ToeicBackend.Infrastructure.Services.GeminiAiService>("gemini");
+builder.Services.AddKeyedScoped<ToeicBackend.Application.Interfaces.IAiService, ToeicBackend.Infrastructure.Services.OpenAiService>("openai");
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAiService, ToeicBackend.Infrastructure.Services.HybridAiService>();
 // Đăng ký Speaking (Luyện Nói) từ develop
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingRepository, ToeicBackend.Infrastructure.Repositories.SpeakingRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingService, ToeicBackend.Application.Services.SpeakingService>();
@@ -117,6 +117,13 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingHistorySe
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamRepository, ToeicBackend.Infrastructure.Repositories.ExamRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IExamService, ToeicBackend.Application.Services.ExamService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IDashboardService, ToeicBackend.Application.Services.DashboardService>();
+
+// --- EXAM FLOW (SPEAKING & WRITING FULL TEST) ---
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingExamHistoryRepository, ToeicBackend.Infrastructure.Repositories.SpeakingExamHistoryRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpeakingExamHistoryService, ToeicBackend.Application.Services.SpeakingExamHistoryService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingExamHistoryRepository, ToeicBackend.Infrastructure.Repositories.WritingExamHistoryRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IWritingExamHistoryService, ToeicBackend.Application.Services.WritingExamHistoryService>();
+// ------------------------------------------------
 
 builder.Services.AddCors(options =>
 {

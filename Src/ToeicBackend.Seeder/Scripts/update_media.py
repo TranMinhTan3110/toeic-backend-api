@@ -45,8 +45,8 @@ def update_questions():
         json.dump(data, f, ensure_ascii=False, indent=2)
     
     print(f"--- KẾT QUẢ CẬP NHẬT QUESTIONS ---")
-    print(f" Đã gán {count_img} link ảnh.")
-    print(f" Đã gán {count_audio} link audio.")
+    print(f"✔ Đã gán {count_img} link ảnh.")
+    print(f"✔ Đã gán {count_audio} link audio.")
 
 def update_groups():
     if not os.path.exists(GROUPS_FILE):
@@ -100,8 +100,8 @@ def update_groups():
         json.dump(groups, f, ensure_ascii=False, indent=2)
     
     print(f"\n--- KẾT QUẢ CẬP NHẬT GROUPS ---")
-    print(f" Đã gán {count_group_audio} link audio cho các nhóm Part 3 & 4.")
-    print(f" Đã gán {count_group_img} link ảnh cho các nhóm Part 7.")
+    print(f"✔ Đã gán {count_group_audio} link audio cho các nhóm Part 3 & 4.")
+    print(f"✔ Đã gán {count_group_img} link ảnh cho các nhóm Part 7.")
 
 if __name__ == "__main__":
     update_questions()

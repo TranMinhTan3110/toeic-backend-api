@@ -35,8 +35,8 @@ def update_part2():
         json.dump(data, f, ensure_ascii=False, indent=4)
 
     print(f"--- KẾT QUẢ CẬP NHẬT PART 2 PRACTICE ---")
-    print(f"Đã đổi {count_id} ID sang định dạng 'p_q_part2_x'.")
-    print(f"Đã gán/cập nhật {count_audio} link audio.")
+    print(f"✔ Đã đổi {count_id} ID sang định dạng 'p_q_part2_x'.")
+    print(f"✔ Đã gán/cập nhật {count_audio} link audio.")
 
 if __name__ == '__main__':
     update_part2()
