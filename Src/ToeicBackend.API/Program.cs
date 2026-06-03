@@ -76,6 +76,9 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyReposi
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IVocabularyService, ToeicBackend.Application.Services.VocabularyService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IUserRepository, ToeicBackend.Infrastructure.Repositories.UserRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IAuthService, ToeicBackend.Infrastructure.Services.AuthService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IOtpService, ToeicBackend.Infrastructure.Services.OtpService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IResetTokenService, ToeicBackend.Infrastructure.Services.ResetTokenService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IEmailService, ToeicBackend.Infrastructure.Services.EmailService>();
 
 // --- PHẦN SRS VÀ TIẾN ĐỘ HỌC TẬP ---
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.ISpacedRepetitionService, ToeicBackend.Infrastructure.Services.SpacedRepetitionService>();
@@ -100,6 +103,10 @@ builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningReposit
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IListeningService, ToeicBackend.Application.Services.ListeningService>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IGrammarRepository, ToeicBackend.Infrastructure.Repositories.GrammarRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IGrammarService, ToeicBackend.Application.Services.GrammarService>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingRepository, ToeicBackend.Infrastructure.Repositories.ReadingRepository>();
+builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingService, ToeicBackend.Application.Services.ReadingService>();
+
+// Reading (Part5/6/7)
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingRepository, ToeicBackend.Infrastructure.Repositories.ReadingRepository>();
 builder.Services.AddScoped<ToeicBackend.Application.Interfaces.IReadingService, ToeicBackend.Application.Services.ReadingService>();
 
