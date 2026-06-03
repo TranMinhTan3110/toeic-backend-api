@@ -85,6 +85,12 @@ public class UserRepository : IUserRepository
         await docRef.SetAsync(fields.ToDictionary(x => x.Key, x => x.Value), SetOptions.MergeAll);
     }
 
+    public async Task DeleteAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        await docRef.DeleteAsync();
+    }
+
     public async Task<IReadOnlyList<User>> GetWeeklyLeaderboardAsync(string periodKey, int limit)
     {
         var query = _firestoreDb.Collection(CollectionName)

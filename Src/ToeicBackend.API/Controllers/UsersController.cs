@@ -75,6 +75,26 @@ public class UsersController : ControllerBase
         }
     }
 
+    [HttpDelete("me")]
+    public async Task<IActionResult> DeleteMe()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        try
+        {
+            await _profileService.DeleteProfileAsync(userId);
+            return Ok(new { success = true, message = "Đã xóa hồ sơ người dùng." });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Không thể xóa hồ sơ người dùng.", detail = ex.Message });
+        }
+    }
+
     [HttpGet("admin/all")]
     public async Task<IActionResult> GetAllAdmin(
         [FromQuery] int page = 1,

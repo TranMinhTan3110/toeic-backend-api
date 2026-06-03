@@ -83,6 +83,14 @@ public class UserProfileService : IUserProfileService
         return profile;
     }
 
+    public async Task DeleteProfileAsync(string userId)
+    {
+        await _userRepository.DeleteAsync(userId);
+
+        // Xóa cache vì danh sách user admin đã thay đổi
+        _cache.Remove(AdminUsersCacheKey);
+    }
+
     public async Task<IEnumerable<UserProfileDto>> GetAllUsersAdminAsync()
     {
         if (_cache.TryGetValue(AdminUsersCacheKey, out List<UserProfileDto>? cachedUsers) && cachedUsers != null)

@@ -8,6 +8,7 @@ public interface IUserRepository
     Task CreateAsync(User user);
     Task UpdateAsync(User user);
     Task UpdateFieldsAsync(string id, IReadOnlyDictionary<string, object?> fields);
+    Task DeleteAsync(string id);
     Task<IReadOnlyList<User>> GetWeeklyLeaderboardAsync(string periodKey, int limit);
     Task<IReadOnlyList<User>> GetAllUsersAsync();
 }
