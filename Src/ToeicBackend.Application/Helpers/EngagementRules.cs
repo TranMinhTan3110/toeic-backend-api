@@ -17,6 +17,10 @@ public static class EngagementRules
     public const int ListeningEpPerCorrect = 3;         // 3 EP / câu nghe đúng
     public const int ListeningCompleteBonusEp = 5;       // +5 EP thưởng hoàn thành (nếu đúng > 0)
 
+    // Reading Practice Gamification
+    public const int ReadingEpPerCorrect = 3;           // 3 EP / câu đọc đúng
+    public const int ReadingCompleteBonusEp = 5;         // +5 EP thưởng hoàn thành (nếu đúng > 0)
+
     // Speaking Practice Gamification
     public const int SpeakingEpPerCorrect = 5;          // 5 EP / câu nói đúng
     public const int SpeakingCompleteBonusEp = 5;        // +5 EP thưởng hoàn thành (nếu đúng > 0)

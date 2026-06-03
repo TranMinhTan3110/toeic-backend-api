@@ -30,6 +30,7 @@ public class EngagementService : IEngagementService
             ActivityType.GrammarLessonComplete,
             ActivityType.GrammarExercise,
             ActivityType.ListeningComplete,
+            ActivityType.ReadingComplete,
             ActivityType.SpeakingComplete,
             ActivityType.WritingComplete,
             ActivityType.SpeakingExamComplete,
@@ -82,9 +83,12 @@ public class EngagementService : IEngagementService
             ActivityType.GrammarLessonComplete => EngagementRules.GrammarLessonBaseEp,
             ActivityType.GrammarExercise       => request.CorrectAnswers * EngagementRules.GrammarExerciseEpPerCorrect,
             
-            // Listening, Speaking, Writing practices
+            // Listening, Reading, Speaking, Writing practices
             ActivityType.ListeningComplete => request.CorrectAnswers > 0
                 ? (request.CorrectAnswers * EngagementRules.ListeningEpPerCorrect) + EngagementRules.ListeningCompleteBonusEp
+                : 0,
+            ActivityType.ReadingComplete => request.CorrectAnswers > 0
+                ? (request.CorrectAnswers * EngagementRules.ReadingEpPerCorrect) + EngagementRules.ReadingCompleteBonusEp
                 : 0,
             ActivityType.SpeakingComplete => request.CorrectAnswers > 0
                 ? (request.CorrectAnswers * EngagementRules.SpeakingEpPerCorrect) + EngagementRules.SpeakingCompleteBonusEp
