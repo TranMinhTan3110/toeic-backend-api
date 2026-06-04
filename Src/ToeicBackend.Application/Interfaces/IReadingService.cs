@@ -1,9 +1,22 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.DTOs.Reading;
+using ToeicBackend.Domain.Entities;
 
 namespace ToeicBackend.Application.Interfaces;
 
 public interface IReadingService
 {
+    Task<IEnumerable<ReadingQuestionDto>> GetQuestionsByPartAsync(int part);
+    Task<IEnumerable<ReadingQuestionDto>> GetAllQuestionsAdminAsync();
+    Task<IEnumerable<ReadingGroupDto>> GetGroupsByPartAsync(int part);
+    Task<string> AddQuestionAsync(ReadingQuestion question);
+    Task<string> AddGroupAsync(QuestionGroup group);
+    Task<int> GetCountByPartAsync(int part);
+    Task<bool> DeleteQuestionAsync(string id);
+    Task<bool> UpdateQuestionAsync(string id, ReadingQuestionDto dto);
+
     Task<IEnumerable<Part5QuestionDto>> GetPart5QuestionsAsync(int? count = null);
     Task<IEnumerable<Part6PassageDto>> GetPart6PassagesAsync();
     Task<IEnumerable<Part7PassageDto>> GetPart7PassagesAsync();
@@ -14,12 +27,12 @@ public interface IReadingService
     Task<IEnumerable<Part6PassageDto>> GetPart6QuestionsAsync();
     Task<IEnumerable<Part7PassageDto>> GetPart7QuestionsAsync();
     // History practice for Reading
-    Task<string> SaveHistoryAsync(string userId, ToeicBackend.Application.DTOs.SaveReadingHistoryRequestDto request);
-    Task<string> SavePart6HistoryAsync(string userId, ToeicBackend.Application.DTOs.SaveReadingHistoryRequestDto request);
-    Task<string> SavePart7HistoryAsync(string userId, ToeicBackend.Application.DTOs.SaveReadingHistoryRequestDto request);
-    Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetUserHistoryAsync(string userId);
-    Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart5HistoryAsync(string userId);
-    Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart6HistoryAsync(string userId);
-    Task<IEnumerable<ToeicBackend.Application.DTOs.ReadingHistoryDto>> GetPart7HistoryAsync(string userId);
-    Task<ToeicBackend.Application.DTOs.ReadingHistoryDto?> GetHistoryByIdAsync(string id);
+    Task<string> SaveHistoryAsync(string userId, SaveReadingHistoryRequestDto request);
+    Task<string> SavePart6HistoryAsync(string userId, SaveReadingHistoryRequestDto request);
+    Task<string> SavePart7HistoryAsync(string userId, SaveReadingHistoryRequestDto request);
+    Task<IEnumerable<ReadingHistoryDto>> GetUserHistoryAsync(string userId);
+    Task<IEnumerable<ReadingHistoryDto>> GetPart5HistoryAsync(string userId);
+    Task<IEnumerable<ReadingHistoryDto>> GetPart6HistoryAsync(string userId);
+    Task<IEnumerable<ReadingHistoryDto>> GetPart7HistoryAsync(string userId);
+    Task<ReadingHistoryDto?> GetHistoryByIdAsync(string id);
 }

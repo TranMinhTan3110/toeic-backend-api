@@ -19,5 +19,6 @@ public interface IListeningService
     Task<IEnumerable<ListeningHistoryDto>> GetUserHistoryAsync(string userId);
     Task<ListeningHistoryDto?> GetHistoryByIdAsync(string id);
     Task<bool> DeleteQuestionAsync(string id);
+    Task<bool> UpdateQuestionAsync(string id, ListeningQuestionDto dto);
 }
 
