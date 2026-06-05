@@ -177,7 +177,8 @@ public class ListeningService : IListeningService
             GroupId = entity.GroupId,
             Difficulty = entity.Difficulty,
             IsForExam = entity.IsForExam,
-            IsForPractice = entity.IsForPractice
+            IsForPractice = entity.IsForPractice,
+            Skill = entity.Skill
         };
     }
 
@@ -280,6 +281,7 @@ public class ListeningService : IListeningService
         if (question == null) return false;
 
         // Cập nhật các trường chính của câu hỏi
+        if (dto.Part > 0) question.Part = dto.Part;
         if (dto.QuestionText != null) question.QuestionText = dto.QuestionText;
         if (dto.Difficulty != null) question.Difficulty = dto.Difficulty;
         if (dto.CorrectAnswer != null) question.CorrectAnswer = dto.CorrectAnswer;
@@ -288,6 +290,11 @@ public class ListeningService : IListeningService
         if (dto.AudioUrl != null) question.AudioUrl = dto.AudioUrl;
         if (dto.Explanation != null) question.Explanation = dto.Explanation;
         if (dto.ExplanationVi != null) question.ExplanationVi = dto.ExplanationVi;
+        if (dto.GroupId != null) question.GroupId = dto.GroupId;
+        if (dto.Skill != null) question.Skill = dto.Skill;
+        
+        question.IsForExam = dto.IsForExam;
+        question.IsForPractice = dto.IsForPractice;
 
         // Xử lý Script cho câu hỏi
         if (dto.Script != null)

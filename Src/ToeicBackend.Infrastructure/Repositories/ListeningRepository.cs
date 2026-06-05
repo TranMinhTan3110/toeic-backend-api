@@ -284,6 +284,34 @@ public class ListeningRepository : IListeningRepository
         return snapshot.Exists ? snapshot.ConvertTo<ListeningHistory>() : null;
     }
 
+    public async Task<bool> UpdateQuestionAsync(string id, ListeningQuestion question)
+    {
+        var docRef = _firestoreDb.Collection(QuestionsCollection).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+
+        var updates = new Dictionary<string, object>
+        {
+            { "part",           question.Part },
+            { "question_text",  question.QuestionText ?? "" },
+            { "image_url",      question.ImageUrl ?? "" },
+            { "audio_url",      question.AudioUrl ?? "" },
+            { "options",        question.Options ?? new List<string>() },
+            { "correct_answer", question.CorrectAnswer ?? "" },
+            { "explanation",    question.Explanation ?? "" },
+            { "explanation_vi", question.ExplanationVi ?? "" },
+            { "script",         question.Script ?? "" },
+            { "group_id",       question.GroupId ?? "" },
+            { "difficulty",     question.Difficulty ?? "medium" },
+            { "skill",          question.Skill ?? "listening" },
+            { "is_for_exam",    question.IsForExam },
+            { "is_for_practice",question.IsForPractice },
+        };
+
+        await docRef.UpdateAsync(updates);
+        return true;
+    }
+
     public async Task<bool> DeleteQuestionAsync(string id)
     {
         var docRef = _firestoreDb.Collection(QuestionsCollection).Document(id);

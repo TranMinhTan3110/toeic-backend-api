@@ -23,6 +23,7 @@ public interface IListeningRepository
     Task<string> AddHistoryAsync(ListeningHistory history);
     Task<IEnumerable<ListeningHistory>> GetHistoryByUserIdAsync(string userId);
     Task<ListeningHistory?> GetHistoryByIdAsync(string id);
+    Task<bool> UpdateQuestionAsync(string id, ListeningQuestion question);
     Task<bool> DeleteQuestionAsync(string id);
     Task<bool> UpdateQuestionAsync(ListeningQuestion question);
     Task<bool> UpdateGroupAsync(QuestionGroup group);

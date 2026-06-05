@@ -11,5 +11,6 @@ public interface ISpeakingService
     Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice);
     Task<IEnumerable<SpeakingQuestionDto>> GetByExamSetIdAsync(string examSetId);
     Task AddQuestionAsync(ToeicBackend.Domain.Entities.SpeakingQuestion entity);
+    Task<bool> UpdateQuestionAsync(string id, SpeakingQuestionDto dto);
     Task<bool> DeleteQuestionAsync(string id);
 }

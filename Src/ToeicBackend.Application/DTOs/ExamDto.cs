@@ -14,5 +14,7 @@ public class ExamDto
     public bool IsPractice { get; set; }
     public bool IsPremium { get; set; }
     public bool IsPublished { get; set; }
+    public string ExamType { get; set; } = "full";
     public List<string> QuestionIds { get; set; } = new();
+    public int Attempts { get; set; }
 }

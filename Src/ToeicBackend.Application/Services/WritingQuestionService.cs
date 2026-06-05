@@ -147,29 +147,52 @@ public class WritingQuestionService : IWritingQuestionService
         
         if (entities == null || !entities.Any())
         {
-            string? alternateId = null;
-            if (examSetId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
+            var baseId = examSetId;
+            if (examSetId.EndsWith("_speaking", StringComparison.OrdinalIgnoreCase))
             {
-                if (int.TryParse(examSetId.Substring(5), out int num))
-                {
-                    alternateId = $"ETS-WRT-2024-{num:D2}";
-                }
+                baseId = examSetId.Substring(0, examSetId.Length - 9);
             }
-            else if (examSetId.StartsWith("ETS-WRT-2024-", StringComparison.OrdinalIgnoreCase))
+            else if (examSetId.EndsWith("_writing", StringComparison.OrdinalIgnoreCase))
             {
-                if (int.TryParse(examSetId.Substring(13), out int num))
+                baseId = examSetId.Substring(0, examSetId.Length - 8);
+            }
+
+            if (baseId != examSetId)
+            {
+                Console.WriteLine($"[DEBUG] No writing questions found for '{examSetId}'. Trying base ID: '{baseId}'");
+                var baseEntities = await _repository.GetQuestionsByExamSetIdAsync(baseId);
+                if (baseEntities != null && baseEntities.Any())
                 {
-                    alternateId = $"test_{num}";
+                    entities = baseEntities;
                 }
             }
 
-            if (!string.IsNullOrEmpty(alternateId))
+            if (entities == null || !entities.Any())
             {
-                Console.WriteLine($"[DEBUG] No writing questions found for '{examSetId}'. Retrying with alternate ID: '{alternateId}'");
-                var altEntities = await _repository.GetQuestionsByExamSetIdAsync(alternateId);
-                if (altEntities != null && altEntities.Any())
+                string? alternateId = null;
+                if (baseId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
                 {
-                    entities = altEntities;
+                    if (int.TryParse(baseId.Substring(5), out int num))
+                    {
+                        alternateId = $"ETS-WRT-2024-{num:D2}";
+                    }
+                }
+                else if (baseId.StartsWith("ETS-WRT-2024-", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (int.TryParse(baseId.Substring(13), out int num))
+                    {
+                        alternateId = $"test_{num}";
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(alternateId))
+                {
+                    Console.WriteLine($"[DEBUG] No writing questions found for '{examSetId}' or '{baseId}'. Retrying with alternate ID: '{alternateId}'");
+                    var altEntities = await _repository.GetQuestionsByExamSetIdAsync(alternateId);
+                    if (altEntities != null && altEntities.Any())
+                    {
+                        entities = altEntities;
+                    }
                 }
             }
         }
@@ -273,7 +296,9 @@ public class WritingQuestionService : IWritingQuestionService
             Topic = dto.Topic,
             Difficulty = string.IsNullOrWhiteSpace(dto.Difficulty) ? "medium" : Normalize(dto.Difficulty),
             ExamSetId = dto.ExamSetId,
-            IsPractice = dto.IsPractice
+            IsPractice = dto.IsPractice,
+            IsExam = dto.IsExam,
+            AiPrompt = dto.AiPrompt
         };
     }
 
@@ -301,7 +326,9 @@ public class WritingQuestionService : IWritingQuestionService
             Topic = entity.Topic,
             Difficulty = entity.Difficulty,
             ExamSetId = entity.ExamSetId,
-            IsPractice = entity.IsPractice
+            IsPractice = entity.IsPractice,
+            IsExam = entity.IsExam,
+            AiPrompt = entity.AiPrompt
         };
     }
 }

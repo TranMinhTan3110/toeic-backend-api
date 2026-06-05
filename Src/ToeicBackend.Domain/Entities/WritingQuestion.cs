@@ -23,5 +23,6 @@ public class WritingQuestion
     public string Difficulty { get; set; } = string.Empty; // easy | medium | hard
     public string? ExamSetId { get; set; }
     public bool IsPractice { get; set; }
+    public bool IsExam { get; set; }
     public DateTime? CreatedAt { get; set; }
 }

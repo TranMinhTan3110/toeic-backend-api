@@ -45,29 +45,52 @@ public class SpeakingService : ISpeakingService
         
         if (entities == null || !entities.Any())
         {
-            string? alternateId = null;
-            if (examSetId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
+            var baseId = examSetId;
+            if (examSetId.EndsWith("_speaking", StringComparison.OrdinalIgnoreCase))
             {
-                if (int.TryParse(examSetId.Substring(5), out int num))
-                {
-                    alternateId = $"ETS-SPK-2024-{num:D2}";
-                }
+                baseId = examSetId.Substring(0, examSetId.Length - 9);
             }
-            else if (examSetId.StartsWith("ETS-SPK-2024-", StringComparison.OrdinalIgnoreCase))
+            else if (examSetId.EndsWith("_writing", StringComparison.OrdinalIgnoreCase))
             {
-                if (int.TryParse(examSetId.Substring(13), out int num))
+                baseId = examSetId.Substring(0, examSetId.Length - 8);
+            }
+
+            if (baseId != examSetId)
+            {
+                Console.WriteLine($"[DEBUG] No speaking questions found for '{examSetId}'. Trying base ID: '{baseId}'");
+                var baseEntities = await _repository.GetByExamSetIdAsync(baseId);
+                if (baseEntities != null && baseEntities.Any())
                 {
-                    alternateId = $"test_{num}";
+                    entities = baseEntities;
                 }
             }
 
-            if (!string.IsNullOrEmpty(alternateId))
+            if (entities == null || !entities.Any())
             {
-                Console.WriteLine($"[DEBUG] No speaking questions found for '{examSetId}'. Retrying with alternate ID: '{alternateId}'");
-                var altEntities = await _repository.GetByExamSetIdAsync(alternateId);
-                if (altEntities != null && altEntities.Any())
+                string? alternateId = null;
+                if (baseId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
                 {
-                    entities = altEntities;
+                    if (int.TryParse(baseId.Substring(5), out int num))
+                    {
+                        alternateId = $"ETS-SPK-2024-{num:D2}";
+                    }
+                }
+                else if (baseId.StartsWith("ETS-SPK-2024-", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (int.TryParse(baseId.Substring(13), out int num))
+                    {
+                        alternateId = $"test_{num}";
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(alternateId))
+                {
+                    Console.WriteLine($"[DEBUG] No speaking questions found for '{examSetId}' or '{baseId}'. Retrying with alternate ID: '{alternateId}'");
+                    var altEntities = await _repository.GetByExamSetIdAsync(alternateId);
+                    if (altEntities != null && altEntities.Any())
+                    {
+                        entities = altEntities;
+                    }
                 }
             }
         }
@@ -140,6 +163,35 @@ public class SpeakingService : ISpeakingService
     public async Task AddQuestionAsync(SpeakingQuestion entity)
     {
         await _repository.AddAsync(entity);
+    }
+
+    public async Task<bool> UpdateQuestionAsync(string id, SpeakingQuestionDto dto)
+    {
+        var entity = new SpeakingQuestion
+        {
+            Id = id,
+            TaskType        = dto.TaskType,
+            TaskNumber      = dto.TaskNumber,
+            PromptText      = dto.PromptText,
+            PromptImageUrl  = dto.PromptImageUrl,
+            PromptAudioUrl  = dto.PromptAudioUrl,
+            ImageUrl        = dto.ImageUrl,
+            AudioUrl        = dto.AudioUrl,
+            PreparationTime = dto.PreparationTime,
+            ResponseTime    = dto.ResponseTime,
+            Difficulty      = dto.Difficulty ?? "medium",
+            AiPrompt        = dto.AiPrompt ?? string.Empty,
+            ScoringCriteria = dto.ScoringCriteria ?? new List<string>(),
+            ExamSetId       = dto.ExamSetId,
+            Topic           = dto.Topic,
+            IsPractice      = dto.IsPractice,
+            IsExam          = dto.IsExam,
+            MaxScore        = dto.MaxScore,
+            SampleAnswer    = dto.SampleAnswer,
+            Questions       = dto.Questions ?? new List<string>(),
+            AnswerTimes     = dto.AnswerTimes ?? new List<int>(),
+        };
+        return await _repository.UpdateAsync(id, entity);
     }
 
     public async Task<bool> DeleteQuestionAsync(string id)

@@ -16,5 +16,6 @@ public class ListeningQuestionDto
     public string Difficulty { get; set; } = "medium";
     public bool IsForExam { get; set; }
     public bool IsForPractice { get; set; }
+    public string Skill { get; set; } = "listening";
     public string? GrammarTopicId { get; set; }
 }

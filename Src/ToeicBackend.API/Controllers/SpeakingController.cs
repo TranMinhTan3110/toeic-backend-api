@@ -260,6 +260,22 @@ public class SpeakingController : ControllerBase
         }
     }
 
+    [HttpPatch("admin/{id}")]
+    public async Task<IActionResult> UpdateQuestion(string id, [FromBody] SpeakingQuestionDto dto)
+    {
+        try
+        {
+            var result = await _service.UpdateQuestionAsync(id, dto);
+            if (!result) return NotFound(new { success = false, message = "Không tìm thấy câu hỏi." });
+            return Ok(new { success = true, id });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error UpdateSpeakingQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message });
+        }
+    }
+
     [HttpDelete("admin/{id}")]
     public async Task<IActionResult> DeleteQuestion(string id)
     {

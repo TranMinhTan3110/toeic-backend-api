@@ -11,5 +11,6 @@ public interface ISpeakingRepository
     Task<int> GetCountByFilterAsync(bool? isExam, bool? isPractice);
     Task<IEnumerable<SpeakingQuestion>> GetByExamSetIdAsync(string examSetId);
     Task AddAsync(SpeakingQuestion entity);
+    Task<bool> UpdateAsync(string id, SpeakingQuestion entity);
     Task<bool> DeleteAsync(string id);
 }
