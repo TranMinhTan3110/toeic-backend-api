@@ -77,6 +77,20 @@ public class UserRepository : IUserRepository
         await docRef.SetAsync(user, SetOptions.MergeAll);
     }
 
+    public async Task UpdateFieldsAsync(string id, IReadOnlyDictionary<string, object?> fields)
+    {
+        if (fields.Count == 0) return;
+
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        await docRef.SetAsync(fields.ToDictionary(x => x.Key, x => x.Value), SetOptions.MergeAll);
+    }
+
+    public async Task DeleteAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        await docRef.DeleteAsync();
+    }
+
     public async Task<IReadOnlyList<User>> GetWeeklyLeaderboardAsync(string periodKey, int limit)
     {
         var query = _firestoreDb.Collection(CollectionName)

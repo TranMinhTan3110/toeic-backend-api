@@ -12,4 +12,8 @@ public interface IExamService
     Task<ExamDto> CreateExamAsync(SaveExamDto dto);
     Task<ExamDto?> UpdateExamAsync(string id, UpdateExamDto dto);
     Task<bool> DeleteExamAsync(string id);
+    Task<string> SaveFullTestHistoryAsync(string userId, SaveFullTestRequestDto request);
+    Task<IEnumerable<FullTestHistoryDto>> GetUserFullTestHistoryAsync(string userId);
+    Task<FullTestHistoryDto?> GetFullTestHistoryByIdAsync(string id);
 }
+

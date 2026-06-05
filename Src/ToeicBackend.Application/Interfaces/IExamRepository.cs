@@ -12,4 +12,7 @@ public interface IExamRepository
     Task<string> AddExamAsync(Exam exam);
     Task<bool> UpdateExamAsync(Exam exam);
     Task<bool> DeleteExamAsync(string id);
+    Task<string> AddFullTestHistoryAsync(FullTestHistory history);
+    Task<IEnumerable<FullTestHistory>> GetFullTestHistoryByUserIdAsync(string userId);
+    Task<FullTestHistory?> GetFullTestHistoryByIdAsync(string id);
 }

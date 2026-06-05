@@ -1,10 +1,15 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using ToeicBackend.API.Extensions;
 using ToeicBackend.Application.Common;
+using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.DTOs.Reading;
 using ToeicBackend.Application.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using ToeicBackend.API.Extensions;
-using ToeicBackend.Application.DTOs;
+using ToeicBackend.Domain.Entities;
 
 namespace ToeicBackend.API.Controllers;
 
@@ -19,10 +24,193 @@ public class ReadingController : ControllerBase
         _service = service;
     }
 
+    [HttpGet("part/{part}")]
+    public async Task<ActionResult<IEnumerable<ReadingQuestionDto>>> GetByPart(int part)
+    {
+        var results = await _service.GetQuestionsByPartAsync(part);
+        return Ok(results);
+    }
+
+    [HttpGet("groups/{part}")]
+    public async Task<ActionResult<IEnumerable<ReadingGroupDto>>> GetGroupsByPart(int part)
+    {
+        var results = await _service.GetGroupsByPartAsync(part);
+        return Ok(results);
+    }
+
+    [HttpGet("count/{part}")]
+    public async Task<ActionResult<object>> GetCountByPart(int part)
+    {
+        try
+        {
+            var count = await _service.GetCountByPartAsync(part);
+            return Ok(new { part, count, type = part == 5 ? "questions" : "groups" });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Count Error] Part {part}: {ex.Message}");
+            return Ok(new { part, count = 0, type = part == 5 ? "questions" : "groups" });
+        }
+    }
+
+    [HttpGet("admin/all")]
+    public async Task<ActionResult<IEnumerable<ReadingQuestionDto>>> GetAllAdmin()
+    {
+        try
+        {
+            var results = await _service.GetAllQuestionsAdminAsync();
+            return Ok(results);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Firebase Quota/Error] {ex.Message}");
+            // Return mock data fallback in case Firebase quota is exceeded
+            var mockData = new List<ReadingQuestionDto>
+            {
+                new ReadingQuestionDto { Id = "quota_err_1", Part = 5, QuestionText = "Câu hỏi bị ẩn do Firebase hết hạn mức (Quota Exceeded)", Difficulty = "easy" },
+                new ReadingQuestionDto { Id = "quota_err_2", Part = 6, QuestionText = "Vui lòng chờ sang ngày mới hoặc nâng cấp gói Firebase.", Difficulty = "medium" },
+                new ReadingQuestionDto { Id = "quota_err_3", Part = 7, QuestionText = "Hoặc dùng mock data này để tiếp tục phát triển UI.", Difficulty = "hard" }
+            };
+            return Ok(mockData);
+        }
+    }
+
+    [HttpPost("admin/add-single")]
+    public async Task<ActionResult> AddSingleQuestion([FromBody] ReadingQuestionDto dto)
+    {
+        try
+        {
+            object? explanationValue = dto.Explanation;
+            if (explanationValue is System.Text.Json.JsonElement jsonElement)
+            {
+                explanationValue = jsonElement.ValueKind switch
+                {
+                    System.Text.Json.JsonValueKind.String => jsonElement.GetString(),
+                    System.Text.Json.JsonValueKind.Number => jsonElement.GetDouble(),
+                    System.Text.Json.JsonValueKind.True => true,
+                    System.Text.Json.JsonValueKind.False => false,
+                    System.Text.Json.JsonValueKind.Null => null,
+                    _ => jsonElement.ToString()
+                };
+            }
+
+            var entity = new ReadingQuestion
+            {
+                Id = string.IsNullOrEmpty(dto.Id) ? "admin_r_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : dto.Id,
+                Part = dto.Part,
+                QuestionText = dto.QuestionText,
+                ImageUrl = dto.ImageUrl,
+                Options = dto.Options ?? new List<string>(),
+                CorrectAnswer = dto.CorrectAnswer ?? string.Empty,
+                Explanation = explanationValue,
+                ExplanationVi = dto.ExplanationVi,
+                Script = dto.Script,
+                GroupId = dto.GroupId,
+                Difficulty = dto.Difficulty ?? "medium",
+                IsForExam = false,
+                IsForPractice = true,
+                Skill = "reading",
+                GrammarTopicId = dto.GrammarTopicId
+            };
+
+            await _service.AddQuestionAsync(entity);
+            return Ok(new { success = true, id = entity.Id });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error AddSingleQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
+    }
+
+    [HttpPost("admin/add-group")]
+    public async Task<ActionResult> AddGroupQuestion([FromBody] ReadingGroupDto groupDto)
+    {
+        try
+        {
+            var groupId = string.IsNullOrEmpty(groupDto.Id) ? "admin_r_group_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() : groupDto.Id;
+            
+            // Create sub-questions first
+            var questionIds = new List<string>();
+            foreach (var q in groupDto.Questions)
+            {
+                var qId = string.IsNullOrEmpty(q.Id) ? "admin_r_q_" + DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() + Guid.NewGuid().ToString().Substring(0, 4) : q.Id;
+                questionIds.Add(qId);
+                
+                var entity = new ReadingQuestion
+                {
+                    Id = qId,
+                    Part = q.Part,
+                    QuestionText = q.QuestionText,
+                    Options = q.Options ?? new List<string>(),
+                    CorrectAnswer = q.CorrectAnswer ?? string.Empty,
+                    Explanation = q.Explanation,
+                    ExplanationVi = q.ExplanationVi,
+                    Difficulty = q.Difficulty ?? "medium",
+                    Skill = "reading",
+                    GroupId = groupId,
+                    IsForExam = false,
+                    IsForPractice = true
+                };
+                await _service.AddQuestionAsync(entity);
+            }
+
+            var groupEntity = new QuestionGroup
+            {
+                Id = groupId,
+                Part = groupDto.Part,
+                Script = groupDto.Script,
+                PassageText = groupDto.PassageText,
+                ImageUrl = groupDto.ImageUrl,
+                AudioUrl = "", // not used
+                Source = groupDto.Source,
+                QuestionCount = groupDto.Questions.Count,
+                QuestionIds = questionIds
+            };
+            
+            await _service.AddGroupAsync(groupEntity);
+            return Ok(new { success = true, id = groupEntity.Id });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error AddGroupQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
+    }
+
+    [HttpDelete("admin/{id}")]
+    public async Task<IActionResult> DeleteQuestion(string id)
+    {
+        var result = await _service.DeleteQuestionAsync(id);
+        if (!result)
+        {
+            return NotFound(new { message = "Không tìm thấy câu hỏi." });
+        }
+        return Ok(new { success = true, message = "Đã xóa câu hỏi thành công." });
+    }
+
+    [HttpPut("admin/{id}")]
+    public async Task<IActionResult> UpdateQuestion(string id, [FromBody] ReadingQuestionDto dto)
+    {
+        try
+        {
+            var result = await _service.UpdateQuestionAsync(id, dto);
+            if (!result)
+            {
+                return NotFound(new { success = false, message = "Không tìm thấy câu hỏi để cập nhật." });
+            }
+            return Ok(new { success = true, message = "Đã cập nhật câu hỏi thành công." });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[Error UpdateQuestion] {ex.Message}");
+            return StatusCode(500, new { success = false, message = ex.Message, detail = ex.ToString() });
+        }
+    }
+
     [HttpGet("part5/questions")]
     public async Task<IActionResult> GetPart5Questions([FromQuery] int? count = null)
     {
-        // if count is null or not provided, service will return all available questions
         var items = await _service.GetPart5QuestionsAsync(count);
         var resp = new ApiResponse<IEnumerable<Part5QuestionDto>> { Data = items };
         return Ok(resp);
@@ -31,17 +219,14 @@ public class ReadingController : ControllerBase
     [HttpPost("part5/submit")]
     public async Task<IActionResult> SubmitPart5([FromBody] System.Text.Json.JsonElement body)
     {
-        // Normalize different possible client payload shapes into Part5SubmitRequestDto
         var answers = new Dictionary<string, string>();
 
         try
         {
             if (body.ValueKind == System.Text.Json.JsonValueKind.Object)
             {
-                // Case 1: { "answers": { "q1": "A", ... } }
                 if (body.TryGetProperty("answers", out var answersProp))
                 {
-                    // answers may be an object map or an array
                     if (answersProp.ValueKind == System.Text.Json.JsonValueKind.Object)
                     {
                         foreach (var prop in answersProp.EnumerateObject())
@@ -54,7 +239,6 @@ public class ReadingController : ControllerBase
                     }
                     else if (answersProp.ValueKind == System.Text.Json.JsonValueKind.Array)
                     {
-                        // array of items: allow { questionId, selectedOption } or { questionId, selectedIndex }
                         foreach (var item in answersProp.EnumerateArray())
                         {
                             if (item.ValueKind != System.Text.Json.JsonValueKind.Object) continue;
@@ -71,7 +255,6 @@ public class ReadingController : ControllerBase
                             if (item.TryGetProperty("answer", out var s3) && s3.ValueKind == System.Text.Json.JsonValueKind.String) sel = sel ?? s3.GetString();
                             if (item.TryGetProperty("selected", out var s4) && s4.ValueKind == System.Text.Json.JsonValueKind.String) sel = sel ?? s4.GetString();
 
-                            // support numeric selectedIndex
                             if (sel == null)
                             {
                                 if (item.TryGetProperty("selectedIndex", out var si) && si.ValueKind == System.Text.Json.JsonValueKind.Number)
@@ -90,7 +273,6 @@ public class ReadingController : ControllerBase
                 }
                 else
                 {
-                    // Case 2: top-level map { "q1": "A", ... }
                     bool looksLikeMap = true;
                     foreach (var prop in body.EnumerateObject())
                     {
@@ -112,7 +294,6 @@ public class ReadingController : ControllerBase
             }
             else if (body.ValueKind == System.Text.Json.JsonValueKind.Array)
             {
-                // Case 3: array of items [{ "questionId":"q1", "selectedOption":"A" }, ...]
                 foreach (var item in body.EnumerateArray())
                 {
                     if (item.ValueKind != System.Text.Json.JsonValueKind.Object) continue;
@@ -259,7 +440,6 @@ public class ReadingController : ControllerBase
                     if (item.TryGetProperty("answer", out var s3) && s3.ValueKind == System.Text.Json.JsonValueKind.String) sel = sel ?? s3.GetString();
                     if (item.TryGetProperty("selected", out var s4) && s4.ValueKind == System.Text.Json.JsonValueKind.String) sel = sel ?? s4.GetString();
 
-                    // numeric selectedIndex in top-level array
                     if (sel == null)
                     {
                         if (item.TryGetProperty("selectedIndex", out var si) && si.ValueKind == System.Text.Json.JsonValueKind.Number)
@@ -312,7 +492,17 @@ public class ReadingController : ControllerBase
         return Ok(resp);
     }
 
-    // --- History Practice Endpoints for Reading ---
+    [HttpPost("part7/submit")]
+    public async Task<IActionResult> SubmitPart7([FromBody] System.Text.Json.JsonElement body)
+    {
+        var answers = ParseAnswers(body);
+        if (answers == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Invalid request payload" });
+        if (answers.Count == 0) return BadRequest(new ApiResponse<string> { Success = false, Message = "No answers provided" });
+        var request = new Part7SubmitRequestDto { Answers = answers };
+        var result = await _service.SubmitPart7AnswersAsync(request);
+        var resp = new ApiResponse<Part7SubmitResponseDto> { Data = result };
+        return Ok(resp);
+    }
 
     [HttpPost("history")]
     [Authorize]
@@ -326,7 +516,6 @@ public class ReadingController : ControllerBase
         return Ok(new { success = true, id = historyId });
     }
 
-    // compatibility aliases: some frontends call part-specific history routes
     [HttpPost("part5/history")]
     [Authorize]
     public Task<IActionResult> SaveHistory_Part5([FromBody] SaveReadingHistoryRequestDto dto)
@@ -352,6 +541,15 @@ public class ReadingController : ControllerBase
         if (dto == null) return Task.FromResult<IActionResult>(BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" }));
         dto.Part = 6;
         return SaveHistory(dto);
+    }
+
+    [HttpPost("part7/history")]
+    [Authorize]
+    public async Task<IActionResult> SaveHistory_Part7([FromBody] SaveReadingHistoryRequestDto dto)
+    {
+        if (dto == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" });
+        dto.Part = 7;
+        return await SaveHistory(dto);
     }
 
     [HttpGet("history")]
@@ -390,6 +588,18 @@ public class ReadingController : ControllerBase
         return Ok(results);
     }
 
+    [HttpGet("part7/history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<ReadingHistoryDto>>> GetPart7UserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+            return Unauthorized(new { message = "Token không hợp lệ" });
+
+        var results = await _service.GetPart7HistoryAsync(userId);
+        return Ok(results);
+    }
+
     [HttpGet("history/{id}")]
     [Authorize]
     public async Task<ActionResult<ReadingHistoryDto>> GetHistoryById(string id)
@@ -406,38 +616,5 @@ public class ReadingController : ControllerBase
             return Forbid();
 
         return Ok(result);
-    }
-
-    [HttpPost("part7/submit")]
-    public async Task<IActionResult> SubmitPart7([FromBody] System.Text.Json.JsonElement body)
-    {
-        var answers = ParseAnswers(body);
-        if (answers == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Invalid request payload" });
-        if (answers.Count == 0) return BadRequest(new ApiResponse<string> { Success = false, Message = "No answers provided" });
-        var request = new Part7SubmitRequestDto { Answers = answers };
-        var result = await _service.SubmitPart7AnswersAsync(request);
-        var resp = new ApiResponse<Part7SubmitResponseDto> { Data = result };
-        return Ok(resp);
-    }
-
-    [HttpPost("part7/history")]
-    [Authorize]
-    public async Task<IActionResult> SaveHistory_Part7([FromBody] SaveReadingHistoryRequestDto dto)
-    {
-        if (dto == null) return BadRequest(new ApiResponse<string> { Success = false, Message = "Request body cannot be empty" });
-        dto.Part = 7;
-        return await SaveHistory(dto);
-    }
-
-    [HttpGet("part7/history")]
-    [Authorize]
-    public async Task<ActionResult<IEnumerable<ReadingHistoryDto>>> GetPart7UserHistory()
-    {
-        var userId = User.GetFirebaseUserId();
-        if (string.IsNullOrEmpty(userId))
-            return Unauthorized(new { message = "Token không hợp lệ" });
-
-        var results = await _service.GetPart7HistoryAsync(userId);
-        return Ok(results);
     }
 }

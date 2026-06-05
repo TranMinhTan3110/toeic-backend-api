@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ToeicBackend.API.Extensions;
 using ToeicBackend.Application.DTOs;
 using ToeicBackend.Application.Interfaces;
 
@@ -41,8 +43,64 @@ public class ExamController : ControllerBase
         return Ok(new { Message = "Test 3 restored successfully" });
     }
 
+    [HttpPost("history/submit")]
+    [Authorize]
+    public async Task<IActionResult> SubmitFullTest([FromBody] SaveFullTestRequestDto dto)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
 
+        try
+        {
+            var id = await _service.SaveFullTestHistoryAsync(userId, dto);
+            return Ok(new { success = true, id });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Lỗi nộp bài thi Full Test", detail = ex.Message });
+        }
+    }
 
+    [HttpGet("history")]
+    [Authorize]
+    public async Task<ActionResult<IEnumerable<FullTestHistoryDto>>> GetUserHistory()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        var results = await _service.GetUserFullTestHistoryAsync(userId);
+        return Ok(results);
+    }
+
+    [HttpGet("history/{id}")]
+    [Authorize]
+    public async Task<ActionResult<FullTestHistoryDto>> GetHistoryById(string id)
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
+        }
+
+        var result = await _service.GetFullTestHistoryByIdAsync(id);
+        if (result == null)
+        {
+            return NotFound(new { message = "Không tìm thấy lịch sử thi Full Test" });
+        }
+
+        if (result.UserId != userId)
+        {
+            return Forbid();
+        }
+
+        return Ok(result);
+    }
     [HttpGet("questions/{examId}")]
     public async Task<ActionResult<IEnumerable<ListeningQuestionDto>>> GetExamQuestions(string examId)
     {

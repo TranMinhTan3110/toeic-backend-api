@@ -261,45 +261,61 @@ public class ListeningService : IListeningService
         };
     }
 
-    public async Task<bool> UpdateQuestionAsync(string id, ListeningQuestionDto dto)
-    {
-        var existing = await _repository.GetQuestionByIdAsync(id);
-        if (existing == null) return false;
-
-        var entity = new ListeningQuestion
-        {
-            Id           = id,
-            Part         = dto.Part > 0 ? dto.Part : existing.Part,
-            QuestionText = dto.QuestionText ?? existing.QuestionText,
-            ImageUrl     = dto.ImageUrl ?? existing.ImageUrl,
-            AudioUrl     = dto.AudioUrl ?? existing.AudioUrl,
-            Options      = dto.Options ?? existing.Options,
-            CorrectAnswer= dto.CorrectAnswer ?? existing.CorrectAnswer,
-            Explanation  = dto.Explanation ?? existing.Explanation,
-            ExplanationVi= dto.ExplanationVi ?? existing.ExplanationVi,
-            Script       = dto.Script ?? existing.Script,
-            GroupId      = dto.GroupId ?? existing.GroupId,
-            Difficulty   = dto.Difficulty ?? existing.Difficulty,
-            Skill        = dto.Skill ?? existing.Skill,
-            IsForExam    = dto.IsForExam,
-            IsForPractice= dto.IsForPractice,
-        };
-
-        var result = await _repository.UpdateQuestionAsync(id, entity);
-        if (result)
-        {
-            _cache.Remove(QuestionsCacheKey(entity.Part));
-            _cache.Remove(CountCacheKey(entity.Part));
-        }
-        return result;
-    }
-
     public async Task<bool> DeleteQuestionAsync(string id)
     {
         var question = await _repository.GetQuestionByIdAsync(id);
         if (question == null) return false;
 
         var result = await _repository.DeleteQuestionAsync(id);
+        if (result)
+        {
+            _cache.Remove(QuestionsCacheKey(question.Part));
+            _cache.Remove(CountCacheKey(question.Part));
+        }
+        return result;
+    }
+
+    public async Task<bool> UpdateQuestionAsync(string id, ListeningQuestionDto dto)
+    {
+        var question = await _repository.GetQuestionByIdAsync(id);
+        if (question == null) return false;
+
+        // Cập nhật các trường chính của câu hỏi
+        if (dto.Part > 0) question.Part = dto.Part;
+        if (dto.QuestionText != null) question.QuestionText = dto.QuestionText;
+        if (dto.Difficulty != null) question.Difficulty = dto.Difficulty;
+        if (dto.CorrectAnswer != null) question.CorrectAnswer = dto.CorrectAnswer;
+        if (dto.Options != null && dto.Options.Any()) question.Options = dto.Options;
+        if (dto.ImageUrl != null) question.ImageUrl = dto.ImageUrl;
+        if (dto.AudioUrl != null) question.AudioUrl = dto.AudioUrl;
+        if (dto.Explanation != null) question.Explanation = dto.Explanation;
+        if (dto.ExplanationVi != null) question.ExplanationVi = dto.ExplanationVi;
+        if (dto.GroupId != null) question.GroupId = dto.GroupId;
+        if (dto.Skill != null) question.Skill = dto.Skill;
+        
+        question.IsForExam = dto.IsForExam;
+        question.IsForPractice = dto.IsForPractice;
+
+        // Xử lý Script cho câu hỏi
+        if (dto.Script != null)
+        {
+            if (!string.IsNullOrEmpty(question.GroupId))
+            {
+                // Nếu thuộc nhóm (Part 3, Part 4), lưu script vào Group
+                var group = await _repository.GetGroupByIdAsync(question.GroupId);
+                if (group != null)
+                {
+                    group.Script = dto.Script;
+                    await _repository.UpdateGroupAsync(group);
+                    _cache.Remove(GroupsCacheKey(group.Part));
+                }
+            }
+            
+            // Đồng thời lưu vào câu hỏi để đảm bảo tính nhất quán (hoặc cho Part 1, Part 2)
+            question.Script = dto.Script;
+        }
+
+        var result = await _repository.UpdateQuestionAsync(question);
         if (result)
         {
             _cache.Remove(QuestionsCacheKey(question.Part));

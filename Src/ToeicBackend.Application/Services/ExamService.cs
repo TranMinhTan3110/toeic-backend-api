@@ -125,12 +125,12 @@ public class ExamService : IExamService
     {
         // 1. Generate clean exam id from Title (e.g. slugified)
         var examId = string.IsNullOrEmpty(dto.Title) 
-            ? Guid.NewGuid().ToString() 
-            : dto.Title.ToLower()
-                .Replace(" ", "_")
-                .Replace("-", "_")
-                .Replace("#", "")
-                .Replace("—", "_");
+             ? Guid.NewGuid().ToString() 
+             : dto.Title.ToLower()
+                 .Replace(" ", "_")
+                 .Replace("-", "_")
+                 .Replace("#", "")
+                 .Replace("—", "_");
         
         // Ensure slug is clean
         examId = string.Concat(examId.Select(c => char.IsLetterOrDigit(c) || c == '_' ? c : '_'))
@@ -269,5 +269,59 @@ public class ExamService : IExamService
 
         // 4. Delete the exam itself
         return await _repository.DeleteExamAsync(id);
+    }
+
+    public async Task<string> SaveFullTestHistoryAsync(string userId, SaveFullTestRequestDto request)
+    {
+        var entity = new FullTestHistory
+        {
+            UserId = userId,
+            ExamId = request.ExamId,
+            ExamTitle = request.ExamTitle,
+            ScoreListening = request.ScoreListening,
+            ScoreReading = request.ScoreReading,
+            TotalScore = request.TotalScore,
+            CorrectCount = request.CorrectCount,
+            TotalCount = request.TotalCount,
+            TimeSpent = request.TimeSpent,
+            CompletedAt = DateTime.UtcNow,
+            Answers = request.Answers ?? new(),
+            PartScores = request.PartScores ?? new()
+        };
+
+        var id = await _repository.AddFullTestHistoryAsync(entity);
+        return id;
+    }
+
+    public async Task<IEnumerable<FullTestHistoryDto>> GetUserFullTestHistoryAsync(string userId)
+    {
+        var entities = await _repository.GetFullTestHistoryByUserIdAsync(userId);
+        return entities.Select(MapToFullTestHistoryDto);
+    }
+
+    public async Task<FullTestHistoryDto?> GetFullTestHistoryByIdAsync(string id)
+    {
+        var entity = await _repository.GetFullTestHistoryByIdAsync(id);
+        return entity == null ? null : MapToFullTestHistoryDto(entity);
+    }
+
+    private FullTestHistoryDto MapToFullTestHistoryDto(FullTestHistory entity)
+    {
+        return new FullTestHistoryDto
+        {
+            Id = entity.Id,
+            UserId = entity.UserId,
+            ExamId = entity.ExamId,
+            ExamTitle = entity.ExamTitle,
+            ScoreListening = entity.ScoreListening,
+            ScoreReading = entity.ScoreReading,
+            TotalScore = entity.TotalScore,
+            CorrectCount = entity.CorrectCount,
+            TotalCount = entity.TotalCount,
+            TimeSpent = entity.TimeSpent,
+            CompletedAt = entity.CompletedAt,
+            Answers = entity.Answers,
+            PartScores = entity.PartScores
+        };
     }
 }
