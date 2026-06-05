@@ -177,7 +177,8 @@ public class ListeningService : IListeningService
             GroupId = entity.GroupId,
             Difficulty = entity.Difficulty,
             IsForExam = entity.IsForExam,
-            IsForPractice = entity.IsForPractice
+            IsForPractice = entity.IsForPractice,
+            Skill = entity.Skill
         };
     }
 
@@ -258,6 +259,39 @@ public class ListeningService : IListeningService
             IncorrectQuestionIds = entity.IncorrectQuestionIds ?? new(),
             SelectedAnswers = entity.SelectedAnswers ?? new()
         };
+    }
+
+    public async Task<bool> UpdateQuestionAsync(string id, ListeningQuestionDto dto)
+    {
+        var existing = await _repository.GetQuestionByIdAsync(id);
+        if (existing == null) return false;
+
+        var entity = new ListeningQuestion
+        {
+            Id           = id,
+            Part         = dto.Part > 0 ? dto.Part : existing.Part,
+            QuestionText = dto.QuestionText ?? existing.QuestionText,
+            ImageUrl     = dto.ImageUrl ?? existing.ImageUrl,
+            AudioUrl     = dto.AudioUrl ?? existing.AudioUrl,
+            Options      = dto.Options ?? existing.Options,
+            CorrectAnswer= dto.CorrectAnswer ?? existing.CorrectAnswer,
+            Explanation  = dto.Explanation ?? existing.Explanation,
+            ExplanationVi= dto.ExplanationVi ?? existing.ExplanationVi,
+            Script       = dto.Script ?? existing.Script,
+            GroupId      = dto.GroupId ?? existing.GroupId,
+            Difficulty   = dto.Difficulty ?? existing.Difficulty,
+            Skill        = dto.Skill ?? existing.Skill,
+            IsForExam    = dto.IsForExam,
+            IsForPractice= dto.IsForPractice,
+        };
+
+        var result = await _repository.UpdateQuestionAsync(id, entity);
+        if (result)
+        {
+            _cache.Remove(QuestionsCacheKey(entity.Part));
+            _cache.Remove(CountCacheKey(entity.Part));
+        }
+        return result;
     }
 
     public async Task<bool> DeleteQuestionAsync(string id)

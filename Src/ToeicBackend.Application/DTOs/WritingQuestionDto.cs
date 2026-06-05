@@ -18,8 +18,10 @@ public class WritingQuestionDto
     public string? SampleAnswer { get; set; }
     public string? SampleAnswerTranslation { get; set; }
     public string? ExplanationVietnamese { get; set; }
+    public string? AiPrompt { get; set; }
     public string? Topic { get; set; }
     public string Difficulty { get; set; } = string.Empty;
     public string? ExamSetId { get; set; }
     public bool IsPractice { get; set; }
+    public bool IsExam { get; set; }
 }

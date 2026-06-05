@@ -65,7 +65,14 @@ public class ExamRepository : IExamRepository
     public async Task<IEnumerable<Exam>> GetAllAsync()
     {
         var snapshot = await _firestoreDb.Collection(CollectionName).GetSnapshotAsync();
-        return snapshot.Documents.Select(MapToDomain);
+        var exams = snapshot.Documents.Select(MapToDomain).ToList();
+        
+        var tasks = exams.Select(async exam => {
+            exam.Attempts = await GetAttemptsCountAsync(exam.Id);
+        });
+        await Task.WhenAll(tasks);
+        
+        return exams;
     }
 
     public async Task<Exam?> GetByIdAsync(string id)
@@ -75,7 +82,9 @@ public class ExamRepository : IExamRepository
 
         if (!snapshot.Exists) return null;
 
-        return MapToDomain(snapshot);
+        var exam = MapToDomain(snapshot);
+        exam.Attempts = await GetAttemptsCountAsync(exam.Id);
+        return exam;
     }
 
     public async Task<IEnumerable<Exam>> GetByFilterAsync(bool? isExam, bool? isPractice)
@@ -93,7 +102,35 @@ public class ExamRepository : IExamRepository
         }
 
         var snapshot = await query.GetSnapshotAsync();
-        return snapshot.Documents.Select(MapToDomain);
+        var exams = snapshot.Documents.Select(MapToDomain).ToList();
+        
+        var tasks = exams.Select(async exam => {
+            exam.Attempts = await GetAttemptsCountAsync(exam.Id);
+        });
+        await Task.WhenAll(tasks);
+        
+        return exams;
+    }
+
+    private async Task<int> GetAttemptsCountAsync(string examId)
+    {
+        try
+        {
+            var speakingSnap = await _firestoreDb.Collection("speaking_exam_history")
+                .WhereEqualTo("exam_set_id", examId)
+                .Count().GetSnapshotAsync();
+            
+            var writingSnap = await _firestoreDb.Collection("writing_exam_history")
+                .WhereEqualTo("exam_set_id", examId)
+                .Count().GetSnapshotAsync();
+                
+            return (int)((speakingSnap.Count ?? 0) + (writingSnap.Count ?? 0));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[ExamRepository] Error getting attempts for {examId}: {ex.Message}");
+            return 0;
+        }
     }
 
     private ListeningQuestion MapToQuestion(DocumentSnapshot doc)
@@ -191,6 +228,8 @@ public class ExamRepository : IExamRepository
         if (doc.ContainsField("is_practice")) exam.IsPractice = doc.GetValue<bool>("is_practice");
         if (doc.ContainsField("is_premium")) exam.IsPremium = doc.GetValue<bool>("is_premium");
         if (doc.ContainsField("is_published")) exam.IsPublished = doc.GetValue<bool>("is_published");
+        if (doc.ContainsField("exam_type")) exam.ExamType = doc.GetValue<string>("exam_type");
+        if (doc.ContainsField("attempts")) exam.Attempts = doc.GetValue<int>("attempts");
         
         if (doc.ContainsField("question_ids"))
         {
@@ -203,5 +242,69 @@ public class ExamRepository : IExamRepository
         }
 
         return exam;
+    }
+
+    public async Task<string> AddExamAsync(Exam exam)
+    {
+        var docRef = string.IsNullOrEmpty(exam.Id)
+            ? _firestoreDb.Collection(CollectionName).Document()
+            : _firestoreDb.Collection(CollectionName).Document(exam.Id);
+
+        var data = new Dictionary<string, object>
+        {
+            { "id", docRef.Id },
+            { "title", exam.Title },
+            { "description", exam.Description ?? "" },
+            { "difficulty", exam.Difficulty },
+            { "duration", exam.Duration },
+            { "year", exam.Year },
+            { "image_url", exam.ImageUrl ?? "" },
+            { "audio_url", exam.AudioUrl ?? "" },
+            { "is_exam", exam.IsExam },
+            { "is_practice", exam.IsPractice },
+            { "is_premium", exam.IsPremium },
+            { "is_published", exam.IsPublished },
+            { "exam_type", exam.ExamType ?? "full" },
+            { "question_ids", exam.QuestionIds }
+        };
+
+        await docRef.SetAsync(data);
+        return docRef.Id;
+    }
+
+    public async Task<bool> UpdateExamAsync(Exam exam)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(exam.Id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+
+        var updates = new Dictionary<string, object>();
+
+        if (exam.Title != null)       updates["title"]       = exam.Title;
+        if (exam.Description != null) updates["description"] = exam.Description;
+        if (exam.Difficulty != null)  updates["difficulty"]  = exam.Difficulty;
+        if (exam.Duration > 0)        updates["duration"]    = exam.Duration;
+        if (exam.Year > 0)            updates["year"]        = exam.Year;
+        if (exam.ImageUrl != null)    updates["image_url"]   = exam.ImageUrl;
+        if (exam.AudioUrl != null)    updates["audio_url"]   = exam.AudioUrl;
+        if (exam.ExamType != null)    updates["exam_type"]   = exam.ExamType;
+
+        // bool fields — always update if explicitly set
+        updates["is_exam"]      = exam.IsExam;
+        updates["is_practice"]  = exam.IsPractice;
+        updates["is_premium"]   = exam.IsPremium;
+        updates["is_published"] = exam.IsPublished;
+
+        await docRef.UpdateAsync(updates);
+        return true;
+    }
+
+    public async Task<bool> DeleteExamAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+        await docRef.DeleteAsync();
+        return true;
     }
 }

@@ -9,4 +9,7 @@ public interface IExamRepository
     Task<IEnumerable<Exam>> GetAllAsync();
     Task<Exam?> GetByIdAsync(string id);
     Task<IEnumerable<Exam>> GetByFilterAsync(bool? isExam, bool? isPractice);
+    Task<string> AddExamAsync(Exam exam);
+    Task<bool> UpdateExamAsync(Exam exam);
+    Task<bool> DeleteExamAsync(string id);
 }

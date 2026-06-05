@@ -206,7 +206,8 @@ public class WritingQuestionRepository : IWritingQuestionRepository
             { "topic", question.Topic ?? "" },
             { "difficulty", question.Difficulty ?? "medium" },
             { "exam_set_id", question.ExamSetId ?? "" },
-            { "is_practice", question.IsPractice }
+            { "is_practice", question.IsPractice },
+            { "is_exam", question.IsExam }
         };
 
         if (includeCreatedAt)
@@ -240,6 +241,7 @@ public class WritingQuestionRepository : IWritingQuestionRepository
         if (doc.ContainsField("difficulty")) wq.Difficulty = doc.GetValue<string>("difficulty");
         if (doc.ContainsField("exam_set_id")) wq.ExamSetId = doc.GetValue<string?>("exam_set_id");
         if (doc.ContainsField("is_practice")) wq.IsPractice = doc.GetValue<bool>("is_practice");
+        if (doc.ContainsField("is_exam")) wq.IsExam = doc.GetValue<bool>("is_exam");
         
         // Skip created_at - Firestore Timestamp not directly convertible to DateTime
         // Frontend doesn't need this info anyway

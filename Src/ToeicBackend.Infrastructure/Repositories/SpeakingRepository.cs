@@ -469,6 +469,57 @@ public class SpeakingRepository : ISpeakingRepository
         EvictCache(question);
     }
 
+    public async Task<bool> UpdateAsync(string id, SpeakingQuestion question)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+
+        var data = new Dictionary<string, object>
+        {
+            { "task_type",          question.TaskType ?? "" },
+            { "task_number",        question.TaskNumber },
+            { "prompt_text",        question.PromptText ?? "" },
+            { "prompt_image_url",   question.PromptImageUrl ?? "" },
+            { "prompt_audio_url",   question.PromptAudioUrl ?? "" },
+            { "image_url",          question.ImageUrl ?? "" },
+            { "audio_url",          question.AudioUrl ?? "" },
+            { "preparation_time",   question.PreparationTime },
+            { "response_time",      question.ResponseTime },
+            { "difficulty",         question.Difficulty ?? "medium" },
+            { "ai_prompt",          question.AiPrompt ?? "" },
+            { "scoring_criteria",   question.ScoringCriteria ?? new List<string>() },
+            { "exam_set_id",        question.ExamSetId ?? "" },
+            { "topic",              question.Topic ?? "" },
+            { "is_practice",        question.IsPractice },
+            { "is_exam",            question.IsExam },
+            { "max_score",          question.MaxScore },
+            { "sample_answer",      question.SampleAnswer ?? "" },
+            { "questions",          question.Questions ?? new List<string>() },
+            { "answer_times",       question.AnswerTimes ?? new List<int>() },
+        };
+
+        if (question.Explanation != null)
+        {
+            var explanationData = new Dictionary<string, object>
+            {
+                { "translation",              question.Explanation.Translation ?? "" },
+                { "context_translation",      question.Explanation.ContextTranslation ?? "" },
+                { "questions_translation",    question.Explanation.QuestionsTranslation ?? new List<string>() },
+                { "sample_answers",           question.Explanation.SampleAnswers ?? new List<string>() },
+                { "sample_answers_translation", question.Explanation.SampleAnswersTranslation ?? new List<string>() },
+                { "keywords", question.Explanation.Keywords?.Select(k => new Dictionary<string, object>
+                    { { "word", k.Word ?? "" }, { "ipa", k.Ipa ?? "" }, { "meaning", k.Meaning ?? "" } }).ToList<object>()
+                    ?? new List<object>() }
+            };
+            data["explanation"] = explanationData;
+        }
+
+        await docRef.UpdateAsync(data);
+        EvictCache(question);
+        return true;
+    }
+
     public async Task<bool> DeleteAsync(string id)
     {
         var docRef = _firestoreDb.Collection(CollectionName).Document(id);

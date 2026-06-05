@@ -1,0 +1,17 @@
+﻿TaskNumber,TaskType,Id,PromptText,PromptImage,GivenWords,EmailContent,EmailQuestions,ExplanationVi,MinWords,TimeLimit,MaxScore,Topic,Difficulty,SampleAnswer,SampleAnswerTranslation
+1,write_sentence,t6_wrt_task1_001,"Write one sentence based on a picture using the given words.",wrt_test6_t1_q1.png,"hard hat, arm",,,,8,3,office picture,easy,"The worker is carrying a hard hat under his arm.","Người công nhân đang cầm một chiếc mũ bảo hộ dưới cánh tay của mình."
+2,write_sentence,t6_wrt_task2_001,"Write one sentence based on a picture using the given words.",wrt_test6_t2_q2.png,"computer, typing",,,,8,3,office picture,easy,"She is typing a report on the computer.","Cô ấy đang gõ báo cáo trên máy tính."
+3,write_sentence,t6_wrt_task3_001,"Write one sentence based on a picture using the given words.",wrt_test6_t3_q3.png,"meeting, discuss",,,,8,3,office picture,easy,"They are holding a meeting to discuss the project.","Họ đang tổ chức cuộc họp để thảo luận về dự án."
+4,write_sentence,t6_wrt_task4_001,"Write one sentence based on a picture using the given words.",wrt_test6_t4_q4.png,"phone, talking",,,,8,3,office picture,easy,"The man is talking on the phone in his office.","Người ông đang nói chuyện điện thoại trong văn phòng của mình."
+5,write_sentence,t6_wrt_task5_001,"Write one sentence based on a picture using the given words.",wrt_test6_t5_q5.png,"document, signing",,,,8,3,office picture,easy,"He is signing a business document at the desk.","Anh ấy đang ký một tài liệu kinh doanh tại bàn làm việc."
+6,respond_email,t6_wrt_task6_001,"Respond to the written request.",,,"From: Emily Clark
+Dear Mr. Wilson,
+Due to an unexpected conflict, the meeting has been rescheduled to August 16 at 10:00 A.M.","Confirm whether the new meeting time works for you. | If it does not work, suggest another suitable time.","Từ: Emily Clark
+Kính gửi ông Wilson,
+Do trùng lịch đột xuất, cuộc họp được dời sang ngày 16 tháng 8 lúc 10 sáng.",,10,4,meeting reschedule,medium,"Dear Ms. Clark, The new meeting time on August 16 works well for me.","Kính gửi cô Clark, Thời gian họp mới hoàn toàn phù hợp với tôi."
+7,respond_email,t6_wrt_task7_001,"Respond to the written request.",,,"From: Customer Service
+Dear Valued Customer,
+Thank you for purchasing our product. Please let us know how we can improve.","Rate your satisfaction with the product. | Suggest one area of improvement.","Từ: Dịch vụ khách hàng
+Kính gửi quý khách,
+Cảm ơn bạn đã mua sản phẩm của chúng tôi. Hãy cho chúng tôi biết làm thế nào chúng tôi có thể cải thiện.",,10,4,product feedback,medium,"Dear Customer Service, I am highly satisfied with the product, but suggest adding a longer power cord.","Kính gửi Dịch vụ khách hàng, Tôi rất hài lòng với sản phẩm, nhưng đề xuất thêm dây nguồn dài hơn."
+8,opinion_essay,t6_wrt_task8_001,"What do you think are the most important characteristics for a job you want to have? Support your opinion with details.",,,,,"When choosing a job, people often consider salary, working conditions...",,300,30,5,job characteristics,hard,"In my opinion, the most important characteristics of a job are a positive work environment, growth, and balance.","Theo tôi, các đặc điểm quan trọng nhất của công việc là môi trường tích cực, sự phát triển và sự cân bằng."

@@ -1,0 +1,15 @@
+﻿Part,Id,QuestionText,OptionA,OptionB,OptionC,OptionD,CorrectAnswer,Explanation,ExplanationVi,ScriptOrPassage,Translation,ImageFileName,AudioFileName,GroupId
+1,t6_q_part1_1,,A,B,C,D,A,Explanation En,Explanation Vi,,,lr_test6_p1_q1.png,lr_test6_p1_q1.mp3,
+2,t6_q_part2_7,,A,B,C,,B,Explanation En,Explanation Vi,"M: Where is the meeting?
+W: In room 201.","M: Cuộc họp ở đâu?
+W: Ở phòng 201.",,lr_test6_p2_q7.mp3,
+3,t6_q_part3_32,"Why does the woman call?","Job offer","Meeting schedule","Salary adjustment","Company policy",B,"Explanation En","Explanation Vi","W: Hello Jingdao, everybody seemed to enjoy the company picnic.
+M: Yes, it was great.","W: Xin chào Jingdao, mọi người đều thích buổi dã ngoại công ty.
+M: Đúng vậy.",lr_test6_p3_g1.png,lr_test6_p3_g1.mp3,t6_group_part3_01
+3,t6_q_part3_33,"What will the man do next?","Review documents","Confirm attendance","Resign from his post","Approve the budget",A,"Explanation En","Explanation Vi","W: Hello Jingdao, everybody seemed to enjoy the company picnic.
+M: Yes, it was great.","W: Xin chào Jingdao, mọi người đều thích buổi dã ngoại công ty.
+M: Đúng vậy.",lr_test6_p3_g1.png,lr_test6_p3_g1.mp3,t6_group_part3_01
+4,t6_q_part4_71,"What is the purpose of the talk?","To announce a construction project","To introduce a new manager","To describe a schedule change","To apologize for a delay",D,"Explanation En","Explanation Vi","M: Attention passengers, the train has been delayed due to maintenance.","M: Chú ý hành khách, chuyến tàu đã bị hoãn do bảo trì.",,lr_test6_p4_g1.mp3,t6_group_part4_01
+5,t6_q_part5_101,"Former CEO Ken Nakata spoke about ------- career experiences.","he","his","him","himself",B,"Explanation En","Explanation Vi,,,,,
+6,t6_q_part6_131,"Choose the correct word.","develop","development","developed","developing",B,"Explanation En","Explanation Vi","We are writing to announce the ------- of our new software.","Chúng tôi viết thư này để thông báo về sự phát triển của phần mềm mới.",,,t6_group_part6_01
+7,t6_q_part7_147,"What is stated about the conference?","It is free.","It is held in Chicago.","It has been cancelled.","It starts at 9 A.M.",B,"Explanation En","Explanation Vi","Welcome to the Chicago Tech Conference.","Chào mừng đến với Hội nghị Công nghệ Chicago.",lr_test6_p7_g1.png,,t6_group_part7_01

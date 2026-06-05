@@ -9,4 +9,7 @@ public interface IExamService
     Task<IEnumerable<ExamDto>> GetAllAsync();
     Task<ExamDto?> GetByIdAsync(string id);
     Task<IEnumerable<ExamDto>> GetByFilterAsync(bool? isExam, bool? isPractice);
+    Task<ExamDto> CreateExamAsync(SaveExamDto dto);
+    Task<ExamDto?> UpdateExamAsync(string id, UpdateExamDto dto);
+    Task<bool> DeleteExamAsync(string id);
 }
