@@ -11,4 +11,10 @@ public interface IAuthService
     Task<string> GeneratePasswordResetTokenAsync(string email);
     Task<bool> ValidatePasswordResetTokenAsync(string email, string token);
     Task<bool> ResetPasswordAsync(string email, string newPassword);
+
+    // Administrative user actions
+    Task<string> CreateFirebaseUserAsync(string email, string password, string displayName);
+    Task UpdateFirebaseUserAsync(string uid, string? email, string? password, string? displayName);
+    Task DeleteFirebaseUserAsync(string uid);
 }
+

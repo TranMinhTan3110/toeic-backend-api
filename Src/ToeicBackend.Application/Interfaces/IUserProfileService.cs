@@ -11,6 +11,10 @@ public interface IUserProfileService
     Task<PagedUsersResultDto> GetPagedUsersAdminAsync(int page, int pageSize, string? searchTerm, string? status, string? role);
     Task<bool> LockUserAsync(string userId);
     Task<bool> UnlockUserAsync(string userId);
+    Task<UserProfileDto> CreateUserAdminAsync(string userId, string email, string displayName, string role);
+    Task<UserProfileDto?> UpdateUserAdminAsync(string userId, string email, string displayName, string role);
+    Task<bool> AssignRoleAsync(string userId, string role);
 }
+
 
 
