@@ -134,11 +134,18 @@ public class UserProfileService : IUserProfileService
                 filteredQuery = filteredQuery.Where(u => !u.IsLocked);
         }
 
-        // 4. Lọc theo vai trò (User, Admin)
+        // 4. Lọc theo vai trò (User, Admin, Admins)
         if (!string.IsNullOrWhiteSpace(role) && role != "all")
         {
             var roleLower = role.ToLower();
-            filteredQuery = filteredQuery.Where(u => u.Role.ToLower() == roleLower);
+            if (roleLower == "admin")
+            {
+                filteredQuery = filteredQuery.Where(u => u.Role.ToLower() == "admin" || u.Role.ToLower() == "superadmin");
+            }
+            else
+            {
+                filteredQuery = filteredQuery.Where(u => u.Role.ToLower() == roleLower);
+            }
         }
 
         // 5. Phân trang
@@ -238,4 +245,52 @@ public class UserProfileService : IUserProfileService
         var trimmed = value.Trim();
         return string.IsNullOrEmpty(trimmed) ? null : trimmed;
     }
+
+    public async Task<UserProfileDto> CreateUserAdminAsync(string userId, string email, string displayName, string role)
+    {
+        var newUser = new Domain.Entities.User
+        {
+            Uid = userId,
+            DisplayName = displayName,
+            Email = email,
+            Role = role,
+            CreatedAt = DateTime.UtcNow,
+            TargetScore = 0,
+            CurrentLevel = "beginner",
+            Plan = "free",
+            StreakDays = 0,
+            ExperiencePoints = 0,
+            TotalStudyMinutes = 0,
+            PreferredSkills = new List<string>()
+        };
+        await _userRepository.CreateAsync(newUser);
+        _cache.Remove(AdminUsersCacheKey);
+        return MapToDto(newUser);
+    }
+
+    public async Task<UserProfileDto?> UpdateUserAdminAsync(string userId, string email, string displayName, string role)
+    {
+        var existing = await _userRepository.GetByIdAsync(userId);
+        if (existing == null) return null;
+
+        existing.Email = email;
+        existing.DisplayName = displayName;
+        existing.Role = role;
+
+        await _userRepository.UpdateAsync(existing);
+        _cache.Remove(AdminUsersCacheKey);
+        return MapToDto(existing);
+    }
+
+    public async Task<bool> AssignRoleAsync(string userId, string role)
+    {
+        var existing = await _userRepository.GetByIdAsync(userId);
+        if (existing == null) return false;
+
+        existing.Role = role;
+        await _userRepository.UpdateAsync(existing);
+        _cache.Remove(AdminUsersCacheKey);
+        return true;
+    }
 }
+
