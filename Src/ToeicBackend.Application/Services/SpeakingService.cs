@@ -42,8 +42,39 @@ public class SpeakingService : ISpeakingService
     public async Task<IEnumerable<SpeakingQuestionDto>> GetByExamSetIdAsync(string examSetId)
     {
         var entities = await _repository.GetByExamSetIdAsync(examSetId);
+        
+        if (entities == null || !entities.Any())
+        {
+            string? alternateId = null;
+            if (examSetId.StartsWith("test_", StringComparison.OrdinalIgnoreCase))
+            {
+                if (int.TryParse(examSetId.Substring(5), out int num))
+                {
+                    alternateId = $"ETS-SPK-2024-{num:D2}";
+                }
+            }
+            else if (examSetId.StartsWith("ETS-SPK-2024-", StringComparison.OrdinalIgnoreCase))
+            {
+                if (int.TryParse(examSetId.Substring(13), out int num))
+                {
+                    alternateId = $"test_{num}";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(alternateId))
+            {
+                Console.WriteLine($"[DEBUG] No speaking questions found for '{examSetId}'. Retrying with alternate ID: '{alternateId}'");
+                var altEntities = await _repository.GetByExamSetIdAsync(alternateId);
+                if (altEntities != null && altEntities.Any())
+                {
+                    entities = altEntities;
+                }
+            }
+        }
+        
         return entities.Select(MapToDto);
     }
+
 
     public async Task<SpeakingQuestionDto?> GetByIdAsync(string id)
     {
@@ -104,5 +135,15 @@ public class SpeakingService : ISpeakingService
             SampleAnswers = explanation.SampleAnswers,
             SampleAnswersTranslation = explanation.SampleAnswersTranslation
         };
+    }
+
+    public async Task AddQuestionAsync(SpeakingQuestion entity)
+    {
+        await _repository.AddAsync(entity);
+    }
+
+    public async Task<bool> DeleteQuestionAsync(string id)
+    {
+        return await _repository.DeleteAsync(id);
     }
 }

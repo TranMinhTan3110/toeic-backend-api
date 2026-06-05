@@ -140,6 +140,30 @@ Nội dung JSON của bộ câu hỏi thực hành cho '{topicTitle}':";
         byte[]? audioBytes = null,
         string? mimeType = null)
     {
+        bool hasAudio = audioBytes != null && audioBytes.Length > 0;
+        bool hasTranscript = !string.IsNullOrWhiteSpace(userTranscript) && 
+                              !userTranscript.Contains("Không nhận diện được giọng nói") && 
+                              !userTranscript.Contains("bỏ qua") && 
+                              userTranscript.Trim() != "...";
+
+        if (!hasAudio && !hasTranscript)
+        {
+            return new SpeakingEvaluationDto
+            {
+                OverallScore = 0,
+                Passed = false,
+                Feedback = "Hệ thống không nhận diện được giọng nói của bạn hoặc bạn đã bỏ qua câu hỏi. Vui lòng nói to rõ hoặc kiểm tra lại micro và thử lại.",
+                Transcript = string.IsNullOrWhiteSpace(userTranscript) ? "(Bỏ qua)" : userTranscript,
+                CriteriaScores = new Dictionary<string, double>
+                {
+                    { "Phát âm", 0 },
+                    { "Lưu loát", 0 },
+                    { "Ngữ pháp", 0 },
+                    { "Từ vựng", 0 }
+                }
+            };
+        }
+
         var samplesBlock = sampleAnswers.Count > 0
             ? string.Join("\n---\n", sampleAnswers.Select((s, i) => $"[Mẫu {i + 1}]\n{s}"))
             : "(Không có bài mẫu — chấm theo tiêu chí TOEIC Speaking.)";
@@ -177,7 +201,7 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             return cachedEval;
         }
 
-        var raw = await CallGeminiAsync(prompt, 2000, audioBytes, mimeType);
+        var raw = await CallGeminiAsync(prompt, 2000, audioBytes, mimeType, isJson: true);
         var dto = ParseSpeakingEvaluationJson(raw, userTranscript);
 
         if (dto.OverallScore > 0)
@@ -311,7 +335,7 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             return cachedEval;
         }
 
-        var raw = await CallGeminiAsync(prompt, 3000);
+        var raw = await CallGeminiAsync(prompt, 3000, isJson: true);
         var dto = ParseWritingEvaluationJson(raw, userAnswer);
 
         if (dto.OverallScore > 0)
@@ -396,10 +420,10 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
         return match.Success ? match.Value : trimmed;
     }
 
-    private async Task<string> CallGeminiAsync(string prompt, int maxTokens, byte[]? audioBytes = null, string? mimeType = null)
+    private async Task<string> CallGeminiAsync(string prompt, int maxTokens, byte[]? audioBytes = null, string? mimeType = null, bool isJson = false)
     {
         // Debug để xác nhận Backend đang chạy bản mới nhất
-        Console.WriteLine($"[GEMINI DEBUG] Đang gọi AI với maxTokens: {maxTokens}, có audio: {audioBytes != null}");
+        Console.WriteLine($"[GEMINI DEBUG] Đang gọi AI với maxTokens: {maxTokens}, có audio: {audioBytes != null}, isJson: {isJson}");
 
         object partsArray;
 
@@ -407,6 +431,10 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
         {
             var base64Audio = Convert.ToBase64String(audioBytes);
             var resolvedMime = string.IsNullOrWhiteSpace(mimeType) ? "audio/m4a" : mimeType;
+            if (resolvedMime.IndexOf("webm", StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                resolvedMime = "audio/webm";
+            }
             partsArray = new object[]
             {
                 new { text = prompt },
@@ -432,11 +460,18 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             {
                 new { parts = partsArray }
             },
-            generationConfig = new
-            {
-                maxOutputTokens = maxTokens,
-                temperature = 0.7
-            }
+            generationConfig = isJson
+                ? (object)new
+                {
+                    maxOutputTokens = maxTokens,
+                    temperature = 0.7,
+                    responseMimeType = "application/json"
+                }
+                : new
+                {
+                    maxOutputTokens = maxTokens,
+                    temperature = 0.7
+                }
         };
 
         var json = JsonSerializer.Serialize(requestBody);

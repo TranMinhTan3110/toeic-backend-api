@@ -292,5 +292,53 @@ public class ListeningRepository : IListeningRepository
         await docRef.DeleteAsync();
         return true;
     }
+
+    public async Task<bool> UpdateQuestionAsync(ListeningQuestion question)
+    {
+        if (string.IsNullOrEmpty(question.Id)) return false;
+        var docRef = _firestoreDb.Collection(QuestionsCollection).Document(question.Id);
+        
+        var data = new Dictionary<string, object>
+        {
+            { "part", question.Part },
+            { "question_text", question.QuestionText ?? "" },
+            { "image_url", question.ImageUrl ?? "" },
+            { "audio_url", question.AudioUrl ?? "" },
+            { "options", question.Options },
+            { "correct_answer", question.CorrectAnswer },
+            { "explanation", question.Explanation ?? "" },
+            { "explanation_vi", question.ExplanationVi ?? "" },
+            { "script", question.Script ?? "" },
+            { "group_id", question.GroupId ?? "" },
+            { "difficulty", question.Difficulty },
+            { "skill", question.Skill },
+            { "is_for_exam", question.IsForExam },
+            { "is_for_practice", question.IsForPractice }
+        };
+
+        await docRef.SetAsync(data, SetOptions.MergeAll);
+        return true;
+    }
+
+    public async Task<bool> UpdateGroupAsync(QuestionGroup group)
+    {
+        if (string.IsNullOrEmpty(group.Id)) return false;
+        var docRef = _firestoreDb.Collection(GroupsCollection).Document(group.Id);
+
+        var data = new Dictionary<string, object>
+        {
+            { "part", group.Part },
+            { "passage_text", group.PassageText ?? "" },
+            { "script", group.Script ?? "" },
+            { "image_url", group.ImageUrl ?? "" },
+            { "audio_url", group.AudioUrl ?? "" },
+            { "question_count", group.QuestionCount },
+            { "source", group.Source ?? "" },
+            { "question_ids", group.QuestionIds }
+        };
+
+        await docRef.SetAsync(data, SetOptions.MergeAll);
+        return true;
+    }
 }
 

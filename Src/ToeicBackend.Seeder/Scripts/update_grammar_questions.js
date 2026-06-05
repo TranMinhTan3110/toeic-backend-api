@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const filePath = path.join(__dirname, 'SeedData', 'questions.json');
+const filePath = path.join(__dirname, '..', 'SeedData', 'questions.json');
 
 if (!fs.existsSync(filePath)) {
   console.error(`[ERROR] File not found: ${filePath}`);

@@ -62,4 +62,27 @@ public class EpEventRepository : IEpEventRepository
             return false;
         }
     }
+
+    public async Task<bool> ExistsForReferenceEverAsync(
+        string userId,
+        string activityType,
+        string referenceId)
+    {
+        var query = _firestoreDb.Collection(CollectionName)
+            .WhereEqualTo(nameof(EpEvent.UserId), userId)
+            .WhereEqualTo(nameof(EpEvent.ActivityType), activityType)
+            .WhereEqualTo(nameof(EpEvent.ReferenceId), referenceId)
+            .Limit(1);
+
+        try
+        {
+            var snapshot = await query.GetSnapshotAsync();
+            return snapshot.Count > 0;
+        }
+        catch (RpcException ex) when (ex.StatusCode == StatusCode.FailedPrecondition)
+        {
+            Console.WriteLine("[EpEventRepository] Thiếu Firestore index (ExistsForReferenceEver).");
+            return false;
+        }
+    }
 }

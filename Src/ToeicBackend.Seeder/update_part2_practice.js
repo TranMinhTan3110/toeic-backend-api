@@ -26,7 +26,7 @@ data.forEach(q => {
         count_id++;
         count_audio++;
     } else if (qid.startsWith('p_q_part2_')) {
-        let pure_id = qid.substring(2); // Remove 'p_'
+        let pure_id = qid.substring(2); 
         q.audio_url = `${AUDIO_BASE}${pure_id}.mp3`;
         count_audio++;
     }

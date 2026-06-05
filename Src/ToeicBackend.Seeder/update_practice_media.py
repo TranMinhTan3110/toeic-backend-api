@@ -31,8 +31,8 @@ def update_practice_questions():
         json.dump(data, f, ensure_ascii=False, indent=4)
     
     print(f"--- KẾT QUẢ CẬP NHẬT PRACTICE LISTENING ---")
-    print(f"✔ Đã gán {count_img} link ảnh.")
-    print(f"✔ Đã gán {count_audio} link audio.")
+    print(f"Đã gán {count_img} link ảnh.")
+    print(f" Đã gán {count_audio} link audio.")
 
 if __name__ == "__main__":
     update_practice_questions()

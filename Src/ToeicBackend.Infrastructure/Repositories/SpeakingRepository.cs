@@ -397,4 +397,122 @@ public class SpeakingRepository : ISpeakingRepository
         value = raw.ToString() ?? string.Empty;
         return !string.IsNullOrWhiteSpace(value);
     }
+
+    public async Task AddAsync(SpeakingQuestion question)
+    {
+        var docRef = string.IsNullOrEmpty(question.Id)
+            ? _firestoreDb.Collection(CollectionName).Document()
+            : _firestoreDb.Collection(CollectionName).Document(question.Id);
+
+        if (string.IsNullOrEmpty(question.Id))
+        {
+            question.Id = docRef.Id;
+        }
+
+        var data = new Dictionary<string, object>
+        {
+            { "task_type", question.TaskType ?? "" },
+            { "task_number", question.TaskNumber },
+            { "prompt_text", question.PromptText ?? "" },
+            { "prompt_image_url", question.PromptImageUrl ?? "" },
+            { "prompt_audio_url", question.PromptAudioUrl ?? "" },
+            { "image_url", question.ImageUrl ?? "" },
+            { "audio_url", question.AudioUrl ?? "" },
+            { "preparation_time", question.PreparationTime },
+            { "response_time", question.ResponseTime },
+            { "difficulty", question.Difficulty ?? "medium" },
+            { "ai_prompt", question.AiPrompt ?? "" },
+            { "scoring_criteria", question.ScoringCriteria ?? new List<string>() },
+            { "exam_set_id", question.ExamSetId ?? "" },
+            { "topic", question.Topic ?? "" },
+            { "is_practice", question.IsPractice },
+            { "is_exam", question.IsExam },
+            { "max_score", question.MaxScore },
+            { "sample_answer", question.SampleAnswer ?? "" },
+            { "questions", question.Questions ?? new List<string>() },
+            { "answer_times", question.AnswerTimes ?? new List<int>() },
+            { "created_at", FieldValue.ServerTimestamp }
+        };
+
+        if (question.Explanation != null)
+        {
+            var explanationData = new Dictionary<string, object>
+            {
+                { "translation", question.Explanation.Translation ?? "" },
+                { "context_translation", question.Explanation.ContextTranslation ?? "" },
+                { "questions_translation", question.Explanation.QuestionsTranslation ?? new List<string>() },
+                { "sample_answers", question.Explanation.SampleAnswers ?? new List<string>() },
+                { "sample_answers_translation", question.Explanation.SampleAnswersTranslation ?? new List<string>() }
+            };
+
+            if (question.Explanation.Keywords != null)
+            {
+                var keywordsData = question.Explanation.Keywords.Select(k => new Dictionary<string, object>
+                {
+                    { "word", k.Word ?? "" },
+                    { "ipa", k.Ipa ?? "" },
+                    { "meaning", k.Meaning ?? "" }
+                }).ToList();
+                explanationData.Add("keywords", keywordsData);
+            }
+            else
+            {
+                explanationData.Add("keywords", new List<object>());
+            }
+
+            data.Add("explanation", explanationData);
+        }
+
+        await docRef.SetAsync(data, SetOptions.Overwrite);
+
+        // Evict cache
+        EvictCache(question);
+    }
+
+    public async Task<bool> DeleteAsync(string id)
+    {
+        var docRef = _firestoreDb.Collection(CollectionName).Document(id);
+        var snapshot = await docRef.GetSnapshotAsync();
+        if (!snapshot.Exists) return false;
+
+        var question = MapToDomain(snapshot);
+        await docRef.DeleteAsync();
+
+        // Evict cache
+        EvictCache(question);
+        return true;
+    }
+
+    private void EvictCache(SpeakingQuestion question)
+    {
+        _cache.Remove("speaking_questions_all");
+        _cache.Remove($"speaking_questions_task_{question.TaskNumber}");
+        _cache.Remove($"speaking_question_id_{question.Id}");
+
+        // Evict general list caches
+        _cache.Remove("speaking_questions_filter_true_true");
+        _cache.Remove("speaking_questions_filter_true_false");
+        _cache.Remove("speaking_questions_filter_false_true");
+        _cache.Remove("speaking_questions_filter_false_false");
+        _cache.Remove("speaking_questions_filter_null_null");
+        _cache.Remove("speaking_questions_filter_true_null");
+        _cache.Remove("speaking_questions_filter_false_null");
+        _cache.Remove("speaking_questions_filter_null_true");
+        _cache.Remove("speaking_questions_filter_null_false");
+
+        _cache.Remove("speaking_questions_count_true_true");
+        _cache.Remove("speaking_questions_count_true_false");
+        _cache.Remove("speaking_questions_count_false_true");
+        _cache.Remove("speaking_questions_count_false_false");
+        _cache.Remove("speaking_questions_count_null_null");
+        _cache.Remove("speaking_questions_count_true_null");
+        _cache.Remove("speaking_questions_count_false_null");
+        _cache.Remove("speaking_questions_count_null_true");
+        _cache.Remove("speaking_questions_count_null_false");
+
+        if (!string.IsNullOrEmpty(question.ExamSetId))
+        {
+            _cache.Remove($"speaking_questions_exam_set_{question.ExamSetId}");
+        }
+    }
 }
