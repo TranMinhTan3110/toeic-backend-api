@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ToeicBackend.API.Extensions;
@@ -27,13 +28,26 @@ public class UsersController : ControllerBase
             return Unauthorized(new { message = "Token không hợp lệ" });
         }
 
-        var profile = await _profileService.GetProfileAsync(userId);
-        if (profile == null)
+        try
         {
-            return NotFound(new { message = "User chưa được đồng bộ. Gọi POST /api/auth/sync trước." });
-        }
+            var profile = await _profileService.GetProfileAsync(userId);
+            if (profile == null)
+            {
+                return NotFound(new { message = "User chưa được đồng bộ. Gọi POST /api/auth/sync trước." });
+            }
 
-        return Ok(profile);
+            profile.Email = User.FindFirstValue("email") ?? profile.Email;
+            profile.DisplayName = string.IsNullOrWhiteSpace(profile.DisplayName)
+                ? User.FindFirstValue("name") ?? string.Empty
+                : profile.DisplayName;
+            profile.AvatarUrl ??= User.FindFirstValue("picture");
+
+            return Ok(profile);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Không thể tải hồ sơ người dùng.", detail = ex.Message });
+        }
     }
 
     [HttpPatch("me")]
@@ -45,13 +59,40 @@ public class UsersController : ControllerBase
             return Unauthorized(new { message = "Token không hợp lệ" });
         }
 
-        var profile = await _profileService.UpdateProfileAsync(userId, dto);
-        if (profile == null)
+        try
         {
-            return NotFound(new { message = "User chưa được đồng bộ. Gọi POST /api/auth/sync trước." });
+            var profile = await _profileService.UpdateProfileAsync(userId, dto);
+            if (profile == null)
+            {
+                return NotFound(new { message = "User chưa được đồng bộ. Gọi POST /api/auth/sync trước." });
+            }
+
+            return Ok(profile);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Không thể cập nhật hồ sơ người dùng.", detail = ex.Message });
+        }
+    }
+
+    [HttpDelete("me")]
+    public async Task<IActionResult> DeleteMe()
+    {
+        var userId = User.GetFirebaseUserId();
+        if (string.IsNullOrEmpty(userId))
+        {
+            return Unauthorized(new { message = "Token không hợp lệ" });
         }
 
-        return Ok(profile);
+        try
+        {
+            await _profileService.DeleteProfileAsync(userId);
+            return Ok(new { success = true, message = "Đã xóa hồ sơ người dùng." });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = "Không thể xóa hồ sơ người dùng.", detail = ex.Message });
+        }
     }
 
     [HttpGet("admin/all")]
