@@ -210,4 +210,60 @@ public class AuthService : IAuthService
             throw;
         }
     }
+
+    public async Task<string> CreateFirebaseUserAsync(string email, string password, string displayName)
+    {
+        try
+        {
+            var args = new UserRecordArgs
+            {
+                Email = email,
+                Password = password,
+                DisplayName = displayName,
+                EmailVerified = true
+            };
+            var userRecord = await FirebaseAuth.DefaultInstance.CreateUserAsync(args);
+            return userRecord.Uid;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error creating Firebase user for email: {email}");
+            throw;
+        }
+    }
+
+    public async Task UpdateFirebaseUserAsync(string uid, string? email, string? password, string? displayName)
+    {
+        try
+        {
+            var args = new UserRecordArgs
+            {
+                Uid = uid
+            };
+            if (!string.IsNullOrEmpty(email)) args.Email = email;
+            if (!string.IsNullOrEmpty(password)) args.Password = password;
+            if (!string.IsNullOrEmpty(displayName)) args.DisplayName = displayName;
+
+            await FirebaseAuth.DefaultInstance.UpdateUserAsync(args);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error updating Firebase user with uid: {uid}");
+            throw;
+        }
+    }
+
+    public async Task DeleteFirebaseUserAsync(string uid)
+    {
+        try
+        {
+            await FirebaseAuth.DefaultInstance.DeleteUserAsync(uid);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, $"Error deleting Firebase user with uid: {uid}");
+            throw;
+        }
+    }
 }
+
