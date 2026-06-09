@@ -180,7 +180,7 @@ Bạn là giám khảo TOEIC Speaking chuyên nghiệp. Hãy lắng nghe trực 
 YÊU CẦU ĐÁNH GIÁ ĐA PHƯƠNG THỨC CHUYÊN SÂU:
 1. Hãy LẮNG NGHE trực tiếp file ghi âm đính kèm để đánh giá chính xác Ngữ âm (Pronunciation), Ngữ điệu & Trọng âm (Intonation & Stress) và Độ lưu loát (Fluency).
 2. Hãy chỉ rõ những từ bị phát âm sai, thiếu âm đuôi (ending sounds) hoặc nhấn sai trọng âm nghe thấy từ file âm thanh nếu có.
-3. Chấm điểm theo thang điểm 10 cho từng tiêu chí và cho điểm trung bình tổng quan.
+3. Chấm điểm theo thang điểm 10 cho từng tiêu chí và cho điểm trung bình tổng quan. NẾU AUDIO IM LẶNG HOẶC KHÔNG CÓ GIỌNG NÓI: CHẤM 0 ĐIỂM TOÀN BỘ VÀ GHI PHẦN TRANSCRIPT LÀ '(Không nhận diện được giọng nói)'.
 
 TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải thích thêm) theo schema:
 {{
@@ -192,7 +192,8 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
     ""Ngữ pháp"": <0-10>,
     ""Từ vựng"": <0-10>
   }},
-  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, nêu rõ thế mạnh và lỗi phát âm/ngữ điệu nghe thấy từ file audio để giúp học viên sửa đổi>""
+  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, nêu rõ thế mạnh và lỗi phát âm/ngữ điệu nghe thấy từ file audio để giúp học viên sửa đổi>"",
+  ""transcript"": ""<văn bản chính xác bạn nghe được từ file ghi âm của học viên. Nếu im lặng hoặc không rõ, ghi '(Không nhận diện được giọng nói)'>""
 }}";
 
         var cacheKey = $"speaking_eval_{taskNumber}_{userTranscript.ToLower().Trim().GetHashCode()}_{(audioBytes != null ? audioBytes.Length : 0)}";
@@ -245,13 +246,30 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
                 ? fbEl.GetString() ?? string.Empty
                 : string.Empty;
 
+            var parsedTranscript = root.TryGetProperty("transcript", out var transEl)
+                ? transEl.GetString() ?? string.Empty
+                : transcript;
+            
+            if (string.IsNullOrWhiteSpace(parsedTranscript)) parsedTranscript = "(AI đã nghe âm thanh và chấm điểm thành công, nhưng không bóc băng được thành văn bản chi tiết)";
+
+            // Ép điểm về 0 nếu AI kết luận không có giọng nói
+            if (parsedTranscript.Contains("Không nhận diện được giọng nói", StringComparison.OrdinalIgnoreCase))
+            {
+                overall = 0;
+                passed = false;
+                foreach (var key in criteria.Keys.ToList())
+                {
+                    criteria[key] = 0;
+                }
+            }
+
             return new SpeakingEvaluationDto
             {
                 OverallScore = overall,
                 Passed = passed,
                 CriteriaScores = criteria,
                 Feedback = feedback,
-                Transcript = transcript
+                Transcript = parsedTranscript
             };
         }
         catch

@@ -187,7 +187,8 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
     ""Ngữ pháp"": <0-10>,
     ""Từ vựng"": <0-10>
   }},
-  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, phân tích điểm mạnh từ vựng/ngữ pháp và lưu ý rằng đây là đánh giá dựa trên bản dịch transcript (do hệ thống Gemini đang bận hoặc quá tải)>""
+  ""feedback"": ""<nhận xét tiếng Việt, 2-4 câu, nêu rõ thế mạnh và lỗi phát âm/ngữ điệu nghe thấy từ file audio để giúp học viên sửa đổi>"",
+  ""transcript"": ""<văn bản chính xác bạn nghe được từ file ghi âm của học viên. Nếu im lặng hoặc không rõ, ghi '(Không nhận diện được giọng nói)'>""
 }}";
 
         var cacheKey = $"speaking_eval_openai_{taskNumber}_{userTranscript.ToLower().Trim().GetHashCode()}";
@@ -240,13 +241,19 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
                 ? fbEl.GetString() ?? string.Empty
                 : string.Empty;
 
+            var parsedTranscript = root.TryGetProperty("transcript", out var transEl)
+                ? transEl.GetString() ?? string.Empty
+                : transcript;
+            
+            if (string.IsNullOrWhiteSpace(parsedTranscript)) parsedTranscript = "(AI đã nghe âm thanh và chấm điểm thành công, nhưng không bóc băng được thành văn bản chi tiết)";
+
             return new SpeakingEvaluationDto
             {
                 OverallScore = overall,
                 Passed = passed,
                 CriteriaScores = criteria,
                 Feedback = feedback,
-                Transcript = transcript
+                Transcript = parsedTranscript
             };
         }
         catch
