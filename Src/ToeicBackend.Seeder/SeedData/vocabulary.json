@@ -1,0 +1,4785 @@
+[
+  {
+    "id": "vocab_001",
+    "word": "negotiate",
+    "phonetic": "/nɪˈɡoʊʃieɪt/",
+    "word_type": "verb",
+    "definition_en": "To discuss something in order to reach an agreement.",
+    "definition_vi": "Đàm phán, thương lượng.",
+    "examples": [
+      {
+        "sentence": "They negotiated a new contract with the supplier.",
+        "sentence_vi": "Họ đã đàm phán một hợp đồng mới với nhà cung cấp."
+      },
+      {
+        "sentence": "The union is negotiating better wages.",
+        "sentence_vi": "Công đoàn đang đàm phán mức lương tốt hơn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "bargain",
+      "mediate",
+      "discuss"
+    ],
+    "antonyms": [
+      "agree",
+      "accept"
+    ],
+    "collocations": [
+      "negotiate a deal",
+      "negotiate terms",
+      "negotiate a contract"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_002",
+    "word": "submit",
+    "phonetic": "/səbˈmɪt/",
+    "word_type": "verb",
+    "definition_en": "To present something for consideration or judgment.",
+    "definition_vi": "Nộp, trình, đệ trình.",
+    "examples": [
+      {
+        "sentence": "Please submit your report by Friday.",
+        "sentence_vi": "Vui lòng nộp báo cáo của bạn trước thứ Sáu."
+      },
+      {
+        "sentence": "She submitted her application online.",
+        "sentence_vi": "Cô ấy đã nộp đơn trực tuyến."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "hand in",
+      "present",
+      "file"
+    ],
+    "antonyms": [
+      "withdraw",
+      "recall"
+    ],
+    "collocations": [
+      "submit a report",
+      "submit an application",
+      "submit a request"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_003",
+    "word": "reimbursement",
+    "phonetic": "/ˌriːɪmˈbɜːrsmənt/",
+    "word_type": "noun",
+    "definition_en": "The action of repaying a person who has spent money.",
+    "definition_vi": "Việc hoàn tiền, bồi hoàn.",
+    "examples": [
+      {
+        "sentence": "Employees will receive reimbursement for travel expenses.",
+        "sentence_vi": "Nhân viên sẽ được hoàn tiền chi phí đi lại."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "repayment",
+      "refund",
+      "compensation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "expense reimbursement",
+      "seek reimbursement",
+      "claim reimbursement"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_004",
+    "word": "deadline",
+    "phonetic": "/ˈdɛdlaɪn/",
+    "word_type": "noun",
+    "definition_en": "The latest time or date by which something should be completed.",
+    "definition_vi": "Hạn chót, thời hạn cuối.",
+    "examples": [
+      {
+        "sentence": "We must meet the deadline for the project.",
+        "sentence_vi": "Chúng ta phải đáp ứng hạn chót cho dự án."
+      },
+      {
+        "sentence": "The deadline for applications is next Monday.",
+        "sentence_vi": "Hạn chót nộp đơn là thứ Hai tới."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "due date",
+      "time limit",
+      "cutoff"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "meet a deadline",
+      "miss a deadline",
+      "set a deadline"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_005",
+    "word": "implement",
+    "phonetic": "/ˈɪmplɪmɛnt/",
+    "word_type": "verb",
+    "definition_en": "To put a plan or decision into effect.",
+    "definition_vi": "Triển khai, thực hiện.",
+    "examples": [
+      {
+        "sentence": "The company will implement the new policy next month.",
+        "sentence_vi": "Công ty sẽ triển khai chính sách mới vào tháng tới."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "execute",
+      "carry out",
+      "apply"
+    ],
+    "antonyms": [
+      "cancel",
+      "abandon"
+    ],
+    "collocations": [
+      "implement a plan",
+      "implement a strategy",
+      "implement changes"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_006",
+    "word": "approve",
+    "phonetic": "/əˈpruːv/",
+    "word_type": "verb",
+    "definition_en": "To officially agree to a plan, request, etc.",
+    "definition_vi": "Chấp thuận, phê duyệt.",
+    "examples": [
+      {
+        "sentence": "The manager approved the budget for the project.",
+        "sentence_vi": "Quản lý đã phê duyệt ngân sách cho dự án."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "accept",
+      "authorize",
+      "endorse"
+    ],
+    "antonyms": [
+      "reject",
+      "refuse"
+    ],
+    "collocations": [
+      "approve a request",
+      "approve a budget",
+      "approve a plan"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_007",
+    "word": "postpone",
+    "phonetic": "/pəʊˈspəʊn/",
+    "word_type": "verb",
+    "definition_en": "To arrange for an event, etc. to take place at a time later than that first scheduled.",
+    "definition_vi": "Hoãn lại.",
+    "examples": [
+      {
+        "sentence": "The meeting was postponed until next week.",
+        "sentence_vi": "Cuộc họp đã bị hoãn lại cho đến tuần sau."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "delay",
+      "defer",
+      "put off"
+    ],
+    "antonyms": [
+      "advance",
+      "forward"
+    ],
+    "collocations": [
+      "postpone a meeting",
+      "postpone a date",
+      "postpone until"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_008",
+    "word": "notify",
+    "phonetic": "/ˈnəʊtɪfaɪ/",
+    "word_type": "verb",
+    "definition_en": "To formally or officially inform somebody about something.",
+    "definition_vi": "Thông báo.",
+    "examples": [
+      {
+        "sentence": "Please notify the HR department of any changes.",
+        "sentence_vi": "Vui lòng thông báo cho bộ phận nhân sự về bất kỳ thay đổi nào."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "inform",
+      "advise",
+      "brief"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "notify someone of",
+      "notify about",
+      "officially notify"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_009",
+    "word": "relevant",
+    "phonetic": "/ˈreləvənt/",
+    "word_type": "adjective",
+    "definition_en": "Closely connected with the subject being discussed.",
+    "definition_vi": "Liên quan, thích hợp.",
+    "examples": [
+      {
+        "sentence": "Please provide all relevant documents for the application.",
+        "sentence_vi": "Vui lòng cung cấp tất cả các tài liệu liên quan cho đơn đăng ký."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "applicable",
+      "pertinent",
+      "related"
+    ],
+    "antonyms": [
+      "irrelevant"
+    ],
+    "collocations": [
+      "relevant information",
+      "relevant experience",
+      "relevant documents"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_010",
+    "word": "substitute",
+    "phonetic": "/ˈsʌbstɪtjuːt/",
+    "word_type": "noun",
+    "definition_en": "A person or thing that you use or have instead of the one you normally use or have.",
+    "definition_vi": "Người thay thế, vật thay thế.",
+    "examples": [
+      {
+        "sentence": "We need to find a substitute for the teacher.",
+        "sentence_vi": "Chúng ta cần tìm một người thay thế cho giáo viên."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "replacement",
+      "alternative",
+      "proxy"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "substitute for",
+      "act as a substitute",
+      "temporary substitute"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_011",
+    "word": "efficient",
+    "phonetic": "/ɪˈfɪʃnt/",
+    "word_type": "adjective",
+    "definition_en": "Doing something well and thoroughly with no waste of time, money, or energy.",
+    "definition_vi": "Hiệu quả, năng suất.",
+    "examples": [
+      {
+        "sentence": "The new system is more efficient than the old one.",
+        "sentence_vi": "Hệ thống mới hiệu quả hơn hệ thống cũ."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "effective",
+      "productive",
+      "streamlined"
+    ],
+    "antonyms": [
+      "inefficient"
+    ],
+    "collocations": [
+      "efficient way",
+      "energy efficient",
+      "highly efficient"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_012",
+    "word": "expenditure",
+    "phonetic": "/ɪkˈspendɪtʃə(r)/",
+    "word_type": "noun",
+    "definition_en": "The act of spending or using money; an amount of money spent.",
+    "definition_vi": "Chi phí, sự tiêu dùng.",
+    "examples": [
+      {
+        "sentence": "The company's expenditure on marketing has increased.",
+        "sentence_vi": "Chi phí của công ty cho tiếp thị đã tăng lên."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "spending",
+      "outlay",
+      "cost"
+    ],
+    "antonyms": [
+      "income",
+      "revenue"
+    ],
+    "collocations": [
+      "capital expenditure",
+      "annual expenditure",
+      "reduce expenditure"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_013",
+    "word": "consult",
+    "phonetic": "/kənˈsʌlt/",
+    "word_type": "verb",
+    "definition_en": "To go to somebody for information or advice.",
+    "definition_vi": "Tham vấn, hỏi ý kiến.",
+    "examples": [
+      {
+        "sentence": "You should consult a lawyer before signing the contract.",
+        "sentence_vi": "Bạn nên tham vấn luật sư trước khi ký hợp đồng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "ask",
+      "seek advice",
+      "confer"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "consult a specialist",
+      "consult with",
+      "consult a manual"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_014",
+    "word": "accommodation",
+    "phonetic": "/əˌkɒməˈdeɪʃn/",
+    "word_type": "noun",
+    "definition_en": "A place to live, work, or stay in.",
+    "definition_vi": "Chỗ ở, nơi trú ngụ.",
+    "examples": [
+      {
+        "sentence": "The company will provide accommodation for the trainees.",
+        "sentence_vi": "Công ty sẽ cung cấp chỗ ở cho các thực tập sinh."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "housing",
+      "lodging",
+      "residence"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "book accommodation",
+      "hotel accommodation",
+      "provide accommodation"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_015",
+    "word": "comply",
+    "phonetic": "/kəmˈplaɪ/",
+    "word_type": "verb",
+    "definition_en": "To obey a rule, an order, etc.; to meet specified standards.",
+    "definition_vi": "Tuân thủ.",
+    "examples": [
+      {
+        "sentence": "All employees must comply with the safety regulations.",
+        "sentence_vi": "Tất cả nhân viên phải tuân thủ các quy định về an toàn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "obey",
+      "adhere to",
+      "follow"
+    ],
+    "antonyms": [
+      "violate",
+      "disobey"
+    ],
+    "collocations": [
+      "comply with a rule",
+      "comply with standards",
+      "refuse to comply"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_016",
+    "word": "collaborate",
+    "phonetic": "/kəˈlæbəreɪt/",
+    "word_type": "verb",
+    "definition_en": "To work together with somebody in order to produce or achieve something.",
+    "definition_vi": "Cộng tác.",
+    "examples": [
+      {
+        "sentence": "The two departments collaborated on the research project.",
+        "sentence_vi": "Hai bộ phận đã cộng tác trong dự án nghiên cứu."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "cooperate",
+      "work together",
+      "team up"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "collaborate on",
+      "collaborate with",
+      "closely collaborate"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_017",
+    "word": "incentive",
+    "phonetic": "/ɪnˈsentɪv/",
+    "word_type": "noun",
+    "definition_en": "Something that encourages you to do something.",
+    "definition_vi": "Sự khuyến khích, ưu đãi.",
+    "examples": [
+      {
+        "sentence": "The company offers performance-based incentives.",
+        "sentence_vi": "Công ty đưa ra các ưu đãi dựa trên hiệu suất."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "motivation",
+      "encouragement",
+      "bonus"
+    ],
+    "antonyms": [
+      "deterrent"
+    ],
+    "collocations": [
+      "financial incentive",
+      "tax incentive",
+      "provide an incentive"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_018",
+    "word": "voucher",
+    "phonetic": "/ˈvaʊtʃə(r)/",
+    "word_type": "noun",
+    "definition_en": "A printed piece of paper that can be used instead of money to pay for something.",
+    "definition_vi": "Phiếu giảm giá, chứng từ.",
+    "examples": [
+      {
+        "sentence": "I have a voucher for a free meal at that restaurant.",
+        "sentence_vi": "Tôi có một phiếu giảm giá cho một bữa ăn miễn phí tại nhà hàng đó."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "coupon",
+      "ticket",
+      "token"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "gift voucher",
+      "discount voucher",
+      "redeem a voucher"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_019",
+    "word": "candidate",
+    "phonetic": "/ˈkændɪdət/",
+    "word_type": "noun",
+    "definition_en": "A person who is applying for a job or taking a test.",
+    "definition_vi": "Ứng viên.",
+    "examples": [
+      {
+        "sentence": "We are interviewing several candidates for the position.",
+        "sentence_vi": "Chúng tôi đang phỏng vấn một vài ứng viên cho vị trí này."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "applicant",
+      "nominee",
+      "contestant"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "job candidate",
+      "successful candidate",
+      "potential candidate"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_020",
+    "word": "inventory",
+    "phonetic": "/ˈɪnvəntri/",
+    "word_type": "noun",
+    "definition_en": "A complete list of items such as property, goods in stock, or the contents of a building.",
+    "definition_vi": "Hàng tồn kho, danh mục hàng hóa.",
+    "examples": [
+      {
+        "sentence": "The store takes inventory every month.",
+        "sentence_vi": "Cửa hàng kiểm kê hàng tồn kho hàng tháng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "stock",
+      "list",
+      "catalog"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "inventory control",
+      "take inventory",
+      "inventory management"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_021",
+    "word": "department",
+    "phonetic": "/dɪˈpɑːrtmənt/",
+    "word_type": "noun",
+    "definition_en": "A division of a large organization.",
+    "definition_vi": "Phòng ban, bộ phận.",
+    "examples": [
+      {
+        "sentence": "The marketing department is planning a new campaign.",
+        "sentence_vi": "Phòng tiếp thị đang lên kế hoạch cho một chiến dịch mới."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "division",
+      "unit",
+      "branch"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "marketing department",
+      "sales department",
+      "head of department"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_022",
+    "word": "management",
+    "phonetic": "/ˈmænɪdʒmənt/",
+    "word_type": "noun",
+    "definition_en": "The process of dealing with or controlling things or people.",
+    "definition_vi": "Sự quản lý, ban quản lý.",
+    "examples": [
+      {
+        "sentence": "The management decided to delay the project.",
+        "sentence_vi": "Ban quản lý đã quyết định trì hoãn dự án."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "administration",
+      "supervision",
+      "leadership"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "top management",
+      "project management",
+      "management style"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_023",
+    "word": "headquarters",
+    "phonetic": "/ˈhedkwɔːrtərz/",
+    "word_type": "noun",
+    "definition_en": "The main office of a company.",
+    "definition_vi": "Trụ sở chính.",
+    "examples": [
+      {
+        "sentence": "Our company headquarters is located in New York.",
+        "sentence_vi": "Trụ sở chính của công ty chúng tôi đặt tại New York."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "main office",
+      "base",
+      "center"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "corporate headquarters",
+      "regional headquarters",
+      "move to headquarters"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_024",
+    "word": "schedule",
+    "phonetic": "/ˈskedʒuːl/",
+    "word_type": "noun",
+    "definition_en": "A plan of procedures or events.",
+    "definition_vi": "Lịch trình, kế hoạch.",
+    "examples": [
+      {
+        "sentence": "We need to adjust the meeting schedule.",
+        "sentence_vi": "Chúng ta cần điều chỉnh lịch họp."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "timetable",
+      "plan",
+      "program"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "busy schedule",
+      "ahead of schedule",
+      "behind schedule"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_025",
+    "word": "contract",
+    "phonetic": "/ˈkɑːntrækt/",
+    "word_type": "noun",
+    "definition_en": "A written or spoken agreement that is intended to be enforceable by law.",
+    "definition_vi": "Hợp đồng.",
+    "examples": [
+      {
+        "sentence": "The company signed a three-year contract with the supplier.",
+        "sentence_vi": "Công ty đã ký một hợp đồng ba năm với nhà cung cấp."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "agreement",
+      "deal",
+      "bond"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "sign a contract",
+      "breach of contract",
+      "employment contract"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_026",
+    "word": "promotion",
+    "phonetic": "/prəˈmoʊʃn/",
+    "word_type": "noun",
+    "definition_en": "Adancement to a higher position.",
+    "definition_vi": "Sự thăng tiến, sự thăng chức.",
+    "examples": [
+      {
+        "sentence": "She received a promotion after just six months.",
+        "sentence_vi": "Cô ấy đã được thăng chức chỉ sau sáu tháng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "advancement",
+      "upgrade",
+      "elevation"
+    ],
+    "antonyms": [
+      "demotion"
+    ],
+    "collocations": [
+      "get a promotion",
+      "seek a promotion",
+      "sales promotion"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_027",
+    "word": "requirement",
+    "phonetic": "/rɪˈkwaɪərmənt/",
+    "word_type": "noun",
+    "definition_en": "A thing that is needed or wanted.",
+    "definition_vi": "Yêu cầu, điều kiện tiên quyết.",
+    "examples": [
+      {
+        "sentence": "English proficiency is a requirement for this job.",
+        "sentence_vi": "Thành thạo tiếng Anh là một yêu cầu cho công việc này."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "necessity",
+      "essential",
+      "prerequisite"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "meet requirements",
+      "legal requirement",
+      "basic requirement"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_028",
+    "word": "policy",
+    "phonetic": "/ˈpɑːləsi/",
+    "word_type": "noun",
+    "definition_en": "A course or principle of action adopted or proposed by an organization.",
+    "definition_vi": "Chính sách.",
+    "examples": [
+      {
+        "sentence": "The company has a strict policy regarding late arrivals.",
+        "sentence_vi": "Công ty có chính sách nghiêm ngặt về việc đi muộn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "rule",
+      "strategy",
+      "procedure"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "company policy",
+      "insurance policy",
+      "public policy"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_029",
+    "word": "agreement",
+    "phonetic": "/əˈɡriːmənt/",
+    "word_type": "noun",
+    "definition_en": "A negotiated and typically legally binding arrangement.",
+    "definition_vi": "Thỏa thuận, hiệp nghị.",
+    "examples": [
+      {
+        "sentence": "The two parties reached an agreement after long discussions.",
+        "sentence_vi": "Hai bên đã đạt được thỏa thuận sau những cuộc thảo luận dài."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "450",
+    "synonyms": [
+      "settlement",
+      "accord",
+      "treaty"
+    ],
+    "antonyms": [
+      "disagreement"
+    ],
+    "collocations": [
+      "reach an agreement",
+      "under the agreement",
+      "confidentiality agreement"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_030",
+    "word": "personnel",
+    "phonetic": "/ˌpɜːrsəˈnel/",
+    "word_type": "noun",
+    "definition_en": "People employed in an organization.",
+    "definition_vi": "Nhân sự, nhân viên.",
+    "examples": [
+      {
+        "sentence": "The personnel department is in charge of recruitment.",
+        "sentence_vi": "Bộ phận nhân sự chịu trách nhiệm tuyển dụng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "staff",
+      "workforce",
+      "employees"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "personnel manager",
+      "military personnel",
+      "highly trained personnel"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_031",
+    "word": "strategy",
+    "phonetic": "/ˈstrætədʒi/",
+    "word_type": "noun",
+    "definition_en": "A plan of action designed to achieve a long-term or overall aim.",
+    "definition_vi": "Chiến lược.",
+    "examples": [
+      {
+        "sentence": "We need a new marketing strategy to increase sales.",
+        "sentence_vi": "Chúng ta cần một chiến lược tiếp thị mới để tăng doanh số."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "plan",
+      "scheme",
+      "master plan"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "marketing strategy",
+      "long-term strategy",
+      "business strategy"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_032",
+    "word": "expansion",
+    "phonetic": "/ɪkˈpænʃn/",
+    "word_type": "noun",
+    "definition_en": "The action of becoming larger or more extensive.",
+    "definition_vi": "Sự mở rộng, sự bành trướng.",
+    "examples": [
+      {
+        "sentence": "The company announced expansion plans for Asian markets.",
+        "sentence_vi": "Công ty đã công bố kế hoạch mở rộng sang thị trường châu Á."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "growth",
+      "increase",
+      "enlargement"
+    ],
+    "antonyms": [
+      "contraction"
+    ],
+    "collocations": [
+      "business expansion",
+      "rapid expansion",
+      "plans for expansion"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_033",
+    "word": "innovation",
+    "phonetic": "/ˌɪnəˈveɪʃn/",
+    "word_type": "noun",
+    "definition_en": "A new method, product, or idea.",
+    "definition_vi": "Sự đổi mới, sự cách tân.",
+    "examples": [
+      {
+        "sentence": "The bank is known for its technical innovation.",
+        "sentence_vi": "Ngân hàng được biết đến với sự đổi mới về kỹ thuật."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "novelty",
+      "invention",
+      "modernization"
+    ],
+    "antonyms": [
+      "stagnation"
+    ],
+    "collocations": [
+      "product innovation",
+      "technological innovation",
+      "encourage innovation"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_034",
+    "word": "investment",
+    "phonetic": "/ɪnˈvestmənt/",
+    "word_type": "noun",
+    "definition_en": "The action of investing money for profit or material result.",
+    "definition_vi": "Sự đầu tư, khoản đầu tư.",
+    "examples": [
+      {
+        "sentence": "The government is encouraging foreign investment.",
+        "sentence_vi": "Chính phủ đang khuyến khích đầu tư nước ngoài."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "capital",
+      "funding",
+      "backing"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "foreign investment",
+      "capital investment",
+      "return on investment"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_035",
+    "word": "productivity",
+    "phonetic": "/ˌproʊdʌkˈtɪvəti/",
+    "word_type": "noun",
+    "definition_en": "The state or quality of being productive.",
+    "definition_vi": "Năng suất, hiệu suất làm việc.",
+    "examples": [
+      {
+        "sentence": "The new equipment has increased productivity by 20%.",
+        "sentence_vi": "Thiết bị mới đã làm tăng năng suất thêm 20%."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "650",
+    "synonyms": [
+      "efficiency",
+      "output",
+      "yield"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "increase productivity",
+      "labor productivity",
+      "high productivity"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_036",
+    "word": "merger",
+    "phonetic": "/ˈmɜːrdʒər/",
+    "word_type": "noun",
+    "definition_en": "A combination of two things, especially companies, into one.",
+    "definition_vi": "Sự sáp nhập.",
+    "examples": [
+      {
+        "sentence": "The merger between the two electronics giants was approved.",
+        "sentence_vi": "Sự sáp nhập giữa hai gã khổng lồ điện tử đã được phê duyệt."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "amalgamation",
+      "combination",
+      "union"
+    ],
+    "antonyms": [
+      "separation",
+      "split"
+    ],
+    "collocations": [
+      "mergers and acquisitions",
+      "propose a merger",
+      "corporate merger"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_037",
+    "word": "acquisition",
+    "phonetic": "/ˌækwɪˈzɪʃn/",
+    "word_type": "noun",
+    "definition_en": "An asset or object bought or obtained.",
+    "definition_vi": "Sự mua lại, sự đạt được.",
+    "examples": [
+      {
+        "sentence": "The group's latest acquisition is a high-street bank.",
+        "sentence_vi": "Lần mua lại mới nhất của tập đoàn là một ngân hàng lớn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "purchase",
+      "gain",
+      "attainment"
+    ],
+    "antonyms": [
+      "loss",
+      "divestment"
+    ],
+    "collocations": [
+      "hostile acquisition",
+      "strategic acquisition",
+      "data acquisition"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_038",
+    "word": "subsidiary",
+    "phonetic": "/səbˈsɪdiˌeri/",
+    "word_type": "noun",
+    "definition_en": "A company controlled by a holding company.",
+    "definition_vi": "Công ty con, chi nhánh.",
+    "examples": [
+      {
+        "sentence": "The company has subsidiaries in over 50 countries.",
+        "sentence_vi": "Công ty có các công ty con tại hơn 50 quốc gia."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "branch",
+      "division",
+      "offshoot"
+    ],
+    "antonyms": [
+      "parent company"
+    ],
+    "collocations": [
+      "wholly owned subsidiary",
+      "foreign subsidiary",
+      "operate as a subsidiary"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_039",
+    "word": "stakeholder",
+    "phonetic": "/ˈsteɪkhoʊldər/",
+    "word_type": "noun",
+    "definition_en": "A person with an interest or concern in something.",
+    "definition_vi": "Bên liên quan, cổ đông.",
+    "examples": [
+      {
+        "sentence": "The company must consider all its stakeholders.",
+        "sentence_vi": "Công ty phải xem xét tất cả các bên liên quan của mình."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "partner",
+      "interested party",
+      "investor"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "key stakeholders",
+      "stakeholder engagement",
+      "stakeholder interests"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_040",
+    "word": "consolidation",
+    "phonetic": "/kənˌsɑːlɪˈdeɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The action or process of making something stronger or more solid.",
+    "definition_vi": "Sự hợp nhất, sự củng cố.",
+    "examples": [
+      {
+        "sentence": "The consolidation of the two departments will save money.",
+        "sentence_vi": "Sự hợp nhất của hai bộ phận sẽ tiết kiệm tiền."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "amalgamation",
+      "merging",
+      "strengthening"
+    ],
+    "antonyms": [
+      "fragmentation"
+    ],
+    "collocations": [
+      "market consolidation",
+      "debt consolidation",
+      "process of consolidation"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_041",
+    "word": "franchise",
+    "phonetic": "/ˈfræntʃaɪz/",
+    "word_type": "noun",
+    "definition_en": "An authorization granted by a government or company to an individual or group.",
+    "definition_vi": "Nhượng quyền thương mại.",
+    "examples": [
+      {
+        "sentence": "McDonald's operates many franchises around the world.",
+        "sentence_vi": "McDonald's vận hành nhiều cửa hàng nhượng quyền trên khắp thế giới."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "license",
+      "dealership",
+      "concession"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "franchise agreement",
+      "franchise owner",
+      "fast-food franchise"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_042",
+    "word": "diversification",
+    "phonetic": "/daɪˌvɜːrsɪfɪˈkeɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The process of a company enlarging or varying its range of products.",
+    "definition_vi": "Sự đa dạng hóa.",
+    "examples": [
+      {
+        "sentence": "Corporate diversification can reduce risk.",
+        "sentence_vi": "Đa dạng hóa doanh nghiệp có thể làm giảm rủi ro."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "varying",
+      "branching out",
+      "expansion"
+    ],
+    "antonyms": [
+      "specialization"
+    ],
+    "collocations": [
+      "product diversification",
+      "market diversification",
+      "strategy of diversification"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_043",
+    "word": "sustainability",
+    "phonetic": "/səˌsteɪnəˈbɪləti/",
+    "word_type": "noun",
+    "definition_en": "The ability to be maintained at a certain rate or level.",
+    "definition_vi": "Sự bền vững.",
+    "examples": [
+      {
+        "sentence": "The company is committed to environmental sustainability.",
+        "sentence_vi": "Công ty cam kết về sự bền vững môi trường."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "business",
+    "level": "800",
+    "synonyms": [
+      "continuance",
+      "viability",
+      "endurance"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "environmental sustainability",
+      "long-term sustainability",
+      "sustainability report"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_044",
+    "word": "equipment",
+    "phonetic": "/ɪˈkwɪpmənt/",
+    "word_type": "noun",
+    "definition_en": "The necessary items for a particular purpose.",
+    "definition_vi": "Thiết bị, dụng cụ.",
+    "examples": [
+      {
+        "sentence": "All office equipment should be turned off at night.",
+        "sentence_vi": "Tất cả thiết bị văn phòng nên được tắt vào ban đêm."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "gear",
+      "apparatus",
+      "hardware"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "office equipment",
+      "safety equipment",
+      "new equipment"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_045",
+    "word": "document",
+    "phonetic": "/ˈdɑːkjumənt/",
+    "word_type": "noun",
+    "definition_en": "A piece of written, printed, or electronic matter that provides information.",
+    "definition_vi": "Tài liệu.",
+    "examples": [
+      {
+        "sentence": "Please save the document before closing the program.",
+        "sentence_vi": "Vui lòng lưu tài liệu trước khi đóng chương trình."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "paper",
+      "record",
+      "file"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "legal document",
+      "confidential document",
+      "sign a document"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_046",
+    "word": "report",
+    "phonetic": "/rɪˈpɔːrt/",
+    "word_type": "noun",
+    "definition_en": "An account given of a particular matter.",
+    "definition_vi": "Báo cáo.",
+    "examples": [
+      {
+        "sentence": "The annual report shows a profit for the company.",
+        "sentence_vi": "Báo cáo thường niên cho thấy lợi nhuận của công ty."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "account",
+      "record",
+      "statement"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "annual report",
+      "progress report",
+      "write a report"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_047",
+    "word": "file",
+    "phonetic": "/faɪl/",
+    "word_type": "noun",
+    "definition_en": "A folder or box for holding loose papers.",
+    "definition_vi": "Hồ sơ, tệp tin.",
+    "examples": [
+      {
+        "sentence": "She put the letters in a blue file.",
+        "sentence_vi": "Cô ấy đã đặt những lá thư vào một hồ sơ màu xanh."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "folder",
+      "dossier",
+      "binder"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "personnel file",
+      "electronic file",
+      "open a file"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_048",
+    "word": "staff",
+    "phonetic": "/stæf/",
+    "word_type": "noun",
+    "definition_en": "All the people employed by a particular organization.",
+    "definition_vi": "Nhân viên, đội ngũ nhân viên.",
+    "examples": [
+      {
+        "sentence": "The company has a staff of 50 people.",
+        "sentence_vi": "Công ty có đội ngũ nhân viên gồm 50 người."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "450",
+    "synonyms": [
+      "employees",
+      "workforce",
+      "team"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "staff meeting",
+      "member of staff",
+      "trained staff"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_049",
+    "word": "procedure",
+    "phonetic": "/prəˈsiːdʒər/",
+    "word_type": "noun",
+    "definition_en": "An established or official way of doing something.",
+    "definition_vi": "Thủ tục, quy trình.",
+    "examples": [
+      {
+        "sentence": "What is the procedure for applying for a loan?",
+        "sentence_vi": "Thủ tục đăng ký vay tiền là gì?"
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "process",
+      "method",
+      "system"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "standard procedure",
+      "safety procedure",
+      "follow the procedure"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_050",
+    "word": "maintenance",
+    "phonetic": "/ˈmeɪntənəns/",
+    "word_type": "noun",
+    "definition_en": "The process of keeping something in good condition.",
+    "definition_vi": "Sự bảo trì, bảo dưỡng.",
+    "examples": [
+      {
+        "sentence": "The lift is out of service for maintenance.",
+        "sentence_vi": "Thang máy đang ngừng hoạt động để bảo trì."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "care",
+      "upkeep",
+      "repair"
+    ],
+    "antonyms": [
+      "neglect"
+    ],
+    "collocations": [
+      "regular maintenance",
+      "maintenance costs",
+      "building maintenance"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_051",
+    "word": "conference",
+    "phonetic": "/ˈkɑːnfərəns/",
+    "word_type": "noun",
+    "definition_en": "A formal meeting for discussion.",
+    "definition_vi": "Hội nghị.",
+    "examples": [
+      {
+        "sentence": "The annual sales conference is held in June.",
+        "sentence_vi": "Hội nghị bán hàng thường niên được tổ chức vào tháng 6."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "meeting",
+      "seminar",
+      "convention"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "attend a conference",
+      "press conference",
+      "conference room"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_052",
+    "word": "supervision",
+    "phonetic": "/ˌsuːpərˈvɪʒn/",
+    "word_type": "noun",
+    "definition_en": "The action of supervising someone or something.",
+    "definition_vi": "Sự giám sát.",
+    "examples": [
+      {
+        "sentence": "The project was done under the supervision of a manager.",
+        "sentence_vi": "Dự án được thực hiện dưới sự giám sát của một quản lý."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "oversight",
+      "management",
+      "control"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "close supervision",
+      "direct supervision",
+      "under supervision"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_053",
+    "word": "workflow",
+    "phonetic": "/ˈwɜːrkfloʊ/",
+    "word_type": "noun",
+    "definition_en": "The sequence of processes through which a piece of work passes.",
+    "definition_vi": "Luồng công việc, quy trình làm việc.",
+    "examples": [
+      {
+        "sentence": "We need to improve our internal workflow.",
+        "sentence_vi": "Chúng ta cần cải thiện luồng công việc nội bộ."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "process",
+      "routine",
+      "stream"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "efficient workflow",
+      "workflow management",
+      "automate workflow"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_054",
+    "word": "colleague",
+    "phonetic": "/ˈkɑːliːɡ/",
+    "word_type": "noun",
+    "definition_en": "A person with whom one works.",
+    "definition_vi": "Đồng nghiệp.",
+    "examples": [
+      {
+        "sentence": "I'm going to lunch with a colleague.",
+        "sentence_vi": "Tôi đang đi ăn trưa với một đồng nghiệp."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "co-worker",
+      "associate",
+      "partner"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "senior colleague",
+      "former colleague",
+      "trustworthy colleague"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_055",
+    "word": "evaluation",
+    "phonetic": "/ɪˌvæljuˈeɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The making of a judgment about the amount, number, or value of something.",
+    "definition_vi": "Sự đánh giá.",
+    "examples": [
+      {
+        "sentence": "The job performance evaluation is held annually.",
+        "sentence_vi": "Sự đánh giá hiệu quả công việc được tổ chức hàng năm."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "assessment",
+      "appraisal",
+      "rating"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "performance evaluation",
+      "preliminary evaluation",
+      "careful evaluation"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_056",
+    "word": "resolution",
+    "phonetic": "/ˌrezəˈluːʃn/",
+    "word_type": "noun",
+    "definition_en": "A firm decision to do or not to do something.",
+    "definition_vi": "Sự giải quyết, nghị quyết.",
+    "examples": [
+      {
+        "sentence": "The committee reached a resolution on the issue.",
+        "sentence_vi": "Ủy ban đã đạt được một nghị quyết về vấn này."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "decision",
+      "settlement",
+      "determination"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "pass a resolution",
+      "conflict resolution",
+      "New Year resolution"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_057",
+    "word": "regulation",
+    "phonetic": "/ˌreɡjuˈleɪʃn/",
+    "word_type": "noun",
+    "definition_en": "A rule or directive made and maintained by an authority.",
+    "definition_vi": "Quy định, quy tắc.",
+    "examples": [
+      {
+        "sentence": "The new safety regulations came into effect last week.",
+        "sentence_vi": "Các quy định an toàn mới đã có hiệu lực vào tuần trước."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "rule",
+      "directive",
+      "statute"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "government regulations",
+      "safety regulations",
+      "comply with regulations"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_058",
+    "word": "objective",
+    "phonetic": "/əbˈdʒektɪv/",
+    "word_type": "noun",
+    "definition_en": "A thing aimed at or sought; a goal.",
+    "definition_vi": "Mục tiêu.",
+    "examples": [
+      {
+        "sentence": "The main objective of the course is to improve communication skills.",
+        "sentence_vi": "Mục tiêu chính của khóa học là cải thiện kỹ năng giao tiếp."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "650",
+    "synonyms": [
+      "goal",
+      "aim",
+      "target"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "clear objective",
+      "strategic objective",
+      "primary objective"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_059",
+    "word": "oversight",
+    "phonetic": "/ˈoʊvərsaɪt/",
+    "word_type": "noun",
+    "definition_en": "The action of overseeing something.",
+    "definition_vi": "Sự giám sát, sự sơ suất.",
+    "examples": [
+      {
+        "sentence": "The committee has oversight of the program.",
+        "sentence_vi": "Ủy ban có quyền giám sát chương trình."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "supervision",
+      "management",
+      "slip"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "provide oversight",
+      "regulatory oversight",
+      "careless oversight"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_060",
+    "word": "implementation",
+    "phonetic": "/ˌɪmplɪmenˈteɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The process of putting a decision or plan into effect.",
+    "definition_vi": "Sự triển khai, sự thực hiện.",
+    "examples": [
+      {
+        "sentence": "The implementation of the new system took six months.",
+        "sentence_vi": "Sự triển khai hệ thống mới mất sáu tháng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "execution",
+      "application",
+      "enactment"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "plan implementation",
+      "successful implementation",
+      "delay implementation"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_061",
+    "word": "standardization",
+    "phonetic": "/ˌstændərdaɪˈzeɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The process of making something conform to a standard.",
+    "definition_vi": "Sự tiêu chuẩn hóa.",
+    "examples": [
+      {
+        "sentence": "Standardization can help reduce manufacturing costs.",
+        "sentence_vi": "Tiêu chuẩn hóa có thể giúp giảm chi phí sản xuất."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "uniformity",
+      "normalization"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "process standardization",
+      "global standardization",
+      "lack of standardization"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_062",
+    "word": "discrepancy",
+    "phonetic": "/dɪˈskrepənsi/",
+    "word_type": "noun",
+    "definition_en": "A lack of compatibility or similarity between two or more facts.",
+    "definition_vi": "Sự khác biệt, sự không nhất quán.",
+    "examples": [
+      {
+        "sentence": "There is a discrepancy between the two reports.",
+        "sentence_vi": "Có sự khác biệt giữa hai báo cáo."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "difference",
+      "inconsistency",
+      "variance"
+    ],
+    "antonyms": [
+      "similarity",
+      "consistency"
+    ],
+    "collocations": [
+      "significant discrepancy",
+      "financial discrepancy",
+      "resolve a discrepancy"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_063",
+    "word": "bureaucracy",
+    "phonetic": "/bjʊˈrɑːkrəsi/",
+    "word_type": "noun",
+    "definition_en": "A system of government in which most of the important decisions are taken by state officials.",
+    "definition_vi": "Thủ tục hành chính, bộ máy quan liêu.",
+    "examples": [
+      {
+        "sentence": "The government is trying to reduce bureaucracy.",
+        "sentence_vi": "Chính phủ đang cố gắng giảm bớt thủ tục hành chính rườm rà."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "red tape",
+      "administration",
+      "officialdom"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "government bureaucracy",
+      "cut through bureaucracy",
+      "inefficient bureaucracy"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_064",
+    "word": "accountability",
+    "phonetic": "/əˌkaʊntəˈbɪləti/",
+    "word_type": "noun",
+    "definition_en": "The fact or condition of being accountable.",
+    "definition_vi": "Trách nhiệm giải trình.",
+    "examples": [
+      {
+        "sentence": "The new law will increase transparency and accountability.",
+        "sentence_vi": "Luật mới sẽ làm tăng tính minh bạch và trách nhiệm giải trình."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "responsibility",
+      "answerability",
+      "liability"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "public accountability",
+      "lack of accountability",
+      "ensure accountability"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_065",
+    "word": "strategic",
+    "phonetic": "/strəˈtiːdʒɪk/",
+    "word_type": "adjective",
+    "definition_en": "Relating to the identification of long-term or overall aims and interests.",
+    "definition_vi": "Mang tính chiến lược.",
+    "examples": [
+      {
+        "sentence": "We need a strategic approach to solve the problem.",
+        "sentence_vi": "Chúng ta cần một phương pháp mang tính chiến lược để giải quyết vấn đề."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "planned",
+      "calculated",
+      "tactical"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "strategic planning",
+      "strategic partnership",
+      "strategic location"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_066",
+    "word": "compliance",
+    "phonetic": "/kəmˈplaɪəns/",
+    "word_type": "noun",
+    "definition_en": "The action or fact of complying with a wish or command.",
+    "definition_vi": "Sự tuân thủ.",
+    "examples": [
+      {
+        "sentence": "Compliance with the rules is mandatory for everyone.",
+        "sentence_vi": "Sự tuân thủ các quy tắc là bắt buộc đối với tất cả mọi người."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "obedience",
+      "adherence",
+      "conformity"
+    ],
+    "antonyms": [
+      "violation",
+      "defiance"
+    ],
+    "collocations": [
+      "strict compliance",
+      "ensuring compliance",
+      "legal compliance"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_067",
+    "word": "infrastructure",
+    "phonetic": "/ˈɪnfrəstrʌktʃər/",
+    "word_type": "noun",
+    "definition_en": "The basic physical and organizational structures and facilities.",
+    "definition_vi": "Cơ sở hạ tầng.",
+    "examples": [
+      {
+        "sentence": "The city needs an upgrade to its transport infrastructure.",
+        "sentence_vi": "Thành phố cần nâng cấp cơ sở hạ tầng giao thông."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "office",
+    "level": "800",
+    "synonyms": [
+      "framework",
+      "base",
+      "foundation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "basic infrastructure",
+      "modern infrastructure",
+      "physical infrastructure"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_068",
+    "word": "budget",
+    "phonetic": "/ˈbʌdʒɪt/",
+    "word_type": "noun",
+    "definition_en": "An estimate of income and expenditure for a set period of time.",
+    "definition_vi": "Ngân sách.",
+    "examples": [
+      {
+        "sentence": "We need to stay within our budget.",
+        "sentence_vi": "Chúng ta cần phải duy trì trong phạm vi ngân sách."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "allowance",
+      "allocation",
+      "funds"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "annual budget",
+      "budget cut",
+      "tight budget"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_069",
+    "word": "cost",
+    "phonetic": "/kɔːst/",
+    "word_type": "noun",
+    "definition_en": "An amount that has to be paid or spent to buy or obtain something.",
+    "definition_vi": "Chi phí, giá cả.",
+    "examples": [
+      {
+        "sentence": "The cost of living is rising.",
+        "sentence_vi": "Chi phí sinh hoạt đang tăng lên."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "price",
+      "expense",
+      "charge"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "operating cost",
+      "extra cost",
+      "low cost"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_070",
+    "word": "account",
+    "phonetic": "/əˈkaʊnt/",
+    "word_type": "noun",
+    "definition_en": "A record or statement of financial expenditure and receipts.",
+    "definition_vi": "Tài khoản.",
+    "examples": [
+      {
+        "sentence": "I need to open a bank account.",
+        "sentence_vi": "Tôi cần mở một tài khoản ngân hàng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "report",
+      "record",
+      "statement"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "bank account",
+      "savings account",
+      "joint account"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_071",
+    "word": "bill",
+    "phonetic": "/bɪl/",
+    "word_type": "noun",
+    "definition_en": "A printed or written statement of the money owed for goods or services.",
+    "definition_vi": "Hóa đơn.",
+    "examples": [
+      {
+        "sentence": "Can I have the bill, please?",
+        "sentence_vi": "Cho tôi xin hóa đơn được không?"
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "invoice",
+      "check",
+      "statement"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "utility bill",
+      "electric bill",
+      "pay a bill"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_072",
+    "word": "payment",
+    "phonetic": "/ˈpeɪmənt/",
+    "word_type": "noun",
+    "definition_en": "The action or process of paying someone or something.",
+    "definition_vi": "Sự thanh toán, tiền thanh toán.",
+    "examples": [
+      {
+        "sentence": "Payment is due at the end of the month.",
+        "sentence_vi": "Thanh toán đến hạn vào cuối tháng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "remittance",
+      "settlement",
+      "discharge"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "monthly payment",
+      "online payment",
+      "method of payment"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_073",
+    "word": "price",
+    "phonetic": "/praɪs/",
+    "word_type": "noun",
+    "definition_en": "The amount of money expected, required, or given in payment for something.",
+    "definition_vi": "Giá cả.",
+    "examples": [
+      {
+        "sentence": "The price of petrol has gone up again.",
+        "sentence_vi": "Giá xăng lại tăng lên rồi."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "cost",
+      "charge",
+      "rate"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "high price",
+      "reasonable price",
+      "market price"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_074",
+    "word": "profit",
+    "phonetic": "/ˈpɑːfɪt/",
+    "word_type": "noun",
+    "definition_en": "A financial gain.",
+    "definition_vi": "Lợi nhuận.",
+    "examples": [
+      {
+        "sentence": "The company made a huge profit last year.",
+        "sentence_vi": "Công ty đã đạt được lợi nhuận khổng lề vào năm ngoái."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "gain",
+      "earnings",
+      "revenue"
+    ],
+    "antonyms": [
+      "loss"
+    ],
+    "collocations": [
+      "net profit",
+      "make a profit",
+      "profit margin"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_075",
+    "word": "tax",
+    "phonetic": "/tæks/",
+    "word_type": "noun",
+    "definition_en": "A compulsory contribution to state revenue.",
+    "definition_vi": "Thuế.",
+    "examples": [
+      {
+        "sentence": "They are planning to increase income tax.",
+        "sentence_vi": "Họ đang lên kế hoạch tăng thuế thu nhập."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "duty",
+      "levy",
+      "tariff"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "income tax",
+      "property tax",
+      "pay tax"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_076",
+    "word": "bank",
+    "phonetic": "/bæŋk/",
+    "word_type": "noun",
+    "definition_en": "A financial establishment that invests money deposited by customers.",
+    "definition_vi": "Ngân hàng.",
+    "examples": [
+      {
+        "sentence": "She works at a local bank.",
+        "sentence_vi": "Cô ấy làm việc tại một ngân hàng địa phương."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "financial institution"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "bank robbery",
+      "bank account",
+      "central bank"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_077",
+    "word": "save",
+    "phonetic": "/seɪv/",
+    "word_type": "verb",
+    "definition_en": "Keep safe or rescue from harm or danger.",
+    "definition_vi": "Tiết kiệm, lưu giữ.",
+    "examples": [
+      {
+        "sentence": "She is saving money for a new car.",
+        "sentence_vi": "Cô ấy đang tiết kiệm tiền để mua một chiếc ô tô mới."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "450",
+    "synonyms": [
+      "conserve",
+      "store",
+      "reserve"
+    ],
+    "antonyms": [
+      "spend",
+      "waste"
+    ],
+    "collocations": [
+      "save money",
+      "save time",
+      "save energy"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_078",
+    "word": "asset",
+    "phonetic": "/ˈæset/",
+    "word_type": "noun",
+    "definition_en": "A useful or valuable thing.",
+    "definition_vi": "Tài sản.",
+    "examples": [
+      {
+        "sentence": "The company’s primary asset is its reputation.",
+        "sentence_vi": "Tài sản chính của công ty là danh tiếng của nó."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "property",
+      "possession",
+      "resource"
+    ],
+    "antonyms": [
+      "liability"
+    ],
+    "collocations": [
+      "fixed assets",
+      "intangible assets",
+      "liquid assets"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_079",
+    "word": "liability",
+    "phonetic": "/ˌlaɪəˈbɪləti/",
+    "word_type": "noun",
+    "definition_en": "The state of being responsible for something, especially by law.",
+    "definition_vi": "Nợ phải trả, trách nhiệm pháp lý.",
+    "examples": [
+      {
+        "sentence": "The company has significant liabilities.",
+        "sentence_vi": "Công ty có những khoản nợ lớn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "debt",
+      "obligation",
+      "burden"
+    ],
+    "antonyms": [
+      "asset"
+    ],
+    "collocations": [
+      "legal liability",
+      "limited liability",
+      "joint liability"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_080",
+    "word": "revenue",
+    "phonetic": "/ˈrevənjuː/",
+    "word_type": "noun",
+    "definition_en": "Income, especially when of a company or organization.",
+    "definition_vi": "Doanh thu.",
+    "examples": [
+      {
+        "sentence": "The company reported a significant increase in revenue.",
+        "sentence_vi": "Công ty báo cáo một sự gia tăng đáng kể về doanh thu."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "income",
+      "earnings",
+      "yield"
+    ],
+    "antonyms": [
+      "expenditure"
+    ],
+    "collocations": [
+      "annual revenue",
+      "tax revenue",
+      "gross revenue"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_081",
+    "word": "invoice",
+    "phonetic": "/ˈɪnvɔɪs/",
+    "word_type": "noun",
+    "definition_en": "A bill for goods or services.",
+    "definition_vi": "Hóa đơn, tờ khai.",
+    "examples": [
+      {
+        "sentence": "Please send the invoice to the accounting department.",
+        "sentence_vi": "Vui lòng gửi hóa đơn cho bộ phận kế toán."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "bill",
+      "statement",
+      "check"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "outstanding invoice",
+      "proforma invoice",
+      "settle an invoice"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_082",
+    "word": "transaction",
+    "phonetic": "/trænˈzækʃn/",
+    "word_type": "noun",
+    "definition_en": "An instance of buying or selling something.",
+    "definition_vi": "Giao dịch.",
+    "examples": [
+      {
+        "sentence": "The entire transaction took only a few minutes.",
+        "sentence_vi": "Toàn bộ giao dịch chỉ mất vài phút."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "deal",
+      "business",
+      "operation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "financial transaction",
+      "online transaction",
+      "record a transaction"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_083",
+    "word": "interest",
+    "phonetic": "/ˈɪntrest/",
+    "word_type": "noun",
+    "definition_en": "Money paid regularly at a particular rate for the use of money lent.",
+    "definition_vi": "Lãi suất, tiền lãi.",
+    "examples": [
+      {
+        "sentence": "The bank offers a high interest rate on savings.",
+        "sentence_vi": "Ngân hàng cung cấp mức lãi suất cao cho các khoản tiết kiệm."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "profit",
+      "dividend"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "interest rate",
+      "compound interest",
+      "accrued interest"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_084",
+    "word": "balance",
+    "phonetic": "/ˈbæləns/",
+    "word_type": "noun",
+    "definition_en": "An even distribution of weight enabling someone or something to remain upright and steady.",
+    "definition_vi": "Số dư (tài khoản), sự cân bằng.",
+    "examples": [
+      {
+        "sentence": "I checked my bank balance this morning.",
+        "sentence_vi": "Tôi đã kiểm tra số dư ngân hàng của mình sáng nay."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "remainder",
+      "equilibrium",
+      "stability"
+    ],
+    "antonyms": [
+      "imbalance"
+    ],
+    "collocations": [
+      "bank balance",
+      "account balance",
+      "outstanding balance"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_085",
+    "word": "estimate",
+    "phonetic": "/ˈestɪmeɪt/",
+    "word_type": "noun",
+    "definition_en": "An approximate calculation or judgment of the value, number, quantity, or extent of something.",
+    "definition_vi": "Sự ước tính, bản dự toán.",
+    "examples": [
+      {
+        "sentence": "Can you give me an estimate for the repairs?",
+        "sentence_vi": "Bạn có thể cho tôi một bản dự toán cho việc sửa chữa không?"
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "approximation",
+      "forecast",
+      "calculation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "rough estimate",
+      "cost estimate",
+      "provide an estimate"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_086",
+    "word": "forecast",
+    "phonetic": "/ˈfɔːrkæst/",
+    "word_type": "noun",
+    "definition_en": "A prediction or estimate of future events.",
+    "definition_vi": "Dự báo.",
+    "examples": [
+      {
+        "sentence": "The financial forecast for next year is positive.",
+        "sentence_vi": "Dự báo tài chính cho năm tới là tích cực."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "650",
+    "synonyms": [
+      "prediction",
+      "projection",
+      "prognosis"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "sales forecast",
+      "weather forecast",
+      "economic forecast"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_087",
+    "word": "dividend",
+    "phonetic": "/ˈdɪvɪdend/",
+    "word_type": "noun",
+    "definition_en": "A sum of money paid regularly by a company to its shareholders.",
+    "definition_vi": "Cổ tức.",
+    "examples": [
+      {
+        "sentence": "The company will pay a dividend to shareholders this quarter.",
+        "sentence_vi": "Công ty sẽ trả cổ tức cho các cổ đông vào quý này."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "bonus",
+      "share",
+      "portion"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "stock dividend",
+      "pay a dividend",
+      "dividend yield"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_088",
+    "word": "equity",
+    "phonetic": "/ˈekwəti/",
+    "word_type": "noun",
+    "definition_en": "The value of the shares issued by a company.",
+    "definition_vi": "Vốn chủ sở hữu, tính công bằng.",
+    "examples": [
+      {
+        "sentence": "He has considerable equity in the company.",
+        "sentence_vi": "Ông ấy có vốn chủ sở hữu đáng kể trong công ty."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "shares",
+      "value",
+      "fairness"
+    ],
+    "antonyms": [
+      "unfairness"
+    ],
+    "collocations": [
+      "private equity",
+      "brand equity",
+      "home equity"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_089",
+    "word": "portfolio",
+    "phonetic": "/pɔːrtˈfoʊlioʊ/",
+    "word_type": "noun",
+    "definition_en": "A range of investments held by a person or organization.",
+    "definition_vi": "Danh mục đầu tư.",
+    "examples": [
+      {
+        "sentence": "Her investment portfolio includes stocks and bonds.",
+        "sentence_vi": "Danh mục đầu tư của cô ấy bao gồm cổ phiếu và trái phiếu."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "range",
+      "set",
+      "collection"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "investment portfolio",
+      "diversify a portfolio",
+      "stock portfolio"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_090",
+    "word": "audit",
+    "phonetic": "/ˈɔːdɪt/",
+    "word_type": "noun",
+    "definition_en": "An official inspection of an organization's accounts.",
+    "definition_vi": "Kiểm toán, sự kiểm tra sổ sách.",
+    "examples": [
+      {
+        "sentence": "The company’s accounts are undergoing an annual audit.",
+        "sentence_vi": "Sổ sách của công ty đang được kiểm toán hàng năm."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "inspection",
+      "examination",
+      "review"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "internal audit",
+      "independent audit",
+      "conduct an audit"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_091",
+    "word": "amortization",
+    "phonetic": "/ˌæmɔːrtəˈzeɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The action or process of gradually writing off the initial cost of an asset.",
+    "definition_vi": "Sự khấu hao, sự trả dần.",
+    "examples": [
+      {
+        "sentence": "The loan has a 30-year amortization period.",
+        "sentence_vi": "Khoản vay có thời gian trả dần là 30 năm."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "depreciation",
+      "repayment"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "loan amortization",
+      "amortization schedule",
+      "negative amortization"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_092",
+    "word": "volatility",
+    "phonetic": "/ˌvɑːləˈtɪləti/",
+    "word_type": "noun",
+    "definition_en": "Liability to change rapidly and unpredictably.",
+    "definition_vi": "Sự biến động.",
+    "examples": [
+      {
+        "sentence": "The stock market has seen a lot of volatility recently.",
+        "sentence_vi": "Thị trường chứng khoán đã chứng kiến rất nhiều biến động gần đây."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "instability",
+      "uncertainty",
+      "fluctuation"
+    ],
+    "antonyms": [
+      "stability"
+    ],
+    "collocations": [
+      "market volatility",
+      "price volatility",
+      "high volatility"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_093",
+    "word": "shareholder",
+    "phonetic": "/ˈʃerhoʊldər/",
+    "word_type": "noun",
+    "definition_en": "An owner of shares in a company.",
+    "definition_vi": "Cổ đông.",
+    "examples": [
+      {
+        "sentence": "Shareholders will vote on the proposed merger.",
+        "sentence_vi": "Các cổ đông sẽ bỏ phiếu về việc sáp nhập được đề xuất."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "stockholder",
+      "investor"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "major shareholder",
+      "shareholder meeting",
+      "protect shareholders"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_094",
+    "word": "capital",
+    "phonetic": "/ˈkæpɪtl/",
+    "word_type": "noun",
+    "definition_en": "Wealth in the form of money or other assets owned by a person or organization.",
+    "definition_vi": "Vốn, tài sản chính.",
+    "examples": [
+      {
+        "sentence": "The company needs more capital to expand.",
+        "sentence_vi": "Công ty cần thêm vốn để mở rộng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "funding",
+      "resources",
+      "wealth"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "venture capital",
+      "working capital",
+      "capital gain"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_095",
+    "word": "credit",
+    "phonetic": "/ˈkredɪt/",
+    "word_type": "noun",
+    "definition_en": "The ability of a customer to obtain goods or services before payment, based on the trust that payment will be made in the future.",
+    "definition_vi": "Tín dụng, sự ghi có.",
+    "examples": [
+      {
+        "sentence": "We offer Interest-free credit for six months.",
+        "sentence_vi": "Chúng tôi cung cấp tín dụng không lãi suất trong sáu tháng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "finance",
+    "level": "800",
+    "synonyms": [
+      "loan",
+      "balance"
+    ],
+    "antonyms": [
+      "debit"
+    ],
+    "collocations": [
+      "credit card",
+      "credit score",
+      "line of credit"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_096",
+    "word": "flight",
+    "phonetic": "/flaɪt/",
+    "word_type": "noun",
+    "definition_en": "The action or process of flying through the air.",
+    "definition_vi": "Chuyến bay.",
+    "examples": [
+      {
+        "sentence": "The flight was delayed by two hours.",
+        "sentence_vi": "Chuyến bay đã bị hoãn hai giờ."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "air travel",
+      "trip",
+      "journey"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "direct flight",
+      "international flight",
+      "book a flight"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_097",
+    "word": "ticket",
+    "phonetic": "/ˈtɪkɪt/",
+    "word_type": "noun",
+    "definition_en": "A piece of paper or card that gives the holder a certain right.",
+    "definition_vi": "Vé.",
+    "examples": [
+      {
+        "sentence": "I bought a return ticket to London.",
+        "sentence_vi": "Tôi đã mua một chiếc vé khứ hồi đi London."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "coupon",
+      "token",
+      "pass"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "air ticket",
+      "train ticket",
+      "one-way ticket"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_098",
+    "word": "hotel",
+    "phonetic": "/hoʊˈtel/",
+    "word_type": "noun",
+    "definition_en": "An establishment providing accommodation, meals, and other services for travelers and tourists.",
+    "definition_vi": "Khách sạn.",
+    "examples": [
+      {
+        "sentence": "We stayed at a luxury hotel by the sea.",
+        "sentence_vi": "Chúng tôi đã ở tại một khách sạn sang trọng bên bờ biển."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "inn",
+      "lodging",
+      "motel"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "five-star hotel",
+      "book a hotel",
+      "hotel reservation"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_099",
+    "word": "reservation",
+    "phonetic": "/ˌrezərˈveɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The action of reserving something.",
+    "definition_vi": "Sự đặt trước, sự giữ chỗ.",
+    "examples": [
+      {
+        "sentence": "I'd like to make a reservation for two people.",
+        "sentence_vi": "Tôi muốn đặt chỗ cho hai người."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "booking",
+      "appointment",
+      "engagement"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "confirmed reservation",
+      "cancel a reservation",
+      "online reservation"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_100",
+    "word": "destination",
+    "phonetic": "/ˌdestɪˈneɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The place to which someone or something is going or being sent.",
+    "definition_vi": "Điểm đến.",
+    "examples": [
+      {
+        "sentence": "Spain is a popular holiday destination.",
+        "sentence_vi": "Tây Ban Nha là một điểm đến nghỉ lễ phổ biến."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "goal",
+      "target",
+      "end"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "final destination",
+      "holiday destination",
+      "popular destination"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_101",
+    "word": "airport",
+    "phonetic": "/ˈerpɔːrt/",
+    "word_type": "noun",
+    "definition_en": "A complex of runways and buildings for the takeoff, landing, and maintenance of civil aircraft.",
+    "definition_vi": "Sân bay.",
+    "examples": [
+      {
+        "sentence": "We arrived at the airport two hours before the flight.",
+        "sentence_vi": "Chúng tôi đã đến sân bay hai giờ trước chuyến bay."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "airfield",
+      "airstrip"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "international airport",
+      "airport terminal",
+      "at the airport"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_102",
+    "word": "passport",
+    "phonetic": "/ˈpæspɔːrt/",
+    "word_type": "noun",
+    "definition_en": "An official document issued by a government.",
+    "definition_vi": "Hộ chiếu.",
+    "examples": [
+      {
+        "sentence": "You need a valid passport to travel abroad.",
+        "sentence_vi": "Bạn cần một hộ chiếu hợp lệ để đi du lịch nước ngoài."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "identification",
+      "papers",
+      "visa"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "valid passport",
+      "passport control",
+      "renew a passport"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_103",
+    "word": "departure",
+    "phonetic": "/dɪˈpɑːrtʃər/",
+    "word_type": "noun",
+    "definition_en": "The action of leaving, especially to start a journey.",
+    "definition_vi": "Sự khởi hành.",
+    "examples": [
+      {
+        "sentence": "The departure of the flight was delayed.",
+        "sentence_vi": "Sự khởi hành của chuyến bay đã bị trì hoãn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "leaving",
+      "exit",
+      "withdrawal"
+    ],
+    "antonyms": [
+      "arrival"
+    ],
+    "collocations": [
+      "departure lounge",
+      "scheduled departure",
+      "time of departure"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_104",
+    "word": "arrival",
+    "phonetic": "/əˈraɪvl/",
+    "word_type": "noun",
+    "definition_en": "The action or process of arriving.",
+    "definition_vi": "Sự đến nơi.",
+    "examples": [
+      {
+        "sentence": "We are waiting for the arrival of the train.",
+        "sentence_vi": "Chúng tôi đang đợi tàu đến."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "450",
+    "synonyms": [
+      "appearance",
+      "entry",
+      "occurrence"
+    ],
+    "antonyms": [
+      "departure"
+    ],
+    "collocations": [
+      "expected arrival",
+      "on arrival",
+      "arrival time"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_105",
+    "word": "itinerary",
+    "phonetic": "/aɪˈtɪnəreri/",
+    "word_type": "noun",
+    "definition_en": "A planned route or journey.",
+    "definition_vi": "Lịch trình chuyến đi.",
+    "examples": [
+      {
+        "sentence": "We have a very tight itinerary for our trip to Japan.",
+        "sentence_vi": "Chúng tôi có một lịch trình rất dày đặc cho chuyến du lịch Nhật Bản."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "route",
+      "schedule",
+      "travel plan"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "detailed itinerary",
+      "travel itinerary",
+      "follow an itinerary"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_106",
+    "word": "commute",
+    "phonetic": "/kəˈmjuːt/",
+    "word_type": "verb",
+    "definition_en": "Travel some distance between one's home and place of work on a regular basis.",
+    "definition_vi": "Đi lại đều đặn (giữa nhà và nơi làm việc).",
+    "examples": [
+      {
+        "sentence": "She commutes from Cambridge to London every day.",
+        "sentence_vi": "Cô ấy đi lại từ Cambridge đến London mỗi ngày."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "travel",
+      "journey"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "daily commute",
+      "commute to work",
+      "long commute"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_107",
+    "word": "transit",
+    "phonetic": "/ˈtrænzɪt/",
+    "word_type": "noun",
+    "definition_en": "The carrying of people, goods, or materials from one place to another.",
+    "definition_vi": "Sự quá cảnh, sự vận chuyển.",
+    "examples": [
+      {
+        "sentence": "The goods were lost in transit.",
+        "sentence_vi": "Hàng hóa đã bị thất lạc trong quá trình vận chuyển."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "transportation",
+      "conveyance",
+      "shipment"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "mass transit",
+      "public transit",
+      "in transit"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_108",
+    "word": "baggage",
+    "phonetic": "/ˈbæɡɪdʒ/",
+    "word_type": "noun",
+    "definition_en": "Suitcases and personal possessions of a traveler.",
+    "definition_vi": "Hành lý.",
+    "examples": [
+      {
+        "sentence": "You should not leave your baggage unattended.",
+        "sentence_vi": "Bạn không nên để hành lý của mình mà không có người trông coi."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "luggage",
+      "suitcases",
+      "gear"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "excess baggage",
+      "baggage claim",
+      "carry-on baggage"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_109",
+    "word": "concierge",
+    "phonetic": "/kɔːnˈsjerʒ/",
+    "word_type": "noun",
+    "definition_en": "A hotel staff member who helps guests with information, bookings, and other needs.",
+    "definition_vi": "Người hỗ trợ khách hàng, nhân viên tiền sảnh.",
+    "examples": [
+      {
+        "sentence": "The concierge helped us book a table at a local restaurant.",
+        "sentence_vi": "Nhân viên tiền sảnh đã giúp chúng tôi đặt bàn tại một nhà hàng địa phương."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "porter",
+      "doorman"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "hotel concierge",
+      "ask the concierge",
+      "concierge desk"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_110",
+    "word": "cancellation",
+    "phonetic": "/ˌkænsəˈluːʃn/",
+    "word_type": "noun",
+    "definition_en": "The action of canceling something that has been arranged or planned.",
+    "definition_vi": "Sự hủy bỏ.",
+    "examples": [
+      {
+        "sentence": "The cancellation of the flight caused a lot of problems.",
+        "sentence_vi": "Việc hủy chuyến bay đã gây ra nhiều vấn đề."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "annulment",
+      "withdrawal",
+      "repeal"
+    ],
+    "antonyms": [
+      "confirmation"
+    ],
+    "collocations": [
+      "last-minute cancellation",
+      "cancellation policy",
+      "flight cancellation"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_111",
+    "word": "confirmed",
+    "phonetic": "/kənˈfɜːrmd/",
+    "word_type": "adjective",
+    "definition_en": "Firmly established and unlikely to change.",
+    "definition_vi": "Đã được xác nhận.",
+    "examples": [
+      {
+        "sentence": "We have a confirmed reservation for two nights.",
+        "sentence_vi": "Chúng tôi có một bản đặt phòng đã được xác nhận cho hai đêm."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "fixed",
+      "settled",
+      "official"
+    ],
+    "antonyms": [
+      "unconfirmed"
+    ],
+    "collocations": [
+      "confirmed booking",
+      "confirmed flight",
+      "fully confirmed"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_112",
+    "word": "package",
+    "phonetic": "/ˈpækɪdʒ/",
+    "word_type": "noun",
+    "definition_en": "A set of proposals or terms offered as a unit.",
+    "definition_vi": "Gói (tour), kiện hàng.",
+    "examples": [
+      {
+        "sentence": "We booked an all-inclusive holiday package.",
+        "sentence_vi": "Chúng tôi đã đặt một gói nghỉ lễ trọn gói."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "parcel",
+      "bundle",
+      "set"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "holiday package",
+      "tour package",
+      "all-inclusive package"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_113",
+    "word": "explore",
+    "phonetic": "/ɪkˈsplɔːr/",
+    "word_type": "verb",
+    "definition_en": "Travel in or through an unfamiliar country or area in order to learn about it.",
+    "definition_vi": "Khám phá, thám hiểm.",
+    "examples": [
+      {
+        "sentence": "We spent the whole day exploring the old city.",
+        "sentence_vi": "Chúng tôi đã dành cả ngày để khám phá thành phố cổ."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "search",
+      "investigate",
+      "inspect"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "explore the city",
+      "explore options",
+      "explore possibilities"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_114",
+    "word": "guided",
+    "phonetic": "/ˈɡaɪdɪd/",
+    "word_type": "adjective",
+    "definition_en": "Accompanied or directed by a guide.",
+    "definition_vi": "Được hướng dẫn.",
+    "examples": [
+      {
+        "sentence": "We took a guided tour of the museum.",
+        "sentence_vi": "Chúng tôi đã tham gia một chuyến tham quan bảo tàng có hướng dẫn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "650",
+    "synonyms": [
+      "directed",
+      "led"
+    ],
+    "antonyms": [
+      "unguided"
+    ],
+    "collocations": [
+      "guided tour",
+      "guided walk",
+      "expertly guided"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_115",
+    "word": "expedition",
+    "phonetic": "/ˌekspəˈdɪʃn/",
+    "word_type": "noun",
+    "definition_en": "A journey undertaken by a group of people with a particular purpose.",
+    "definition_vi": "Cuộc thám hiểm, đoàn thám hiểm.",
+    "examples": [
+      {
+        "sentence": "He went on an expedition to the Antarctic.",
+        "sentence_vi": "Ông ấy đã đi thám hiểm vùng Nam Cực."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "journey",
+      " voyage",
+      "mission"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "scientific expedition",
+      "rescue expedition",
+      "mountaineer expedition"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_116",
+    "word": "quarantine",
+    "phonetic": "/ˈkwɔːrəntiːn/",
+    "word_type": "noun",
+    "definition_en": "A state, period, or place of isolation for people or animals that have arrived from elsewhere.",
+    "definition_vi": "Sự cách ly, thời gian kiểm dịch.",
+    "examples": [
+      {
+        "sentence": "The animals were kept in quarantine for six months.",
+        "sentence_vi": "Các con vật được giữ trong khu cách ly trong sáu tháng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "isolation",
+      "seclusion",
+      "separation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "under quarantine",
+      "strict quarantine",
+      "quarantine laws"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_117",
+    "word": "hospitality",
+    "phonetic": "/ˌhɑːspɪˈtæləti/",
+    "word_type": "noun",
+    "definition_en": "The friendly and generous reception and entertainment of guests.",
+    "definition_vi": "Lòng hiếu khách, dịch vụ khách sạn.",
+    "examples": [
+      {
+        "sentence": "Thank you for your warm hospitality during our stay.",
+        "sentence_vi": "Cảm ơn vì lòng hiếu khách nồng hậu của bạn trong thời gian chúng tôi ở lại."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "friendliness",
+      "welcome",
+      "warmth"
+    ],
+    "antonyms": [
+      "hostility"
+    ],
+    "collocations": [
+      "hospitality industry",
+      "warm hospitality",
+      "corporate hospitality"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_118",
+    "word": "avenue",
+    "phonetic": "/ˈævənjuː/",
+    "word_type": "noun",
+    "definition_en": "A broad road in a town or city, typically having trees at intervals along it.",
+    "definition_vi": "Đại lộ.",
+    "examples": [
+      {
+        "sentence": "The hotel is located on a quiet avenue near the park.",
+        "sentence_vi": "Khách sạn nằm trên một đại lộ yên tĩnh gần công viên."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "street",
+      "road",
+      "boulevard"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "Fifth Avenue",
+      "main avenue",
+      "line with trees"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_119",
+    "word": "immigration",
+    "phonetic": "/ˌɪmɪˈɡreɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The action of coming to live permanently in a foreign country.",
+    "definition_vi": "Sự nhập cư, việc kiểm soát nhập cảnh.",
+    "examples": [
+      {
+        "sentence": "The government is trying to reduce immigration.",
+        "sentence_vi": "Chính phủ đang cố gắng giảm bớt sự nhập cư."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "migration",
+      "colonization"
+    ],
+    "antonyms": [
+      "emigration"
+    ],
+    "collocations": [
+      "immigration officer",
+      "immigration laws",
+      "control immigration"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_120",
+    "word": "visa",
+    "phonetic": "/ˈviːzə/",
+    "word_type": "noun",
+    "definition_en": "An endorsement on a passport indicating that the holder is allowed to enter, leave, or stay for a specified period of time in a country.",
+    "definition_vi": "Thị thực, visa.",
+    "examples": [
+      {
+        "sentence": "I need to apply for a visa to visit the USA.",
+        "sentence_vi": "Tôi cần xin thị thực để đi thăm Hoa Kỳ."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "permit",
+      "clearance"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "valid visa",
+      "tourist visa",
+      "visa application"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_121",
+    "word": "layover",
+    "phonetic": "/ˈleɪoʊvər/",
+    "word_type": "noun",
+    "definition_en": "A period of rest or waiting before a further stage in a journey.",
+    "definition_vi": "Điểm dừng nghỉ, thời gian chờ quá cảnh.",
+    "examples": [
+      {
+        "sentence": "I had a six-hour layover in Dubai.",
+        "sentence_vi": "Tôi đã có sáu giờ dừng nghỉ tại Dubai."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "stopover",
+      "break",
+      "pause"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "short layover",
+      "overnight layover",
+      "at the airport"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_122",
+    "word": "voyage",
+    "phonetic": "/ˈvɔɪɪdʒ/",
+    "word_type": "noun",
+    "definition_en": "A long journey involving travel by sea or in space.",
+    "definition_vi": "Chuyến hải hành, chuyến du hành xa.",
+    "examples": [
+      {
+        "sentence": "The voyage across the Atlantic took seven days.",
+        "sentence_vi": "Chuyến hải hành vượt Đại Tây Dương mất bảy ngày."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "journey",
+      "expedition",
+      "crossing"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "maiden voyage",
+      "sea voyage",
+      "long voyage"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_123",
+    "word": "lush",
+    "phonetic": "/lʌʃ/",
+    "word_type": "adjective",
+    "definition_en": "(Of vegetation) growing luxuriantly.",
+    "definition_vi": "Tươi tốt, sum suê.",
+    "examples": [
+      {
+        "sentence": "The island has lush tropical vegetation.",
+        "sentence_vi": "Hòn đảo có thảm thực vật nhiệt đới tươi tốt."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "luxuriant",
+      "abundant",
+      "green"
+    ],
+    "antonyms": [
+      "barren",
+      "sparse"
+    ],
+    "collocations": [
+      "lush garden",
+      "lush landscape",
+      "lush greenery"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_124",
+    "word": "scenic",
+    "phonetic": "/ˈsiːnɪk/",
+    "word_type": "adjective",
+    "definition_en": "Providing or relating to views of impressive or beautiful natural scenery.",
+    "definition_vi": "Có cảnh đẹp, thuộc về phong cảnh.",
+    "examples": [
+      {
+        "sentence": "We took a scenic drive along the coast.",
+        "sentence_vi": "Chúng tôi đã đi một chuyến xe ngắm cảnh dọc theo bờ biển."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "travel",
+    "level": "800",
+    "synonyms": [
+      "picturesque",
+      "beautiful",
+      "panoramic"
+    ],
+    "antonyms": [
+      "ugly",
+      "dull"
+    ],
+    "collocations": [
+      "scenic route",
+      "scenic beauty",
+      "scenic view"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_125",
+    "word": "daily",
+    "phonetic": "/ˈdeɪli/",
+    "word_type": "adjective",
+    "definition_en": "Done, produced, or occurring every day or every weekday.",
+    "definition_vi": "Hàng ngày.",
+    "examples": [
+      {
+        "sentence": "Exercise is part of my daily routine.",
+        "sentence_vi": "Tập thể dục là một phần thói quen hàng ngày của tôi."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "everyday",
+      "day-to-day",
+      "quotidian"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "daily life",
+      "daily routine",
+      "daily basis"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_126",
+    "word": "social",
+    "phonetic": "/ˈsoʊʃl/",
+    "word_type": "adjective",
+    "definition_en": "Relating to society or its organization.",
+    "definition_vi": "Thuộc về xã hội.",
+    "examples": [
+      {
+        "sentence": "He has a very busy social life.",
+        "sentence_vi": "Anh ấy có một đời sống xã hội rất bận rộn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "communal",
+      "public",
+      "collective"
+    ],
+    "antonyms": [
+      "private",
+      "individual"
+    ],
+    "collocations": [
+      "social media",
+      "social skills",
+      "social security"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_127",
+    "word": "public",
+    "phonetic": "/ˈpʌblɪk/",
+    "word_type": "adjective",
+    "definition_en": "Of or concerning the people as a whole.",
+    "definition_vi": "Công cộng, công chúng.",
+    "examples": [
+      {
+        "sentence": "The park is open to the public.",
+        "sentence_vi": "Công viên mở cửa cho công chúng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "communal",
+      "open",
+      "national"
+    ],
+    "antonyms": [
+      "private"
+    ],
+    "collocations": [
+      "public transport",
+      "public relations",
+      "public health"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_128",
+    "word": "common",
+    "phonetic": "/ˈkɑːmən/",
+    "word_type": "adjective",
+    "definition_en": "Occurring, found, or done often; prevalent.",
+    "definition_vi": "Phổ biến, chung.",
+    "examples": [
+      {
+        "sentence": "It's common for people to feel nervous before surgery.",
+        "sentence_vi": "Việc mọi người cảm thấy lo lắng trước khi phẫu thuật là điều phổ biến."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "usual",
+      "ordinary",
+      "regular"
+    ],
+    "antonyms": [
+      "rare",
+      "unusual"
+    ],
+    "collocations": [
+      "common sense",
+      "common ground",
+      "common interest"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_129",
+    "word": "simple",
+    "phonetic": "/ˈsɪmpl/",
+    "word_type": "adjective",
+    "definition_en": "Easily understood or done; presenting no difficulty.",
+    "definition_vi": "Đơn giản.",
+    "examples": [
+      {
+        "sentence": "The task is actually quite simple.",
+        "sentence_vi": "Nhiệm vụ này thực ra khá đơn giản."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "easy",
+      "uncomplicated",
+      "straightforward"
+    ],
+    "antonyms": [
+      "complex",
+      "complicated"
+    ],
+    "collocations": [
+      "simple task",
+      "simple solution",
+      "pure and simple"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_130",
+    "word": "nature",
+    "phonetic": "/ˈneɪtʃər/",
+    "word_type": "noun",
+    "definition_en": "The phenomena of the physical world collectively.",
+    "definition_vi": "Thiên nhiên, bản chất.",
+    "examples": [
+      {
+        "sentence": "It is important to protect nature.",
+        "sentence_vi": "Việc bảo vệ thiên nhiên là rất quan trọng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "scenery",
+      "world",
+      "creation"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "mother nature",
+      "human nature",
+      "nature reserve"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_131",
+    "word": "energy",
+    "phonetic": "/ˈenərdʒi/",
+    "word_type": "noun",
+    "definition_en": "The strength and vitality required for sustained physical or mental activity.",
+    "definition_vi": "Năng lượng.",
+    "examples": [
+      {
+        "sentence": "Switching off lights saves energy.",
+        "sentence_vi": "Tắt đèn giúp tiết kiệm năng lượng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "power",
+      "force",
+      "vigor"
+    ],
+    "antonyms": [
+      "lethargy"
+    ],
+    "collocations": [
+      "renewable energy",
+      "solar energy",
+      "high energy"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_132",
+    "word": "future",
+    "phonetic": "/ˈfjuːtʃər/",
+    "word_type": "noun",
+    "definition_en": "The time or a period of time following the moment of speaking or writing.",
+    "definition_vi": "Tương lai.",
+    "examples": [
+      {
+        "sentence": "We are planning for the future.",
+        "sentence_vi": "Chúng tôi đang lên kế hoạch cho tương lai."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "tomorrow",
+      "destiny",
+      "fate"
+    ],
+    "antonyms": [
+      "past"
+    ],
+    "collocations": [
+      "bright future",
+      "in the future",
+      "near future"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_133",
+    "word": "modern",
+    "phonetic": "/ˈmɑːdərn/",
+    "word_type": "adjective",
+    "definition_en": "Relating to the present or recent times.",
+    "definition_vi": "Hiện đại.",
+    "examples": [
+      {
+        "sentence": "I prefer modern furniture.",
+        "sentence_vi": "Tôi thích đồ nội thất hiện đại hơn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "450",
+    "synonyms": [
+      "contemporary",
+      "current",
+      "present-day"
+    ],
+    "antonyms": [
+      "ancient",
+      "old-fashioned"
+    ],
+    "collocations": [
+      "modern life",
+      "modern technology",
+      "modern world"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_134",
+    "word": "individual",
+    "phonetic": "/ˌɪndɪˈvɪdʒuəl/",
+    "word_type": "noun",
+    "definition_en": "A single human being as distinct from a group.",
+    "definition_vi": "Cá nhân.",
+    "examples": [
+      {
+        "sentence": "Every individual has rights.",
+        "sentence_vi": "Mỗi cá nhân đều có những quyền lợi."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "person",
+      "human",
+      "soul"
+    ],
+    "antonyms": [
+      "group",
+      "mass"
+    ],
+    "collocations": [
+      "private individual",
+      "individual needs",
+      "highly individual"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_135",
+    "word": "interaction",
+    "phonetic": "/ˌɪntərˈækʃn/",
+    "word_type": "noun",
+    "definition_en": "Reciprocal action or influence.",
+    "definition_vi": "Sự tương tác.",
+    "examples": [
+      {
+        "sentence": "The study looks at the interaction between the two drugs.",
+        "sentence_vi": "Nghiên cứu xem xét sự tương tác giữa hai loại thuốc."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "communication",
+      "contact",
+      "connection"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "social interaction",
+      "human interaction",
+      "direct interaction"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_136",
+    "word": "efficiency",
+    "phonetic": "/ɪˈfɪʃnsi/",
+    "word_type": "noun",
+    "definition_en": "The state or quality of being efficient.",
+    "definition_vi": "Hiệu quả, sự hiệu quả.",
+    "examples": [
+      {
+        "sentence": "Electronic billing will improve efficiency.",
+        "sentence_vi": "Thanh toán điện tử sẽ cải thiện hiệu quả."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "productivity",
+      "competence",
+      "effectiveness"
+    ],
+    "antonyms": [
+      "inefficiency"
+    ],
+    "collocations": [
+      "energy efficiency",
+      "improve efficiency",
+      "peak efficiency"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_137",
+    "word": "perspective",
+    "phonetic": "/pərˈspektɪv/",
+    "word_type": "noun",
+    "definition_en": "A particular attitude toward or way of regarding something; a point of view.",
+    "definition_vi": "Góc nhìn, quan điểm.",
+    "examples": [
+      {
+        "sentence": "You need to look at it from a different perspective.",
+        "sentence_vi": "Bạn cần nhìn nhận nó từ một góc độ khác."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "viewpoint",
+      "outlook",
+      "aspect"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "global perspective",
+      "different perspective",
+      "new perspective"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_138",
+    "word": "influence",
+    "phonetic": "/ˈɪnfluəns/",
+    "word_type": "noun",
+    "definition_en": "The capacity to have an effect on the character, development, or behavior of someone or something.",
+    "definition_vi": "Sự ảnh hưởng.",
+    "examples": [
+      {
+        "sentence": "His parents had a strong influence on him.",
+        "sentence_vi": "Bố mẹ anh ấy đã có một ảnh hưởng mạnh mẽ đối với anh ấy."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "impact",
+      "effect",
+      "pressure"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "major influence",
+      "under the influence",
+      "have an influence"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_139",
+    "word": "contribution",
+    "phonetic": "/ˌkɑːntrɪˈbjuːʃn/",
+    "word_type": "noun",
+    "definition_en": "A gift or payment to a common fund or treasury.",
+    "definition_vi": "Sự đóng góp.",
+    "examples": [
+      {
+        "sentence": "Every contribution helps, no matter how small.",
+        "sentence_vi": "Mọi sự đóng góp đều giúp ích, bất kể nhỏ đến đâu."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "donation",
+      "gift",
+      "offering"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "significant contribution",
+      "make a contribution",
+      "charitable contribution"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_140",
+    "word": "fundamental",
+    "phonetic": "/ˌfʌndəˈmentl/",
+    "word_type": "adjective",
+    "definition_en": "Forming a necessary base or core; of central importance.",
+    "definition_vi": "Cơ bản, nền tảng.",
+    "examples": [
+      {
+        "sentence": "There is a fundamental difference between the two systems.",
+        "sentence_vi": "Có một sự khác biệt cơ bản giữa hai hệ thống."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "basic",
+      "core",
+      "essential"
+    ],
+    "antonyms": [
+      "secondary",
+      "minor"
+    ],
+    "collocations": [
+      "fundamental rights",
+      "fundamental change",
+      "fundamental principle"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_141",
+    "word": "potential",
+    "phonetic": "/pəˈtenʃl/",
+    "word_type": "adjective",
+    "definition_en": "Having or showing the capacity to become or develop into something in the future.",
+    "definition_vi": "Tiềm năng.",
+    "examples": [
+      {
+        "sentence": "The new project has great potential.",
+        "sentence_vi": "Dự án mới có tiềm năng rất lớn."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "possible",
+      "prospective",
+      "latent"
+    ],
+    "antonyms": [
+      "impossible"
+    ],
+    "collocations": [
+      "potential customers",
+      "potential risk",
+      "full potential"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_142",
+    "word": "diverse",
+    "phonetic": "/daɪˈvɜːrs/",
+    "word_type": "adjective",
+    "definition_en": "Showing a great deal of variety; very different.",
+    "definition_vi": "Đa dạng.",
+    "examples": [
+      {
+        "sentence": "The city has a very diverse population.",
+        "sentence_vi": "Thành phố có một dân số rất đa dạng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "650",
+    "synonyms": [
+      "varied",
+      "different",
+      "assorted"
+    ],
+    "antonyms": [
+      "similar",
+      "uniform"
+    ],
+    "collocations": [
+      "diverse range",
+      "diverse background",
+      "culturally diverse"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_143",
+    "word": "paradigm",
+    "phonetic": "/ˈpærədaɪm/",
+    "word_type": "noun",
+    "definition_en": "A typical example or pattern of something; a model.",
+    "definition_vi": "Hình mẫu, hệ biến hóa.",
+    "examples": [
+      {
+        "sentence": "There has been a paradigm shift in our thinking.",
+        "sentence_vi": "Đã có một sự thay đổi về hệ tư duy trong suy nghĩ của chúng ta."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "model",
+      "pattern",
+      "example"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "paradigm shift",
+      "new paradigm",
+      "dominant paradigm"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_144",
+    "word": "complexity",
+    "phonetic": "/kəmˈpleksəti/",
+    "word_type": "noun",
+    "definition_en": "The state or quality of being intricate or complex.",
+    "definition_vi": "Sự phức tạp.",
+    "examples": [
+      {
+        "sentence": "the complexity of the task was overwhelming.",
+        "sentence_vi": "Sự phức tạp của nhiệm vụ thật quá sức chịu đựng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "intricacy",
+      "complication"
+    ],
+    "antonyms": [
+      "simplicity"
+    ],
+    "collocations": [
+      "high complexity",
+      "added complexity",
+      "reduce complexity"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_145",
+    "word": "integration",
+    "phonetic": "/ˌɪntɪˈɡreɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The action or process of integrating.",
+    "definition_vi": "Sự tích hợp, sự hội nhập.",
+    "examples": [
+      {
+        "sentence": "The integration of the two companies will take time.",
+        "sentence_vi": "Sự tích hợp của hai công ty sẽ mất thời gian."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "combination",
+      "merger",
+      "unification"
+    ],
+    "antonyms": [
+      "separation"
+    ],
+    "collocations": [
+      "economic integration",
+      "social integration",
+      "seamless integration"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_146",
+    "word": "sustainability",
+    "phonetic": "/səˌsteɪnəˈbɪləti/",
+    "word_type": "noun",
+    "definition_en": "The ability to be maintained at a certain rate or level.",
+    "definition_vi": "Sự bền vững.",
+    "examples": [
+      {
+        "sentence": "Environmental sustainability is a key goal.",
+        "sentence_vi": "Sự bền vững môi trường là một mục tiêu then chốt."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "continuability",
+      "durability"
+    ],
+    "antonyms": [
+      "instability"
+    ],
+    "collocations": [
+      "economic sustainability",
+      "environmental sustainability",
+      "long-term sustainability"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_147",
+    "word": "innovation",
+    "phonetic": "/ˌɪnəˈveɪʃn/",
+    "word_type": "noun",
+    "definition_en": "The action or process of innovating.",
+    "definition_vi": "Sự đổi mới, sự sáng tân.",
+    "examples": [
+      {
+        "sentence": "The company is known for its innovation in technology.",
+        "sentence_vi": "Công ty được biết đến với sự đổi mới trong công nghệ."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "change",
+      "invention",
+      "modernization"
+    ],
+    "antonyms": [
+      "stagnation"
+    ],
+    "collocations": [
+      "technological innovation",
+      "encourage innovation",
+      "product innovation"
+    ],
+    "related_question_ids": [],
+    "frequency": "high"
+  },
+  {
+    "id": "vocab_148",
+    "word": "versatility",
+    "phonetic": "/ˌvɜːrsəˈtɪləti/",
+    "word_type": "noun",
+    "definition_en": "Ability to adapt or be adapted to many different functions or activities.",
+    "definition_vi": "Sự linh hoạt, sự đa tài.",
+    "examples": [
+      {
+        "sentence": "The versatility of the new software is impressive.",
+        "sentence_vi": "Sự linh hoạt của phần mềm mới thật ấn tượng."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "adaptability",
+      "flexibility"
+    ],
+    "antonyms": [
+      "rigidity"
+    ],
+    "collocations": [
+      "great versatility",
+      "offer versatility",
+      "demonstrate versatility"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  },
+  {
+    "id": "vocab_149",
+    "word": "correlation",
+    "phonetic": "/ˌkɔːrəˈleɪʃn/",
+    "word_type": "noun",
+    "definition_en": "A mutual relationship or connection between two or more things.",
+    "definition_vi": "Sự tương quan.",
+    "examples": [
+      {
+        "sentence": "There is a direct correlation between smoking and lung cancer.",
+        "sentence_vi": "Có một sự tương quan trực tiếp giữa việc hút thuốc và ung thư phổi."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "connection",
+      "link",
+      "relationship"
+    ],
+    "antonyms": [],
+    "collocations": [
+      "direct correlation",
+      "high correlation",
+      "statistical correlation"
+    ],
+    "related_question_ids": [],
+    "frequency": "medium"
+  },
+  {
+    "id": "vocab_150",
+    "word": "synthesis",
+    "phonetic": "/ˈsɪnθəsɪs/",
+    "word_type": "noun",
+    "definition_en": "The combination of ideas to form a theory or system.",
+    "definition_vi": "Sự tổng hợp.",
+    "examples": [
+      {
+        "sentence": "The report is a synthesis of various studies.",
+        "sentence_vi": "Bản báo cáo là một sự tổng hợp của nhiều nghiên cứu khác nhau."
+      }
+    ],
+    "audio_url": null,
+    "image_url": null,
+    "topic": "general",
+    "level": "800",
+    "synonyms": [
+      "combination",
+      "mixture",
+      "blend"
+    ],
+    "antonyms": [
+      "analysis"
+    ],
+    "collocations": [
+      "final synthesis",
+      "chemical synthesis",
+      "synthesis of ideas"
+    ],
+    "related_question_ids": [],
+    "frequency": "low"
+  }
+]
