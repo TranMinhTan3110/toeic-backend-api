@@ -252,8 +252,8 @@ TUYỆT ĐỐI chỉ trả về JSON hợp lệ (không markdown, không giải 
             
             if (string.IsNullOrWhiteSpace(parsedTranscript)) parsedTranscript = "(AI đã nghe âm thanh và chấm điểm thành công, nhưng không bóc băng được thành văn bản chi tiết)";
 
-            // Ép điểm về 0 nếu AI kết luận không có giọng nói
-            if (parsedTranscript.Contains("Không nhận diện được giọng nói", StringComparison.OrdinalIgnoreCase))
+            // Ép điểm về 0 nếu AI kết luận hoàn toàn không có giọng nói
+            if (parsedTranscript.Trim().Equals("(Không nhận diện được giọng nói)", StringComparison.OrdinalIgnoreCase))
             {
                 overall = 0;
                 passed = false;
