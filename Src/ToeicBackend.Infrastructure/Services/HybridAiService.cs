@@ -60,7 +60,29 @@ public class HybridAiService : IAiService
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[HYBRID AI WARNING] Gemini gặp sự cố hoặc quá tải: {ex.Message}. Tự động chuyển hướng (fallback) sang chấm bằng OpenAI...");
+            Console.WriteLine($"[HYBRID AI WARNING] Gemini gặp sự cố hoặc quá tải: {ex.Message}.");
+            
+            // Nếu không có transcript (tức là request chỉ có file audio từ Mobile)
+            // thì không được chuyển sang OpenAI vì OpenAI (gpt-4o-mini) trong hệ thống này không hỗ trợ nghe audio.
+            if (string.IsNullOrWhiteSpace(userTranscript))
+            {
+                return new SpeakingEvaluationDto
+                {
+                    OverallScore = 0,
+                    Passed = false,
+                    Feedback = "Hệ thống AI chấm điểm (Gemini) hiện đang quá tải hoặc hết lượt sử dụng miễn phí (Lỗi 429 Quota). Vui lòng thử lại sau hoặc nâng cấp tài khoản AI.",
+                    Transcript = "(Lỗi hệ thống AI - Không thể nghe file âm thanh)",
+                    CriteriaScores = new Dictionary<string, double>
+                    {
+                        { "Pronunciation", 0 },
+                        { "Fluency", 0 },
+                        { "Grammar", 0 },
+                        { "Vocabulary", 0 }
+                    }
+                };
+            }
+
+            Console.WriteLine($"[HYBRID AI WARNING] Tự động chuyển hướng (fallback) sang chấm bằng OpenAI...");
             return await _openAiService.EvaluateSpeakingAsync(taskPrompt, sampleAnswers, userTranscript, taskNumber, audioBytes, mimeType);
         }
     }
