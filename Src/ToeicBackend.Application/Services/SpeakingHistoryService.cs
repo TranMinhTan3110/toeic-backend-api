@@ -78,7 +78,7 @@ public class SpeakingHistoryService : ISpeakingHistoryService
         var prompt = BuildTaskPrompt(question, subQuestionIndex);
         var samples = CollectSampleAnswers(question, subQuestionIndex);
 
-        if (string.IsNullOrWhiteSpace(transcript))
+        if (string.IsNullOrWhiteSpace(transcript) && (audioBytes == null || audioBytes.Length == 0))
         {
             return new SpeakingEvaluationDto
             {
