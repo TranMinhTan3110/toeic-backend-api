@@ -15,10 +15,14 @@ jobs:
 
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v0.1.10
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_KEY: ${{ secrets.GEMINI_API_KEY }}
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
+          envs: OPENAI_KEY,GEMINI_KEY
           script: |
             # Di chuyển vào thư mục dự án
             cd ~/toeic-backend-api
@@ -32,8 +36,15 @@ jobs:
             # Build lại image Docker với code mới
             sudo docker build -t toeic-api .
             
-            # Chạy lại container
-            sudo docker run -d --name my-api -p 8080:8080 --restart unless-stopped toeic-api
+            # Chạy lại container với các API keys
+            sudo docker run -d \
+              --name my-api \
+              -p 8080:8080 \
+              -e "ASPNETCORE_ENVIRONMENT=Development" \
+              -e "OpenAi:ApiKey=$OPENAI_KEY" \
+              -e "Gemini:ApiKey=$GEMINI_KEY" \
+              --restart unless-stopped \
+              toeic-api
             
             # Dọn dẹp các file rác của Docker
             sudo docker image prune -f
