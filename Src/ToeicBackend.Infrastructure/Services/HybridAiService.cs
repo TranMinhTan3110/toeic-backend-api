@@ -51,7 +51,7 @@ public class HybridAiService : IAiService
             var result = await _geminiService.EvaluateSpeakingAsync(taskPrompt, sampleAnswers, userTranscript, taskNumber, audioBytes, mimeType);
             
             // Nếu kết quả trả về bị lỗi hoặc rỗng (do lỗi 429 hoặc lỗi xử lý nội bộ nhưng bắt được trong GeminiService)
-            if (result == null || result.OverallScore == 0 || (result.Feedback != null && result.Feedback.Contains("Không thể phân tích phản hồi AI")))
+            if (result == null || (result.Feedback != null && result.Feedback.Contains("Không thể phân tích phản hồi AI")))
             {
                 throw new Exception("Gemini returned a failed/empty evaluation (likely due to 429 or quota limit).");
             }
