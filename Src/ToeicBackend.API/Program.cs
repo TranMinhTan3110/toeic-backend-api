@@ -138,6 +138,12 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Cấu hình để ASP.NET Core hiểu được nó đang chạy sau Nginx (HTTPS)
+app.UseForwardedHeaders(new Microsoft.AspNetCore.Builder.ForwardedHeadersOptions
+{
+    ForwardedHeaders = Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedFor | Microsoft.AspNetCore.HttpOverrides.ForwardedHeaders.XForwardedProto
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
