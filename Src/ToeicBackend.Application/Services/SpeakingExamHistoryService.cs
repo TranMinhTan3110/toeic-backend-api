@@ -27,72 +27,83 @@ public class SpeakingExamHistoryService : ISpeakingExamHistoryService
     {
         var taskResults = new List<SpeakingExamTaskResultDto>();
 
-        // Chấm điểm tuần tự từng câu thay vì gọi song song (Task.WhenAll)
-        // Việc gọi song song 11 câu cùng lúc sẽ làm sập giới hạn (Rate Limit 429) của Gemini Free Tier.
-        foreach (var task in request.Tasks)
+        // Giới hạn chạy tối đa 3 luồng cùng lúc (Bounded Concurrency)
+        // - Tránh lỗi 429 (TooManyRequests) do dội bom 11 câu cùng lúc.
+        // - Tránh lỗi Timeout (Connection Closed) do chạy tuần tự 11 câu mất hơn 2 phút.
+        using var semaphore = new SemaphoreSlim(3);
+        
+        var evalTasks = request.Tasks.Select(async task =>
         {
-            var question = await _speakingRepository.GetByIdAsync(task.QuestionId);
-            if (question == null) 
+            await semaphore.WaitAsync();
+            try
             {
-                taskResults.Add(new SpeakingExamTaskResultDto
+                var question = await _speakingRepository.GetByIdAsync(task.QuestionId);
+                if (question == null) 
+                {
+                    return new SpeakingExamTaskResultDto
+                    {
+                        QuestionId = task.QuestionId,
+                        SubQuestionIndex = task.SubQuestionIndex,
+                        Transcript = task.Transcript ?? "",
+                        Score = 0,
+                        Feedback = "Không tìm thấy câu hỏi",
+                        Passed = false
+                    };
+                }
+
+                // Parse audio nếu có
+                byte[]? audioBytes = null;
+                string? mimeType = null;
+                if (!string.IsNullOrEmpty(task.AudioBase64) && !string.IsNullOrEmpty(task.AudioMimeType))
+                {
+                    try
+                    {
+                        audioBytes = Convert.FromBase64String(task.AudioBase64);
+                        mimeType = task.AudioMimeType;
+                    }
+                    catch { /* bỏ qua nếu base64 lỗi */ }
+                }
+
+                // Lấy prompt + sampleAnswers từ question
+                var promptText = question.PromptText ?? "";
+                if (task.SubQuestionIndex.HasValue && question.Questions != null &&
+                    task.SubQuestionIndex.Value < question.Questions.Count)
+                {
+                    promptText = question.Questions[task.SubQuestionIndex.Value];
+                }
+
+                var sampleAnswers = question.SampleAnswer != null
+                    ? new[] { question.SampleAnswer }
+                    : Array.Empty<string>();
+
+                var eval = await _aiService.EvaluateSpeakingAsync(
+                    taskPrompt: promptText,
+                    sampleAnswers: sampleAnswers,
+                    userTranscript: task.Transcript ?? "",
+                    taskNumber: question.TaskNumber,
+                    audioBytes: audioBytes,
+                    mimeType: mimeType);
+
+                return new SpeakingExamTaskResultDto
                 {
                     QuestionId = task.QuestionId,
                     SubQuestionIndex = task.SubQuestionIndex,
                     Transcript = task.Transcript ?? "",
-                    Score = 0,
-                    Feedback = "Không tìm thấy câu hỏi",
-                    Passed = false
-                });
-                continue;
+                    Score = eval.OverallScore,
+                    Feedback = eval.Feedback,
+                    CriteriaScores = eval.CriteriaScores,
+                    Passed = eval.Passed
+                };
             }
-
-            // Parse audio nếu có
-            byte[]? audioBytes = null;
-            string? mimeType = null;
-            if (!string.IsNullOrEmpty(task.AudioBase64) && !string.IsNullOrEmpty(task.AudioMimeType))
+            finally
             {
-                try
-                {
-                    audioBytes = Convert.FromBase64String(task.AudioBase64);
-                    mimeType = task.AudioMimeType;
-                }
-                catch { /* bỏ qua nếu base64 lỗi */ }
+                // Nghỉ ngơi 0.5 giây trước khi thả luồng cho câu tiếp theo để dãn cách API
+                await Task.Delay(500);
+                semaphore.Release();
             }
+        });
 
-            // Lấy prompt + sampleAnswers từ question
-            var promptText = question.PromptText ?? "";
-            if (task.SubQuestionIndex.HasValue && question.Questions != null &&
-                task.SubQuestionIndex.Value < question.Questions.Count)
-            {
-                promptText = question.Questions[task.SubQuestionIndex.Value];
-            }
-
-            var sampleAnswers = question.SampleAnswer != null
-                ? new[] { question.SampleAnswer }
-                : Array.Empty<string>();
-
-            var eval = await _aiService.EvaluateSpeakingAsync(
-                taskPrompt: promptText,
-                sampleAnswers: sampleAnswers,
-                userTranscript: task.Transcript ?? "",
-                taskNumber: question.TaskNumber,
-                audioBytes: audioBytes,
-                mimeType: mimeType);
-
-            taskResults.Add(new SpeakingExamTaskResultDto
-            {
-                QuestionId = task.QuestionId,
-                SubQuestionIndex = task.SubQuestionIndex,
-                Transcript = task.Transcript ?? "",
-                Score = eval.OverallScore,
-                Feedback = eval.Feedback,
-                CriteriaScores = eval.CriteriaScores,
-                Passed = eval.Passed
-            });
-
-            // Nghỉ 1.5 giây giữa mỗi lần chấm để tránh bị Google khóa mõm vì dội bom API
-            await Task.Delay(1500);
-        }
+        taskResults = (await Task.WhenAll(evalTasks)).ToList();
 
         // Tính điểm TOEIC Speaking 0-200
         var rawAvg = taskResults.Count > 0 ? taskResults.Average(t => t.Score) : 0;
