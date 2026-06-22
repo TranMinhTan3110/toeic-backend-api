@@ -27,19 +27,24 @@ public class SpeakingExamHistoryService : ISpeakingExamHistoryService
     {
         var taskResults = new List<SpeakingExamTaskResultDto>();
 
-        // Chấm điểm batch — mỗi task gọi AI song song
-        var evalTasks = request.Tasks.Select(async task =>
+        // Chấm điểm tuần tự từng câu thay vì gọi song song (Task.WhenAll)
+        // Việc gọi song song 11 câu cùng lúc sẽ làm sập giới hạn (Rate Limit 429) của Gemini Free Tier.
+        foreach (var task in request.Tasks)
         {
             var question = await _speakingRepository.GetByIdAsync(task.QuestionId);
-            if (question == null) return new SpeakingExamTaskResultDto
+            if (question == null) 
             {
-                QuestionId = task.QuestionId,
-                SubQuestionIndex = task.SubQuestionIndex,
-                Transcript = task.Transcript ?? "",
-                Score = 0,
-                Feedback = "Không tìm thấy câu hỏi",
-                Passed = false
-            };
+                taskResults.Add(new SpeakingExamTaskResultDto
+                {
+                    QuestionId = task.QuestionId,
+                    SubQuestionIndex = task.SubQuestionIndex,
+                    Transcript = task.Transcript ?? "",
+                    Score = 0,
+                    Feedback = "Không tìm thấy câu hỏi",
+                    Passed = false
+                });
+                continue;
+            }
 
             // Parse audio nếu có
             byte[]? audioBytes = null;
@@ -74,7 +79,7 @@ public class SpeakingExamHistoryService : ISpeakingExamHistoryService
                 audioBytes: audioBytes,
                 mimeType: mimeType);
 
-            return new SpeakingExamTaskResultDto
+            taskResults.Add(new SpeakingExamTaskResultDto
             {
                 QuestionId = task.QuestionId,
                 SubQuestionIndex = task.SubQuestionIndex,
@@ -83,10 +88,11 @@ public class SpeakingExamHistoryService : ISpeakingExamHistoryService
                 Feedback = eval.Feedback,
                 CriteriaScores = eval.CriteriaScores,
                 Passed = eval.Passed
-            };
-        });
+            });
 
-        taskResults = (await Task.WhenAll(evalTasks)).ToList();
+            // Nghỉ 1.5 giây giữa mỗi lần chấm để tránh bị Google khóa mõm vì dội bom API
+            await Task.Delay(1500);
+        }
 
         // Tính điểm TOEIC Speaking 0-200
         var rawAvg = taskResults.Count > 0 ? taskResults.Average(t => t.Score) : 0;
