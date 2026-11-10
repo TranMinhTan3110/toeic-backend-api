@@ -171,7 +171,3 @@ flowchart LR
   *(Kiến trúc hệ thống, Hybrid AI, Concurrency, CI/CD, AWS EC2 & Docker Deployment)*
 * **Nhóm thành viên:** Hỗ trợ phát triển Mobile Client, Web Admin và ngân hàng đề thi.
 
----
-
-## 📄 License
-Phát hành theo giấy phép [MIT License](LICENSE).
